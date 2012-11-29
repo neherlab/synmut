@@ -1,5 +1,97 @@
 \begin{thebibliography}{}
 
+\bibitem[Barat {\em et~al.}(1991)Barat, Grice, and
+  Daelix]{barat_interaction_1991}
+Barat, C., Grice, S. F. J.~L., and Daelix, J.-L. (1991).
+\newblock Interaction of {HIV-1} reverse transcriptase with a synthetic form of
+  its replication primer, {tRNALys},3.
+\newblock {\em Nucleic Acids Research\/}, {\bf 19}(4), 751--757.
+
+\bibitem[Batorsky {\em et~al.}(2011)Batorsky, Kearney, Palmer, Maldarelli,
+  Rouzine, and Coffin]{batorsky_estimate_2011}
+Batorsky, R., Kearney, M.~F., Palmer, S.~E., Maldarelli, F., Rouzine, I.~M.,
+  and Coffin, J.~M. (2011).
+\newblock Estimate of effective recombination rate and average selection
+  coefficient for {HIV} in chronic infection.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America\/}, {\bf 108}(14), 5661--6.
+
+\bibitem[Bunnik {\em et~al.}(2008)Bunnik, Pisas, Van~Nuenen, and
+  Schuitemaker]{bunnik_autologous_2008}
+Bunnik, E., Pisas, L., Van~Nuenen, A., and Schuitemaker, H. (2008).
+\newblock Autologous neutralizing humoral immunity and evolution of the viral
+  envelope in the course of subtype b human immunodeficiency virus type 1
+  infection.
+\newblock {\em Journal of virology\/}, {\bf 82}(16), 7932.
+
+\bibitem[Ewens(2004)Ewens]{ewens_mathematical_2004}
+Ewens, W.~J. (2004).
+\newblock {\em Mathematical Population Genetics: I. Theoretical
+  Introduction\/}.
+\newblock Springer.
+
+\bibitem[Fernandes {\em et~al.}(2012)Fernandes, Jayaraman, and
+  Frankel]{fernandes_hiv-1_2012}
+Fernandes, J., Jayaraman, B., and Frankel, A. (2012).
+\newblock The {HIV-1} rev response element: An {RNA} scaffold that directs the
+  cooperative assembly of a homo-oligomeric ribonucleoprotein complex.
+\newblock {\em {RNA} Biology\/}, {\bf 9}(1), 4--9.
+
+\bibitem[Li {\em et~al.}(2012)Li, Kao, Gao, Sandig, Limmer, Pavon-Eternod,
+  Jones, Landry, Pan, Weitzman, and David]{li_codon-usage-based_2012}
+Li, M., Kao, E., Gao, X., Sandig, H., Limmer, K., Pavon-Eternod, M., Jones,
+  T.~E., Landry, S., Pan, T., Weitzman, M.~D., and David, M. (2012).
+\newblock Codon-usage-based inhibition of {HIV} protein synthesis by human
+  schlafen 11.
+\newblock {\em Nature\/}.
+
+\bibitem[Liu {\em et~al.}(2006)Liu, {McNevin}, Cao, Zhao, Genowati, Wong,
+  {McLaughlin}, {McSweyn}, Diem, Stevens, {\em et~al.}]{liu_selection_2006}
+Liu, Y., {McNevin}, J., Cao, J., Zhao, H., Genowati, I., Wong, K.,
+  {McLaughlin}, S., {McSweyn}, M., Diem, K., Stevens, C., {\em et~al.} (2006).
+\newblock Selection on the human immunodeficiency virus type 1 proteome
+  following primary infection.
+\newblock {\em Journal of virology\/}, {\bf 80}(19), 9519.
+
+\bibitem[Neher and Leitner(2010)Neher and Leitner]{neher_recombination_2010}
+Neher, R. and Leitner, T. (2010).
+\newblock Recombination rate and selection strength in {HIV} intra-patient
+  evolution.
+\newblock {\em {PLoS} Comput Biol\/}, {\bf 6}(1), e1000660.
+
+\bibitem[Ngumbela {\em et~al.}(2008)Ngumbela, Ryan, Sivamurthy, Brockman,
+  Gandhi, Bhardwaj, and Kavanagh]{ngumbela_quantitative_2008}
+Ngumbela, K.~C., Ryan, K.~P., Sivamurthy, R., Brockman, M.~A., Gandhi, R.~T.,
+  Bhardwaj, N., and Kavanagh, D.~G. (2008).
+\newblock Quantitative effect of suboptimal codon usage on translational
+  efficiency of {mRNA} encoding {HIV-1} gag in intact t cells.
+\newblock {\em {PLoS} {ONE}\/}, {\bf 3}(6), e2356.
+
+\bibitem[Paillart {\em et~al.}(2002)Paillart, Skripkin, Ehresmann, Ehresmann,
+  and Marquet]{paillart_vitro_2002}
+Paillart, J.-C., Skripkin, E., Ehresmann, B., Ehresmann, C., and Marquet, R.
+  (2002).
+\newblock In vitro evidence for a long range pseudoknot in the
+  5′-untranslated and matrix coding regions of {HIV-1} genomic {RNA}.
+\newblock {\em Journal of Biological Chemistry\/}, {\bf 277}(8), 5995--6004.
+
+\bibitem[Pantaleo and Fauci(1996)Pantaleo and
+  Fauci]{pantaleo_immunopathogenesis_1996}
+Pantaleo, G. and Fauci, A.~S. (1996).
+\newblock Immunopathogenesis of hiv infection1.
+\newblock {\em Annual Review of Microbiology\/}, {\bf 50}(1), 825--854.
+\newblock {PMID:} 8905100.
+
+\bibitem[Shankarappa {\em et~al.}(1999)Shankarappa, Margolick, Gange, Rodrigo,
+  Upchurch, Farzadegan, Gupta, Rinaldo, Learn, He, {\em
+  et~al.}]{shankarappa_consistent_1999}
+Shankarappa, R., Margolick, J., Gange, S., Rodrigo, A., Upchurch, D.,
+  Farzadegan, H., Gupta, P., Rinaldo, C., Learn, G., He, X., {\em et~al.}
+  (1999).
+\newblock Consistent viral evolutionary changes associated with the progression
+  of human immunodeficiency virus type 1 infection.
+\newblock {\em Journal of Virology\/}, {\bf 73}(12), 10489.
+
 \bibitem[Watts {\em et~al.}(2009)Watts, Dang, Gorelick, Leonard, Jr, Swanstrom,
   Burch, and Weeks]{watts_architecture_2009}
 Watts, J.~M., Dang, K.~K., Gorelick, R.~J., Leonard, C.~W., Jr, J. W.~B.,

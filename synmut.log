@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Arch Linux) (format=pdflatex 2012.10.20)  27 NOV 2012 18:17
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Arch Linux) (format=pdflatex 2012.10.20)  28 NOV 2012 18:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -335,25 +335,25 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 ) (./synmut.aux)
 \openout1 = `synmut.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 40.
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 40
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 42.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 42
 .
 (/usr/share/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 (/usr/share/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 ) (/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -388,7 +388,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring ON on input line 40.
+Package hyperref Info: Link coloring ON on input line 42.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -396,193 +396,176 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count127
 )
-LaTeX Info: Redefining \ref on input line 40.
-LaTeX Info: Redefining \pageref on input line 40.
-LaTeX Info: Redefining \nameref on input line 40.
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
+LaTeX Info: Redefining \nameref on input line 42.
 (./synmut.out) (./synmut.out)
 \@outlinefile=\write3
 \openout3 = `synmut.out'.
 
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 43
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 45
 .
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 43
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 45
 .
 (/usr/share/texmf-dist/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 43
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 45
 .
 (/usr/share/texmf-dist/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 43.
+LaTeX Font Info:    Try loading font information for U+msa on input line 45.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 43.
+LaTeX Font Info:    Try loading font information for U+msb on input line 45.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
+[1
 
-<./figures/Shankarappa_allele_freqs_trajectories_syn_nonsynp8.png, id=20, 990.0
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<./figures/Shankarappa_allele_freqs_trajectories_syn_nonsynp8.png, id=64, 990.0
 99pt x 652.5981pt>
 File: ./figures/Shankarappa_allele_freqs_trajectories_syn_nonsynp8.png Graphic 
 file (type png)
 <use ./figures/Shankarappa_allele_freqs_trajectories_syn_nonsynp8.png>
 Package pdftex.def Info: ./figures/Shankarappa_allele_freqs_trajectories_syn_no
-nsynp8.png used on input line 68.
+nsynp8.png used on input line 138.
 (pdftex.def)             Requested size: 390.0pt x 257.05147pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 71.
+(Font)              scaled to size 9.85492pt on input line 142.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 71.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 142.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 9.85492pt on input line 71.
-
-<./figures/Bunnik2008_fixmid_syn_ShankanonShanka.pdf, id=22, 578.16pt x 433.62p
+(Font)              scaled to size 9.85492pt on input line 142.
+[2]
+<./figures/Bunnik2008_fixmid_syn_ShankanonShanka.pdf, id=83, 578.16pt x 433.62p
 t>
 File: ./figures/Bunnik2008_fixmid_syn_ShankanonShanka.pdf Graphic file (type pd
 f)
 <use ./figures/Bunnik2008_fixmid_syn_ShankanonShanka.pdf>
 Package pdftex.def Info: ./figures/Bunnik2008_fixmid_syn_ShankanonShanka.pdf us
-ed on input line 77.
+ed on input line 150.
 (pdftex.def)             Requested size: 191.10214pt x 143.32661pt.
-<./figures/Shankarappa_fixmid_syn_V_regions.pdf, id=23, 578.16pt x 433.62pt>
+<./figures/Shankarappa_fixmid_syn_V_regions.pdf, id=84, 578.16pt x 433.62pt>
 File: ./figures/Shankarappa_fixmid_syn_V_regions.pdf Graphic file (type pdf)
 <use ./figures/Shankarappa_fixmid_syn_V_regions.pdf>
 Package pdftex.def Info: ./figures/Shankarappa_fixmid_syn_V_regions.pdf used on
- input line 78.
+ input line 151.
 (pdftex.def)             Requested size: 191.10214pt x 143.32661pt.
-
-<./figures/fixation_probability_shortgenome_N_1e4_epitopes_example_longer.pdf, 
-id=24, 650.43pt x 505.89pt>
-File: ./figures/fixation_probability_shortgenome_N_1e4_epitopes_example_longer.
-pdf Graphic file (type pdf)
-
-<use ./figures/fixation_probability_shortgenome_N_1e4_epitopes_example_longer.p
-df>
-Package pdftex.def Info: ./figures/fixation_probability_shortgenome_N_1e4_epito
-pes_example_longer.pdf used on input line 89.
-(pdftex.def)             Requested size: 191.10214pt x 148.63414pt.
-
-<./figures/fixation_probability_N_1e4_3ingredients_3rddel_envnonenv_stopall.pdf
-, id=25, 609.78046pt x 614.295pt>
-File: ./figures/fixation_probability_N_1e4_3ingredients_3rddel_envnonenv_stopal
-l.pdf Graphic file (type pdf)
-
-<use ./figures/fixation_probability_N_1e4_3ingredients_3rddel_envnonenv_stopall
-.pdf>
-Package pdftex.def Info: ./figures/fixation_probability_N_1e4_3ingredients_3rdd
-el_envnonenv_stopall.pdf used on input line 90.
-(pdftex.def)             Requested size: 191.10214pt x 192.51973pt.
+<./figures/Shankarappa_fix_loss_dt_times.pdf, id=93, 578.16pt x 433.62pt>
+File: ./figures/Shankarappa_fix_loss_dt_times.pdf Graphic file (type pdf)
+<use ./figures/Shankarappa_fix_loss_dt_times.pdf>
+Package pdftex.def Info: ./figures/Shankarappa_fix_loss_dt_times.pdf used on in
+put line 164.
+(pdftex.def)             Requested size: 390.0pt x 292.4956pt.
 
 <./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_Vandflanking_fr
-omSHAPE.pdf, id=26, 578.16pt x 433.62pt>
+omSHAPE.pdf, id=94, 578.16pt x 433.62pt>
 File: ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_Vandflanki
 ng_fromSHAPE.pdf Graphic file (type pdf)
 
 <use ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_Vandflankin
 g_fromSHAPE.pdf>
 Package pdftex.def Info: ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_re
-activity_Vandflanking_fromSHAPE.pdf used on input line 100.
+activity_Vandflanking_fromSHAPE.pdf used on input line 176.
 (pdftex.def)             Requested size: 191.10214pt x 143.32661pt.
 
 <./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_nonVandflanking
-.pdf, id=27, 578.16pt x 433.62pt>
+.pdf, id=95, 578.16pt x 433.62pt>
 File: ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_nonVandfla
 nking.pdf Graphic file (type pdf)
 
 <use ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_nonVandflan
 king.pdf>
 Package pdftex.def Info: ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_re
-activity_nonVandflanking.pdf used on input line 101.
-(pdftex.def)             Requested size: 191.10214pt x 143.32661pt.
-<./figures/Henn_density_polymorphisms.pdf, id=32, 578.16pt x 433.62pt>
-File: ./figures/Henn_density_polymorphisms.pdf Graphic file (type pdf)
-<use ./figures/Henn_density_polymorphisms.pdf>
-Package pdftex.def Info: ./figures/Henn_density_polymorphisms.pdf used on input
- line 116.
+activity_nonVandflanking.pdf used on input line 177.
 (pdftex.def)             Requested size: 191.10214pt x 143.32661pt.
 
-<./figures/Henn_density_polymorphisms_syn_over_chances.pdf, id=33, 578.16pt x 4
-33.62pt>
-File: ./figures/Henn_density_polymorphisms_syn_over_chances.pdf Graphic file (t
-ype pdf)
-<use ./figures/Henn_density_polymorphisms_syn_over_chances.pdf>
-Package pdftex.def Info: ./figures/Henn_density_polymorphisms_syn_over_chances.
-pdf used on input line 117.
-(pdftex.def)             Requested size: 191.10214pt x 143.32661pt.
+<./figures/fixation_probability_shortgenome_N_1e4_epitopes_example_longer.pdf, 
+id=112, 650.43pt x 505.89pt>
+File: ./figures/fixation_probability_shortgenome_N_1e4_epitopes_example_longer.
+pdf Graphic file (type pdf)
+
+<use ./figures/fixation_probability_shortgenome_N_1e4_epitopes_example_longer.p
+df>
+Package pdftex.def Info: ./figures/fixation_probability_shortgenome_N_1e4_epito
+pes_example_longer.pdf used on input line 205.
+(pdftex.def)             Requested size: 191.10214pt x 148.63414pt.
+
+<./figures/fixation_probability_N_1e4_3ingredients_3rddel_envnonenv_stopall.pdf
+, id=113, 609.78046pt x 614.295pt>
+File: ./figures/fixation_probability_N_1e4_3ingredients_3rddel_envnonenv_stopal
+l.pdf Graphic file (type pdf)
+
+<use ./figures/fixation_probability_N_1e4_3ingredients_3rddel_envnonenv_stopall
+.pdf>
+Package pdftex.def Info: ./figures/fixation_probability_N_1e4_3ingredients_3rdd
+el_envnonenv_stopall.pdf used on input line 206.
+(pdftex.def)             Requested size: 191.10214pt x 192.51973pt.
 
 <./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescepi_6_h
-eat.pdf, id=34, 642.4pt x 292.05519pt>
+eat.pdf, id=114, 642.4pt x 292.05519pt>
 File: ./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescep
 i_6_heat.pdf Graphic file (type pdf)
 
 <use ./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescepi
 _6_heat.pdf>
 Package pdftex.def Info: ./figures/fixation_loss_shortgenome_area_ada_frac_del_
-eff_coi_0_01_nescepi_6_heat.pdf used on input line 128.
+eff_coi_0_01_nescepi_6_heat.pdf used on input line 216.
 (pdftex.def)             Requested size: 191.10214pt x 86.88193pt.
 
 <./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescepi_6_n
-onsyn_heat.pdf, id=35, 642.4pt x 292.05519pt>
+onsyn_heat.pdf, id=115, 642.4pt x 292.05519pt>
 File: ./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescep
 i_6_nonsyn_heat.pdf Graphic file (type pdf)
 
 <use ./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescepi
 _6_nonsyn_heat.pdf>
 Package pdftex.def Info: ./figures/fixation_loss_shortgenome_area_ada_frac_del_
-eff_coi_0_01_nescepi_6_nonsyn_heat.pdf used on input line 129.
+eff_coi_0_01_nescepi_6_nonsyn_heat.pdf used on input line 217.
 (pdftex.def)             Requested size: 191.10214pt x 86.88193pt.
-(./synmut.bbl
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./figures/Shankarappa_
-allele_freqs_trajectories_syn_nonsynp8.png> <./figures/Bunnik2008_fixmid_syn_Sh
-ankanonShanka.pdf> <./figures/Shankarappa_fixmid_syn_V_regions.pdf
+(./synmut.bbl [3 <./figures/Shankarappa_allele_freqs_trajectories_syn_nonsynp8.
+png>] [4 <./figures/Bunnik2008_fixmid_syn_ShankanonShanka.pdf> <./figures/Shank
+arappa_fixmid_syn_V_regions.pdf
 
 pdfTeX warning: pdflatex (file ./figures/Shankarappa_fixmid_syn_V_regions.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
->] [3 <./figures/fixation_probability_shortgenome_N_1e4_epitopes_example_longer
+>] [5 <./figures/Shankarappa_fix_loss_dt_times.pdf>] [6 <./figures/mixed_Shanka
+rappa_Bunnik2008_Liu_fixation_reactivity_Vandflanking_fromSHAPE.pdf> <./figures
+/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_nonVandflanking.pdf
+
+pdfTeX warning: pdflatex (file ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixat
+ion_reactivity_nonVandflanking.pdf): PDF inclusion: multiple pdfs with page gro
+up included in a single page
+>] [7 <./figures/fixation_probability_shortgenome_N_1e4_epitopes_example_longer
 .pdf> <./figures/fixation_probability_N_1e4_3ingredients_3rddel_envnonenv_stopa
 ll.pdf
 
 pdfTeX warning: pdflatex (file ./figures/fixation_probability_N_1e4_3ingredient
 s_3rddel_envnonenv_stopall.pdf): PDF inclusion: multiple pdfs with page group i
 ncluded in a single page
-> <./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_Vandflanking_
-fromSHAPE.pdf
-
-pdfTeX warning: pdflatex (file ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixat
-ion_reactivity_Vandflanking_fromSHAPE.pdf): PDF inclusion: multiple pdfs with p
-age group included in a single page
-> <./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_nonVandflanki
-ng.pdf
-
-pdfTeX warning: pdflatex (file ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixat
-ion_reactivity_nonVandflanking.pdf): PDF inclusion: multiple pdfs with page gro
-up included in a single page
->] [4 <./figures/Henn_density_polymorphisms.pdf> <./figures/Henn_density_polymo
-rphisms_syn_over_chances.pdf
-
-pdfTeX warning: pdflatex (file ./figures/Henn_density_polymorphisms_syn_over_ch
-ances.pdf): PDF inclusion: multiple pdfs with page group included in a single p
-age
 > <./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescepi_6
 _heat.pdf
 
@@ -595,35 +578,40 @@ _nonsyn_heat.pdf
 pdfTeX warning: pdflatex (file ./figures/fixation_loss_shortgenome_area_ada_fra
 c_del_eff_coi_0_01_nescepi_6_nonsyn_heat.pdf): PDF inclusion: multiple pdfs wit
 h page group included in a single page
->])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
-[5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+>] (/usr/share/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2012/04/20 UCS: Unicode data U+2000..U+20FF
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 240.
+[8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 240.
 (./synmut.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 240.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 240.
 Package rerunfilecheck Info: File `synmut.out' has not changed.
 (rerunfilecheck)             Checksum: 01739B3027FA53CD7E63BDA39599BB37;176.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 152.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 240.
  ) 
 Here is how much of TeX's memory you used:
- 8260 strings out of 493488
- 124681 string characters out of 3146891
- 223207 words of memory out of 3000000
- 11392 multiletter control sequences out of 15000+200000
- 36229 words of font info for 74 fonts, out of 3000000 for 9000
+ 8584 strings out of 493488
+ 128513 string characters out of 3146891
+ 227207 words of memory out of 3000000
+ 11688 multiletter control sequences out of 15000+200000
+ 54855 words of font info for 116 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 44i,7n,42p,826b,459s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,7n,46p,924b,466s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a
 .pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on synmut.pdf (5 pages, 1118318 bytes).
+Output written on synmut.pdf (8 pages, 1099291 bytes).
 PDF statistics:
- 2318 PDF objects out of 2487 (max. 8388607)
- 1541 compressed objects within 16 object streams
- 29 named destinations out of 1000 (max. 500000)
- 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2325 PDF objects out of 2487 (max. 8388607)
+ 1565 compressed objects within 16 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
