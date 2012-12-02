@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Arch Linux) (format=pdflatex 2012.10.20)  28 NOV 2012 18:35
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Arch Linux) (format=pdflatex 2012.10.20)  1 DEC 2012 17:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -435,13 +435,13 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
@@ -451,167 +451,163 @@ File: ./figures/Shankarappa_allele_freqs_trajectories_syn_nonsynp8.png Graphic
 file (type png)
 <use ./figures/Shankarappa_allele_freqs_trajectories_syn_nonsynp8.png>
 Package pdftex.def Info: ./figures/Shankarappa_allele_freqs_trajectories_syn_no
-nsynp8.png used on input line 138.
+nsynp8.png used on input line 153.
 (pdftex.def)             Requested size: 390.0pt x 257.05147pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 142.
+(Font)              scaled to size 9.85492pt on input line 157.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 142.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 157.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 9.85492pt on input line 142.
+(Font)              scaled to size 9.85492pt on input line 157.
 [2]
-<./figures/Bunnik2008_fixmid_syn_ShankanonShanka.pdf, id=83, 578.16pt x 433.62p
+<./figures/Bunnik2008_fixmid_syn_ShankanonShanka.pdf, id=88, 578.16pt x 433.62p
 t>
 File: ./figures/Bunnik2008_fixmid_syn_ShankanonShanka.pdf Graphic file (type pd
 f)
 <use ./figures/Bunnik2008_fixmid_syn_ShankanonShanka.pdf>
 Package pdftex.def Info: ./figures/Bunnik2008_fixmid_syn_ShankanonShanka.pdf us
-ed on input line 150.
+ed on input line 179.
 (pdftex.def)             Requested size: 191.10214pt x 143.32661pt.
-<./figures/Shankarappa_fixmid_syn_V_regions.pdf, id=84, 578.16pt x 433.62pt>
+<./figures/Shankarappa_fixmid_syn_V_regions.pdf, id=89, 578.16pt x 433.62pt>
 File: ./figures/Shankarappa_fixmid_syn_V_regions.pdf Graphic file (type pdf)
 <use ./figures/Shankarappa_fixmid_syn_V_regions.pdf>
 Package pdftex.def Info: ./figures/Shankarappa_fixmid_syn_V_regions.pdf used on
- input line 151.
+ input line 180.
 (pdftex.def)             Requested size: 191.10214pt x 143.32661pt.
-<./figures/Shankarappa_fix_loss_dt_times.pdf, id=93, 578.16pt x 433.62pt>
+[3 <./figures/Shankarappa_allele_freqs_trajectories_syn_nonsynp8.png>] <./figur
+es/Shankarappa_fix_loss_dt_times.pdf, id=118, 578.16pt x 433.62pt>
 File: ./figures/Shankarappa_fix_loss_dt_times.pdf Graphic file (type pdf)
 <use ./figures/Shankarappa_fix_loss_dt_times.pdf>
 Package pdftex.def Info: ./figures/Shankarappa_fix_loss_dt_times.pdf used on in
-put line 164.
+put line 217.
 (pdftex.def)             Requested size: 390.0pt x 292.4956pt.
+[4 <./figures/Bunnik2008_fixmid_syn_ShankanonShanka.pdf> <./figures/Shankarappa
+_fixmid_syn_V_regions.pdf
 
+pdfTeX warning: pdflatex (file ./figures/Shankarappa_fixmid_syn_V_regions.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+>] [5 <./figures/Shankarappa_fix_loss_dt_times.pdf>]
 <./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_Vandflanking_fr
-omSHAPE.pdf, id=94, 578.16pt x 433.62pt>
+omSHAPE.pdf, id=423, 578.16pt x 433.62pt>
 File: ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_Vandflanki
 ng_fromSHAPE.pdf Graphic file (type pdf)
 
 <use ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_Vandflankin
 g_fromSHAPE.pdf>
 Package pdftex.def Info: ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_re
-activity_Vandflanking_fromSHAPE.pdf used on input line 176.
+activity_Vandflanking_fromSHAPE.pdf used on input line 280.
 (pdftex.def)             Requested size: 191.10214pt x 143.32661pt.
 
 <./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_nonVandflanking
-.pdf, id=95, 578.16pt x 433.62pt>
+.pdf, id=424, 578.16pt x 433.62pt>
 File: ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_nonVandfla
 nking.pdf Graphic file (type pdf)
 
 <use ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_nonVandflan
 king.pdf>
 Package pdftex.def Info: ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_re
-activity_nonVandflanking.pdf used on input line 177.
+activity_nonVandflanking.pdf used on input line 281.
 (pdftex.def)             Requested size: 191.10214pt x 143.32661pt.
+[6] [7 <./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_Vandflan
+king_fromSHAPE.pdf> <./figures/mixed_Shankarappa_Bunnik2008_Liu_fixation_reacti
+vity_nonVandflanking.pdf
 
+pdfTeX warning: pdflatex (file ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixat
+ion_reactivity_nonVandflanking.pdf): PDF inclusion: multiple pdfs with page gro
+up included in a single page
+>]
 <./figures/fixation_probability_shortgenome_N_1e4_epitopes_example_longer.pdf, 
-id=112, 650.43pt x 505.89pt>
+id=504, 650.43pt x 505.89pt>
 File: ./figures/fixation_probability_shortgenome_N_1e4_epitopes_example_longer.
 pdf Graphic file (type pdf)
 
 <use ./figures/fixation_probability_shortgenome_N_1e4_epitopes_example_longer.p
 df>
 Package pdftex.def Info: ./figures/fixation_probability_shortgenome_N_1e4_epito
-pes_example_longer.pdf used on input line 205.
+pes_example_longer.pdf used on input line 349.
 (pdftex.def)             Requested size: 191.10214pt x 148.63414pt.
 
 <./figures/fixation_probability_N_1e4_3ingredients_3rddel_envnonenv_stopall.pdf
-, id=113, 609.78046pt x 614.295pt>
+, id=505, 518.00227pt x 391.32913pt>
 File: ./figures/fixation_probability_N_1e4_3ingredients_3rddel_envnonenv_stopal
 l.pdf Graphic file (type pdf)
 
 <use ./figures/fixation_probability_N_1e4_3ingredients_3rddel_envnonenv_stopall
 .pdf>
 Package pdftex.def Info: ./figures/fixation_probability_N_1e4_3ingredients_3rdd
-el_envnonenv_stopall.pdf used on input line 206.
-(pdftex.def)             Requested size: 191.10214pt x 192.51973pt.
+el_envnonenv_stopall.pdf used on input line 350.
+(pdftex.def)             Requested size: 191.10214pt x 144.36555pt.
 
 <./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescepi_6_h
-eat.pdf, id=114, 642.4pt x 292.05519pt>
+eat.pdf, id=508, 642.4pt x 292.05519pt>
 File: ./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescep
 i_6_heat.pdf Graphic file (type pdf)
 
 <use ./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescepi
 _6_heat.pdf>
 Package pdftex.def Info: ./figures/fixation_loss_shortgenome_area_ada_frac_del_
-eff_coi_0_01_nescepi_6_heat.pdf used on input line 216.
+eff_coi_0_01_nescepi_6_heat.pdf used on input line 382.
 (pdftex.def)             Requested size: 191.10214pt x 86.88193pt.
 
 <./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescepi_6_n
-onsyn_heat.pdf, id=115, 642.4pt x 292.05519pt>
+onsyn_heat.pdf, id=509, 642.4pt x 292.05519pt>
 File: ./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescep
 i_6_nonsyn_heat.pdf Graphic file (type pdf)
 
 <use ./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescepi
 _6_nonsyn_heat.pdf>
 Package pdftex.def Info: ./figures/fixation_loss_shortgenome_area_ada_frac_del_
-eff_coi_0_01_nescepi_6_nonsyn_heat.pdf used on input line 217.
+eff_coi_0_01_nescepi_6_nonsyn_heat.pdf used on input line 383.
 (pdftex.def)             Requested size: 191.10214pt x 86.88193pt.
-(./synmut.bbl [3 <./figures/Shankarappa_allele_freqs_trajectories_syn_nonsynp8.
-png>] [4 <./figures/Bunnik2008_fixmid_syn_ShankanonShanka.pdf> <./figures/Shank
-arappa_fixmid_syn_V_regions.pdf
-
-pdfTeX warning: pdflatex (file ./figures/Shankarappa_fixmid_syn_V_regions.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
->] [5 <./figures/Shankarappa_fix_loss_dt_times.pdf>] [6 <./figures/mixed_Shanka
-rappa_Bunnik2008_Liu_fixation_reactivity_Vandflanking_fromSHAPE.pdf> <./figures
-/mixed_Shankarappa_Bunnik2008_Liu_fixation_reactivity_nonVandflanking.pdf
-
-pdfTeX warning: pdflatex (file ./figures/mixed_Shankarappa_Bunnik2008_Liu_fixat
-ion_reactivity_nonVandflanking.pdf): PDF inclusion: multiple pdfs with page gro
-up included in a single page
->] [7 <./figures/fixation_probability_shortgenome_N_1e4_epitopes_example_longer
-.pdf> <./figures/fixation_probability_N_1e4_3ingredients_3rddel_envnonenv_stopa
-ll.pdf
+[8] [9 <./figures/fixation_probability_shortgenome_N_1e4_epitopes_example_longe
+r.pdf> <./figures/fixation_probability_N_1e4_3ingredients_3rddel_envnonenv_stop
+all.pdf
 
 pdfTeX warning: pdflatex (file ./figures/fixation_probability_N_1e4_3ingredient
 s_3rddel_envnonenv_stopall.pdf): PDF inclusion: multiple pdfs with page group i
 ncluded in a single page
-> <./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescepi_6
-_heat.pdf
-
-pdfTeX warning: pdflatex (file ./figures/fixation_loss_shortgenome_area_ada_fra
-c_del_eff_coi_0_01_nescepi_6_heat.pdf): PDF inclusion: multiple pdfs with page 
-group included in a single page
-> <./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescepi_6
-_nonsyn_heat.pdf
+>] [10 <./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nesc
+epi_6_heat.pdf> <./figures/fixation_loss_shortgenome_area_ada_frac_del_eff_coi_
+0_01_nescepi_6_nonsyn_heat.pdf
 
 pdfTeX warning: pdflatex (file ./figures/fixation_loss_shortgenome_area_ada_fra
 c_del_eff_coi_0_01_nescepi_6_nonsyn_heat.pdf): PDF inclusion: multiple pdfs wit
 h page group included in a single page
->] (/usr/share/texmf-dist/tex/latex/ucs/data/uni-32.def
+>] [11] (./synmut.bbl [12] (/usr/share/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2012/04/20 UCS: Unicode data U+2000..U+20FF
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 240.
-[8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 240.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 145.
+[13])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 519.
+[14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 519.
 (./synmut.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 240.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 240.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 519.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 519.
 Package rerunfilecheck Info: File `synmut.out' has not changed.
 (rerunfilecheck)             Checksum: 01739B3027FA53CD7E63BDA39599BB37;176.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 240.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 519.
  ) 
 Here is how much of TeX's memory you used:
- 8584 strings out of 493488
- 128513 string characters out of 3146891
- 227207 words of memory out of 3000000
- 11688 multiletter control sequences out of 15000+200000
- 54855 words of font info for 116 fonts, out of 3000000 for 9000
+ 8629 strings out of 493488
+ 129318 string characters out of 3146891
+ 231025 words of memory out of 3000000
+ 11707 multiletter control sequences out of 15000+200000
+ 58093 words of font info for 122 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 44i,7n,46p,924b,466s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,8n,46p,915b,499s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a
-.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ti
-mes/utmri8a.pfb>
-Output written on synmut.pdf (8 pages, 1099291 bytes).
+c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/shar
+e/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-dist/fonts/type1
+/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
+/usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on synmut.pdf (14 pages, 1128781 bytes).
 PDF statistics:
- 2325 PDF objects out of 2487 (max. 8388607)
- 1565 compressed objects within 16 object streams
- 42 named destinations out of 1000 (max. 500000)
+ 2448 PDF objects out of 2487 (max. 8388607)
+ 1684 compressed objects within 17 object streams
+ 62 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

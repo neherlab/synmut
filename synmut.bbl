@@ -16,6 +16,33 @@ Batorsky, R., Kearney, M.~F., Palmer, S.~E., Maldarelli, F., Rouzine, I.~M.,
 \newblock {\em Proceedings of the National Academy of Sciences of the United
   States of America\/}, {\bf 108}(14), 5661--6.
 
+\bibitem[Boltz {\em et~al.}(2012)Boltz, Ambrose, Kearney, Shao, {KewalRamani},
+  Maldarelli, Mellors, and Coffin]{boltz_ultrasensitive_2012}
+Boltz, V.~F., Ambrose, Z., Kearney, M.~F., Shao, W., {KewalRamani}, V.~N.,
+  Maldarelli, F., Mellors, J.~W., and Coffin, J.~M. (2012).
+\newblock Ultrasensitive allele-specific {PCR} reveals rare preexisting
+  drug-resistant variants and a large replicating virus population in macaques
+  infected with a simian immunodeficiency virus containing human
+  immunodeficiency virus reverse transcriptase.
+\newblock {\em Journal of Virology\/}, {\bf 86}(23), 12525--12530.
+
+\bibitem[Brenner {\em et~al.}(2007)Brenner, Roger, Routy, Moisi, Ntemgwa,
+  Matte, Baril, Thomas, Rouleau, Bruneau, Leblanc, Legault, Tremblay, Charest,
+  and Wainberg]{brenner_high_2007}
+Brenner, B.~G., Roger, M., Routy, J.-P., Moisi, D., Ntemgwa, M., Matte, C.,
+  Baril, J.-G., Thomas, R., Rouleau, D., Bruneau, J., Leblanc, R., Legault, M.,
+  Tremblay, C., Charest, H., and Wainberg, M.~A. (2007).
+\newblock High rates of forward transmission events after acute/early hiv-1
+  infection.
+\newblock {\em Journal of Infectious Diseases\/}, {\bf 195}(7), 951--959.
+
+\bibitem[Bronson and Anderson(1994)Bronson and
+  Anderson]{bronson_nucleotide_1994}
+Bronson, E.~C. and Anderson, J.~N. (1994).
+\newblock Nucleotide composition as a driving force in the evolution of
+  retroviruses.
+\newblock {\em Journal of Molecular Evolution\/}, {\bf 38}(5), 506--532.
+
 \bibitem[Bunnik {\em et~al.}(2008)Bunnik, Pisas, Van~Nuenen, and
   Schuitemaker]{bunnik_autologous_2008}
 Bunnik, E., Pisas, L., Van~Nuenen, A., and Schuitemaker, H. (2008).
@@ -23,6 +50,19 @@ Bunnik, E., Pisas, L., Van~Nuenen, A., and Schuitemaker, H. (2008).
   envelope in the course of subtype b human immunodeficiency virus type 1
   infection.
 \newblock {\em Journal of virology\/}, {\bf 82}(16), 7932.
+
+\bibitem[Coleman {\em et~al.}(2008)Coleman, Papamichail, Skiena, Futcher,
+  Wimmer, and Mueller]{coleman_virus_2008}
+Coleman, J.~R., Papamichail, D., Skiena, S., Futcher, B., Wimmer, E., and
+  Mueller, S. (2008).
+\newblock Virus attenuation by genome-scale changes in codon pair bias.
+\newblock {\em Science\/}, {\bf 320}(5884), 1784--1787.
+
+\bibitem[Desai and Fisher(2007)Desai and Fisher]{desai_beneficial_2007}
+Desai, M.~M. and Fisher, D.~S. (2007).
+\newblock Beneficial mutation selection balance and the effect of linkage on
+  positive selection.
+\newblock {\em Genetics\/}, {\bf 176}(3), 1759--98.
 
 \bibitem[Ewens(2004)Ewens]{ewens_mathematical_2004}
 Ewens, W.~J. (2004).
@@ -36,6 +76,18 @@ Fernandes, J., Jayaraman, B., and Frankel, A. (2012).
 \newblock The {HIV-1} rev response element: An {RNA} scaffold that directs the
   cooperative assembly of a homo-oligomeric ribonucleoprotein complex.
 \newblock {\em {RNA} Biology\/}, {\bf 9}(1), 4--9.
+
+\bibitem[Forsdyke(1995)Forsdyke]{forsdyke_reciprocal_1995}
+Forsdyke, D. (1995).
+\newblock Reciprocal relationship between stem-loop potential and substitution
+  density in retroviral quasispecies under positive darwinian selection.
+\newblock {\em Journal of Molecular Evolution\/}, {\bf 41}(6).
+
+\bibitem[Jenkins and Holmes(2003)Jenkins and Holmes]{jenkins_extent_2003}
+Jenkins, G.~M. and Holmes, E.~C. (2003).
+\newblock The extent of codon usage bias in human {RNA} viruses and its
+  evolutionary origin.
+\newblock {\em Virus Research\/}, {\bf 92}(1), 1--7.
 
 \bibitem[Li {\em et~al.}(2012)Li, Kao, Gao, Sandig, Limmer, Pavon-Eternod,
   Jones, Landry, Pan, Weitzman, and David]{li_codon-usage-based_2012}
@@ -53,11 +105,29 @@ Liu, Y., {McNevin}, J., Cao, J., Zhao, H., Genowati, I., Wong, K.,
   following primary infection.
 \newblock {\em Journal of virology\/}, {\bf 80}(19), 9519.
 
+\bibitem[Moore {\em et~al.}(2009)Moore, Ranchobe, Lambson, Gray, Cave,
+  Abrahams, Bandawe, Mlisana, Abdool~Karim, Williamson, Morris, the {CAPRISA}
+  002~study, and the {NIAID} Center~for {HIV/AIDS} Vaccine
+  Immunology~{(CHAVI)}]{moore_limited_2009}
+Moore, P.~L., Ranchobe, N., Lambson, B.~E., Gray, E.~S., Cave, E., Abrahams,
+  M.-R., Bandawe, G., Mlisana, K., Abdool~Karim, S.~S., Williamson, C., Morris,
+  L., the {CAPRISA} 002~study, and the {NIAID} Center~for {HIV/AIDS} Vaccine
+  Immunology~{(CHAVI)} (2009).
+\newblock Limited neutralizing antibody specificities drive neutralization
+  escape in early hiv-1 subtype c infection.
+\newblock {\em PLoS Pathog\/}, {\bf 5}(9), e1000598.
+
 \bibitem[Neher and Leitner(2010)Neher and Leitner]{neher_recombination_2010}
 Neher, R. and Leitner, T. (2010).
 \newblock Recombination rate and selection strength in {HIV} intra-patient
   evolution.
 \newblock {\em {PLoS} Comput Biol\/}, {\bf 6}(1), e1000660.
+
+\bibitem[Neher and Shraiman(2011)Neher and Shraiman]{neher_genetic_2011}
+Neher, R.~A. and Shraiman, B. (2011).
+\newblock Genetic draft and quasi-neutrality in large facultatively sexual
+  populations.
+\newblock {\em Genetics\/}, {\bf 188}(4), 975--996.
 
 \bibitem[Ngumbela {\em et~al.}(2008)Ngumbela, Ryan, Sivamurthy, Brockman,
   Gandhi, Bhardwaj, and Kavanagh]{ngumbela_quantitative_2008}
@@ -82,6 +152,28 @@ Pantaleo, G. and Fauci, A.~S. (1996).
 \newblock {\em Annual Review of Microbiology\/}, {\bf 50}(1), 825--854.
 \newblock {PMID:} 8905100.
 
+\bibitem[Perelson {\em et~al.}(1996)Perelson, Neumann, Markowitz, Leonard, and
+  Ho]{perelson_hiv-1_1996}
+Perelson, a.~S., Neumann, a.~U., Markowitz, M., Leonard, J.~M., and Ho, D.~D.
+  (1996).
+\newblock Hiv-1 dynamics in vivo: virion clearance rate, infected cell
+  life-span, and viral generation time.
+\newblock {\em Science {(New York, N.Y.)}\/}, {\bf 271}(5255), 1582--6.
+
+\bibitem[Richman {\em et~al.}(2003)Richman, Wrin, Little, and
+  Petropoulos]{richman_rapid_2003}
+Richman, D.~D., Wrin, T., Little, S.~J., and Petropoulos, C.~J. (2003).
+\newblock Rapid evolution of the neutralizing antibody response to {HIV} type 1
+  infection.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {\bf
+  100}(7), 4144--4149.
+
+\bibitem[Sanjuan and Borderia(2011)Sanjuan and
+  Borderia]{sanjuan_interplay_2011}
+Sanjuan, R. and Borderia, A.~V. (2011).
+\newblock Interplay between rna structure and protein evolution in hiv-1.
+\newblock {\em Molecular Biology and Evolution\/}, {\bf 28}(4), 1333--1338.
+
 \bibitem[Shankarappa {\em et~al.}(1999)Shankarappa, Margolick, Gange, Rodrigo,
   Upchurch, Farzadegan, Gupta, Rinaldo, Learn, He, {\em
   et~al.}]{shankarappa_consistent_1999}
@@ -92,6 +184,12 @@ Shankarappa, R., Margolick, J., Gange, S., Rodrigo, A., Upchurch, D.,
   of human immunodeficiency virus type 1 infection.
 \newblock {\em Journal of Virology\/}, {\bf 73}(12), 10489.
 
+\bibitem[Strelkowa and Laessig(2012)Strelkowa and
+  Laessig]{strelkowa_clonal_2012}
+Strelkowa, N. and Laessig, M. (2012).
+\newblock Clonal interference in the evolution of influenza.
+\newblock {\em Genetics\/}.
+
 \bibitem[Watts {\em et~al.}(2009)Watts, Dang, Gorelick, Leonard, Jr, Swanstrom,
   Burch, and Weeks]{watts_architecture_2009}
 Watts, J.~M., Dang, K.~K., Gorelick, R.~J., Leonard, C.~W., Jr, J. W.~B.,
@@ -99,5 +197,11 @@ Watts, J.~M., Dang, K.~K., Gorelick, R.~J., Leonard, C.~W., Jr, J. W.~B.,
 \newblock Architecture and secondary structure of an entire {HIV-1} {RNA}
   genome.
 \newblock {\em Nature\/}, {\bf 460}(7256), 711--716.
+
+\bibitem[Zanini and Neher(2012)Zanini and Neher]{zanini_ffpopsim:_2012}
+Zanini, F. and Neher, R.~A. (2012).
+\newblock {FFPopSim:} an efficient forward simulation package for the evolution
+  of large populations.
+\newblock {\em Bioinformatics\/}.
 
 \end{thebibliography}
