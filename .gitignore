@@ -1,4 +1,5 @@
 # Ignore final PDF but not figures
+*.out
 *.pdf
 !figures/*.pdf
 
