@@ -1,5 +1,18 @@
 \begin{thebibliography}{}
 
+\bibitem[Bar {\em et~al.}(2012)Bar, Tsao, Iyer, Decker, Yang, Bonsignori, Chen,
+  Hwang, Montefiori, Liao, Hraber, Fischer, Li, Wang, Sterrett, Keele, Ganusov,
+  Perelson, Korber, Georgiev, {McLellan}, Pavlicek, Gao, Haynes, Hahn, Kwong,
+  and Shaw]{bar_early_2012}
+Bar, K.~J., Tsao, C.-y., Iyer, S.~S., Decker, J.~M., Yang, Y., Bonsignori, M.,
+  Chen, X., Hwang, K.-K., Montefiori, D.~C., Liao, H.-X., Hraber, P., Fischer,
+  W., Li, H., Wang, S., Sterrett, S., Keele, B.~F., Ganusov, V.~V., Perelson,
+  A.~S., Korber, B.~T., Georgiev, I., {McLellan}, J.~S., Pavlicek, J.~W., Gao,
+  F., Haynes, B.~F., Hahn, B.~H., Kwong, P.~D., and Shaw, G.~M. (2012).
+\newblock Early low-titer neutralizing antibodies impede {HIV-1} replication
+  and select for virus escape.
+\newblock {\em {PLoS} Pathog\/}, {\bf 8}(5), e1002721.
+
 \bibitem[Barat {\em et~al.}(1991)Barat, Grice, and
   Daelix]{barat_interaction_1991}
 Barat, C., Grice, S. F. J.~L., and Daelix, J.-L. (1991).
@@ -26,16 +39,6 @@ Boltz, V.~F., Ambrose, Z., Kearney, M.~F., Shao, W., {KewalRamani}, V.~N.,
   immunodeficiency virus reverse transcriptase.
 \newblock {\em Journal of Virology\/}, {\bf 86}(23), 12525--12530.
 
-\bibitem[Brenner {\em et~al.}(2007)Brenner, Roger, Routy, Moisi, Ntemgwa,
-  Matte, Baril, Thomas, Rouleau, Bruneau, Leblanc, Legault, Tremblay, Charest,
-  and Wainberg]{brenner_high_2007}
-Brenner, B.~G., Roger, M., Routy, J.-P., Moisi, D., Ntemgwa, M., Matte, C.,
-  Baril, J.-G., Thomas, R., Rouleau, D., Bruneau, J., Leblanc, R., Legault, M.,
-  Tremblay, C., Charest, H., and Wainberg, M.~A. (2007).
-\newblock High rates of forward transmission events after acute/early hiv-1
-  infection.
-\newblock {\em Journal of Infectious Diseases\/}, {\bf 195}(7), 951--959.
-
 \bibitem[Bronson and Anderson(1994)Bronson and
   Anderson]{bronson_nucleotide_1994}
 Bronson, E.~C. and Anderson, J.~N. (1994).
@@ -58,18 +61,6 @@ Coleman, J.~R., Papamichail, D., Skiena, S., Futcher, B., Wimmer, E., and
 \newblock Virus attenuation by genome-scale changes in codon pair bias.
 \newblock {\em Science\/}, {\bf 320}(5884), 1784--1787.
 
-\bibitem[Desai and Fisher(2007)Desai and Fisher]{desai_beneficial_2007}
-Desai, M.~M. and Fisher, D.~S. (2007).
-\newblock Beneficial mutation selection balance and the effect of linkage on
-  positive selection.
-\newblock {\em Genetics\/}, {\bf 176}(3), 1759--98.
-
-\bibitem[Ewens(2004)Ewens]{ewens_mathematical_2004}
-Ewens, W.~J. (2004).
-\newblock {\em Mathematical Population Genetics: I. Theoretical
-  Introduction\/}.
-\newblock Springer.
-
 \bibitem[Fernandes {\em et~al.}(2012)Fernandes, Jayaraman, and
   Frankel]{fernandes_hiv-1_2012}
 Fernandes, J., Jayaraman, B., and Frankel, A. (2012).
@@ -83,11 +74,27 @@ Forsdyke, D. (1995).
   density in retroviral quasispecies under positive darwinian selection.
 \newblock {\em Journal of Molecular Evolution\/}, {\bf 41}(6).
 
+\bibitem[Gillespie(2000)Gillespie]{gillespie_genetic_2000}
+Gillespie, J.~H. (2000).
+\newblock Genetic drift in an infinite population. the pseudohitchhiking model.
+\newblock {\em Genetics\/}, {\bf 155}(2), 909--19.
+
 \bibitem[Jenkins and Holmes(2003)Jenkins and Holmes]{jenkins_extent_2003}
 Jenkins, G.~M. and Holmes, E.~C. (2003).
 \newblock The extent of codon usage bias in human {RNA} viruses and its
   evolutionary origin.
 \newblock {\em Virus Research\/}, {\bf 92}(1), 1--7.
+
+\bibitem[Josefsson {\em et~al.}(2011)Josefsson, King, Makitalo, Br\"annstr\"om,
+  Shao, Maldarelli, Kearney, Hu, Chen, Gaines, Mellors, Albert, Coffin, and
+  Palmer]{josefsson_majority_2011}
+Josefsson, L., King, M.~S., Makitalo, B., Br\"annstr\"om, J., Shao, W.,
+  Maldarelli, F., Kearney, M.~F., Hu, W.-S., Chen, J., Gaines, H., Mellors,
+  J.~W., Albert, J., Coffin, J.~M., and Palmer, S.~E. (2011).
+\newblock Majority of {CD4+} t cells from peripheral blood of
+  {HIV-1–infected} individuals contain only one {HIV} {DNA} molecule.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {\bf
+  108}(27), 11199--11204.
 
 \bibitem[Li {\em et~al.}(2012)Li, Kao, Gao, Sandig, Limmer, Pavon-Eternod,
   Jones, Landry, Pan, Weitzman, and David]{li_codon-usage-based_2012}
@@ -104,6 +111,20 @@ Liu, Y., {McNevin}, J., Cao, J., Zhao, H., Genowati, I., Wong, K.,
 \newblock Selection on the human immunodeficiency virus type 1 proteome
   following primary infection.
 \newblock {\em Journal of virology\/}, {\bf 80}(19), 9519.
+
+\bibitem[Mansky and Temin(1995)Mansky and Temin]{mansky_lower_1995}
+Mansky, L.~M. and Temin, H.~M. (1995).
+\newblock Lower in vivo mutation rate of human immunodeficiency virus type 1
+  than that predicted from the fidelity of purified reverse transcriptase.
+\newblock {\em Journal of virology\/}, {\bf 69}(8), 5087--5094.
+
+\bibitem[{McMichael} {\em et~al.}(2009){McMichael}, Borrow, Tomaras,
+  Goonetilleke, and Haynes]{mcmichael_immune_2009}
+{McMichael}, A.~J., Borrow, P., Tomaras, G.~D., Goonetilleke, N., and Haynes,
+  B.~F. (2009).
+\newblock The immune response during acute {HIV-1} infection: clues for vaccine
+  development.
+\newblock {\em Nature Reviews Immunology\/}, {\bf 10}(1), 11--23.
 
 \bibitem[Moore {\em et~al.}(2009)Moore, Ranchobe, Lambson, Gray, Cave,
   Abrahams, Bandawe, Mlisana, Abdool~Karim, Williamson, Morris, the {CAPRISA}
@@ -152,14 +173,6 @@ Pantaleo, G. and Fauci, A.~S. (1996).
 \newblock {\em Annual Review of Microbiology\/}, {\bf 50}(1), 825--854.
 \newblock {PMID:} 8905100.
 
-\bibitem[Perelson {\em et~al.}(1996)Perelson, Neumann, Markowitz, Leonard, and
-  Ho]{perelson_hiv-1_1996}
-Perelson, a.~S., Neumann, a.~U., Markowitz, M., Leonard, J.~M., and Ho, D.~D.
-  (1996).
-\newblock Hiv-1 dynamics in vivo: virion clearance rate, infected cell
-  life-span, and viral generation time.
-\newblock {\em Science {(New York, N.Y.)}\/}, {\bf 271}(5255), 1582--6.
-
 \bibitem[Richman {\em et~al.}(2003)Richman, Wrin, Little, and
   Petropoulos]{richman_rapid_2003}
 Richman, D.~D., Wrin, T., Little, S.~J., and Petropoulos, C.~J. (2003).
@@ -184,6 +197,12 @@ Shankarappa, R., Margolick, J., Gange, S., Rodrigo, A., Upchurch, D.,
   of human immunodeficiency virus type 1 infection.
 \newblock {\em Journal of Virology\/}, {\bf 73}(12), 10489.
 
+\bibitem[Smith and Haigh(1974)Smith and Haigh]{smith_hitch-hiking_1974}
+Smith, J.~M. and Haigh, J. (1974).
+\newblock The hitch-hiking effect of a favourable gene.
+\newblock {\em Genetical research\/}, {\bf 23}(1), 23--35.
+\newblock {PMID:} 4407212.
+
 \bibitem[Strelkowa and Laessig(2012)Strelkowa and
   Laessig]{strelkowa_clonal_2012}
 Strelkowa, N. and Laessig, M. (2012).
@@ -197,6 +216,12 @@ Watts, J.~M., Dang, K.~K., Gorelick, R.~J., Leonard, C.~W., Jr, J. W.~B.,
 \newblock Architecture and secondary structure of an entire {HIV-1} {RNA}
   genome.
 \newblock {\em Nature\/}, {\bf 460}(7256), 711--716.
+
+\bibitem[Williamson(2003)Williamson]{williamson_adaptation_2003}
+Williamson, S. (2003).
+\newblock Adaptation in the env gene of {HIV-1} and evolutionary theories of
+  disease progression.
+\newblock {\em Molecular biology and evolution\/}, {\bf 20}(8), 1318--25.
 
 \bibitem[Zanini and Neher(2012)Zanini and Neher]{zanini_ffpopsim:_2012}
 Zanini, F. and Neher, R.~A. (2012).
