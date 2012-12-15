@@ -3,46 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: synmut.aux
 The style file: natbib.bst
 Database file #1: bib.bib
-Warning--I didn't find a database entry for "smth"
-You've used 30 entries,
+You've used 33 entries,
             2378 wiz_defined-function locations,
-            713 strings with 11764 characters,
-and the built_in function-call counts, 17074 in all, are:
-= -- 1472
-> -- 1299
-< -- 13
-+ -- 403
-- -- 395
-* -- 1773
-:= -- 3054
-add.period$ -- 143
-call.type$ -- 30
-change.case$ -- 190
-chr.to.int$ -- 30
-cite$ -- 30
-duplicate$ -- 578
-empty$ -- 970
-format.name$ -- 445
-if$ -- 3261
+            729 strings with 12191 characters,
+and the built_in function-call counts, 18521 in all, are:
+= -- 1620
+> -- 1371
+< -- 15
++ -- 423
+- -- 415
+* -- 1909
+:= -- 3299
+add.period$ -- 156
+call.type$ -- 33
+change.case$ -- 210
+chr.to.int$ -- 33
+cite$ -- 33
+duplicate$ -- 634
+empty$ -- 1066
+format.name$ -- 472
+if$ -- 3549
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 30
-newline$ -- 155
-num.names$ -- 120
-pop$ -- 171
+missing$ -- 33
+newline$ -- 170
+num.names$ -- 132
+pop$ -- 187
 preamble$ -- 1
-purify$ -- 190
+purify$ -- 210
 quote$ -- 0
-skip$ -- 382
+skip$ -- 422
 stack$ -- 0
-substring$ -- 1032
-swap$ -- 108
+substring$ -- 1131
+swap$ -- 118
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 270
+type$ -- 297
 warning$ -- 0
-while$ -- 135
+while$ -- 149
 width$ -- 0
-write$ -- 393
-(There was 1 warning)
+write$ -- 432

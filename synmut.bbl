@@ -61,6 +61,12 @@ Coleman, J.~R., Papamichail, D., Skiena, S., Futcher, B., Wimmer, E., and
 \newblock Virus attenuation by genome-scale changes in codon pair bias.
 \newblock {\em Science\/}, {\bf 320}(5884), 1784--1787.
 
+\bibitem[Desai and Fisher(2007)Desai and Fisher]{desai_beneficial_2007}
+Desai, M.~M. and Fisher, D.~S. (2007).
+\newblock Beneficial mutation selection balance and the effect of linkage on
+  positive selection.
+\newblock {\em Genetics\/}, {\bf 176}(3), 1759--98.
+
 \bibitem[Fernandes {\em et~al.}(2012)Fernandes, Jayaraman, and
   Frankel]{fernandes_hiv-1_2012}
 Fernandes, J., Jayaraman, B., and Frankel, A. (2012).
@@ -144,6 +150,11 @@ Neher, R. and Leitner, T. (2010).
   evolution.
 \newblock {\em {PLoS} Comput Biol\/}, {\bf 6}(1), e1000660.
 
+\bibitem[Neher {\em et~al.}(2010)Neher, Shraiman, and Fisher]{neher_rate_2010}
+Neher, R., Shraiman, B., and Fisher, D. (2010).
+\newblock Rate of adaptation in large sexual populations.
+\newblock {\em Genetics\/}, {\bf 184}(2), 467.
+
 \bibitem[Neher and Shraiman(2011)Neher and Shraiman]{neher_genetic_2011}
 Neher, R.~A. and Shraiman, B. (2011).
 \newblock Genetic draft and quasi-neutrality in large facultatively sexual
@@ -222,6 +233,11 @@ Williamson, S. (2003).
 \newblock Adaptation in the env gene of {HIV-1} and evolutionary theories of
   disease progression.
 \newblock {\em Molecular biology and evolution\/}, {\bf 20}(8), 1318--25.
+
+\bibitem[Yang and Bielawski(2000)Yang and Bielawski]{yang_statistical_2000}
+Yang, Z. and Bielawski, J.~P. (2000).
+\newblock Statistical methods for detecting molecular adaptation.
+\newblock {\em Trends in Ecology \& Evolution\/}, {\bf 15}(12), 496--503.
 
 \bibitem[Zanini and Neher(2012)Zanini and Neher]{zanini_ffpopsim:_2012}
 Zanini, F. and Neher, R.~A. (2012).
