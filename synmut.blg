@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: synmut.aux
 The style file: natbib.bst
 Database file #1: bib.bib
-You've used 33 entries,
+You've used 35 entries,
             2378 wiz_defined-function locations,
-            729 strings with 12191 characters,
-and the built_in function-call counts, 18521 in all, are:
-= -- 1620
-> -- 1371
-< -- 15
-+ -- 423
-- -- 415
-* -- 1909
-:= -- 3299
-add.period$ -- 156
-call.type$ -- 33
-change.case$ -- 210
-chr.to.int$ -- 33
-cite$ -- 33
-duplicate$ -- 634
-empty$ -- 1066
-format.name$ -- 472
-if$ -- 3549
+            740 strings with 12677 characters,
+and the built_in function-call counts, 19568 in all, are:
+= -- 1706
+> -- 1452
+< -- 16
++ -- 448
+- -- 440
+* -- 2012
+:= -- 3492
+add.period$ -- 165
+call.type$ -- 35
+change.case$ -- 221
+chr.to.int$ -- 35
+cite$ -- 35
+duplicate$ -- 671
+empty$ -- 1127
+format.name$ -- 499
+if$ -- 3748
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 33
-newline$ -- 170
-num.names$ -- 132
-pop$ -- 187
+missing$ -- 36
+newline$ -- 180
+num.names$ -- 140
+pop$ -- 202
 preamble$ -- 1
-purify$ -- 210
+purify$ -- 222
 quote$ -- 0
-skip$ -- 422
+skip$ -- 445
 stack$ -- 0
-substring$ -- 1131
-swap$ -- 118
+substring$ -- 1189
+swap$ -- 124
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 297
+type$ -- 312
 warning$ -- 0
-while$ -- 149
+while$ -- 157
 width$ -- 0
-write$ -- 432
+write$ -- 457

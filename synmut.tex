@@ -465,7 +465,73 @@ recombine if rarely, hence clonal interference as studied in
 ref.~\citep{strelkowa_clonal_2012} is only a short-term effect.
 
 \section{Methods}
-\comment{to be written\dots}
+\subsection{Sequence data collection}
+Longitudinal intrapatient viral RNA sequences were collected for published
+studies~\citep{shankarappa_consistent_1999,
+liu_selection_2006, bunnik_autologous_2008} and downloaded from the Los Alamos
+National Laboratory (LANL) HIV sequence database~\citep{LANL2012}. The sequences from
+some patients showed signs of HIV compartimentalization into subpopulations and
+were discarded; a grand total of 11
+patients with approximately 6 time points each and 10 sequences per time point
+were analyzed. The time interval or resolution between two ocnsecutive sequences
+was approximately 6 to 18 months.
+
+\subsection{Sequence analisys}
+The good sequences were aligned within each patient
+via the translated amino acid sequence, using
+Muscle~\citep{edgar_muscle:_2004}, and to the NL4-3 reference sequence probed
+by \citet{watts_architecture_2009}. Within each patient, a consensus RNA
+sequence at the first time point was used to classify alleles as ancestral or
+derived at all sites. Problematic sites that included large frequencies of gaps
+were excluded from the analysis, because variable regions are known to be
+subject to frequent indels, while our analysis is limited to nucleotide
+substitutions. Time series of allele frequencies were extracted from the
+sequences.
+
+The synonymity of a mutation was assigned if the rest of the codon was
+in the ancestral state and using the standard genetic code. Cases where more
+than one mutation within the codon was observed were discarded. Slightly
+different criteria for synonymous/nonsynonymous discrimination yielded similar
+results.
+
+\subsection{Fixation probability and secondary structure}
+For the estimate of times to fixation/extinction, polymorphisms were
+binned by frequency and the time to reaching the first boundary (fixation or
+extinction) was stored. For the fixation probability, the long-time limit of the
+resulting curves was used, excluding polymorphisms that arose late in the
+clinical history (and would have had no time to reach either boundary).
+
+For the correlation analysis with RNA secondary structure, the SHAPE scores were
+downloaded from the journal website~\citep{watts_architecture_2009}. By virtue
+of the alignment of the longitudinal sequences with the reference used by
+\citet{watts_architecture_2009}, SHAPE reactivities were assigned to most sites.
+Problematic assignments in indel-rich regions were excluded from the analysis.
+In order to restrict the analysis to synonymous polymorphisms, a lower frequency
+threshold of 0.15 was used (other thresholds yielded the same results). Since
+very few polymorphisms hitchhike beyond, say, a frequency of 0.5, this pool is
+enriched for to-be-lost mutations; hence the "lost" curve in \FIG{SHAPEA}
+contains much more points than the "fixed" one.
+
+The V loops and flanking regions were identified manually starting from the
+annotated reference HXB2 sequence from the LANL HIV database~\citep{LANL2012}. A
+similar approach was used to label the C2-V5 region sequenced in
+ref.~\citep{shankarappa_consistent_1999}.
+
+\subsection{Computer simulations}
+Simulations were performed using the recently published software
+FFPopSim~\citep{zanini_ffpopsim:_2012}. Both full-length HIV genomes and
+\env{}-only simulations were performed and yielded comparable results. For each
+set of parameters, approximately 100 simulation runs were averaged over. In each
+run, a random fitness landscape with specified statistical properties (e.g.
+density of beneficial sites, average deleterious effect of synonymous changes) was generated.
+Although the curves shown in \FIG{simfixpvar} are not very smooth, small
+parameter changes resulted in overall consistent trends across many repetitions.
+
+For the discussion of simulation parameters, the areas below or above the neutral
+diagonal were estimated from the binned fixation probabilities using the linear
+interpolation between the bin centers. This measure is sufficiently precise for
+our purposes, because the HIV data are quite scarse themselves.
+
 \section*{Acknowledgements}
 \comment{to be written\dots}
 
