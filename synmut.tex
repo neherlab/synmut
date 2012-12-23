@@ -5,6 +5,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\Author}{Fabio~Zanini and Richard~A.~Neher}
+\newcommand{\env}{\textit{env}}
+
 \newcommand{\Title}{Deleterious synonymous mutations hitchhike to high frequency in HIV \env~evolution}
 \newcommand{\Keywords}{{HIV}, {synonymous}, {population genetics}}
 \usepackage[english]{babel}
@@ -31,10 +33,10 @@
 \newcommand{\locus}{s}
 \newcommand{\locuspm}{t}
 \newcommand{\OO}{\mathcal{O}}
-\newcommand{\env}{\textit{env}}
 \newcommand{\rev}{\textit{rev}}
 \newcommand{\FIG}[1]{Fig.~\ref{fig:#1}}
 \newcommand{\FIGS}[2]{Figs.~\ref{fig:#1} and~\ref{fig:#2}}
+\newcommand{\shankaregion{C2-C5}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -46,21 +48,20 @@
 
 \begin{abstract}
 \noindent
-Intrapatient HIV evolution is goverened by selection on the protein level in the
+Intrapatient HIV evolution is governed by selection on the protein level in the
 arms race with the immune system (killer T-cells and antibodies). Synonymous
 mutations do not have an immunity-related phenotype and are often assumed to be
 neutral. In this paper, we show that synonymous changes in epitope-rich regions
-are often deleterious but still reach frequencies of order one.  We analyze time
-series of viral sequences from the V1-C5 part of {\it env} within individual
+are often deleterious but still reach high frequencies.  We analyze time
+series of viral sequences from the \shankaregion~part of {\it env} within individual
 hosts and observe that synonymous derived alleles rarely fix in the
 viral population. Simulations suggest that such synonymous mutations
-have a (Malthisuan) selection coefficient of the order of $-0.001$, and that
-they are brought up to high frequency by linkage to neighbouring beneficial
-nonsynonymous alleles (genetic draft). As far as the biological causes are
-concerned, we detect a negative correlation between fixation of an allele and
-its involvement in evolutionarily conserved RNA stem-loop structures.
-This phenonenon is not observed in other parts of the HIV genome, in which
-selective sweeps are less dense and the genetic architecture less constrained.
+have a (Malthusian) selection coefficient of the order of $-0.001$, and that
+they are brought up to high frequency by hitchhiking with neighboring beneficial
+nonsynonymous alleles. We detect a negative correlation between fixation of an allele and
+its involvement in RNA stem-loop structures.
+Deleterious synonymous mutations are observed in other parts of the HIV genome, in which
+selective sweeps are less dense and hitch-hiking not as strong.
 \end{abstract}
 
 
@@ -78,7 +79,7 @@ targeted by CTLs typically evolve during early infection and spread rapidly thro
 the population~\citep{mcmichael_immune_2009}. During chronic infection, the most
 rapidly evolving part of the HIV genome are the so called variable loops of the
 envelope protein gp120, which need to avoid recognition by neutralizing ABs.
-Mutations in \env~, the gene encoding for gp120, spread through the population
+Mutations in \env, the gene encoding for gp120, spread through the population
 within a few months (see \figurename~\ref{fig:aft}, solid lines).
 The (Malthusian) effect size of these beneficial mutations is of the
 order of $s_a \sim 0.01$~\citep{neher_recombination_2010}.
@@ -92,32 +93,28 @@ The viral genome, however, needs to satisfy further constraints in addition to
 immune escape, such as efficient processing and translation, nuclear export, and
 packaging into the viral capsid: all these processes operate at the RNA level
 and are sensitive to synonymous changes. A
-few functionally important RNA elements are well characterized. For example, a certain RNA
+few functionally important RNA elements are well characterized and show substantially 
+less synonymous variation across the HIV population (see Fig.~S1). For example, a certain RNA
 sequence, called \rev{} response element (RRE), is used by HIV to enhance
 nuclear export of some of its transcripts~\citep{fernandes_hiv-1_2012}. Another
 well studied case is the interaction between viral reverse transcriptase, viral
 ssRNA, and the host tRNA$^\text{Lys3}$: the latter is required for priming
-reverse transcription (RT) and bound by a specifical pseudoknotted RNA structure
+reverse transcription (RT) and bound by a pseudoknotted RNA structure
 in the viral 5' untranslated region~\citep{barat_interaction_1991,
 paillart_vitro_2002}. Furthermore, recent studies have shown that genetically
 engineered HIV strains with skewed codon usage bias (CUB) patterns towards more
 or less abundant tRNAs replicate better or worse,
 respectively~\citep{ngumbela_quantitative_2008, li_codon-usage-based_2012}.
+Similarly, influenza can be dramatically attenuated by reducing its translation efficiency \citep{pseudo_vaccine}.
 Purifying selection beyond the protein sequence is therefore expected, while it
 seems reasonable that the bulk of positive selection through the immune system
-should be restricted to amino acid sequences.
-
-INFLUENZA PSEUDO VACCINE.
-
-%SYNONYMOUS CONSERVATION. DO WE HAVE A PLOT OF GENOME WIDE CONSERVATION, MAYBE
-%FOR SUPPLEMENT? YES
+should be restricted to amino acid sequences. 
 
 Here, we characterize the dynamics of synonymous mutations in \env{} and show
 that a substantial fraction of these mutations are deleterious. We further show
 that, although such synonymous mutations cannot be used as neutral markers, the
 degree to which they hitchhike with nearby nonsynonymous mutations is very
-informative. Their ability to hitchhike for extended times, which is a core
-requirement for our analysis, is rooted in the small recombination rate of
+informative. Their ability to hitchhike for extended times is rooted in the small recombination rate of
 HIV~\citep{neher_recombination_2010, batorsky_estimate_2011}. Extending the
 analysis of fixation probabilities to the nonsynonymous mutations, we show that
 time dependent selection or strong competition of escape mutations inside the
@@ -153,7 +150,7 @@ calculate the fraction that is found at frequency 1, at frequency 0, or at
 intermediate frequency at later times $t_f$. Plotting these fixed, lost, and
 polymorphic fraction against the time interval $t_f-t_i$, we see that most
 synonymous mutations segregate for roughly one year and are lost much more
-frequently than expected. The long-time probability of fixation versus
+frequently than expected if they were neutral. The long-time probability of fixation versus
 extinction is shown as a function of the initial frequency $\nu_0$ in
 panel~\ref{fig:fixp2}. In contrast to synonymous mutations, the nonsynonymous
 seem to follow more a less the neutral expectation -- a point to which we will
@@ -189,7 +186,9 @@ synonymous mutations behave as if they were neutral; see \FIG{fixp}.
 
 These observations suggest that many of the synonymous polymorphisms in the part
 of \env~that includes the hypervariable regions are deleterious, while outside
-this regions polymorphisms are mostly roughly neutral.
+this regions polymorphisms are mostly roughly neutral. Note that this does not imply that all 
+synonymous mutations are neutral -- only those mutations observed at high frequencies tend 
+to be neutral.
 
 \begin{figure}
 \begin{center}
@@ -214,12 +213,8 @@ One possible {\it a priori} explanation for lack of fixation of synonymous
 mutations in C2-V5 are  secondary structures in the viral RNA. If any RNA
 secondary structures are relevant for HIV replication, mutations in nucleotides
 involved in those base pairs are expected to be deleterious and to revert
-preferentially. Many functionally important secondary structure elements have
-been characterized, including  the RRE~\citep{fernandes_hiv-1_2012} the
-5' UTR pseudoknot interacting with thehost tRNA$^\text{Lys3}$~\citep{barat_interaction_1991,
-paillart_vitro_2002}. It has been suggested early on that parts of the viral
-genome that has the potential to form stems is better conserved that the
-remainder~\citep{forsdyke_reciprocal_1995}.
+preferentially. Indeed, synonymous variation across the HIV population is variable, 
+suggesting purifying selection beyond the protein coding level.
 
 Recently, the propensity of nucleotides of the HIV genome to form base pairs has
 been measured using the SHAPE assay (a biochemical reaction preferentially
