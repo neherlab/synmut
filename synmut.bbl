@@ -67,6 +67,12 @@ Desai, M.~M. and Fisher, D.~S. (2007).
   positive selection.
 \newblock {\em Genetics\/}, {\bf 176}(3), 1759--98.
 
+\bibitem[Edgar(2004)Edgar]{edgar_muscle:_2004}
+Edgar, R.~C. (2004).
+\newblock {MUSCLE:} multiple sequence alignment with high accuracy and high
+  throughput.
+\newblock {\em Nucleic Acids Research\/}, {\bf 32}(5), 1792--1797.
+
 \bibitem[Fernandes {\em et~al.}(2012)Fernandes, Jayaraman, and
   Frankel]{fernandes_hiv-1_2012}
 Fernandes, J., Jayaraman, B., and Frankel, A. (2012).
@@ -101,6 +107,14 @@ Josefsson, L., King, M.~S., Makitalo, B., Br\"annstr\"om, J., Shao, W.,
   {HIV-1–infected} individuals contain only one {HIV} {DNA} molecule.
 \newblock {\em Proceedings of the National Academy of Sciences\/}, {\bf
   108}(27), 11199--11204.
+
+\bibitem[Kuiken {\em et~al.}(2012)Kuiken, Leitner, Hahn, Mullins, Wolinsky,
+  Foley, Apetrei, Mizrachi, Rambaut, and Korber]{LANL2012}
+Kuiken, C., Leitner, T., Hahn, B., Mullins, J., Wolinsky, S., Foley, B.,
+  Apetrei, C., Mizrachi, I., Rambaut, A., and Korber, B. (2012).
+\newblock {\em HIV Sequence Compendium 2012\/}.
+\newblock Theoretical Biology and Biophysics Group T-6, Mail Stop K710 Los
+  Alamos National Laboratory Los Alamos, New Mexico 87545 U.S.A.
 
 \bibitem[Li {\em et~al.}(2012)Li, Kao, Gao, Sandig, Limmer, Pavon-Eternod,
   Jones, Landry, Pan, Weitzman, and David]{li_codon-usage-based_2012}
@@ -143,6 +157,14 @@ Moore, P.~L., Ranchobe, N., Lambson, B.~E., Gray, E.~S., Cave, E., Abrahams,
 \newblock Limited neutralizing antibody specificities drive neutralization
   escape in early hiv-1 subtype c infection.
 \newblock {\em PLoS Pathog\/}, {\bf 5}(9), e1000598.
+
+\bibitem[Mueller {\em et~al.}(2010)Mueller, Coleman, Papamichail, Ward,
+  Nimnual, Futcher, Skiena, and Wimmer]{mueller_live_2010}
+Mueller, S., Coleman, J.~R., Papamichail, D., Ward, C.~B., Nimnual, A.,
+  Futcher, B., Skiena, S., and Wimmer, E. (2010).
+\newblock Live attenuated influenza virus vaccines by computer-aided rational
+  design.
+\newblock {\em Nature Biotechnology\/}, {\bf 28}(7), 723--726.
 
 \bibitem[Neher and Leitner(2010)Neher and Leitner]{neher_recombination_2010}
 Neher, R. and Leitner, T. (2010).
