@@ -4,11 +4,6 @@
 \documentclass[rmp, twocolumn]{revtex4}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\Author}{Fabio~Zanini and Richard~A.~Neher}
-\newcommand{\env}{\textit{env}}
-
-\newcommand{\Title}{Deleterious synonymous mutations hitchhike to high frequency in HIV \env~evolution}
-\newcommand{\Keywords}{{HIV}, {synonymous}, {population genetics}}
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage{amsmath,amsfonts,amssymb,eucal,eurosym,textcomp}
@@ -18,11 +13,9 @@
 \usepackage{natbib}
 \usepackage{pslatex}
 \usepackage[colorlinks,linkcolor=red,citecolor=red]{hyperref}
-\hypersetup{pdfauthor={\Author}, pdftitle={\Title}, pdfkeywords={\Keywords}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \graphicspath{{./figures/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\DeclareMathOperator\de{d\!}
 \newcommand{\comment}[1]{\textit{\textcolor{red}{#1}}}
 \newcommand{\mut}{\mu}
 \newcommand{\mfit}{\langle F\rangle}
@@ -36,9 +29,13 @@
 \newcommand{\rev}{\textit{rev}}
 \newcommand{\FIG}[1]{Fig.~\ref{fig:#1}}
 \newcommand{\FIGS}[2]{Figs.~\ref{fig:#1} and~\ref{fig:#2}}
+\newcommand{\env}{\textit{env}}
 \newcommand{\shankaregion}{C2-C5}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Author}{Fabio~Zanini and Richard~A.~Neher}
+\newcommand{\Title}{Deleterious synonymous mutations hitchhike to high frequency in HIV \env~evolution}
+\newcommand{\Keywords}{{HIV}, {synonymous}, {population genetics}}
+\hypersetup{pdfauthor={\Author}, pdftitle={\Title}, pdfkeywords={\Keywords}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \title{\Title}
@@ -57,10 +54,10 @@ series of viral sequences from the \shankaregion~part of {\it env} within indivi
 hosts and observe that synonymous derived alleles rarely fix in the
 viral population. Simulations suggest that such synonymous mutations
 have a (Malthusian) selection coefficient of the order of $-0.001$, and that
-they are brought up to high frequency by hitchhiking with neighboring beneficial
+they are brought up to high frequency by hitchhiking on neighboring beneficial
 nonsynonymous alleles. We detect a negative correlation between fixation of an allele and
 its involvement in RNA stem-loop structures.
-Deleterious synonymous mutations are observed in other parts of the HIV genome, in which
+Deleterious synonymous mutations are not observed as abundantly in other parts of the HIV genome, in which
 selective sweeps are less dense and hitch-hiking not as strong.
 
 \end{abstract}
