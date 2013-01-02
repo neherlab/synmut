@@ -5,6 +5,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\Author}{Fabio~Zanini and Richard~A.~Neher}
+\newcommand{\env}{\textit{env}}
+
 \newcommand{\Title}{Deleterious synonymous mutations hitchhike to high frequency in HIV \env~evolution}
 \newcommand{\Keywords}{{HIV}, {synonymous}, {population genetics}}
 \usepackage[english]{babel}
@@ -31,10 +33,10 @@
 \newcommand{\locus}{s}
 \newcommand{\locuspm}{t}
 \newcommand{\OO}{\mathcal{O}}
-\newcommand{\env}{\textit{env}}
 \newcommand{\rev}{\textit{rev}}
 \newcommand{\FIG}[1]{Fig.~\ref{fig:#1}}
 \newcommand{\FIGS}[2]{Figs.~\ref{fig:#1} and~\ref{fig:#2}}
+\newcommand{\shankaregion}{C2-C5}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -46,24 +48,20 @@
 
 \begin{abstract}
 \noindent
-
-Intrapatient HIV evolution is goverened by selection on the protein level in
-the arms race with the immune system (killer T-cells and antibodies).
-Synonymous mutations do not have an immunity-related phenotype and are often
-assumed to be neutral. In this paper, we show that synonymous changes in
-epitope-rich regions are often deleterious but reach frequencies of order one
-via genetic hitchhiking.  We analyze time series of viral sequences from the
-V1-C5 part of {\it env}, the envelope gene, within individual hosts and observe
-that synonymous derived alleles fix in the viral population much less
-frequently than expected from neutral models. Instead, synonymous changes tend
-to revert on a time scale of two years, suggesting a selection coefficient of the
-order of $-1~$\textperthousand. Extensive computer simulations support these
-findings quantitatively. We explore possible biological causes and detect a
-negative correlation between fixation of an allele and its involvement in
-secondary RNA stem-loop structures, indicating that such structures are
-functionally relevant for HIV replication {\it in vivo}. This phenonenon is not
-observed in other parts of the HIV genome, in which selective sweeps are less
-dense and the genetic architecture less constrained.
+Intrapatient HIV evolution is governed by selection on the protein level in the
+arms race with the immune system (killer T-cells and antibodies). Synonymous
+mutations do not have an immunity-related phenotype and are often assumed to be
+neutral. In this paper, we show that synonymous changes in epitope-rich regions
+are often deleterious but still reach high frequencies.  We analyze time
+series of viral sequences from the \shankaregion~part of {\it env} within individual
+hosts and observe that synonymous derived alleles rarely fix in the
+viral population. Simulations suggest that such synonymous mutations
+have a (Malthusian) selection coefficient of the order of $-0.001$, and that
+they are brought up to high frequency by hitchhiking with neighboring beneficial
+nonsynonymous alleles. We detect a negative correlation between fixation of an allele and
+its involvement in RNA stem-loop structures.
+Deleterious synonymous mutations are observed in other parts of the HIV genome, in which
+selective sweeps are less dense and hitch-hiking not as strong.
 
 \end{abstract}
 \maketitle
@@ -194,7 +192,9 @@ as if they were neutral (orange line).
 
 These observations suggest that many of the synonymous polymorphisms in the part
 of \env~that includes the hypervariable regions are deleterious, while outside
-this regions polymorphisms are mostly roughly neutral.
+this regions polymorphisms are mostly roughly neutral. Note that this does not imply that all 
+synonymous mutations are neutral -- only those mutations observed at high frequencies tend 
+to be neutral.
 
 \begin{figure}
 \begin{center}
