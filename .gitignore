@@ -30,6 +30,7 @@ tramp
 
 *.pydevproject
 .project
+.texlipse
 .metadata
 bin/**
 tmp/**
