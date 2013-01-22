@@ -318,7 +318,7 @@ deleterious effect of the mutation, this corresponds to deleterious effects of
 roughly $s_d \sim - 0.002$ per day.
 
 To get a better idea of the range of parameters that are compatible with the
-observations and our interpretation, we  perform computer simulations of
+observations and our interpretation, we perform computer simulations of
 evolving viral populations under selection and rare recombination. For this
 purpose, we use the recently published package FFPopSim, which includes a module
 dedicated to intrapatient HIV evolution~\citep{zanini_ffpopsim:_2012}. We
@@ -340,8 +340,8 @@ measured fixation probability and calculate its area (see inset of
 correspond to an area under the diagonal of approximately 0.2 for synonymous
 changes, and a very small area over the diagonal for nonsynonymous changes.
 Various simulation curves are shown in \FIG{simfixpvar}. Then, in
-\FIGS{simheat1}{simheat2}, we explore the parameter space: the combinations that
-yield areas close to the experimental result are roughly indicated by ellipses.
+\FIG{simsfig}, we explore the parameter space: the combinations that
+yield areas close to the experimental result are shown.
 The two crucial parameters that control the fixation probability are the
 following: (a) the deleterious effects of hitchhikers compared to the beneficial
 effects of escape mutants, and (b) the density of escape mutations. Intuitively,
@@ -352,23 +352,21 @@ case in simulations.
 
 \begin{figure}
 \begin{center}
-\subfloat{\includegraphics[width=0.9\linewidth]{fixation_loss_shortgenome_distance_ada_frac_del_eff_coi_various.pdf}
+\subfloat{\includegraphics[width=\linewidth]{simulations_graduallydel.pdf}
 \label{fig:simfixpvar}}\\
-\subfloat{\includegraphics[width=0.9\linewidth]{fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescepi_6_heat.pdf}
-\label{fig:simheat1}}\\
-\subfloat{\includegraphics[width=0.9\linewidth]{fixation_loss_shortgenome_area_ada_frac_del_eff_coi_0_01_nescepi_6_nonsyn_heat.pdf}
-\label{fig:simheat2}}
-\caption{\comment{USE A GOOD FIG WITH THE CORRECT $s_a$!} The depression in $P_\text{fix}$ depends on the deleterious effect size
- of the synonymous alleles (panel A). Simulations on the escape competition
- scenario show that the density of selective sweeps and the size of the
- deleterious effects of synonymous mutations are the main driving forces of the
- phenomenon. A convex fixation probability is recovered, as seen in the data,
- along the diagonal (panel B): more dense sweeps can support more deleterious
- linked mutations. The density of sweeps is limited, however, by the
- nonsynonymous fixation probability, which is quite close to neutrality (panel
- C). Moreover, strong competition between escape mutants is required, so that
- several escape mutants are ``found'' by HIV within a few months of antibody
-production.}
+\subfloat{\includegraphics[width=\linewidth]{simulations_syn.pdf}
+\label{fig:simsfig}}
+\caption{(Panel A) The depression in $P_\text{fix}$ depends on the deleterious
+effect size of the synonymous alleles. This parameter also reduces synonymous
+diversity (first inset). The depression found in HIV data is about 0.2.
+(Panel B) To assess the parameter space that affects synonymous fixation and
+diversity, we run many simulations with random parameters for deleterious effect
+size, fraction of deleterious synonymous sites, average size of escape
+mutations (color, blue ($10^{-2.5}$) to red ($10^{-1.5}$)), and rate of
+introduction of new epitopes (marker size, from $10^{-3}$ to $10^{-2}$ per
+generation). Mostly simulations with small deleterious effects and relatively
+high deleterious fractions of synonymous mutations reproduce synonymous HIV-like
+fixation probability and diversity.}
 \label{fig:simheat}
 \end{center}
 \end{figure}
