@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -4837,43 +4837,6 @@
          style="stroke-linecap:square;stroke-linejoin:round" />
     </clipPath>
   </defs>
-  <g
-     id="g26910"
-     transform="matrix(1.0054475,0,0,1.0054475,-101.78101,105.21875)"
-     style="stroke-linecap:square;stroke-linejoin:round">
-    <path
-       d="m 174.11792,42.25624 116.15182,0 0,77.92446 -116.15182,0 0,-77.92446 z"
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="path24799"
-       inkscape:connector-curvature="0" />
-    <path
-       d="m 174.11792,119.96924 116.15182,-77.713"
-       style="fill:none;stroke:#000000;stroke-width:0.994582;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:5.96749209, 5.96749209;stroke-dashoffset:0"
-       id="path24789"
-       inkscape:connector-curvature="0" />
-    <path
-       d="m 174.82738,119.96924 c 84.81641,0 92.6099,-61.775722 92.6099,-61.775722"
-       style="fill:#008000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="path24791"
-       inkscape:connector-curvature="0" />
-    <path
-       d="M 231.90166,88.854175 214.12012,60.161263"
-       style="fill:none;stroke:#000000;stroke-width:1.48026133;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="path24793"
-       inkscape:connector-curvature="0" />
-    <text
-       y="53.582504"
-       x="177.70415"
-       id="text24795"
-       style="font-size:9.6853714px;stroke-linecap:square;stroke-linejoin:round">
-      <tspan
-         style="font-size:11.10196114px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:BitstreamVeraSans-Roman"
-         x="177.70415 186.0417 189.30571 196.89944 200.38544 207.17986 211.50963 218.33733 225.13171 228.65105 237.91008 241.4294 248.49025"
-         y="53.582504"
-         sodipodi:role="line"
-         id="tspan24797">HIV area = 0.2</tspan>
-    </text>
-  </g>
   <path
      style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.4000001;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;marker-end:url(#Arrow1Lend);visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
      d="m 305.38983,156.55085 0,113.82542"
@@ -4930,4 +4893,45 @@
        id="tspan32175"
        x="11.99322"
        y="23.077984">A</tspan></text>
+  <g
+     id="g18232"
+     transform="matrix(1.0291548,0,0,1.0291548,-2.1219628,-4.291654)"
+     style="stroke-linecap:square;stroke-linejoin:round">
+    <g
+       style="stroke-linecap:square;stroke-linejoin:round"
+       transform="matrix(1.0054475,0,0,1.0054475,-101.78101,105.21875)"
+       id="g26910">
+      <path
+         inkscape:connector-curvature="0"
+         id="path24799"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 174.11792,42.25624 116.15182,0 0,77.92446 -116.15182,0 0,-77.92446 z" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path24789"
+         style="fill:none;stroke:#000000;stroke-width:0.994582;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:5.96749209, 5.96749209;stroke-dashoffset:0"
+         d="m 174.11792,119.96924 116.15182,-77.713" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path24791"
+         style="fill:#008000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m 174.82738,119.96924 c 84.81641,0 92.6099,-61.775722 92.6099,-61.775722" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path24793"
+         style="fill:none;stroke:#000000;stroke-width:1.48026133;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="M 231.90166,88.854175 214.12012,60.161263" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text18228"
+       y="158.9222"
+       x="74.434189"
+       style="font-size:11.92152405px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="158.9222"
+         x="74.434189"
+         id="tspan18230"
+         sodipodi:role="line">HIV area = -0.2</tspan></text>
+  </g>
 </svg>
