@@ -334,15 +334,14 @@ roughly $s_d \sim - 0.002$ per day.
 \label{fig:simfixpvar}}\\
 \subfloat{\includegraphics[width=\linewidth]{simulations_syn.pdf}
 \label{fig:simsfig}}
-\caption{Evolutionary parameters compatible with observations.
-Panel A) The depression in $P_\text{fix}$ depends on the deleterious
-effect size of the synonymous alleles (in HIV data is about $-0.2$).
-Increasing this parameter also reduces synonymous
-diversity, measured by the number of mutations at frequencies $0.25 < \nu < 0.75$,
-normalized by the number of possible mutations (first inset).
-Panel B) To assess the parameter space compatible with observations, we run many
-simulations with random parameters for deleterious effect size, fraction of
-deleterious synonymous sites, average size of escape mutations (color, blue ($10^{-2.5}$) to red ($10^{-1.5}$)), and rate of
+\caption{(Panel A) The depression in $P_\text{fix}$ depends on the deleterious
+effect size of the synonymous alleles. This parameter also reduces synonymous
+diversity, measured by probability of a derived allele to be found at
+intermediate frequencies $P_\text{interm}$ (first inset).
+(Panel B) To assess the parameter space that affects synonymous fixation and
+diversity, we run many simulations with random parameters for deleterious effect
+size, fraction of deleterious synonymous sites, average size of escape
+mutations (color, blue ($10^{-2.5}$) to red ($10^{-1.5}$)), and rate of
 introduction of new epitopes (marker size, from $10^{-3}$ to $10^{-2}$ per
 generation). Mostly simulations with small deleterious effects and relatively
 high deleterious fractions of synonymous mutations reproduce synonymous HIV-like
@@ -364,37 +363,42 @@ The first result of the simulations is that genetic draft can indeed bring weakl
 deleterious mutations to high frequencies and results in a dependence of the
 fixation probability on initial frequency that is compatible with observations
 (see \FIG{simfixpvar}).
-The fixation probability of synonymous alleles decreases from the neutral
-expectation to zero as their deleterious effect increases
-(\FIG{simfixpvar}, from $-0.0003$ in blue to $-0.003$ in red). Along with the
-reduction in fixation probability, the number of alleles that reach high
-frequencies, which is a proxy for synonymous diversity, is reduced as well (\FIG{simfixpvar}, top inset).
-
 To assess the reduction in fixation probability quantitatively, we calculate
 the area between the measured fixation probability and the diagonal, which is
 the neutral expectation (\FIG{simfixpvar}, lower inset). This area spans a range
 between $-0.5$ (no fixation at all), zero (neutral-like curve), and $+0.5$ (always
-fixed). The HIV data correspond to an area of approximately $-0.2$ for synonymous
-changes, and essentially zero for nonsynonymous changes.
+fixed). Furthermore, we quantify synonymous diversity via the probability
+$P_\text{interm}$ of a synonymous derived allele to be at intermediate frequencies
+$0.25 < \nu < 0.75$ (\FIG{simfixpvar}, top inset).
+The HIV data correspond to an area $A_\text{syn} \sim -0.2$  for synonymous
+changes and $A_\text{nonsyn} \sim 0$ for nonsynonymous changes,
+and a synonymous diversity $P_\text{interm} \sim 0.005$.
+In the three simulations shown, the fixation probability of synonymous alleles
+decreases from the neutral expectation ($A_\text{syn} \sim 0$) to zero
+($A_\text{syn} \sim -0.5$) as their fitness effect
+worsens; the synonymous diversity plummets as well, as it is harder for
+deleterious mutations to reach the frequency threshold of 0.25
+(\FIG{simfixpvar}, from $-0.0003$ in blue to $-0.003$ in red).
 
-We pick many random combinations of the following four parameters: effect size
-and rate of appearance of beneficial escape mutations, and effect size and
-fraction of deleterious synonymous mutations.
-Among all simulations, we select the one that show a large depression in
-fixation probability (>-0.??) of synonymous mutations but, simulteneously, a
-high synonymous diversity (>0.0? per site), as observed in HIV data. This
-selection imposes a strong constraint on the parameters, in particular on the
-ones related to synonymous changes, i.e.~their deleterious fraction and effect
-size (see \FIG{simsfig}).
+Among all simulations, we select the ones that show HIV-like $A_\text{syn}$ and
+$P_\text{interm}$, i.e. a large depression in
+fixation probability of synonymous mutations but, simulteneously, a moderately
+high synonymous diversity: simulations are gated such that $A_\text{syn} < -0.15$
+and $0.0025 < P_\text{interm} < 0.010$, hence allowing an uncertainty on mutation
+rates or generation times of about twofold. This selection imposes a strong
+constraint on the parameters, in particular on the ones related to synonymous
+changes, i.e. their deleterious fraction and effect size (see \FIG{simsfig}).
 A high fraction ($\gtrsim 0.8$) of only slightly deleterious synonymous sites,
-with effect size $|s_d| \lesssim 0.002$, is required. This result fits well the
-expectation based on the fixation/extinction times above (see \FIG{fixp1}).
+with effect size $|s_d| \sim 0.002$, is required. This result fits well
+the expectation based on the fixation/extinction times above (see \FIG{fixp1}).
 Moreover, it corresponds to {\it a priori} theoretical expectations:
-(a) since high frequency bins are enriched in neutral mutations (it is easier
-for them to hitchhike), the hallmark of deleterious mutations will be visible
-there only if they are pervasive; (b) genetic draft stops working if the
+(a) since high frequency bins are enriched in neutral mutations (it is easier for
+them to hitchhike), the hallmark of deleterious mutations will be visible there
+only if they are pervasive; (b) genetic draft stops working if the
 deleterious effect size becomes comparable to the adaptive effect size of escape
-mutations, because the double mutant has little or no fitness advantage.
+mutations, because the double mutant has little or no fitness advantage; (c)
+mutations with a deleterious effect weaker than approximately $0.001$ are
+indistinguishable from neutral ones and are drafted seamlessly to any frequency.
 
 As long as only features of synonymous mutations are filtered, as performed
 above, no strong correlation of the two nonsynonymous parameters, effect size
