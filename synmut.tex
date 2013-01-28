@@ -370,7 +370,6 @@ expectation to zero as their fitness effect worsens (\FIG{simfixpvar},
 from $-0.0003$ in blue to $-0.003$ in red). Contextually,
 the number of alleles that reach high frequencies, which is a proxy for
 synonymous diversity, is reduced as well (\FIG{simfixpvar}, top inset).
-
 To assess the reduction in fixation probability quantitatively, we calculathe
 the area between the measured fixation probability and the diagonal, which is
 the neutral expectation (\FIG{simfixpvar}, lower inset). This area spans a range
@@ -379,19 +378,26 @@ fixed). The HIV data correspond to an area of approximately $-0.2$ for synonymou
 changes, and essentially zero for nonsynonymous changes.
 
 Among all simulations, we select the one that show a large depression in
-fixation probability of synonymous mutations but, simulteneously, a high
-synonymous diversity, as observed in HIV data. This selection imposes a strong
+fixation probability of synonymous mutations but, simulteneously, a moderately
+high synonymous diversity, quantified by the probability $P_\text{interm}$ of a
+derived allele to be at intermediate frequencies $0.25 < \nu < 0.75$. HIV data show
+$A_\text{syn} \sim -0.2$ and $P_\text{interm} \sim 0.005$; simulations are gated
+such that $A_\text{syn} < -0.15$ and $0.0025 < P_\text{interm} < 0.010$, hence
+allowing an uncertainty on mutation rates or generation times of about twofold.
+This selection imposes a strong
 constraint on the parameters, in particular on the ones related to synonymous
 changes, i.e. their deleterious fraction and effect size (see \FIG{simsfig}).
 A high fraction ($\gtrsim 0.8$) of only slightly deleterious synonymous sites,
-with effect size $|s_d| \lesssim 0.002$, is required. This result fits well
+with effect size $|s_d| \sim 0.002$, is required. This result fits well
 the expectation based on the fixation/extinction times above (see \FIG{fixp1}).
 Moreover, it corresponds to {\it a priori} theoretical expectations:
 (a) since high frequency bins are enriched in neutral mutations (it is easier for
 them to hitchhike), the hallmark of deleterious mutations will be visible there
 only if they are pervasive; (b) genetic draft stops working if the
 deleterious effect size becomes comparable to the adaptive effect size of escape
-mutations, because the double mutant has little or no fitness advantage.
+mutations, because the double mutant has little or no fitness advantage; (c)
+mutations with a deleterious effect weaker than approximately $0.001$ are
+indistinguishable from neutral ones and are drafted seamlessly to any frequency.
 
 As long as only features of synonymous mutations are filtered, as performed
 above, no strong correlation of the two nonsynonymous parameters, effect size
