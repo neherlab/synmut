@@ -336,10 +336,9 @@ roughly $s_d \sim - 0.002$ per day.
 \subfloat{\includegraphics[width=\linewidth]{simulations_syn.pdf}
 \label{fig:simsfig}}
 \caption{(Panel A) The depression in $P_\text{fix}$ depends on the deleterious
-effect size of the synonymous alleles (in HIV data is about $-0.2$).
-This parameter also reduces synonymous
-diversity, measured by the number of mutations at frequencies $0.25 < \nu < 0.75$,
-normalized by the number of possible mutations (first inset).
+effect size of the synonymous alleles. This parameter also reduces synonymous
+diversity, measured by probability of a derived allele to be found at
+intermediate frequencies $P_\text{interm}$ (first inset).
 (Panel B) To assess the parameter space that affects synonymous fixation and
 diversity, we run many simulations with random parameters for deleterious effect
 size, fraction of deleterious synonymous sites, average size of escape
@@ -365,26 +364,29 @@ The first result of the simulations is that genetic draft can indeed bring weakl
 deleterious mutations to high frequencies and result in a dependence of the
 fixation probability on initial frequency that is compatible with observations
 (see \FIG{simfixpvar}).
-The fixation probability of synonymous alleles decreases from the neutral
-expectation to zero as their fitness effect worsens (\FIG{simfixpvar},
-from $-0.0003$ in blue to $-0.003$ in red). Contextually,
-the number of alleles that reach high frequencies, which is a proxy for
-synonymous diversity, is reduced as well (\FIG{simfixpvar}, top inset).
-To assess the reduction in fixation probability quantitatively, we calculathe
+To assess the reduction in fixation probability quantitatively, we calculate
 the area between the measured fixation probability and the diagonal, which is
 the neutral expectation (\FIG{simfixpvar}, lower inset). This area spans a range
 between $-0.5$ (no fixation at all), zero (neutral-like curve), and $+0.5$ (always
-fixed). The HIV data correspond to an area of approximately $-0.2$ for synonymous
-changes, and essentially zero for nonsynonymous changes.
+fixed). Furthermore, we quantify synonymous diversity via the probability
+$P_\text{interm}$ of a synonymous derived allele to be at intermediate frequencies
+$0.25 < \nu < 0.75$ (\FIG{simfixpvar}, top inset).
+The HIV data correspond to an area $A_\text{syn} \sim -0.2$  for synonymous
+changes and $A_\text{nonsyn} \sim 0$ for nonsynonymous changes,
+and a synonymous diversity $P_\text{interm} \sim 0.005$.
+In the three simulations shown, the fixation probability of synonymous alleles
+decreases from the neutral expectation ($A_\text{syn} \sim 0$) to zero
+($A_\text{syn} \sim -0.5$) as their fitness effect
+worsens; the synonymous diversity plummets as well, as it is harder for
+deleterious mutations to reach the frequency threshold of 0.25
+(\FIG{simfixpvar}, from $-0.0003$ in blue to $-0.003$ in red).
 
-Among all simulations, we select the one that show a large depression in
+Among all simulations, we select the ones that show HIV-like $A_\text{syn}$ and
+$P_\text{interm}$, i.e. a large depression in
 fixation probability of synonymous mutations but, simulteneously, a moderately
-high synonymous diversity, quantified by the probability $P_\text{interm}$ of a
-derived allele to be at intermediate frequencies $0.25 < \nu < 0.75$. HIV data show
-$A_\text{syn} \sim -0.2$ and $P_\text{interm} \sim 0.005$; simulations are gated
-such that $A_\text{syn} < -0.15$ and $0.0025 < P_\text{interm} < 0.010$, hence
-allowing an uncertainty on mutation rates or generation times of about twofold.
-This selection imposes a strong
+high synonymous diversity: simulations are gated such that $A_\text{syn} < -0.15$
+and $0.0025 < P_\text{interm} < 0.010$, hence allowing an uncertainty on mutation
+rates or generation times of about twofold. This selection imposes a strong
 constraint on the parameters, in particular on the ones related to synonymous
 changes, i.e. their deleterious fraction and effect size (see \FIG{simsfig}).
 A high fraction ($\gtrsim 0.8$) of only slightly deleterious synonymous sites,
