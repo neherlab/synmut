@@ -189,7 +189,7 @@ mutations do even though they are frequently observed at intermediate
 frequencies. Colors indicate the position of the site along the C2-V5 region
 (blue to red). Inset: the fixation probability $P_\text{fix}(\nu)$ of a neutral mutation
 is simply the likelihood that the future common ancestor is currently carrying
-it, i.e. its frequency $\nu$.}
+it, i.e., its frequency $\nu$.}
 \label{fig:aft}
 \end{center}
 \end{figure}
@@ -214,13 +214,17 @@ neutral. Note that this does not imply that all synonymous mutations are neutral
 \label{fig:fixp1}}\\
 \subfloat{\includegraphics[width=0.9\linewidth]{Bunnik2008_fixmid_syn_ShankanonShanka}
 \label{fig:fixp2}}
-\caption{(Panel A) Time course of loss and fixation of synonymous mutations
-observed in a frequency interval $\nu_0$. The ultimate fraction of synonymous
-mutations that fix as a function of intermediate frequency $\nu_0$ is the
-fixation probability. (Panel B) Fixation probability of derived synonymous
-alleles is strongly suppressed in C2-V5 versus other parts of the {\it env}
-gene. The horizontal error bars on the abscissa are bin sizes, the vertical ones
-the standard deviation after 100 patient bootstraps of the data. Data from
+\caption{Fixation and loss of synonymous mutations. Panel A shows the time
+course of loss and fixation of synonymous mutations observed in a frequency interval $\nu_0$. 
+In each frequency interval, the  fraction of synonymous
+mutations that ultimately fix is the fixation probability conditional on the
+initial frequency.
+Panel B) Fixation probability of derived synonymous
+alleles as a function of $\nu_0$ in C2-V5 is below the neutral
+expectation indicated by the diagonal line. This suppression is not
+oberserved in other parts of {\it env} or for nonsynonymous mutations.
+The horizontal error bars on the abscissa are bin sizes, the vertical ones the
+standard deviation after 100 patient bootstraps of the data. Data from
 Refs.~\cite{shankarappa_consistent_1999, bunnik_autologous_2008}.}
 \label{fig:fixp}
 \end{center}
@@ -244,20 +248,20 @@ on their final destiny (fixation or extinction). Subsequently, we align our
 sequences to the reference NL4-3 strain used in
 ref.~\citep{watts_architecture_2009} and assign them SHAPE reactivities. As
 shown in \FIG{SHAPEA} in a cumulative histogram, the reactivities of fixed
-alleles (red line) are systematically larger than of alleles that are doomed to
-extinction (blue line) (Kolmogorov-Smirnov test, $P\approx 0.002$).
-In other words, alleles that are likely to be
-breaking RNA helices are also more likely to revert and finally be lost from the
-population. As a control, the average over non-observed but potentially
-available polymorphisms lies between the two curves (green line), as expected
-(because only some of these mutations will interfere with stem loop formation).
-To test the hypothesis that mutations in C2-V5 are lost since break stems
-in the conserved between the variable loops, we split the synonymous mutations
-in the extended V1-V5 region further into conserved and variable regions and
-found that the biggest depression in fixation probability is observed in the
-conserved stems, while the variable loops show little deviation from the
-neutral signature, see \FIG{SHAPEB}. This is consistent with important stem
-structures in conservered regions between loops.
+alleles (red line) are systematically larger than of alleles are lost (blue
+line) (Kolmogorov-Smirnov test, $P\approx 0.002$).
+In other words, alleles that are likely to break RNA helices are also more
+likely to revert and finally be lost from the population. As a control, the
+average over non-observed but potentially available polymorphisms lies between
+the two curves (green line), as expected (because only some of these mutations
+will interfere with stem loop formation).
+To test the hypothesis that mutations in C2-V5 are lost since break stems in the
+conserved between the variable loops, we split the synonymous mutations in the
+extended V1-V5 region further into conserved and variable regions and found that
+the biggest depression in fixation probability is observed in the conserved
+stems, while the variable loops show little deviation from the neutral
+signature, see \FIG{SHAPEB}. This is consistent with important stem structures
+in conservered regions between loops.
 
 In addition to RNA secondary structure, we have considered other possible
 explanations for a fitness defect of synonymous mutations, in particular codon
@@ -274,17 +278,18 @@ rule, we expect it to be a minor effect in our context.
 
 \begin{figure}
 \begin{center}
-\subfloat{\includegraphics[width=0.9\linewidth]{reactivities_histograms_syn}
-\label{fig:SHAPEA}}\\
-\subfloat{\includegraphics[width=0.9\linewidth]{Shankarappa_fixmid_syn_V_regions.pdf}\label{fig:SHAPEB}}
+\subfloat{\includegraphics[width=0.48\linewidth]{reactivities_histograms_syn}
+\label{fig:SHAPEA}}
+\subfloat{\includegraphics[width=0.48\linewidth]{Shankarappa_fixmid_syn_V_regions.pdf}\label{fig:SHAPEB}}
 \caption{Permissible synonymous mutations have
-high SHAPE reactivities. \comment{Is this C2-V5 only?} 
-Panel A) Synonymous substitions in the C2-V5 region have substantially higher
-SHAPE reactivities than mutations that reach frequencies above 15\%, but are
-susequently lost. This difference is quantified by a cumulative histogram
-($p=0.002$, Kolmogorov-Smirnov two sample test). Mutations that are never
+high SHAPE reactivities.
+Panel A) Synonymous substitions have
+substantially higher SHAPE reactivities than mutations that reach frequencies above 15\%, but are
+susequently lost (restricted to the vicinity of variable loops). This difference
+is quantified by a cumulative histogram ($p=0.002$, Kolmogorov-Smirnov two 
+sample test). Mutations that are never
 observered show an intermediate distribution of SHAPE values.
-Panel B shows the fixation probablility of synonymous mutations in C2-V5
+Panel B shows the fixation probability of synonymous mutations in C2-V5
 separately for variable loops and the connecting conserved regions, that
 harbor conserved RNA stems. As expected, fixation probability is lower inside
 the conserved regions. Data from Refs.~\cite{shankarappa_consistent_1999,
@@ -326,11 +331,12 @@ roughly $s_d \sim - 0.002$ per day.
 \label{fig:simfixpvar}}\\
 \subfloat{\includegraphics[width=\linewidth]{simulations_syn.pdf}
 \label{fig:simsfig}}
-\caption{(Panel A) The depression in $P_\text{fix}$ depends on the deleterious
-effect size of the synonymous alleles. This parameter also reduces synonymous
-diversity, measured by probability of a derived allele to be found at
+\caption{Distribution of selection coefficients on synonymous sites. Panel A)
+The depression in $P_\text{fix}$ depends on the deleterious effect size 
+of the synonymous alleles. This parameter also reduces synonymous
+diversity, measured by the probability of a derived allele to be found at
 intermediate frequencies $P_\text{interm}$ (first inset).
-(Panel B) To assess the parameter space that affects synonymous fixation and
+Panel B) To assess the parameter space that affects synonymous fixation and
 diversity, we run many simulations with random parameters for deleterious effect
 size, fraction of deleterious synonymous sites, average size of escape
 mutations (color, blue ($10^{-2.5}$) to red ($10^{-1.5}$)), and rate of
@@ -338,8 +344,9 @@ introduction of new epitopes (marker size, from $10^{-3}$ to $10^{-2}$ per
 generation). Mostly simulations with small deleterious effects and relatively
 high deleterious fractions of synonymous mutations reproduce synonymous HIV-like
 fixation probability and diversity. Parameters are chosen uniformly on a
-logarithmic scale from the indicated windows. \comment{should we extend the
-parameters space maybe to $10^{-4}$?}}
+logarithmic scale from the indicated windows. This simulation assumes 6
+roughly equivalent escape mutations per epitope; see supplement for alternative
+models. }
 \label{fig:simheat}
 \end{center}
 \end{figure}
