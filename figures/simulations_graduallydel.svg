@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -4886,14 +4886,14 @@
     <text
        sodipodi:linespacing="125%"
        id="text18228"
-       y="158.9222"
+       y="157.67885"
        x="74.434189"
-       style="font-size:11.92152405px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       style="font-size:10.88271618px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
        xml:space="preserve"><tspan
-         y="158.9222"
+         y="157.67885"
          x="74.434189"
          id="tspan18230"
-         sodipodi:role="line">HIV area = -0.2</tspan></text>
+         sodipodi:role="line">observed A = -0.2</tspan></text>
   </g>
   <path
      sodipodi:nodetypes="cc"
@@ -5059,7 +5059,7 @@
        sodipodi:role="line"
        id="tspan18230-6"
        x="137.55011"
-       y="84.17688">HIV</tspan><tspan
+       y="84.17688">observed</tspan><tspan
        sodipodi:role="line"
        x="137.55011"
        y="97.022095"
