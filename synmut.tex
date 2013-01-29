@@ -20,6 +20,7 @@
 \newcommand{\mut}{\mu}
 \newcommand{\mfit}{\langle F\rangle}
 \newcommand{\mexpfit}{\langle e^{F}\rangle}
+\newcommand{\pfix}{P_{fix}}
 \newcommand{\ox}{r}
 \newcommand{\co}{\rho}
 \newcommand{\gt}{g}
@@ -71,8 +72,8 @@ HIV evolves rapidly within a single host during the course of the infection.
 This evolution is driven by strong selection imposed by the host immune system
 via killer T cells (CTLs) and neutralizing antibodies
 (ABs)~\citep{rambaut_causes_2004} and facilitated by the high
-mutation rate of HIV~\citep{mansky_lower_1995}. When the host develops a CTL or
-AB response against a particular HIV epitope, mutations in the viral genome that
+mutation rate of HIV~\citep{mansky_lower_1995,abram_nature_2010}. When the host
+develops a CTL or AB response against a particular HIV epitope, mutations in the viral genome that
 reduce or prevent recognition of the epitope frequently emerge. Escape mutations
 in epitopes targeted by CTLs typically evolve during early infection and spread
 rapidly through the population~\citep{mcmichael_immune_2009}. During chronic
@@ -87,49 +88,48 @@ earlier \citep{richman_rapid_2003}.
 These escape mutations are strongly selected for their effect on the amino acid
 sequence of the viral proteins. Conversely, synonymous mutations are commonly
 used as approximately neutral markers in studies of viral evolution. Neutral
-markers are very useful in practice, because there evolution can be compared to
+markers are very useful since their dynamics can be compared to
 that of putatively functional sites to detect purifying or directional selection
 \citep{Bhatt:2011p43255,Hurst:2002p32608,Chen:2004p22606}. In most species,
 however, it is  known that synonymous codons don't evolve completely neutrally
 but that some codons are favored over others \citep{plotkin_synonymous_2011}.
-In addition to maintaining protein function and avoiding immune
+This is expected to be particularly important in compact viruses like HIV. 
+In addition to maintaining protein function and avoiding the adaptive immune
 recognition, the HIV genome has to ensure efficient processing and translation,
 nuclear export, and packaging into the viral capsid: all these processes operate at the RNA
 level and are sensitive to synonymous changes. A few functionally important RNA
 elements are well characterized. For example, a certain RNA sequence in the HIV
-genome, called \rev{} response element (RRE), enhances nuclear export of viral
-transcripts~\citep{fernandes_hiv-1_2012}. Another well studied case is the
-interaction between viral reverse transcriptase, viral ssRNA, and the host
+genome, called \rev{} response element (RRE), enhances nuclear export of
+full length or partially spliced viral transcripts~\citep{fernandes_hiv-1_2012}.
+Another well studied case is the interaction between viral reverse transcriptase, viral ssRNA, and the host
 tRNA$^\text{Lys3}$: the latter is required for priming reverse transcription
-(RT) and bound by a specifical pseudoknotted RNA structure in the viral 5'
+(RT) and is bound by a pseudoknotted RNA structure in the viral 5'
 untranslated region~\citep{barat_interaction_1991, paillart_vitro_2002}.
 Nucleotide-level fitness effects have been observed beyond RNA structure as
 well. Recent studies have shown that genetically engineered HIV strains with
-a skewed codon usage bias towards more or less abundant tRNAs
-replicate better or worse \comment{replicate better or produce more protein?},
-respectively~\citep{ngumbela_quantitative_2008, li_codon-usage-based_2012}. A similar conclusion has been reached about
-influenza, and codon-pessimized influenza strains have been shown to be good
-live attenuated vaccines in mice~\citep{mueller_live_2010}. Purifying selection
-beyond the protein sequence is therefore expected
-\citep{forsdyke_reciprocal_1995,snoeck_mapping_2011}, but it seems reasonable
-that the bulk of positive selection through the immune system be restricted to amino acid sequences.
+altered codon usage can in some cases produce more viral protein, but in general
+replicate less efficiently~\citep{ngumbela_quantitative_2008,
+li_codon-usage-based_2012,keating_rich_2009}.
+Codon-deoptimization has been suggested as attenuation strategy for polio and 
+influenza~\citep{mueller_live_2010,coleman_virus_2008}. Purifying
+selection beyond the protein sequence is therefore expected
+\citep{forsdyke_reciprocal_1995,snoeck_mapping_2011}, but while positive
+selection through the immune system be mainly restricted to changes in the
+amino acid sequence.
 
 %SYNONYMOUS CONSERVATION. DO WE HAVE A PLOT OF GENOME WIDE CONSERVATION, MAYBE
 %FOR SUPPLEMENT? YES
 
 In this paper, we characterize the dynamics of synonymous mutations in \env{}
-and show that a substantial fraction of these mutations is deleterious. We
-further show that, although such synonymous mutations cannot be used as neutral
-markers, the degree to which they hitchhike with nearby nonsynonymous mutations
-is very informative both about their on deleterious effect, as well as the
-strength and nature of selection for nearby positively selected sites.
-Their ability to hitchhike for extended times, which is a core requirement for
-our analysis, is rooted in the small recombination rate of
-HIV~\citep{neher_recombination_2010, batorsky_estimate_2011}. Extending the
-analysis of fixation probabilities to the nonsynonymous mutations, we show that
-time dependent selection or strong competition of escape mutations inside the
-same epitope are necessary to explain the observed patterns of fixation and
-loss.
+and show that a substantial fraction of these mutations is deleterious. We then
+compare our observations to computational models of HIV evolution and derive
+estimates for the effect synonymous mutations have on fitness.
+Hitchhiking of synonymous mutations with escape mutations is due to the small
+recombination rate of HIV~\citep{neher_recombination_2010,
+batorsky_estimate_2011}. Extending the analysis of fixation probabilities to the
+nonsynonymous mutations, we show that time dependent selection or strong
+competition of escape mutations inside the same epitope are necessary to explain
+the observed patterns of fixation and loss.
 
 \section{Results}
 
@@ -145,31 +145,35 @@ the common ancestor of the entire future population at a particular locus and
 the neutral mutation is not preferentially associated with genomes of high or
 low fitness).
 Deleterious or beneficial mutations fix less or
-more often than neutral ones, respectively. Time series sequence data enable a
-direct observation of both the current frequency $\nu$ of any particular
-mutation and its future fate (fixation or extinction). 
-
+more often than neutral ones, respectively. \FIG{aft}A\&B show 
+the time course the frequencies of all synonymous and non-synonymous mutations
+observed \env~, C2-V5, in patient p8~\citep{shankarappa_consistent_1999},
+respectively. Despite many synonymous mutations reaching high frequency, very
+few fix (panel~\ref{fig:aftsyn}); however, many nonsynonymous mutations fix
+(panel~\ref{fig:aftnonsyn}).
 
 \subsection{Synonymous polymorphisms in \env, C2-V5, are mostly deleterious}
-
-\FIG{aft} shows time series data of the frequencies of all mutations observed
-\env~, C2-V5, in patient p8~\citep{shankarappa_consistent_1999}. Despite many
-synonymous mutations reaching high frequency, very few fix
-(panel~\ref{fig:aftsyn}); however, many nonsynonymous mutations fix
-(panel~\ref{fig:aftnonsyn}).
-These observations are quantified in \FIG{fixp}, which stratifies the data
-of 7 (resp.~10) patients according to the frequency at which
-different mutations are observed (see methods). Considering all mutations in a
+We study the dynamics and fate of synonymous mutations more quantitatively by
+analyzing data from 7 patients from
+\citet{shankarappa_consistent_1999,liu_selection_2006} and 3 patients from
+\citet{bunnik_autologous_2008} (see methods). The data set from
+\citet{shankarappa_consistent_1999,liu_selection_2006} is restricted to the
+C2-V5 region of \env, while \citet{bunnik_autologous_2008} covers the
+majority of \env. Considering all mutations in a
 frequency interval around $\nu_0$ at some time $t_i$, we calculate the fraction
 that is found at frequency 1, at frequency 0, or at intermediate frequency at
 later times $t_f$. Plotting these fixed, lost, and polymorphic fraction against
 the time interval $t_f-t_i$, we see that most synonymous mutations segregate for
 roughly one year and are lost much more frequently than expected (panel
 \ref{fig:fixp1}). The long-time probability of fixation versus extinction of
-synonymous mutations is shown as a function of the initial frequency $\nu_0$
-in panel~\ref{fig:fixp2} (red line). The nonsynonymous seem to follow more or
-less the neutral expectation (blue line) -- a point to which we will come back
-below. 
+synonymous mutations is shown as a function of the initial frequency $\nu_0$ in
+panel~\ref{fig:fixp2} (red line). Restricted to the region C2-V5, we find that
+$\pfix$ of synonymous mutations is far below the neutral expectation.
+Outside of C2-V5 using data from \citet{bunnik_autologous_2008} only, no such
+reduction in $\pfix$ is found. Restricted to the C2-V5 area, the data from
+\citet{bunnik_autologous_2008} is fully compatible with data from
+\citet{shankarappa_consistent_1999}. The nonsynonymous seem to follow more or
+less the neutral expectation (blue line) -- a point to which we will come back below.
 
 \begin{figure}
 \begin{center}
@@ -190,20 +194,19 @@ it, i.e. its frequency $\nu$.}
 \end{center}
 \end{figure}
 
-\citet{bunnik_autologous_2008} present a longitudinal dataset on the entire
-\env~gene of 3 patients at $\sim 5$ time points with approximately 5-20
-sequences each (see methods). Repeating the above analysis separately on the
-C2-V5 region studied above and the remainder of \env~ reveal striking
-differences (see \FIG{fixp2}). Within C2-V5, this data fully confirms the
-observations made in the data set by \citet{shankarappa_consistent_1999} (red
-line). In the remainder of \env, however, observed synonymous mutations behave
-neutrally (green line). 
-
-These observations suggest that many of the synonymous polymorphisms at
-intermediate frequencies in the part of \env~that includes the hypervariable
-regions are deleterious, while outside this regions polymorphisms are mostly
-roughly neutral. Note that this does not imply that all synonymous mutations are
-neutral -- only those mutations observed at high frequencies tend to be neutral.
+When interpreting these results for the fixation probabilities, it is important
+to distinguish random mutations, and polymorphisms at a given frequency that has
+already been filtered by selection.
+A polymorphism could be beneficial to the virus and on its way to fixation. In
+this case, we expect that it fixes almost surely given we see it at high
+frequency. If, on the other hand, the polymorphism is deleterious it must have
+gotten to high frequency by a chance event (genetic drift or hitch-hiking), and
+we expect that selection will drive it out of the population again. Hence our
+observations suggest that many of the synonymous polymorphisms at intermediate
+frequencies in the part of \env~that includes the hypervariable regions are
+deleterious, while outside this regions polymorphisms are mostly roughly
+neutral. Note that this does not imply that all synonymous mutations are neutral
+-- only those mutations observed at high frequencies tend to be neutral.
 
 \begin{figure}
 \begin{center}
@@ -259,25 +262,15 @@ structures in conservered regions between loops.
 In addition to RNA secondary structure, we have considered other possible
 explanations for a fitness defect of synonymous mutations, in particular codon
 usage bias (CUB). HIV is known to prefer A-rich codons over highly expressed
-human codons~\citep{jenkins_extent_2003}. Moreover, codon-optimized
-and -pessimized viruses have recently been generated and shown to replicate
-better or worse than wild type strains,
-respectively~\citep{li_codon-usage-based_2012, ngumbela_quantitative_2008,
-coleman_virus_2008}. We do not find, however, any evidence for a contribution of
-CUB to the ultimate fate of synonymous alleles. Several lines of thought support
-this result. First of all, within a single patient, we do not observe any bias
-towards more human-like CUB in the synonymous mutations that reach fixation
-rather than extinction. Second, although codon-optimized HIV seems to perform
-better {\it in vitro}, the distance in CUB between HIV and human genes is not
-shrinking at the macroevolutionary level. Third, it is a common phenomenon for
-retroviruses to use variously different codons from their hosts, and CUB effects
-on fitness are thought to be so small that divergent nucleotide composition has
-been suggested as a possible mechanism for viral
-speciation~\citep{bronson_nucleotide_1994}. Fourth, CUB in the V1-C5 region is
-not very different from other parts of the HIV genome, whereas the reduced
-fixation probability is only observed there. In conclusion, although we cannot
-exclude an effect of CUB on fitness as a general rule, we expect it to be a
-minor effect in our context. \comment{Need to read literature}
+human codons~\citep{jenkins_extent_2003,kuyl_biased_2012}. We do not find,
+however, any evidence for a contribution of CUB to the ultimate fate of
+synonymous alleles consistent with the fact that CUB between HIV and human genes
+is not shrinking at the macroevolutionary level \citep{kuyl_biased_2012}. 
+Furthermore, CUB in the V1-C5 region is not very different from other parts of
+the HIV genome, whereas the reduced fixation probability is only observed there. In
+conclusion, although we cannot exclude an effect of CUB on fitness as a general
+rule, we expect it to be a minor effect in our context. 
+
 
 \begin{figure}
 \begin{center}
@@ -311,13 +304,12 @@ that it undergoes frequent adaptive changes to evade recognition by neutralizing
 antibodies~\cite{williamson_adaptation_2003,richman_rapid_2003}. Due to the limited amount of
 recombination in HIV~\cite{neher_recombination_2010,batorsky_estimate_2011},
 deleterious mutations that are linked to adaptive variants can reach high
-frequency~\citep[genetic hitchhiking,][]{smith_hitch-hiking_1974}.
+frequency. This process is known as hitch-hiking \citep{smith_hitch-hiking_1974}
+or genetic draft \citep{gillespie_genetic_2000,neher_genetic_2011}.
 
 The potential for hitchhiking is already apparent from the allele frequency
 trajectories in \FIG{aft}, where many mutations appear to change rapidly in
-frequency as a flock. Deleterious synonymous mutations can be brought to high
-frequency by selection on linked nonsynonymous sites, a process
-known as {\it genetic draft}~\citep{gillespie_genetic_2000, neher_genetic_2011}. In order
+frequency as a flock. In order
 to be advected to high frequency by a linked adaptive mutation, the deleterious
 effect of the mutation has to be substantially smaller than the adaptive effect.
 The latter was estimated to be on the order of $s_a = 0.01$ per day~\citep{neher_recombination_2010}.
@@ -373,35 +365,37 @@ $0.25 < \nu < 0.75$ (\FIG{simfixpvar}, top inset).
 The HIV data correspond to an area $A_\text{syn} \sim -0.2$  for synonymous
 changes and $A_\text{nonsyn} \sim 0$ for nonsynonymous changes,
 and a synonymous diversity $P_\text{interm} \sim 0.005$.
-In the three simulations shown, the fixation probability of synonymous alleles
-decreases from the neutral expectation ($A_\text{syn} \sim 0$) to zero
+In the three simulations shown in \FIG{simfixpvar}, the fixation probability of
+synonymous alleles decreases from the neutral expectation ($A_\text{syn} \sim 0$) to zero
 ($A_\text{syn} \sim -0.5$) as their fitness effect
 worsens; the synonymous diversity plummets as well, as it is harder for
-deleterious mutations to reach the frequency threshold of 0.25
-(\FIG{simfixpvar}, from $-0.0003$ in blue to $-0.003$ in red).
+deleterious mutations to reach the frequency threshold of 0.25.
 
-Among all simulations, we select the ones that show HIV-like $A_\text{syn}$ and
-$P_\text{interm}$, i.e. a large depression in
-fixation probability of synonymous mutations but, simulteneously, a moderately
-high synonymous diversity: simulations are gated such that $A_\text{syn} < -0.15$
-and $0.0025 < P_\text{interm} < 0.010$, hence allowing an uncertainty on mutation
-rates or generation times of about twofold. This selection imposes a strong
-constraint on the parameters, in particular on the ones related to synonymous
-changes, i.e. their deleterious fraction and effect size (see \FIG{simsfig}).
+To map the parameter range of the model that is compatible with the data, we
+repeatedly simulated the evolution with random choices for the deleterious
+effect of synonymous mutations, the fraction of synonymous mutations that are
+deleterious, the escape rate of adaptive mutations, and the frequency of
+escapes.  Among all simulations, we select the ones that show $A_\text{syn}$ and
+$P_\text{interm}$ as observed in the data, i.e., a large depression in fixation
+probability of synonymous mutations but, simulteneously, a moderately high
+synonymous diversity. Specifically, \FIG{simsfig} shows parameter combinations
+for which we found $A_\text{syn} < -0.15$ and $0.0025 < P_\text{interm} < 0.010$
+(twofold variation around the observed value). This selection imposes a strong
+constraint on the deleterious fraction and effect size (see \FIG{simsfig}).
 A high fraction ($\gtrsim 0.8$) of only slightly deleterious synonymous sites,
-with effect size $|s_d| \sim 0.002$, is required. This result fits well
-the expectation based on the fixation/extinction times above (see \FIG{fixp1}).
-Moreover, it corresponds to {\it a priori} theoretical expectations:
-(a) since high frequency bins are enriched in neutral mutations (it is easier for
-them to hitchhike), the hallmark of deleterious mutations will be visible there
-only if they are pervasive; (b) genetic draft stops working if the
-deleterious effect size becomes comparable to the adaptive effect size of escape
-mutations, because the double mutant has little or no fitness advantage; (c)
-mutations with a deleterious effect weaker than approximately $0.001$ are
-indistinguishable from neutral ones and are drafted seamlessly to any frequency.
+with effect size $|s_d| \sim 0.002$, is required. This result fits well the
+expectation based on the fixation/extinction times above (see \FIG{fixp1}).
+The results are plausible:
+(a) since high frequency bins are enriched in neutral mutations (it is easier
+for them to hitchhike), a depression in $\pfix$ will be
+visible only if deleterious mutations are pervasive; (b) in order to
+hitchhike, the deleterious effect size has to be less than the escape rate, otherwise the
+double mutant has little or no fitness advantage; (c) mutations with a 
+deleterious effect weaker than approximately $0.001$ behave neutrally
+consistent with the typical coalescent times observed in HIV.
 
 As long as only features of synonymous mutations are filtered, as performed
-above, no strong correlation of the two nonsynonymous parameters, effect size
+above, no strong correlation of the two nonsynonymous parameters, escape rate
 and rate of appearance of epitopes, is observed; in \FIG{simsfig}, the points
 shown possess a variety of shapes and colors. In most of these simulations, 
 however, nonsynonymous mutations almost always fix once they reach high frequencies
@@ -416,13 +410,13 @@ mechanisms that are biologically plausible and could explain the transient rise
 of nonsynonymous mutations: time-dependent selection and within-epitope
 competition.
 
-The former explanation can be formulated as follows: if the immune system
+The former hypothesis can be formulated as follows: if the immune system
 recognizes the escape mutant before its fixation, the mutant might cease to be
 beneficial and disappear soon, despite its quick initial rise in frequency. In support of this idea,
 \citet{richman_rapid_2003, bunnik_autologous_2008} report antibody responses to
 escape mutants. These respones are delayed by a few months, roughly matching the
 average time needed by an escape mutant to cross frequencies of order one.
-In the alternative explanation, several different escape
+In the alternative hypothesis, several different escape
 mutations within the same epitope might arise almost simultaneously and start to
 spread. Their benefits are not additive, because each of them is
 essentially sufficient to escape. As a consequence, several escape mutations rise to
@@ -432,8 +426,8 @@ multiple sweeping nonsynonymous mutations in real HIV infections has been shown
 previously~\citep{moore_limited_2009, bar_early_2012}.
 We tested both hypotheses in our simulation framework and they both seem to
 achieve a reduced, neutral-like fixation probability while maintaining a high
-rate of substitutions, compatibly with HIV measurements. In real HIV infections,
-both mechanisms are likely to be playing a role.
+rate of substitutions, compatibly with HIV measurements \comment{Supplementary}.
+In real HIV infections, both mechanisms are likely to be playing a role.
 
 \section{Discussion}
 Despite several known functional roles for RNA secondary structure in the HIV
@@ -462,18 +456,18 @@ The observed hitchhiking highlights the importance of linkage due to infrequent
 recombination for the evolution of HIV
 \citep{neher_recombination_2010,batorsky_estimate_2011,
 josefsson_majority_2011}. The recombination rate has been estimated to be on the
-order of $\rho = 10^{-5}$ per base and day. It takes roughly $t_{sw} = s_a^{-1}
-\log \nu_0$ generations for an adaptive mutation with growth rate $s_a$ to rise
+order of $\rho = 10^{-5}$ per base and day. It takes roughly $t_{sw} =
+\epsilon^{-1} \log \nu_0$ generations for escape mutation with escape rate $\epsilon$ to rise
 from an initially low frequency $\nu_0\sim \mu$ to frequency one. This implies
-that a region of length $l = (\rho t_{sw})^{-1} = s_a / \rho \log \nu_0$ remains
-linked to the adaptive mutation. With $s_a=0.01$, $l\approx 100$ bases, hence we 
-expect strong linkage between the variable loops and their surrounding stems,
-but none far beyond the variable regions, consistent with the lack of signal
+that a region of length $l = (\rho t_{sw})^{-1} = \epsilon / \rho \log \nu_0$
+remains linked to the adaptive mutation. With $\epsilon=0.01$, we have $l\approx
+100$ bases. Hence we expect strong linkage between the variable loops and their
+surrounding stems, but none far beyond the variable regions, consistent with the lack of signal
 outside of C1-V5. In case of much stronger selection -- such as observed during
 early CTL escape or drug resistance evolution -- the linked  region is of course
-much larger.
+much larger \citep{nijhuis_stochastic_1998}.
 
-The functional significance of the insulating RNA structure stems between the
+A functional significance of the insulating RNA structure stems between the
 hyper variable loops has been proposed
 previously~\citep{watts_architecture_2009, sanjuan_interplay_2011}.
 \citet{sanjuan_interplay_2011} have shown that insulating stems are relevant for
@@ -484,27 +478,20 @@ known). In absence of repeated adaptive substitutions in the vicinity that cause
 hitchhiking, the deleterious synonymous mutations remain at low frequencies and
 can only be observed by deep sequencing methods. 
 
-Our study uncovers the
-subtle balance of evolutionary forces governing intrapatient HIV evolution. The
-fixation and extinction times and probabilities represent a rich and simple
-summary statistics useful to characterize sequencing data and compare to
-models via computer simulations.
+The fixation and extinction times and probabilities represent a rich and simple
+summary statistics useful to characterize longitudinal sequence data and compare
+to models via computer simulations.
 A similar method has been recently used in a longitudinal study of
 influenza~\citep{strelkowa_clonal_2012}. The propagators suggested in that
-paper, however, represent ratios between nonsynonymous
-mutations and synonymous ones, hence they are inadequate to investigate
-synonymous changes themselves. The authors also conclude that several
-beneficial mutations segregate simultaneously in influenza, a scenario
-remarkably similar to our within-epitope competition picture. While
-recombination hardly affects evolution within an epitope, it might facilitate
-immune escape by easing competition between different epitopes
-\citep{neher_rate_2010,Rouzine:2005p17398}.
+paper, however, represent ratios between nonsynonymous and synonymous mutations.
+The latter is used as an approximately neutral control and this method can
+therefore not be used to investigate synonymous changes themselves.
 
 Our results emphasize the inadequacy of independent site
 models of HIV evolution and the common assumption that selection is time
-independent. If genetic variation is only transiently beneficial, existing
-methods to quantify selection will yield substantial underestimates
-\citep{williamson_adaptation_2003,neher_rate_2010,OTHER}. To explain the
+independent or additive. If genetic variation is only transiently beneficial,
+existing methods to quantify selection will yield substantial underestimates
+\citep{williamson_adaptation_2003,neher_rate_2010,batorsky_estimate_2011}. To explain the
 observations regarding the fixation probabilities of non-synonymous mutations,
 either transient selection, or substational within-epitope competition are
 necessary. Which mechanism is more widespread is not clear as of now,
