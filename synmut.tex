@@ -31,7 +31,7 @@
 \newcommand{\FIG}[1]{Fig.~\ref{fig:#1}}
 \newcommand{\FIGS}[2]{Figs.~\ref{fig:#1} and~\ref{fig:#2}}
 \newcommand{\env}{\textit{env}}
-\newcommand{\shankaregion}{C2-C5}
+\newcommand{\shankaregion}{C2-V5}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\thesubfigure}{\Alph{subfigure}}
 \newcommand{\Author}{Fabio~Zanini and Richard~A.~Neher}
@@ -47,21 +47,24 @@
 
 \begin{abstract}
 \noindent
-Intrapatient HIV evolution is governed by selection on the protein level in the
-arms race with the immune system (killer T-cells and antibodies). Synonymous
-mutations do not have an immunity-related phenotype and are often assumed to be
-neutral. In this paper, we show that synonymous changes in epitope-rich regions
-are often deleterious but still reach high frequencies in the viral population.  We analyze time
-series of viral sequences from the \shankaregion~part of {\it env} within individual
-hosts and observe that synonymous derived alleles rarely reach fixation.
-Simulations suggest that such synonymous mutations
-have a (Malthusian) selection coefficient of the order of $-0.001$, and that
-they are brought up to high frequency by hitchhiking on neighboring beneficial
-nonsynonymous alleles. We detect a negative correlation between the fixation of an allele and
-its involvement in RNA stem-loop structures.
-Deleterious synonymous mutations are not observed as abundantly in other parts of the HIV genome, in which
-selective sweeps are less dense and hitchhiking not as strong; this behaviour is
-confirmed by extensive computer simulations.
+
+Intrapatient HIV evolution is dominated by selection on the protein level in the
+arms race with the immune system. Synonymous mutations do not have an
+immunity-related phenotype and are often assumed to be neutral. Here, we show
+that synonymous changes in epitope-rich regions are often deleterious but still
+reach high frequencies in the viral population.
+We analyze longitudinal intra-patient data from the \shankaregion~part of the
+envelope gene (\env) and observe that synonymous derived alleles rarely reach
+fixation.
+Simulations suggest that such synonymous mutations have a (Malthusian) selection
+coefficient of the order of $-0.002$, and that they are brought up to high
+frequency by hitchhiking on neighboring beneficial nonsynonymous alleles. We
+detect a negative correlation between the fixation of an allele and its
+involvement in RNA stem-loop structures.
+The patterns of fixation of non-synonymous mutations suggest that antibody
+escape mutations in \shankaregion~are only transiently beneficial, either since
+the immune system is catching up or because of competition between equivalent
+escapes.
 
 \end{abstract}
 \maketitle
@@ -439,23 +442,43 @@ In real HIV infections, both mechanisms are likely to be playing a role.
 \section{Discussion}
 Despite several known functional roles for RNA secondary structure in the HIV
 genome, synonymous mutations are often used as approximately neutral markers in
-evolutionary studies of viruses. We have shown that the majority of synonymous
-mutations in the conserved regions C2-C5 of the \env~gene are deleterious.
+evolutionary studies of viruses. By analyzing the fate of mutations in
+longitudinal data of HIV \env{} evolution, we have shown that the majority of
+synonymous mutations in the conserved regions C2-C5 of the \env~gene are deleterious.
 Comparison with recent biochemical studies of binding propensity of bases in RNA
 genome suggest that these mutations are deleterious, at least in part, because they disrupt
 stems in RNA secondary structures. Furthermore, we provide evidence that these
 mutations are brought to high frequency through linkage to adaptive mutations.
-The latter mutations are only transiently adaptive, either through a
-coevolution with the immune system or redundant escape within an epitope. 
 
-Our observations and conclusion rely heavily on longitudinal data in which the
-dynamics of mutations can be explicitly observed. The fact that deleterious
-mutations can be brought to high frequencies through hitchhiking underscores
-the intensity of the coevolution with the immune system. The fact that
-multiple escape mutations in the same epitope -- as is indeed observed in
-studies of antibody escape~\citep{moore_limited_2009, bar_early_2012} -- are
-necessary to explain the patterns of fixation of nonsynonymous mutations points
-towards a large populations size that rapidly discovers adaptive mutations. A
+
+Contrary to naive expectations, the adaptive escape mutations don't seem to be
+unconditionally beneficial. Otherwise we should observe almost sure fixation of
+non-synonymous mutations once they reach intermediate frequency. Instead, we
+find that the fixation probability of non-synonymous mutations is roughly given
+by its frequency. There are several possible explanations for this observation. 
+Similar to synonymous mutations, the majority of non-synonymous mutations could
+be weakly deleterious and the adaptive and deleterious parts conspire to yield
+the neutral-like averaged fixation probability. We consider this possibility
+inplausible since the amino-acid sequence outside the variable loops is much
+more conserved that the synonymous positions, suggesting that the majority of
+the non-synonymous mutations is much more deleterious. 
+
+Alternatively, the lack of fixation could be due to time dependent environment
+through an immune system that is catching up, or competition between mutations
+that mediate escape within the same epitope. We explored both of these
+possibilities and find that both produce the desired effect. Furthermore, there
+is evidence in support of both of these hypothesis. Serum from HIV infected
+individuals tyically neutralizes the virus that dominated the population a few
+(3-6) month ago \citep{richman_rapid_2003}. This suggests that escape mutations
+cease to be beneficial after a few month and might revert if they come with a
+fitness cost. Deep sequencing of regions of \env{} after antibody escape have
+revealed multiple escape mutations in the same epitope
+\citep{moore_limited_2009, bar_early_2012}. Presumably, each one of these
+mutations is sufficient for escape but most combinations of them don't provide
+any additional benefit to the virus. Hence only one of them will spread and the
+others will be driven out of the population even if they transiently reach high
+frequencies. The rapid emergence of multiple escape mutations in the same
+epitope implies a large population size that explores all necessary point mutations rapidly. A
 similar point has been made recently by Boltz {\it et al.} in the context of
 preexisting drug resistance mutations~\citep{boltz_ultrasensitive_2012}. 
 
@@ -464,21 +487,21 @@ recombination for the evolution of HIV
 \citep{neher_recombination_2010,batorsky_estimate_2011,
 josefsson_majority_2011}. The recombination rate has been estimated to be on the
 order of $\rho = 10^{-5}$ per base and day. It takes roughly $t_{sw} =
-\epsilon^{-1} \log \nu_0$ generations for escape mutation with escape rate $\epsilon$ to rise
-from an initially low frequency $\nu_0\sim \mu$ to frequency one. This implies
-that a region of length $l = (\rho t_{sw})^{-1} = \epsilon / \rho \log \nu_0$
-remains linked to the adaptive mutation. With $\epsilon=0.01$, we have $l\approx
-100$ bases. Hence we expect strong linkage between the variable loops and their
-surrounding stems, but none far beyond the variable regions, consistent with the lack of signal
-outside of C1-V5. In case of much stronger selection -- such as observed during
-early CTL escape or drug resistance evolution -- the linked  region is of course
-much larger \citep{nijhuis_stochastic_1998}.
+\epsilon^{-1} \log \nu_0$ generations for escape mutation with escape rate
+$\epsilon$ to rise from an initially low frequency $\nu_0\sim \mu$ to frequency
+one. This implies that a region of length $l = (\rho t_{sw})^{-1} = \epsilon /
+\rho \log \nu_0$ remains linked to the adaptive mutation. With $\epsilon=0.01$,
+we have $l\approx 100$ bases. Hence we expect strong linkage between the
+variable loops and the intervening sequence, but none far beyond the variable
+regions, consistent with the lack of signal outside of C1-V5. In case of much
+stronger selection -- such as observed during early CTL escape or drug
+resistance evolution -- the linked  region is of course much larger
+\citep{nijhuis_stochastic_1998}.
 
 A functional significance of the insulating RNA structure stems between the
-hyper variable loops has been proposed
+hyper-variable loops has been proposed
 previously~\citep{watts_architecture_2009, sanjuan_interplay_2011}.
-\citet{sanjuan_interplay_2011} have shown that insulating stems are relevant for
-viral fitness {\it in vivo}. Our analysis is limited by the availability of
+Our analysis is limited by the availability of
 longitudinal data which requires a focus on the the variable regions of \env.
 Conserved RNA structures exist in different parts of the HIV genome (several are
 known). In absence of repeated adaptive substitutions in the vicinity that cause
@@ -498,21 +521,15 @@ Our results emphasize the inadequacy of independent site
 models of HIV evolution and the common assumption that selection is time
 independent or additive. If genetic variation is only transiently beneficial,
 existing methods to quantify selection will yield substantial underestimates
-\citep{williamson_adaptation_2003,neher_rate_2010,batorsky_estimate_2011}. To explain the
-observations regarding the fixation probabilities of non-synonymous mutations,
-either transient selection, or substational within-epitope competition are
-necessary. Which mechanism is more widespread is not clear as of now,
-there is evidence for both~\citep{richman_rapid_2003, moore_limited_2009,
-bar_early_2012}.
+\citep{williamson_adaptation_2003,neher_rate_2010,batorsky_estimate_2011}.
 
 \section{Methods}
 \subsection{Sequence data collection}
 Longitudinal intrapatient viral RNA sequences were collected for published
 studies~\citep{shankarappa_consistent_1999,
 liu_selection_2006, bunnik_autologous_2008} and downloaded from the Los Alamos
-National Laboratory (LANL) HIV sequence database~\citep{LANL2012}. The sequences from
-some patients showed signs of HIV compartimentalization into subpopulations and
-were discarded; a grand total of 11
+National Laboratory (LANL) HIV sequence database~\citep{LANL2012}. The sequences from some patients
+showed signs of HIV compartimentalization into subpopulations and were discarded; a total of 11
 patients with approximately 6 time points each and 10 sequences per time point
 were analyzed. The time interval or resolution between two consecutive sequences
 was approximately 6 to 18 months.
@@ -526,11 +543,11 @@ The good sequences were aligned within each patient
 via the translated amino acid sequence, using
 Muscle~\citep{edgar_muscle:_2004}, and to the NL4-3 reference sequence used
 by \citet{watts_architecture_2009} in the SHAPE assay. Within each patient, a
-consensus RNA sequence at the first time point was used to classify alleles as ancestral or
-derived at all sites. Problematic sites that included large frequencies of gaps
+consensus nucleotide sequence at the first time point was used to classify
+alleles as ancestral or derived at all sites. Problematic sites that included large frequencies of gaps
 were excluded from the analysis to avoid artefactual substitutions due to
 alignment errors. Time series of allele frequencies were extracted from the
-sequences.
+sequences. \comment{The alignments used are available for download}. 
 
 The synonymity of a mutation was assigned if the rest of the codon was
 in the ancestral state and using the standard genetic code. Cases where more
@@ -576,8 +593,10 @@ diagonal were estimated from the binned fixation probabilities using the linear
 interpolation between the bin centers. This measure is sufficiently precise for
 our purposes, because the HIV data are quite scarse themselves.
 
+\comment{All analysis scripts are available for download\ldots.}. 
 \section*{Acknowledgements}
-\comment{to be written\dots}
+We are grateful for stimulating discussions with Jan Albert and Trevor Bedford.
+This work is supported by the ERC starting grant HIVEVO 260686.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
