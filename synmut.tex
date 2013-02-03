@@ -68,9 +68,11 @@ the immune system is catching up or because of competition between equivalent
 escapes.
 
 \end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \maketitle
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 HIV evolves rapidly within a single host during the course of the infection.
 This evolution is driven by strong selection imposed by the host immune system
@@ -135,8 +137,9 @@ nonsynonymous mutations, we show that time dependent selection or strong
 competition of escape mutations inside the same epitope are necessary to explain
 the observed patterns of fixation and loss.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The central quantity we investigate is the probability of fixation of a
 mutation, conditional on its population frequency.  A neutral mutation
 segregating at frequency $\nu$ has a probability $P_\text{fix}(\nu) = \nu$ to
@@ -151,12 +154,14 @@ low fitness).
 Deleterious or beneficial mutations fix less or
 more often than neutral ones, respectively. \FIG{aft} shows 
 the time course the frequencies of all synonymous and nonsynonymous mutations
-observed \env~, C2-V5, in patient p8~\citep{shankarappa_consistent_1999},
+observed \env~, C2-V5, in patient p1~\citep{shankarappa_consistent_1999},
 respectively. Despite many synonymous mutations reaching high frequency, very
 few fix (panel~\ref{fig:aftsyn}); in constrast, many nonsynonymous mutations fix
 (panel~\ref{fig:aftnonsyn}).
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Synonymous polymorphisms in \env, C2-V5, are mostly deleterious}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We study the dynamics and fate of synonymous mutations more quantitatively by
 analyzing data from 7 patients from
 \citet{shankarappa_consistent_1999,liu_selection_2006} and 3 patients from
@@ -181,12 +186,12 @@ less the neutral expectation (blue line) -- a point to which we will come back b
 
 \begin{figure}
 \begin{center}
-\subfloat{\includegraphics[width=\linewidth]{Shankarappa_allele_freqs_trajectories_syn_p8.pdf}
+\subfloat{\includegraphics[width=\linewidth]{Shankarappa_allele_freqs_trajectories_syn_p1.pdf}
 \label{fig:aftsyn}}\\
-\subfloat{\includegraphics[width=\linewidth]{Shankarappa_allele_freqs_trajectories_nonsyn_p8.pdf}
+ \subfloat{\includegraphics[width=\linewidth]{Shankarappa_allele_freqs_trajectories_nonsyn_p1.pdf}
 \label{fig:aftnonsyn}}
 \caption{Time series of allele frequencies in \env, C2-V5, from
-patient 8~\cite{shankarappa_consistent_1999},
+patient 1~\cite{shankarappa_consistent_1999},
 divided by synonymous (panel A) and nonsynonymous (panel B) derived alleles.
 While nonsynonymous mutations frequently fix, very few synonymous
 mutations do even though they are frequently observed at intermediate
@@ -236,8 +241,9 @@ Refs.~\cite{shankarappa_consistent_1999, bunnik_autologous_2008}.}
 \end{center}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Synonymous mutations in C2-V5 tend to disrupt conserved RNA stems}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 One possible {\it a priori} explanation for lack of fixation of synonymous
 mutations in C2-V5 are  secondary structures in the viral RNA. It has
 been suggested early on that parts of the viral genome that has the potential to
@@ -305,8 +311,9 @@ bunnik_autologous_2008, liu_selection_2006}.}
 \end{figure}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Deleterious mutations are brought to high frequency by hitchhiking}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 While the observation that some fraction of synonymous mutations is deleterious
 is not unexpected, it seems odd that we observe them at high population
 frequency -- at least in some regions of the genome. The region of \env~ in
@@ -445,7 +452,9 @@ materials).
 In real HIV infections, both mechanisms are likely to be playing a role, as they
 are not mutually exclusive.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Despite several known functional roles for RNA secondary structure in the HIV
 genome, synonymous mutations are often used as approximately neutral markers in
 evolutionary studies of viruses. By analyzing the fate of mutations in
@@ -529,82 +538,90 @@ independent or additive. If genetic variation is only transiently beneficial,
 existing methods to quantify selection will yield substantial underestimates
 \citep{williamson_adaptation_2003,neher_rate_2010,batorsky_estimate_2011}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Methods}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Sequence data collection}
-
-Longitudinal intrapatient viral RNA sequences were collected for published
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Longitudinal intrapatient viral RNA sequences are collected for published
 studies~\citep{shankarappa_consistent_1999, liu_selection_2006,
 bunnik_autologous_2008} and downloaded from the Los Alamos National Laboratory
 (LANL) HIV sequence database~\citep{LANL2012}. The sequences from some patients
-showed signs of HIV compartimentalization into subpopulations and were
-discarded; a total of 11 patients with approximately 6 time points each and 10
-sequences per time point were eventually analyzed. The time interval or
-resolution between two consecutive sequences was approximately 6 to 18 months.
+show signs of HIV compartimentalization into subpopulations and are
+discarded (see supplementary materials);
+a total of 11 patients with approximately 6 time points each and 10
+sequences per time point are eventually analyzed. The time interval or
+resolution between two consecutive sequences is approximately 6 to 18 months.
 
-\comment{How did you determine who to discard. Maybe we should include the PCA
-plots into the supplement.}
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Sequence analysis}
-The good sequences were aligned within each patient
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The sequences are aligned within each patient
 via the translated amino acid sequence, using
 Muscle~\citep{edgar_muscle:_2004}, and to the NL4-3 reference sequence used
 by \citet{watts_architecture_2009} in the SHAPE assay. Within each patient, a
-consensus nucleotide sequence at the first time point was used to classify
-alleles as ancestral or derived at all sites. Problematic sites that included large frequencies of gaps
-were excluded from the analysis to avoid artefactual substitutions due to
-alignment errors. Time series of allele frequencies were extracted from the
+consensus nucleotide sequence at the first time point is used to classify
+alleles as ancestral or derived at all sites. Problematic sites that include large frequencies of gaps
+are excluded from the analysis to avoid artefactual substitutions due to
+alignment errors. Time series of allele frequencies are extracted from the
 sequences. \comment{The alignments used are available for download}. 
 
-The synonymity of a mutation was assigned if the rest of the codon was
+The synonymity of a mutation is assigned if the rest of the codon was
 in the ancestral state and using the standard genetic code. Cases where more
-than one mutation within the codon was observed were discarded. Slightly
-different criteria for synonymous/nonsynonymous discrimination yielded similar
+than one mutation within the codon is observed are discarded. Slightly
+different criteria for synonymous/nonsynonymous discrimination yield similar
 results.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Fixation probability and secondary structure}
-For the estimate of times to fixation/extinction, polymorphisms were
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+For the estimate of times to fixation/extinction, polymorphisms are
 binned by frequency and the time to reaching the first boundary (fixation or
-extinction) was stored. For the fixation probability, the long-time limit of the
-resulting curves was used, excluding polymorphisms that arose late in the
-clinical history (and would have had no time to reach either boundary).
+extinction) is stored. For the fixation probability, the long-time limit of the
+resulting curves is used, excluding polymorphisms that arise late in the
+clinical history (hence would have no time to reach either boundary).
 
-For the correlation analysis with RNA secondary structure, the SHAPE scores were
+For the correlation analysis with RNA secondary structure, the SHAPE scores are
 downloaded from the journal website~\citep{watts_architecture_2009}. By virtue
 of the alignment of the longitudinal sequences with the reference used by
-\citet{watts_architecture_2009}, SHAPE reactivities were assigned to most sites.
-Problematic assignments in indel-rich regions were excluded from the analysis.
+\citet{watts_architecture_2009}, SHAPE reactivities are assigned to most sites.
+Problematic assignments in indel-rich regions are excluded from the analysis.
 In order to restrict the analysis to synonymous polymorphisms, a lower frequency
-threshold of 0.15 was used (other thresholds yielded the same results). Since
+threshold of 0.15 was used (other thresholds yield the same results). Since
 very few polymorphisms hitchhike beyond, say, a frequency of 0.5, this pool is
 enriched for to-be-lost mutations; hence the ``lost" curve in \FIG{SHAPEA}
 contains much more points than the ``fixed" one.
 
-The V loops and flanking regions were identified manually starting from the
+The V loops and flanking regions are identified manually starting from the
 annotated reference HXB2 sequence from the LANL HIV database~\citep{LANL2012}. A
-similar approach was used to label the C2-V5 region sequenced in
+similar approach is used to label the C2-V5 region sequenced in
 ref.~\citep{shankarappa_consistent_1999}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Computer simulations}
-Simulations were performed using the recently published software
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Simulations are performed using the recently published software
 FFPopSim~\citep{zanini_ffpopsim:_2012}. Both full-length HIV genomes and
-\env{}-only simulations were performed and yielded comparable results. For each
-set of parameters, approximately 100 simulation runs were averaged over. In each
+\env{}-only simulations are performed and yield comparable results. For each
+set of parameters, approximately 100 simulation runs are averaged over. In each
 run, a random fitness landscape with specified statistical properties (e.g.
-density of beneficial sites, average deleterious effect of synonymous changes) was generated.
-Although the curves shown in \FIG{simfixpvar} are not very smooth, small
-parameter changes resulted in overall consistent trends across many repetitions.
+density of beneficial sites, average deleterious effect of synonymous changes) is generated.
 
 For the discussion of simulation parameters, the areas below or above the neutral
-diagonal were estimated from the binned fixation probabilities using the linear
+diagonal were estimated from the binned fixation probabilities using linear
 interpolation between the bin centers. This measure is sufficiently precise for
-our purposes, because the HIV data are quite scarse themselves.
+our purposes.
 
-\comment{All analysis scripts are available for download\ldots.}. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Methods availability}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+All analysis scripts are available for download.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgements}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We are grateful for stimulating discussions with Jan Albert and Trevor Bedford.
 This work is supported by the ERC starting grant HIVEVO 260686.
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{natbib}
