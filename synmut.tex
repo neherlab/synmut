@@ -49,18 +49,19 @@
 \noindent
 
 Intrapatient HIV evolution is dominated by selection on the protein level in the
-arms race with the immune system. Synonymous mutations do not have an
-immunity-related phenotype and are often assumed to be neutral. Here, we show
+arms race with the adaptive immune system. Synonymous mutations do not have an
+adaptive immunity-related phenotype and are often assumed to be neutral. Here, we show
 that synonymous changes in epitope-rich regions are often deleterious but still
 reach high frequencies in the viral population.
-We analyze longitudinal intra-patient data from the \shankaregion~part of the
-envelope gene (\env) and observe that synonymous derived alleles rarely reach
-fixation.
-Simulations suggest that such synonymous mutations have a (Malthusian) selection
+We analyze longitudinal intrapatient data from the \shankaregion~part of the
+envelope gene (\env) and observe that synonymous derived alleles are rarely
+fixed.
+Computer models suggest that such synonymous mutations have a (Malthusian) selection
 coefficient of the order of $-0.002$, and that they are brought up to high
-frequency by hitchhiking on neighboring beneficial nonsynonymous alleles. We
-detect a negative correlation between the fixation of an allele and its
-involvement in RNA stem-loop structures.
+frequency by hitchhiking on neighboring beneficial nonsynonymous alleles.
+We find that synonymous mutations that disrupt base pairs in RNA stems flanking
+the V loops are more likely to be lost than other synonymous changes, hinting at
+a direct fitness effect of such stem-loop structures in the HIV RNA.
 The patterns of fixation of nonsynonymous mutations suggest that antibody
 escape mutations in \shankaregion~are only transiently beneficial, either since
 the immune system is catching up or because of competition between equivalent
@@ -82,9 +83,9 @@ in epitopes targeted by CTLs typically evolve during early infection and spread
 rapidly through the population~\citep{mcmichael_immune_2009}. During chronic
 infection, the most rapidly evolving part of the HIV genome are the so called
 variable loops of the envelope protein gp120, which need to avoid recognition by
-neutralizing ABs.  Mutations in \env, the gene encoding for gp120, spread
-through the population within a few months (see \figurename~\ref{fig:aft}, solid
-lines). Consistent with this time scale, it is found that serum from a
+neutralizing ABs.  Mutations in \env, the gene encoding gp120, spread
+through the population within a few months (see \figurename~\ref{fig:aftnonsyn}).
+Consistent with this time scale, it is found that serum from a
 particular time typically neutralizes virus extracted more than 3-6 month
 earlier \citep{richman_rapid_2003}.
 
@@ -93,43 +94,43 @@ sequence of the viral proteins. Conversely, synonymous mutations are commonly
 used as approximately neutral markers in studies of viral evolution. Neutral
 markers are very useful since their dynamics can be compared to
 that of putatively functional sites to detect purifying or directional selection
-\citep{Bhatt:2011p43255,Hurst:2002p32608,Chen:2004p22606}. In most species,
-however, it is  known that synonymous codons don't evolve completely neutrally
-but that some codons are favored over others \citep{plotkin_synonymous_2011}.
-This is expected to be particularly important in compact viruses like HIV. 
+\citep{Bhatt:2011p43255,Hurst:2002p32608,Chen:2004p22606}.
 In addition to maintaining protein function and avoiding the adaptive immune
-recognition, the HIV genome has to ensure efficient processing and translation,
+recognition, however, the HIV genome has to ensure efficient processing and translation,
 nuclear export, and packaging into the viral capsid: all these processes operate at the RNA
-level and are sensitive to synonymous changes. A few functionally important RNA
-elements are well characterized. For example, a certain RNA sequence in the HIV
-genome, called \rev{} response element (RRE), enhances nuclear export of
+level and are sensitive to synonymous changes.
+On the one hand, these processes often involve some kind of RNA secondary structure.
+For example, the HIV \rev{} response element (RRE) in \env{} enhances nuclear export of
 full length or partially spliced viral transcripts~\citep{fernandes_hiv-1_2012}.
 Another well studied case is the interaction between viral reverse transcriptase, viral ssRNA, and the host
 tRNA$^\text{Lys3}$: the latter is required for priming reverse transcription
 (RT) and is bound by a pseudoknotted RNA structure in the viral 5'
 untranslated region~\citep{barat_interaction_1991, paillart_vitro_2002}.
-Nucleotide-level fitness effects have been observed beyond RNA structure as
-well. Recent studies have shown that genetically engineered HIV strains with
+On the other hand, nucleotide-level fitness effects have been observed beyond RNA structure as
+well.
+In most species, it is  known that synonymous codons don't evolve completely neutrally
+but that some codons are favored over others \citep{plotkin_synonymous_2011};
+this is expected to be particularly important in compact viruses like HIV. 
+Recent studies have shown that genetically engineered HIV strains with
 altered codon usage can in some cases produce more viral protein, but in general
 replicate less efficiently~\citep{ngumbela_quantitative_2008,
 li_codon-usage-based_2012,keating_rich_2009}.
 Codon-deoptimization has been suggested as attenuation strategy for polio and 
 influenza~\citep{mueller_live_2010,coleman_virus_2008}. Purifying
 selection beyond the protein sequence is therefore expected
-\citep{forsdyke_reciprocal_1995,snoeck_mapping_2011}, but while positive
-selection through the immune system be mainly restricted to changes in the
+\citep{forsdyke_reciprocal_1995,snoeck_mapping_2011}; nonetheless, positive
+selection via the host adaptive immune system is restricted to changes in the
 amino acid sequence.
 
-%SYNONYMOUS CONSERVATION. DO WE HAVE A PLOT OF GENOME WIDE CONSERVATION, MAYBE
-%FOR SUPPLEMENT? YES
-
 In this paper, we characterize the dynamics of synonymous mutations in \env{}
-and show that a substantial fraction of these mutations is deleterious. We then
+and show that a substantial fraction of these mutations is deleterious.
+We argue that synonymous mutations reach high frequencies via genetic hitchhiking
+thanks to the small recombination rate of HIV~\citep{neher_recombination_2010,
+batorsky_estimate_2011}.
+We then
 compare our observations to computational models of HIV evolution and derive
 estimates for the effect synonymous mutations have on fitness.
-Hitchhiking of synonymous mutations with escape mutations is due to the small
-recombination rate of HIV~\citep{neher_recombination_2010,
-batorsky_estimate_2011}. Extending the analysis of fixation probabilities to the
+Extending the analysis of fixation probabilities to the
 nonsynonymous mutations, we show that time dependent selection or strong
 competition of escape mutations inside the same epitope are necessary to explain
 the observed patterns of fixation and loss.
@@ -148,11 +149,11 @@ the common ancestor of the entire future population at a particular locus and
 the neutral mutation is not preferentially associated with genomes of high or
 low fitness).
 Deleterious or beneficial mutations fix less or
-more often than neutral ones, respectively. \FIG{aft}A\&B show 
+more often than neutral ones, respectively. \FIG{aft} shows 
 the time course the frequencies of all synonymous and nonsynonymous mutations
 observed \env~, C2-V5, in patient p8~\citep{shankarappa_consistent_1999},
 respectively. Despite many synonymous mutations reaching high frequency, very
-few fix (panel~\ref{fig:aftsyn}); however, many nonsynonymous mutations fix
+few fix (panel~\ref{fig:aftsyn}); in constrast, many nonsynonymous mutations fix
 (panel~\ref{fig:aftnonsyn}).
 
 \subsection{Synonymous polymorphisms in \env, C2-V5, are mostly deleterious}
@@ -172,7 +173,7 @@ roughly one year and are lost much more frequently than expected (panel
 synonymous mutations is shown as a function of the initial frequency $\nu_0$ in
 panel~\ref{fig:fixp2} (red line). Restricted to the region C2-V5, we find that
 $\pfix$ of synonymous mutations is far below the neutral expectation.
-Outside of C2-V5 using data from \citet{bunnik_autologous_2008} only, no such
+Outside of C2-V5, using data from \citet{bunnik_autologous_2008} only, no such
 reduction in $\pfix$ is found. Restricted to the C2-V5 area, the data from
 \citet{bunnik_autologous_2008} is fully compatible with data from
 \citet{shankarappa_consistent_1999}. The nonsynonymous seem to follow more or
@@ -198,18 +199,19 @@ it, i.e., its frequency $\nu$.}
 \end{figure}
 
 When interpreting these results for the fixation probabilities, it is important
-to distinguish random mutations, and polymorphisms at a given frequency that has
-already been filtered by selection.
+to distinguish between random mutations and polymorphisms at a given frequency,
+which have already been filtered by selection.
 A polymorphism could be beneficial to the virus and on its way to fixation. In
 this case, we expect that it fixes almost surely given we see it at high
 frequency. If, on the other hand, the polymorphism is deleterious it must have
-gotten to high frequency by a chance event (genetic drift or hitch-hiking), and
+gotten to high frequency by chance (genetic drift or hitchhiking), and
 we expect that selection will drive it out of the population again. Hence our
 observations suggest that many of the synonymous polymorphisms at intermediate
 frequencies in the part of \env~that includes the hypervariable regions are
 deleterious, while outside this regions polymorphisms are mostly roughly
 neutral. Note that this does not imply that all synonymous mutations are neutral
--- only those mutations observed at high frequencies tend to be neutral.
+-- only those mutations observed at high frequencies, which have been
+experiencing selection for some time already, tend to be neutral.
 
 \begin{figure}
 \begin{center}
@@ -217,7 +219,8 @@ neutral. Note that this does not imply that all synonymous mutations are neutral
 \label{fig:fixp1}}\\
 \subfloat{\includegraphics[width=0.9\linewidth]{fixation_probabilities}
 \label{fig:fixp2}}
-\caption{Fixation and loss of synonymous mutations. Panel A shows the time
+\caption{Fixation and loss of synonymous mutations.
+Panel A) Time
 course of loss and fixation of synonymous mutations observed in a frequency interval $\nu_0$. 
 In each frequency interval, the  fraction of synonymous
 mutations that ultimately fix is the fixation probability conditional on the
@@ -250,16 +253,16 @@ synonymous alleles observed at intermediate frequencies above 10-15\% depending
 on their final destiny (fixation or extinction). Subsequently, we align our
 sequences to the reference NL4-3 strain used in
 ref.~\citep{watts_architecture_2009} and assign them SHAPE reactivities. As
-shown in \FIG{SHAPEA} in a cumulative histogram, the reactivities of fixed
+shown in \FIG{SHAPEA}, the reactivities of fixed
 alleles (red line) are systematically larger than of alleles are lost (blue
 line) (Kolmogorov-Smirnov test, $P\approx 0.002$).
 In other words, alleles that are likely to break RNA helices are also more
 likely to revert and finally be lost from the population. As a control, the
 average over non-observed but potentially available polymorphisms lies between
 the two curves (green line), as expected (because only some of these mutations
-will interfere with stem loop formation).
-To test the hypothesis that mutations in C2-V5 are lost since break stems in the
-conserved between the variable loops, we split the synonymous mutations in the
+would interfere with stem-loop formation).
+To test the hypothesis that mutations in C2-V5 are lost because they break stems in the
+conserved streches between the variable loops, we split the synonymous mutations in the
 extended V1-V5 region further into conserved and variable regions and found that
 the biggest depression in fixation probability is observed in the conserved
 stems, while the variable loops show little deviation from the neutral
@@ -292,7 +295,7 @@ susequently lost (restricted to the vicinity of variable loops). This difference
 is quantified by a cumulative histogram ($p=0.002$, Kolmogorov-Smirnov two 
 sample test). Mutations that are never
 observered show an intermediate distribution of SHAPE values.
-Panel B shows the fixation probability of synonymous mutations in C2-V5
+Panel B) Fixation probability of synonymous mutations in C2-V5
 separately for variable loops and the connecting conserved regions, that
 harbor conserved RNA stems. As expected, fixation probability is lower inside
 the conserved regions. Data from Refs.~\cite{shankarappa_consistent_1999,
@@ -302,7 +305,7 @@ bunnik_autologous_2008, liu_selection_2006}.}
 \end{figure}
 
 
-\subsection{Deleterious mutations are brought to high frequency by hitch-hiking}
+\subsection{Deleterious mutations are brought to high frequency by hitchhiking}
 
 While the observation that some fraction of synonymous mutations is deleterious
 is not unexpected, it seems odd that we observe them at high population
@@ -312,7 +315,7 @@ that it undergoes frequent adaptive changes to evade recognition by neutralizing
 antibodies~\cite{williamson_adaptation_2003,richman_rapid_2003}. Due to the limited amount of
 recombination in HIV~\cite{neher_recombination_2010,batorsky_estimate_2011},
 deleterious mutations that are linked to adaptive variants can reach high
-frequency. This process is known as hitch-hiking \citep{smith_hitch-hiking_1974}
+frequency. This process is known as hitchhiking \citep{smith_hitch-hiking_1974}
 or genetic draft \citep{gillespie_genetic_2000,neher_genetic_2011}.
 
 The potential for hitchhiking is already apparent from the allele frequency
@@ -384,13 +387,13 @@ deleterious mutations to reach the frequency threshold of 0.25.
 To map the parameter range of the model that is compatible with the data, we
 repeatedly simulated the evolution with random choices for the deleterious
 effect of synonymous mutations, the fraction of synonymous mutations that are
-deleterious, the escape rate of adaptive mutations, and the frequency of
-escapes.  Among all simulations, we select the ones that show $A_\text{syn}$ and
+deleterious, the fitness effect of adaptive mutations (escape rate) and the frequency of
+escapes. Among all simulations, we select the ones that show $A_\text{syn}$ and
 $P_\text{interm}$ as observed in the data, i.e., a large depression in fixation
 probability of synonymous mutations but, simulteneously, a moderately high
 synonymous diversity. Specifically, \FIG{simsfig} shows parameter combinations
-for which we found $A_\text{syn} < -0.15$ and $0.0025 < P_\text{interm} < 0.010$
-(twofold variation around the observed value). This selection imposes a strong
+for which we found $A_\text{syn} < -0.15$ and $0.0025 < P_\text{interm} <
+0.010$. This selection imposes a strong
 constraint on the deleterious fraction and effect size (see \FIG{simsfig}).
 A high fraction ($\gtrsim 0.8$) of only slightly deleterious synonymous sites,
 with effect size $|s_d| \sim 0.002$, is required. This result fits well the
@@ -399,7 +402,8 @@ The results are plausible:
 (a) since high frequency bins are enriched in neutral mutations (it is easier
 for them to hitchhike), a depression in $\pfix$ will be
 visible only if deleterious mutations are pervasive; (b) in order to
-hitchhike, the deleterious effect size has to be less than the escape rate, otherwise the
+hitchhike, the deleterious effect size has to be much smaller than the escape
+rate, otherwise the
 double mutant has little or no fitness advantage; (c) mutations with a 
 deleterious effect weaker than approximately $0.001$ behave neutrally
 consistent with the typical coalescent times observed in HIV.
@@ -436,8 +440,10 @@ multiple sweeping nonsynonymous mutations in real HIV infections has been shown
 previously~\citep{moore_limited_2009, bar_early_2012}.
 We tested both hypotheses in our simulation framework and they both seem to
 achieve a reduced, neutral-like fixation probability while maintaining a high
-rate of substitutions, compatibly with HIV measurements \comment{Supplementary}.
-In real HIV infections, both mechanisms are likely to be playing a role.
+rate of substitutions, compatibly with HIV measurements (see supplementary
+materials).
+In real HIV infections, both mechanisms are likely to be playing a role, as they
+are not mutually exclusive.
 
 \section{Discussion}
 Despite several known functional roles for RNA secondary structure in the HIV
@@ -450,7 +456,7 @@ genome suggest that these mutations are deleterious, at least in part, because t
 stems in RNA secondary structures. Furthermore, we provide evidence that these
 mutations are brought to high frequency through linkage to adaptive mutations.
 
-Contrary to na\"ive expectations, the adaptive escape mutations don't seem to be
+Contrary to na\"ive expectations, the adaptive escape mutations do not seem to be
 unconditionally beneficial. Otherwise we would observe almost sure fixation of
 nonsynonymous mutations once they reach intermediate frequencies. Instead, we
 find that the fixation probability of nonsynonymous mutations is roughly given
@@ -460,13 +466,14 @@ be weakly deleterious and the adaptive and deleterious parts conspire to yield
 the neutral-like averaged fixation probability. We consider this possibility
 inplausible since the amino-acid sequence outside the variable loops is much
 more conserved that the synonymous positions, suggesting that the majority of
-the nonsynonymous mutations is much more deleterious. 
+the nonsynonymous mutations is much more deleterious (see supplementary
+materials). 
 
 Alternatively, the lack of fixation could be due to (a) time dependent environment
 through an immune system that is catching up, or (b) competition between mutations
-that mediate escape within the same epitope. We explored both of these
+that mediate escape within the same epitope. We explore both of these
 possibilities and find that both produce the desired effect. Furthermore, there
-is evidence in support of both of these hypothesis. Serum from HIV infected
+is experimental evidence in support of both of these hypotheses. Serum from HIV infected
 individuals tyically neutralizes the virus that dominated the population a few
 (3-6) month ago \citep{richman_rapid_2003}. This suggests that escape mutations
 cease to be beneficial after a few months and might revert if they come with a

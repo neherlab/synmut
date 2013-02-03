@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -38,8 +38,8 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1916"
-     inkscape:window-height="1161"
+     inkscape:window-width="1276"
+     inkscape:window-height="761"
      id="namedview21177"
      showgrid="false"
      inkscape:zoom="1.2361274"
@@ -52,7 +52,14 @@
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       orientation="1,0"
+       position="-232.17672,358.3773"
+       id="guide4269" />
+  </sodipodi:namedview>
   <defs
      id="defs20213"
      style="stroke-linecap:square;stroke-linejoin:round">
@@ -3570,4 +3577,19 @@
        id="tspan49046"
        x="4.5661826"
        y="22.980661">B</tspan></text>
+  <path
+     d="m 361.95021,205.81137 -17.17717,-0.0209 8.60544,-14.8676 8.57173,14.88849 z"
+     style="fill:none;stroke:#ff0000;stroke-width:2.56616235;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+     id="path16137-2-7"
+     inkscape:connector-curvature="0" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path16131-8-0"
+     style="fill:none;stroke:#008000;stroke-width:2.56616259;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:7;stroke-opacity:1;stroke-dasharray:none"
+     d="m 337.31034,151.89826 13.98148,0 0,13.98148 -13.98148,0 0,-13.98148 z" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path16129-4-8"
+     style="fill:none;stroke:#0000ff;stroke-width:2.56616259;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+     d="m 319.9104,165.36031 c 0,4.04632 -3.27545,7.32177 -7.32075,7.32177 -4.04222,0 -7.32178,-3.27545 -7.32178,-7.32177 0,-4.0453 3.27956,-7.32075 7.32178,-7.32075 4.01758,0 7.28482,3.23952 7.32075,7.25711" />
 </svg>
