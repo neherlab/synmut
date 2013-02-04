@@ -16,19 +16,13 @@ import matplotlib.cm as cm
 
 
 # Globals
+results_dir = '../data/simulations/gradually_more_del_6epitopes/'
 datafile = 'parameters_fixation_areas.dat'
 
 
 
 # Script
 if __name__ == '__main__':
-
-
-    # Input results dir
-    args = sys.argv
-    if len(args) < 2:
-        raise ValueError('Please specify a results folder')
-    results_dir = args[1].rstrip('/')+'/'
 
     # Load data using record arrays
     tb = np.genfromtxt(results_dir+datafile, unpack=False,

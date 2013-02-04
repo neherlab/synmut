@@ -10,10 +10,10 @@ import numpy as np
 
 from Bio.Alphabet.IUPAC import *
 
-from longitudinal.classes.parser_LANL import patient as patientLANL
-from longitudinal.classes.parser_LANL import parse_sequences as parse_sequencesLANL
-from longitudinal.classes.helper import translate, find_with_gaps
-from longitudinal.classes.parser_reference import seq_patterns
+from parser_LANL import patient as patientLANL
+from parser_LANL import parse_sequences as parse_sequencesLANL
+from helper import translate, find_with_gaps
+from parser_reference import seq_patterns
 
 
 # Globals

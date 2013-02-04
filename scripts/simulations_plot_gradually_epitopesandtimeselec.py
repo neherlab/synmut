@@ -16,6 +16,7 @@ import matplotlib.cm as cm
 
 
 # Globals
+results_dir = '../data/simulations/gradually_epitopesandtimeselec/'
 datafile = 'parameters_fixation_areas.dat'
 
 
@@ -27,8 +28,6 @@ def filterfolders(folders):
     if ('nescepi' in tmp) or ('timeselec' in tmp):
         tmp = tmp[:-2]
     base = '_'.join(tmp)
-    print tmp
-    print base
 
     ind = {}
     for i, f in enumerate(folders):
@@ -42,21 +41,12 @@ def filterfolders(folders):
             ind[4] = i
         elif ('nescepi' not in f) and ('timeselec' not in f):
             ind[0] = i
-    print folders
-    print ind
     return [folders[ind[i]] for i in xrange(5)]
 
 
 
 # Script
 if __name__ == '__main__':
-
-
-    # Input results dir
-    args = sys.argv
-    if len(args) < 2:
-        raise ValueError('Please specify a results folder')
-    results_dir = args[1].rstrip('/')+'/'
 
     # Folders
     g = os.walk(results_dir)

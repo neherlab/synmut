@@ -13,7 +13,7 @@ import general.classes.alphabet as abc
 
 
 # Globals
-datadir = '/home/fabio/university/phd/general/data/'
+datadir = '../data/'
 genes = ['gag', 'pol', 'env', 'nef', 'vpu', 'vpr', 'vif', 'tat']
 
 

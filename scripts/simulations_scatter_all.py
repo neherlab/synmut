@@ -16,6 +16,7 @@ import matplotlib.cm as cm
 
 
 # Globals
+results_dir = '../data/simulations/random_gradual_nonsyndead_6epitopes/'
 datafile = 'parameters_fixation_areas.dat'
 
 # Set limits for data-like sims
@@ -30,17 +31,9 @@ Anonsynmin = -0.5
 tmpsnsmin = 0e-6
 
 
+
 # Script
 if __name__ == '__main__':
-
-
-    # Input results dir
-    args = sys.argv
-    if len(args) < 2:
-        raise ValueError('Please specify a results folder')
-    results_dir = args[1].rstrip('/')+'/'
-    
-
 
     # Load data using record arrays
     tb = np.genfromtxt(results_dir+datafile, unpack=False,

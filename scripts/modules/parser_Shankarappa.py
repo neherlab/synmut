@@ -20,14 +20,16 @@ from Bio.Seq import Seq
 from Bio.Alphabet.IUPAC import *
 from Bio.Align import MultipleSeqAlignment as MSA
 
-import longitudinal.classes.parser_SHAPE as pSHAPE
-from longitudinal.classes.helper import find_with_gaps
-from longitudinal.classes.parser_reference import seq_patterns
-from longitudinal.classes.parser_generic import patient_generic, alpha
+import parser_SHAPE as pSHAPE
+from helper import find_with_gaps
+from parser_reference import seq_patterns
+from parser_generic import patient_generic, alpha
+
 
 
 # Globals
-datadir = '/home/fabio/university/phd/longitudinal/data/Shankarappa'
+datadir = '../data/longitudinal/Shankarappa'
+
 
 
 # Classes

@@ -10,8 +10,8 @@ import numpy as np
 import Bio.AlignIO as AlignIO
 from itertools import permutations
 
-from longitudinal.classes.helper import find_with_gaps
-from longitudinal.classes.parser_generic import alpha
+from helper import find_with_gaps
+from parser_generic import alpha
 
 
 

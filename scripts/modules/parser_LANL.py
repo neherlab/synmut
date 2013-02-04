@@ -19,13 +19,13 @@ from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
 from Bio.Alphabet.IUPAC import *
 
-import longitudinal.classes.parser_SHAPE as pSHAPE
-from longitudinal.classes.parser_generic import patient_generic, alpha
+import parser_SHAPE as pSHAPE
+from parser_generic import patient_generic, alpha
 
 
 
 # Globals
-datadir = '/home/fabio/university/phd/longitudinal/data/LANL'
+datadir = '../data/longitudinal/LANL'
 
 columns = [('#',int),
            ('patient_code',str),

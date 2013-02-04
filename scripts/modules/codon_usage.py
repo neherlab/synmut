@@ -12,7 +12,7 @@ from Bio.Seq import translate
 
 
 # Globals
-datadir = '/home/fabio/university/phd/general/data/codon_usage/'
+datadir = '../data/codon_usage/'
 alpha = list(alpha)
 
 
