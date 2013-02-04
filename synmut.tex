@@ -394,8 +394,11 @@ deleterious mutations to reach the frequency threshold of 0.25.
 To map the parameter range of the model that is compatible with the data, we
 repeatedly simulated the evolution with random choices for the deleterious
 effect of synonymous mutations, the fraction of synonymous mutations that are
-deleterious, the fitness effect of adaptive mutations (escape rate) and the frequency of
-escapes. Among all simulations, we select the ones that show $A_\text{syn}$ and
+deleterious, the escape rate and the frequency of new escapes. Note that the
+escape rate is sum of two factors: (a) the beneficial effect due to the ability to
+evade the immune system minus (b) the fitness side costs in terms of structure,
+stability, etc.
+Among all simulations, we select the ones that show $A_\text{syn}$ and
 $P_\text{interm}$ as observed in the data, i.e., a large depression in fixation
 probability of synonymous mutations but, simulteneously, a moderately high
 synonymous diversity. Specifically, \FIG{simsfig} shows parameter combinations
