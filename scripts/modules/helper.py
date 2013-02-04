@@ -7,8 +7,9 @@ content:    Helper functions for all parsers
 # Standard modules
 import numpy as np
 import matplotlib.pyplot as ppl
-import Bio.Seq
 import re
+
+import Bio.Seq
 
 
 # Functions

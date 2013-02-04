@@ -7,8 +7,9 @@ content:    Implement some globals used by many parsers that interact with a
 '''
 # Modules
 import numpy as np
-import Bio.AlignIO as AlignIO
 from itertools import permutations
+
+import Bio.AlignIO as AlignIO
 
 from helper import find_with_gaps
 from parser_generic import alpha

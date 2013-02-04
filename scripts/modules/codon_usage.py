@@ -6,8 +6,10 @@ content:    Read codon usage tables
 '''
 # Modules
 import re
-from longitudinal.classes.parser_generic import alpha
+
 from Bio.Seq import translate
+
+from parser_generic import alpha
 
 
 

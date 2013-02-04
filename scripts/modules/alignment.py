@@ -8,8 +8,10 @@ content:    Tools for managing sequences and alignments of general nature.
 import os
 import glob
 import numpy as np
+
 from Bio import SeqIO, AlignIO
-import general.classes.alphabet as abc
+
+import alphabet as abc
 
 
 # Globals
