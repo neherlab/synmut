@@ -16,11 +16,7 @@ import sys
 sys.path.insert(0, '.')
 import modules.parser_Shankarappa as pS
 from modules.helper import is_nonsyn_table
-
-
-
-# Tables
-alpha = pS.alpha
+from modules.alphabet import alpha
 
 
 
