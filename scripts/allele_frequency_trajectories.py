@@ -20,19 +20,6 @@ from modules.alphabet import alpha
 
 
 
-# Functions
-def expanded_isnongap(afs):
-    '''Restrict the sequence to non-gapped CODONS.'''
-    is_gap = (afs[:,4,:].any(axis=1)).nonzero()[0]
-    is_gap2 = set()
-    for i in is_gap:
-        is_gap2 |= set(range(i - i % 3, i - i % 3 + 3))
-    is_nongap = np.ones(afs.shape[0], bool)
-    is_nongap[list(is_gap2)] = False
-    return is_nongap
-
-
-
 # Script
 if __name__ == '__main__':
 
@@ -55,7 +42,6 @@ if __name__ == '__main__':
         # Eliminate gaps (whole codons are excluded to keep translation possible)
         # first and translate then!
         # Note: this has been implemented at the root
-        #is_nongap = expanded_isnongap(afs)
         is_nongap = (afs[:,4,:] == 0).all(axis=1)
         is_V_region = p.only_V_regions()
 
