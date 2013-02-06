@@ -10,9 +10,9 @@ import re
 
 
 # Globals
-helixfile = '/home/fabio/university/phd/longitudinal/data/SHAPE/nature08237-s2.txt'
-bpseqfile = '/home/fabio/university/phd/longitudinal/data/SHAPE/nature08237-s2_bpseq.txt'
-ppfile = '/home/fabio/university/phd/longitudinal/data/SHAPE/nature08237-s3.txt'
+helixfile = '../data/SHAPE/nature08237-s2.txt'
+bpseqfile = '../data/SHAPE/nature08237-s2_bpseq.txt'
+ppfile = '../data/SHAPE/nature08237-s3.txt'
 
 
 
