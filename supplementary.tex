@@ -10,7 +10,8 @@
 \usepackage{graphicx}
 \usepackage[caption=false]{subfig}
 \usepackage{natbib}
-\usepackage{pslatex}\usepackage[colorlinks,linkcolor=red,citecolor=red]{hyperref}
+\usepackage{pslatex}
+\usepackage[colorlinks,linkcolor=red,citecolor=red]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \graphicspath{{./figures/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -20,7 +21,7 @@
 \newcommand{\Author}{Fabio~Zanini* and Richard~A.~Neher*}
 \newcommand{\Title}{Deleterious synonymous mutations hitchhike to high frequency in HIV \env~evolution}
 \newcommand{\Affiliation}{Max Planck Institute for Developmental Biology, 72076 T\"ubingen, Germany}
-\hypersetup{pdfauthor={\Author}, pdftitle={\Title}, pdfkeywords={\Keywords}}
+%\hypersetup{pdfauthor={\Author}, pdftitle={\Title}, pdfkeywords={\Keywords}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -35,7 +36,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Selection of the patient data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
+\begin{figure}[ht]
 \begin{center}
 \includegraphics[width=0.4\linewidth]{Shankarappa_PCA_p1}
 \includegraphics[width=0.4\linewidth]{Shankarappa_allele_freqs_trajectories_nonsyn_p1}
@@ -43,27 +44,28 @@
 \includegraphics[width=0.4\linewidth]{Shankarappa_allele_freqs_trajectories_nonsyn_p7}
 \caption{Panel A) PCA of all sequences from patient p1 (colors indicate time from seroconversion,
 from blue to red). Panel B) Allele frequency trajectories for nonsynonymous
-changes in the same patient. Panels C and D) the same plots from patient p7, whose
-sequences show signs of compartimentalization.}
+changes in the same patient. Panels C and D) show analogous plots for data from
+patient p7. Samples after day 1000 split into two clusters in the PCA and no
+mutations that arise after day 1000 fix, presumably because they are restricted
+to one subpopulation. }
 \label{fig:aftp}
 \end{center}
 \end{figure}
-Not all of the patients studied in refs.~\citealp{shankarappa_consistent_1999} and
-\citealp{bunnik_autologous_2008} were analyzed. The reason is that patients p4,
-p7, p8, p9 from ref.~\citealp{shankarappa_consistent_1999} and patients ACH19542
-and ACH19768 from ref.~\citealp{bunnik_autologous_2008} showed clear signs of
-compartimentalization (population structure) during infection, which would have
-been an irreparable confounder for our analysis. The difference is clear if
-PCA is performed on all sequences from a ``compartimentalized'' patient, p7.
-This is shown in \figurename~\ref{fig:aftp}: late sequences subdivide in two
-well-defined clusters -- this characteristic is absent from all the patient
-sequences used in our main analysis. On the right, allele frequency trajectories from the same
-patient are plotted: evidently, no derived allele is fixed after 1000 days
-from seroconversion, but a lot of mutations swarm to frequencies around 0.5-0.8. Of
-course, the fixation probability of new mutations in such a sample is very low,
-but this is an effect of population structure rather than any
-of the processes discussed in the main text (time-dependent selection, competition
-of mutants within the same epitope).
+Patients p4, p7, p8, p9 from ref.~\citealp{shankarappa_consistent_1999} and
+patients ACH19542 and ACH19768 from ref.~\citealp{bunnik_autologous_2008} showed clear signs of
+compartimentalization (population structure) during infection. This population
+structure is easy to spot after a principle component analysis (PCA) of all
+sequences from all samples from one patients. When the projections onto the
+first 3 PCs for each sequence, the above mentioned patients show bifurcation
+into two clusters at later time points. Since mutations that arise in one subpopulation cannot fix population wide, such population
+structure confounds our analysis and these patients were exclude.
+
+
+Similar, but less obvious, conclusions can be drawn from the allele frequency
+trajectories plotted next to the PCA plots: no allele that arose after 1000
+days from seroconversion ever fixes, but a most mutations hover at frequencies
+around 0.5-0.8. Fluctuations of these allele frequencies probably reflect
+changing relative sizes of the subpopulations. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Nonsynonymous changes outside of variable regions are deleterious}
@@ -72,11 +74,13 @@ of mutants within the same epitope).
 \begin{center}
 \includegraphics[width=0.5\linewidth]{synmut_conservation_4fold_synnonsyn}
 \caption{Cumulative distribution of synonymous and nonsynonymous diversity in
-{\it gag}. Nonsynonymous changes are, overall, much less common than synonymous
-ones.}
+{\it gag} in the LANL reference panel. Nonsynonymous sites are much
+less diverse than 4-fold synonymous sites. \comment{The title is wrong. How
+do you decide on 4-fold degeneracy? (consensus amino acid???)}.}
 \label{fig:synnonsyncons}
 \end{center}
 \end{figure}
+\comment{this can use streamlining. Why not put is all into the figure caption}
 In the main text, it is argued that, whereas the deleterious effect of
 synonymous changes is very small, most nonsynonymous mutations outside of the
 variable regions are much worse. To show this, we take a multiple sequence alignment of
