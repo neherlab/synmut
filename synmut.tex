@@ -53,7 +53,7 @@ arms race with the adaptive immune system. Synonymous mutations do not affect
 the interaction with the adaptive immune system and are often
 assumed to be neutral.
 We analyze longitudinal intrapatient data from the \shankaregion~part of the
-envelope gene (\env) and observe that synonymous derived alleles  rarely
+envelope gene (\env) and observe that synonymous derived alleles rarely
 fix even though they often reach high frequencies in the viral population.
 We find that synonymous mutations that disrupt base pairs in RNA stems flanking
 the variable loops of gp120 are more likely to be lost than other synonymous
@@ -223,7 +223,7 @@ have been experiencing selection for some time already, tend to be neutral.
 \label{fig:fixp1}}\\
 \subfloat{\includegraphics[width=0.9\linewidth]{fixation_probabilities}
 \label{fig:fixp2}}
-\caption{Fixation and loss of synonymous mutations. \comment{fix x-axis label}
+\caption{Fixation and loss of synonymous mutations.
 Panel A) Time
 course of loss and fixation of synonymous mutations observed in a frequency interval $\nu_0$. 
 In each frequency interval, the  fraction of synonymous
@@ -264,8 +264,8 @@ alleles (red histogram) are systematically larger than of alleles are lost (blue
 ) (Kolmogorov-Smirnov test, $P\approx 0.002$).
 In other words, alleles that are likely to break RNA helices are also more
 likely to revert and finally be lost from the population. The
-average over all mutations that rare not observed  (green) lies between the
-those that fix or get lost.
+average over all mutations that are not observed (green) lies between the
+those that fix and those that get lost.
 To test the hypothesis that mutations in C2-V5 are lost because they break stems in the
 conserved streches between the variable loops, we consider mutations in
 variable loops and conserved parts separately. The biggest depression in
@@ -292,7 +292,7 @@ usage to its human host cells at the macroevolutionary level
 high SHAPE reactivities.
 Panel A) Synonymous substitions have
 substantially higher SHAPE reactivities than mutations that reach frequencies above 15\%, but are
-susequently lost (restricted to the region V1-V5$\pm 50bp$)????. This difference
+susequently lost (restricted to the regions V1-V5$\pm 100bp$ from each). This difference
 is quantified by a cumulative histogram ($p=0.002$, Kolmogorov-Smirnov two 
 sample test). Mutations that are never
 observered show an intermediate distribution of SHAPE values.
@@ -350,7 +350,8 @@ high deleterious fractions of synonymous mutations reproduce synonymous HIV-like
 fixation probability and diversity. Parameters are chosen uniformly on a
 logarithmic scale from the indicated windows. \comment{Can't we show this
 for simple epitopes? I can't seem to find a way to describe this from the
-outset}.
+outset}. \comment{FIXME: (i) only x acis is logarithmic; (ii) redo without
+epitopes (less representative in the end, but easier to introduce).}
 This simulation assumes 6 roughly equivalent escape mutations per epitope; see supplement for alternative models.}
 \label{fig:simheat}
 \end{center}
@@ -510,8 +511,8 @@ A functional significance of the insulating RNA structure stems between the
 hyper-variable loops has been proposed
 previously~\citep{watts_architecture_2009, sanjuan_interplay_2011}.
 Conserved RNA structures exist in different parts of the HIV genome (several are
-known), but our analysis requires longitudinal data most of which focusses
-on \env.
+known), but our analysis requires longitudinal data, most of which focuses
+on \env{}.
 Furthermore, we only expect to see deleterious synonymous
 mutations at high frequencies if they are linked to repeated adaptive
 substitions. Otherwise, they remain at low frequencies and can only be observed
@@ -543,9 +544,9 @@ studies~\citep{shankarappa_consistent_1999, liu_selection_2006,
 bunnik_autologous_2008} and downloaded from the Los Alamos National Laboratory
 (LANL) HIV sequence database~\citep{LANL2012}. The samples from some patients
 show substantial population structure and were discarded (see supplementary
-materials); a total of 11 patients with 6-?? time points each and 10
+materials); a total of 11 patients with 4-23 time points each and approximately 10
 sequences per time point were analyzed. The time intervals between two
-consecutive sequences ranged from 6 to 18 months. \comment{CHECK VALUES}.
+consecutive sequences ranged from 1 to 34 months, most of them approximately 6 to 10 months.
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Sequence analysis}
@@ -570,9 +571,8 @@ criteria for synonymous/nonsynonymous discrimination yield similar results.
 For the estimate of times to fixation/extinction, polymorphisms were
 binned by frequency and the time to reaching the first boundary (fixation or
 extinction) was stored. The fixation probability was determined as the long-time
-limit of the resulting curves. Samples less than ???days
-prior the last time point were omitted since there was not enough information
-on their future fate, i.e., whether they fix or are lost.
+limit of the resulting curves. Mutations that reached high frequency but neither
+fixed nor got extinct were classified as ``floating'' and not analyzed further.
 
 The SHAPE scores quantifying the degree of base pairing of individuals sites in
 the HIV genome were downloaded from the journal
@@ -580,37 +580,53 @@ website~\citep{watts_architecture_2009}.
 Where possible, SHAPE reactivities were assigned to sites in the multiple
 sequence alignments for each patient through the alignment to the sequence
 of the NL4.3 virus used in \citep{watts_architecture_2009}. Problematic
-assignments in indel-rich regions are excluded from the analysis.
-\comment{The following is super confusing}
-In order to restrict the analysis to synonymous polymorphisms, a lower frequency
-threshold of 0.15 was used (other thresholds yield the same results). Since very
-few polymorphisms hitchhike beyond, say, a frequency of 0.5, this pool is
-enriched for to-be-lost mutations; hence the ``lost" curve in \FIG{SHAPEA}
-contains much more points than the ``fixed" one.
+assignments in indel-rich regions were excluded from the analysis.
 
-The variable loops and flanking regions are identified manually starting from
+The variable loops and flanking regions were identified manually starting from
 the annotated reference HXB2 sequence from the LANL HIV database~\citep{LANL2012}. A
-similar approach is used to label the C2-V5 region sequenced in
+similar approach was used to label the C2-V5 region sequenced in
 ref.~\citep{shankarappa_consistent_1999}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Computer simulations}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Simulations are performed using FFPopSim~\citep{zanini_ffpopsim:_2012}. Both full-length HIV genomes and
-\env{}-only simulations are performed and yield comparable results. In each
-run, a random fitness landscape with specified statistical properties 
-(e.g.~density of beneficial sites, average deleterious effect of synonymous changes) is generated.
-For each set of parameters, approximately 100 simulation runs are averaged over. 
-\comment{needs a little bit more detail}.
-For the discussion of simulation parameters, the areas below or above the neutral
-diagonal were estimated from the binned fixation probabilities using linear
+Computer simulations were performed using
+FFPopSim~\citep{zanini_ffpopsim:_2012}. Both full-length HIV genomes and
+\env{}-only simulations were performed and yielded comparable results. In each
+simulation, four random parameters were drawn form prior distributions: (i)
+fraction of deleterious synonymous sites (flat between 0.75 and 1.0); (ii)
+deleterious effect at those sites (logarithmic between $10^{-4}$ and $10^{-2}$);
+(iii) average beneficial effect of an escape mutation (logarithmic between
+$10^{-2.5}$ and $10^{-1.5}$); (iv) rate of introduction of new epitopes
+(logarithmic between $10^{-3}$ and $10^{-2}$ per generation). After these four
+parameters were fixed, the simulation started. All the deleterious synonymous
+sites had the same fitness effect (variations were tested and produced the same
+results), and no epitopes (i.e. no escape mutations) were initially present.
+After 30 generations of burn-in to create some genetic diversity, new epitopes
+were introduced at a constant rate (as specified above). Each time such an
+epitope was actually introduced, its fitness advantage was drawn from an
+exponential distribution with fixed average value (as specified above).
+For the models with competition within epitopes, a complex epistatic fitness
+landscape was manually crafted, in which each single mutant provides the whole
+beneficial effect of escape. For the models with time-dependent selection due to
+the immune system catching up, the beneficial effect of an escape mutation was
+reverted at random after it had appeared, according to its integrated allele
+frequency (see supplementary materials for more details).
+
+For each set of parameters, fixation probabilities and probabilities of
+synonymous polymorphisms $P_\text{interm}$ were calculated as averages over
+approximately 100 repetitions (with different random seeds).
+
+The areas below or above the neutral fixation probability (diagonal line)
+were estimated from the binned fixation probabilities using linear
 interpolation between the bin centers. This measure is sufficiently precise for
 our purposes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Methods availability}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-All analysis scripts, as well as the sequence alignment used, are available for download.
+All analysis and computer simulation scripts, as well as the sequence alignments
+used, are available for download.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgements}

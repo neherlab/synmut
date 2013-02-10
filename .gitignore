@@ -92,3 +92,5 @@ local.properties
 *.vrb
 *.xdy
 
+# Ignore byte-compiled Python scripts
+*.pyc
