@@ -52,8 +52,8 @@ Intrapatient HIV evolution is dominated by selection on the protein level in the
 arms race with the adaptive immune system. Synonymous mutations do not affect 
 the interaction with the adaptive immune system and are often
 assumed to be neutral.
-We analyze longitudinal intrapatient data from the \shankaregion~part of the
-envelope gene (\env) and observe that synonymous derived alleles rarely
+We analyze longitudinal intrapatient data from the \shankaregion{} part of the
+envelope gene (\env{}) and observe that synonymous derived alleles rarely
 fix even though they often reach high frequencies in the viral population.
 We find that synonymous mutations that disrupt base pairs in RNA stems flanking
 the variable loops of gp120 are more likely to be lost than other synonymous
@@ -63,8 +63,8 @@ Computational modeling indicates that these synonymous mutations have a
 (Malthusian) selection coefficient of the order of $-0.002$, and that they are brought up to high
 frequency by hitchhiking on neighboring beneficial nonsynonymous alleles.
 The patterns of fixation of nonsynonymous mutations suggest that antibody
-escape mutations in \shankaregion~are only transiently beneficial, either since
-the immune system is catching up or because of competition between equivalent
+escape mutations in \shankaregion{} are only transiently beneficial, either
+because the immune system is catching up or because of competition between equivalent
 escapes.
 
 \end{abstract}
@@ -244,8 +244,8 @@ Refs.~\cite{shankarappa_consistent_1999, bunnik_autologous_2008}.}
 \subsection{Synonymous mutations in C2-V5 tend to disrupt conserved RNA stems}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 One possible {\it a priori} explanation for lack of fixation of synonymous
-mutations in C2-V5 are  secondary structures in the viral RNA whose disruption
-is deleterious to the virus.
+mutations in C2-V5 are secondary structures in the viral RNA, the disruption of
+which is deleterious to the virus.
 It has been suggested early on that parts of the viral genome that have the
 potential to form RNA stems are better conserved than the
 remainder~\citep{forsdyke_reciprocal_1995,snoeck_mapping_2011}.
@@ -266,6 +266,10 @@ In other words, alleles that are likely to break RNA helices are also more
 likely to revert and finally be lost from the population. The
 average over all mutations that are not observed (green) lies between the
 those that fix and those that get lost.
+Note that, because of small differences in base pairing between the reference
+strain NL4-3 and each patient's initial consensus sequence, this analysis is not
+expected to be very sensitive, but very conservative.
+
 To test the hypothesis that mutations in C2-V5 are lost because they break stems in the
 conserved streches between the variable loops, we consider mutations in
 variable loops and conserved parts separately. The biggest depression in
@@ -346,13 +350,9 @@ size, fraction of deleterious synonymous sites, average size of escape
 mutations (color, blue ($10^{-2.5}$) to red ($10^{-1.5}$)), and rate of
 introduction of new epitopes (marker size, from $10^{-3}$ to $10^{-2}$ per
 generation). Mostly simulations with small deleterious effects and relatively
-high deleterious fractions of synonymous mutations reproduce synonymous HIV-like
-fixation probability and diversity. Parameters are chosen uniformly on a
-logarithmic scale from the indicated windows. \comment{Can't we show this
-for simple epitopes? I can't seem to find a way to describe this from the
-outset}. \comment{FIXME: (i) only x acis is logarithmic; (ii) redo without
-epitopes (less representative in the end, but easier to introduce).}
-This simulation assumes 6 roughly equivalent escape mutations per epitope; see supplement for alternative models.}
+high deleterious fractions of synonymous mutations reproduce synonymous the
+fixation probability and diversity observed in patients. Parameters are chosen
+from uninformed prior distributions in the indicated window (see methods).}
 \label{fig:simheat}
 \end{center}
 \end{figure}
@@ -370,7 +370,8 @@ escapes. Note that the escape rate is sum of two factors: (i) the beneficial
 effect due to the ability to evade the immune system minus (ii) the fitness
 cost of the mutation in terms of structure, stability, etc. Net escape rates
 in chronic infections have been estimated to be on the order of 
-$s_a = 0.01$ per day~\citep{neher_recombination_2010,Asquith}.
+$s_a = 0.01$ per day~\citep{neher_recombination_2010, Asquith}.
+\comment{Asquith??}
 
 \FIG{simfixpvar} shows simulations results for the fixation probability and the
 synonymous diversity for different deleterious effects of synonymous mutations. 
@@ -546,11 +547,12 @@ bunnik_autologous_2008} and downloaded from the Los Alamos National Laboratory
 show substantial population structure and were discarded (see supplementary
 materials); a total of 11 patients with 4-23 time points each and approximately 10
 sequences per time point were analyzed. The time intervals between two
-consecutive sequences ranged from 1 to 34 months, most of them approximately 6 to 10 months.
+consecutive sequences ranged from 1 to 34 months, most of them between 6 and 10
+months.
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Sequence analysis}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The sequences were translated and the resulting amino-acid sequences aligned
 using Muscle~\citep{edgar_muscle:_2004} to each other and the NL4-3 reference
 sequences separately for each patient. Within each patient, the consensus
@@ -563,7 +565,7 @@ points were extracted from the multiple sequence alignment.
 A mutation was considered synonymous if it did not change the amino acid
 corresponding to the codon, and if the rest of the codon was in the ancestral
 state. Codons with more than one mutation were discarded. Slightly different
-criteria for synonymous/nonsynonymous discrimination yield similar results.
+criteria for synonymous/nonsynonymous discrimination yielded similar results.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Fixation probability and secondary structure}
@@ -579,7 +581,7 @@ the HIV genome were downloaded from the journal
 website~\citep{watts_architecture_2009}.
 Where possible, SHAPE reactivities were assigned to sites in the multiple
 sequence alignments for each patient through the alignment to the sequence
-of the NL4.3 virus used in \citep{watts_architecture_2009}. Problematic
+of the NL4.3 virus used in ref.~\citep{watts_architecture_2009}. Problematic
 assignments in indel-rich regions were excluded from the analysis.
 
 The variable loops and flanking regions were identified manually starting from
@@ -595,14 +597,15 @@ FFPopSim~\citep{zanini_ffpopsim:_2012}. Both full-length HIV genomes and
 \env{}-only simulations were performed and yielded comparable results. In each
 simulation, four random parameters were drawn form prior distributions: (i)
 fraction of deleterious synonymous sites (flat between 0.75 and 1.0); (ii)
-deleterious effect at those sites (logarithmic between $10^{-4}$ and $10^{-2}$);
-(iii) average beneficial effect of an escape mutation (logarithmic between
+deleterious effect at those sites (exponential between $10^{-4}$ and $10^{-2}$);
+(iii) average beneficial effect of an escape mutation (exponential between
 $10^{-2.5}$ and $10^{-1.5}$); (iv) rate of introduction of new epitopes
-(logarithmic between $10^{-3}$ and $10^{-2}$ per generation). After these four
+(exponential between $10^{-3}$ and $10^{-2}$ per generation). After these four
 parameters were fixed, the simulation started. All the deleterious synonymous
 sites had the same fitness effect (variations were tested and produced the same
-results), and no epitopes (i.e. no escape mutations) were initially present.
-After 30 generations of burn-in to create some genetic diversity, new epitopes
+results), no epitopes (i.e. no escape mutations) were initially present, and the
+population was isomorphic.
+After 30 generations of burn-in to create genetic diversity, new epitopes
 were introduced at a constant rate (as specified above). Each time such an
 epitope was actually introduced, its fitness advantage was drawn from an
 exponential distribution with fixed average value (as specified above).
@@ -610,7 +613,7 @@ For the models with competition within epitopes, a complex epistatic fitness
 landscape was manually crafted, in which each single mutant provides the whole
 beneficial effect of escape. For the models with time-dependent selection due to
 the immune system catching up, the beneficial effect of an escape mutation was
-reverted at random after it had appeared, according to its integrated allele
+reverted at random times after it had appeared, according to its integrated allele
 frequency (see supplementary materials for more details).
 
 For each set of parameters, fixation probabilities and probabilities of

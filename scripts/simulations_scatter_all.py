@@ -16,7 +16,7 @@ import matplotlib.cm as cm
 
 
 # Globals
-results_dir = '../data/simulations/random_gradual_nonsyndead_6epitopes/'
+results_dir = '../data/simulations/random_gradual_nonsyndead/'
 datafile = 'parameters_fixation_areas.dat'
 
 # Set limits for data-like sims
@@ -82,25 +82,26 @@ if __name__ == '__main__':
     colors = cm.jet([int(255.0 * (i + 2.5)) for i in np.log10(tbg['ada_eff'])])
     sizes = 10 + 120 * (np.log10(tbg['ada_rate']) + 3)
     ind = sizes.argsort()[::-1]
-    plt.scatter(np.log10(tbg['del_eff'])[ind], tbg['del_frac'][ind],
+    plt.scatter(tbg['del_eff'][ind], tbg['del_frac'][ind],
                 color=colors[ind], s=sizes[ind])
-    plt.xlabel(r'$\log_{10}( \text{deleterious effect} )$', fontsize=16)
+    plt.xlabel(r'deleterious effect', fontsize=16)
     plt.ylabel(r'deleterious fraction', fontsize=16)
     plt.gca().xaxis.set_label_coords(0.5, -0.07)
     plt.gca().yaxis.set_label_coords(-0.1, 0.5)
-    plt.xlim(-4.1, -1.9)
+    plt.xscale('log')
+    plt.xlim(10**(-4.1), 10**(-1.9))
     plt.ylim(0.72, 1.02)
     plt.title(('color is adaptive effect (1e-2.5 to 1e-1.5)\n'+
                'size is rate of new epitopes (1e-3 to 1e-2)'), fontsize=14)
     
     # Draw a rectangle around the parameter priors
-    rec = Rectangle(xy=(-4, 0.75),
-                    width=2,
+    rec = Rectangle(xy=(10**(-4), 0.75),
+                    width=0.0099,
                     height=0.25,
                     facecolor='none', edgecolor='red',
                     lw=1.5)
     plt.gca().add_patch(rec)
-    txt2 = plt.text(-2.25, 0.735, 'flat prior', color='red')
+    txt2 = plt.text(10**(-2.25), 0.735, 'flat prior', color='red')
 
     plt.ion()
     plt.show()
