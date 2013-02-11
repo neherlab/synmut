@@ -460,6 +460,33 @@ they disrupt stems in RNA secondary structures. Computational modelling
 shows that these mutations can be brought to high frequency through
 linkage to adaptive mutations.
 
+The fixation and extinction times and probabilities represent a rich and simple
+summary statistics useful to characterize longitudinal sequence data and compare
+to models via computer simulations. Although several recent publications have
+pointed out that synonymous changes in HIV can be
+deleterious~\citep{lemey_synonymous_2007, ngandu_extensive_2008}, our analysis
+is much more direct, as we rely neither on phylogenetic tree reconstruction nor
+on macroevolutionary models. A method that is similar to ours {\it in spiritu}
+has been recently used in a longitudinal study of influenza
+evolution~\citep{strelkowa_clonal_2012}. The propagators suggested in that
+article, however, represent ratios between nonsynonymous and synonymous
+mutations.  The latter is used as an approximately neutral control; this method
+can therefore not be used to investigate synonymous changes themselves. A
+functional significance of the insulating RNA structure stems between the
+hyper-variable loops has also been proposed
+previously~\citep{watts_architecture_2009, sanjuan_interplay_2011} and conserved
+RNA structures exist in different parts of the HIV
+genome~\citep{ngandu_extensive_2008}. Our analysis is nonetheless much more
+direct and is able to quantify the fitness effect of RNA structure within single
+infections. The main limitations of our approach are the following: (i) it
+requires longitudinal data, most of which focuses on \env{} only; and (ii) we
+only expect to see deleterious synonymous mutations at high frequencies if they
+are linked to repeated adaptive substitions. Otherwise, most synonymous
+polymorphisms remain at low frequencies and can only be observed by deep
+sequencing methods. We indeed plan to exploit next-generation sequencing
+technologies to assess synonymous diversity at the level of rare variants in
+future studies.
+
 Contrary to na\"ive expectations, the adaptive escape mutations do not seem to be
 unconditionally beneficial. Otherwise we would observe almost sure fixation of
 nonsynonymous mutations once they reach intermediate frequencies. Instead, we
@@ -477,20 +504,21 @@ Alternatively, the lack of fixation could be due to time dependent environment
 through an immune system that is catching up, or competition between mutations
 that mediate escape within the same epitope. We explore both of these
 possibilities and find that both produce the desired effect. Furthermore, there
-is experimental evidence in support of both of these hypotheses. Serum from HIV infected
-individuals tyically neutralizes the virus that dominated the population a few
-(3-6) month ago \citep{richman_rapid_2003}. This suggests that escape mutations
-cease to be beneficial after a few months and might revert if they come with a
-fitness cost. Deep sequencing of regions of \env{} after antibody escape have
-revealed multiple escape mutations in the same epitope
+is experimental evidence in support of both of these hypotheses. Serum from HIV
+infected individuals tyically neutralizes the virus that dominated the
+population a few (3-6) month ago \citep{richman_rapid_2003}. This suggests that
+escape mutations cease to be beneficial after a few months and might revert if
+they come with a fitness cost. Deep sequencing of regions of \env{} after
+antibody escape have revealed multiple escape mutations in the same epitope
 \citep{moore_limited_2009, bar_early_2012}. Presumably, each one of these
 mutations is sufficient for escape but most combinations of them don't provide
 any additional benefit to the virus. Hence only one mutation will spread and the
 others will be driven out of the population although they transiently reach high
 frequencies. The rapid emergence of multiple escape mutations in the same
-epitope implies a large population size that explores all necessary point mutations rapidly. A
-similar point has been made recently by Boltz {\it et al.} in the context of
-preexisting drug resistance mutations~\citep{boltz_ultrasensitive_2012}. 
+epitope implies a large population size that explores all necessary point
+mutations rapidly. A similar point has been made recently by Boltz {\it et al.}
+in the context of preexisting drug resistance
+mutations~\citep{boltz_ultrasensitive_2012}. 
 
 The observed hitchhiking highlights the importance of linkage due to infrequent
 recombination for the evolution of HIV
@@ -508,32 +536,11 @@ stronger selection -- such as observed during early CTL escape or drug
 resistance evolution -- the linked  region is of course much larger
 \citep{nijhuis_stochastic_1998}.
 
-A functional significance of the insulating RNA structure stems between the
-hyper-variable loops has been proposed
-previously~\citep{watts_architecture_2009, sanjuan_interplay_2011}.
-Conserved RNA structures exist in different parts of the HIV genome (several are
-known), but our analysis requires longitudinal data, most of which focuses
-on \env{}.
-Furthermore, we only expect to see deleterious synonymous
-mutations at high frequencies if they are linked to repeated adaptive
-substitions. Otherwise, they remain at low frequencies and can only be observed
-by deep sequencing methods.
-
-The fixation and extinction times and probabilities represent a rich and simple
-summary statistics useful to characterize longitudinal sequence data and compare
-to models via computer simulations.
-A similar method has been recently used in a longitudinal study of
-influenza evolution~\citep{strelkowa_clonal_2012}. The propagators suggested in
-that paper, however, represent ratios between nonsynonymous and synonymous mutations.
-The latter is used as an approximately neutral control and this method can
-therefore not be used to investigate synonymous changes themselves.
-
-Our results emphasize the inadequacy of independent site
-models of HIV evolution and the common assumption that selection is time
-independent or additive. If genetic variation is only transiently beneficial,
-existing estimates  of the strength of selection
-\citep{neher_rate_2010,batorsky_estimate_2011} could
-be substantial underestimates.
+Our results emphasize the inadequacy of independent site models of HIV evolution
+and the common assumption that selection is time independent or additive. If
+genetic variation is only transiently beneficial, existing estimates of the
+strength of selection \citep{neher_rate_2010,batorsky_estimate_2011} could be
+substantial underestimates.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Methods}
