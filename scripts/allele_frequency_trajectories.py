@@ -26,7 +26,7 @@ if __name__ == '__main__':
     # Define the patients
     patients = pS.parse_sequences(reference='HXB2')
 
-    for k,p in enumerate(patients[:1]):
+    for k,p in enumerate(patients[:]):
         print p
 
         p.filter_only_sequenced()

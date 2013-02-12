@@ -232,9 +232,9 @@ if __name__ == '__main__':
                                 color=colors[iji], alpha=0.3)
         ax.add_patch(rec)
 
-    ax.set_xlabel(r'$t_\text{boundary} - t_i$ [days]', fontsize=16)
+    ax.set_xlabel(r'time interval $\Delta t$ [days]', fontsize=16)
     ax.set_ylabel(r'$\nu$', fontsize=18)
-    ax.set_title('Fixation/extinction times')
+    #ax.set_title(r'time interval $\Delta t [days]$')
     ax.legend(loc=1)
     ax.set_xlim(0, 2000)
 
