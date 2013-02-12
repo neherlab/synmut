@@ -275,7 +275,7 @@ if __name__ == '__main__':
                 if len(neutralize_ind):
                     fitness = pop.get_trait_additive()
                     for ie in neutralize_ind:
-                        fitness[pop.epitopes[ie][0]] = 0
+                        fitness[pop.epitopes[ie][0]] = -0.01
                     pop.set_trait_additive(fitness)
     
             sys.stdout.write(str(100 * i / (n_time_points - 1))+'% completed\n')

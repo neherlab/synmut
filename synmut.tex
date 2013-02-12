@@ -111,19 +111,20 @@ tRNA$^\text{Lys3}$: the latter is required for priming reverse transcription
 (RT) and is bound by a pseudoknotted RNA structure in the viral 5'
 untranslated region~\citep{barat_interaction_1991, paillart_vitro_2002}.
 
-Even in absense of important RNA structure synonymous codons don't
-evolve completely neutrally but that some codons are favored over others in many
-species \citep{plotkin_synonymous_2011}. 
-Recent studies have shown that genetically engineered HIV strains with altered codon usage can in some cases produce more viral protein, but in general replicate less efficiently~\citep{ngumbela_quantitative_2008,
-li_codon-usage-based_2012,keating_rich_2009}.
-Codon-deoptimization has been suggested as attenuation strategy for polio and 
-influenza~\citep{mueller_live_2010,coleman_virus_2008}. Purifying
-selection beyond the protein sequence is therefore expected
-\citep{forsdyke_reciprocal_1995,snoeck_mapping_2011} and it has been
-shown that rates of evolution at synonymous sites
-vary along the HIV genome \citep{mayrose_towards_2007}.
-Positive selection through the host's immune system, however, is restricted to
-changes in the amino acid sequence.
+Even in absense of important RNA structure synonymous codons don't evolve
+completely neutrally but that some codons are favored over others in many
+species \citep{plotkin_synonymous_2011}.  Recent studies have shown that
+genetically engineered HIV strains with altered codon usage can in some cases
+produce more viral protein, but in general replicate less
+efficiently~\citep{ngumbela_quantitative_2008,
+li_codon-usage-based_2012,keating_rich_2009}.  Codon-deoptimization has been
+suggested as attenuation strategy for polio and
+influenza~\citep{mueller_live_2010,coleman_virus_2008}. Purifying selection
+beyond the protein sequence is therefore expected
+\citep{forsdyke_reciprocal_1995,snoeck_mapping_2011} and it has been shown that
+rates of evolution at synonymous sites vary along the HIV genome
+\citep{mayrose_towards_2007}.  Positive selection through the host's immune
+system, however, is restricted to changes in the amino acid sequence.
 
 In this paper, we characterize the dynamics of synonymous mutations in \env{}
 and show that a substantial fraction of these mutations is deleterious.
@@ -155,7 +156,7 @@ low fitness).
 Deleterious or beneficial mutations fix less or
 more often than neutral ones, respectively. \FIG{aft} shows 
 the time course the frequencies of all synonymous and nonsynonymous mutations
-observed \env, C2-V5, in patient p1~\citep{shankarappa_consistent_1999},
+observed \env, C2-V5, in patient p10~\citep{shankarappa_consistent_1999},
 respectively. Despite many synonymous mutations reaching high frequency, 
 few fix (panel~\ref{fig:aftsyn}); in constrast, many nonsynonymous mutations fix
 (panel~\ref{fig:aftnonsyn}).
@@ -188,11 +189,11 @@ more or less the neutral expectation (blue line) -- a point to which we will com
 
 \begin{figure}
 \begin{center}
-\subfloat{\includegraphics[width=\linewidth]{Shankarappa_allele_freqs_trajectories_syn_p1.pdf}
+\subfloat{\includegraphics[width=\linewidth]{Shankarappa_allele_freqs_trajectories_syn_p10.pdf}
 \label{fig:aftsyn}}\\
- \subfloat{\includegraphics[width=\linewidth]{Shankarappa_allele_freqs_trajectories_nonsyn_p1.pdf}
+ \subfloat{\includegraphics[width=\linewidth]{Shankarappa_allele_freqs_trajectories_nonsyn_p10.pdf}
 \label{fig:aftnonsyn}}
-\caption{\comment{I would like p2 or p10 better here} Time series of frequencies
+\caption{Time series of frequencies
 of synonymous (A) and non-synonymous (B) derived alleles in \env, C2-V5, from patient
 1~\cite{shankarappa_consistent_1999}.
 While many nonsynonymous mutations  fix, few synonymous
@@ -374,7 +375,7 @@ escapes. Note that the escape rate is sum of two factors: (i) the beneficial
 effect due to the ability to evade the immune system minus (ii) the fitness
 cost of the mutation in terms of structure, stability, etc. Net escape rates
 in chronic infections have been estimated to be on the order of 
-$s_a = 0.01$ per day~\citep{neher_recombination_2010,Asquith:2006p28003}.
+$\epsilon = 0.01$ per day~\citep{neher_recombination_2010,Asquith:2006p28003}.
 
 
 \FIG{simfixpvar} shows simulations results for the fixation probability and the
@@ -598,7 +599,9 @@ For the estimate of times to fixation/extinction, polymorphisms were
 binned by frequency and the time to first reaching either fixation or
 extinction was stored. The fixation probability was determined as the long-time
 limit of the resulting curves. Mutations that reached high frequency but neither
-fixed nor got extinct were classified as ``floating'' and not analyzed further.
+fixed nor got extinct were classified as ``floating'', with one exception: if they first
+reached high frequencies within 3 years of the last time point, we assumed
+they had not had sufficient time to settle, so we discarded them.
 
 
 The SHAPE scores quantifying the degree of base pairing of individuals sites in
@@ -633,9 +636,9 @@ exponentially distributed escape rate with mean $\epsilon$. Both full-length HIV
 genomes and \env{}-only simulations were performed and yielded comparable results.
 
 The simulations are repeated 2400 times with random choices for the following
-parameters:
-The fraction of deleterious sites $\alpha$ was sampled uniformly between 0.75 and 1.0; the average deleterious effect $s_d$ was sampled such that
-its logarithm is uniformly distributed  between $10^{-4}$ and $10^{-2}$; the 
+parameters: The fraction of deleterious sites $\alpha$ was sampled uniformly
+between 0.75 and 1.0; the average deleterious effect $s_d$ was sampled such that
+its logarithm is uniformly distributed  between $10^{-4}$ and $10^{-2}$; the
 average escape rate $\epsilon$ of escape mutation such that its logarithm is
 uniform between $10^{-2.5}$ and $10^{-1.5}$; the rate $k_A$ of new antibody
 challenges such that its logarithm is uniform between $10^{-3}$ and $10^{-2}$
@@ -646,10 +649,13 @@ epitopes were introduced at a constant rate $k_A$.
 
 For the models with competition within epitopes, a complex epistatic fitness
 landscape was designed such that each single mutant is sufficient for full
-escape. \comment{need more}
-To model recognition of escape variants by the immune system that is catching
-up, the beneficial effect of an escape mutation was set to zero with a
-probability per generation proportional to the frequency of the escape variant.
+escape. In particular, each mutation had a linear effect equal to the escape,
+but a negative epistatic effect of the same magnitude between each pair of sites
+was included. Higher order terms compensated each other to make sure that not
+only double, but all k-mutants with $k \geq 1$ had the same fitness. To model
+recognition of escape variants by the immune system that is catching up, the
+beneficial effect of an escape mutation was set to zero with a probability per
+generation proportional to the frequency of the escape variant.
 
 For each set of parameters, fixation probabilities and probabilities of
 synonymous polymorphisms $P_\text{interm}$ were calculated as averages over
@@ -658,7 +664,9 @@ synonymous polymorphisms $P_\text{interm}$ were calculated as averages over
 The areas below or above the neutral fixation probability (diagonal line)
 were estimated from the binned fixation probabilities using linear
 interpolation between the bin centers. This measure is sufficiently precise for
-our purposes. \comment{what happens with empty bins??}
+our purposes. In 10 runs out of 2400, the highest frequency bin was empty so the
+fixation probability could not be calculated; those runs were excluded from 
+\FIG{simsfig}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Methods availability}

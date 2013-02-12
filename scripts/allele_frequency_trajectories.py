@@ -26,7 +26,9 @@ if __name__ == '__main__':
     # Define the patients
     patients = pS.parse_sequences(reference='HXB2')
 
-    for k,p in enumerate(patients[:]):
+    for k,p in enumerate(patients):
+        if str(p) != 'p10':
+            continue
         print p
 
         p.filter_only_sequenced()
@@ -50,8 +52,8 @@ if __name__ == '__main__':
         is_nonsyn = is_nonsyn_table(consensus)
 
         # Plot trajectories (no gaps, no conserved)
-        figsyn = ppl.figure(figsize=[9.35, 6.325])
-        fignonsyn = ppl.figure(figsize=[9.35, 6.325])
+        figsyn = ppl.figure(figsize=[6.5, 4.3])
+        fignonsyn = ppl.figure(figsize=[6.5, 4.3])
         axsyn = figsyn.add_subplot(1,1,1)
         axnonsyn = fignonsyn.add_subplot(1,1,1)
         x = p.mo_to_SC
@@ -79,8 +81,8 @@ if __name__ == '__main__':
             ax.set_ylabel(r'$\nu$', fontsize=18)
             ax.set_ylim(-0.05,1.05)
 
-        axsyn.set_title('Derived synonymous allele frequency trajectories, '+str(p), fontsize=18)
-        axnonsyn.set_title('Derived nonsynonymous allele frequency trajectories, '+str(p), fontsize=18)
+        #axsyn.set_title('Derived synonymous allele frequency trajectories, '+str(p), fontsize=18)
+        #axnonsyn.set_title('Derived nonsynonymous allele frequency trajectories, '+str(p), fontsize=18)
 
     ppl.ion()
     ppl.show()

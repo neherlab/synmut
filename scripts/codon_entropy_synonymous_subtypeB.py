@@ -45,7 +45,8 @@ if __name__ == '__main__':
     data = {}
 
     # Make figure for all four genes
-    fig, axs = plt.subplots(1, 4)
+    fig, axs = plt.subplots(2, 2)
+    axs = axs.flatten()
 
     for k, gene in enumerate(genes):
 
@@ -113,7 +114,7 @@ if __name__ == '__main__':
         plt.plot(np.arange(len(entropy)), entropyfrac, c='b', lw=1)
         plt.xlabel('Position in '+gene)
         plt.ylim(0, 1)
-        if k == 0:
+        if k in [0, 2]:
             plt.ylabel('Codon entropy / maximal entropy')
         else:
             ax.set_yticklabels([''])
@@ -125,8 +126,9 @@ if __name__ == '__main__':
         plt.plot(xsmooth, ysmooth, c='r', lw=2, ls='-')
         plt.title(gene, fontsize=18)
     
-        # Mark V loops
+        # Mark V loops and rev 2nd exon
         if gene == 'env':
+            # V loops
             refstr = str(ali.reference_seq.seq)
             tmp = (-is_good).nonzero()[0]
             Vind = {}
@@ -141,6 +143,15 @@ if __name__ == '__main__':
                 h = Rectangle((i0, 0), i1 - i0, 1, color='yellow', alpha=0.5)
                 plt.gca().add_patch(h)
                 plt.text(i0 + 0.2 * (i1 - i0), 0.95, key, fontsize=12)
+
+            # Rev exon
+            s = ''.join(consensus[is_good])
+            i0 = s.find('ACCCGCCTCCCA') // 3
+            i1 = s.find('TGCTGTTAGCTTG') // 3
+            h = Rectangle((i0, 0), i1 - i0, 1, color='magenta', alpha=0.5)
+            plt.gca().add_patch(h)
+            t = plt.text(i1 + 0.15 * (i1 - i0), 0.85, 'rev\n2nd\nexon', fontsize=12)
+
         
 
     plt.ion()

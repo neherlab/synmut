@@ -61,29 +61,32 @@ from our analysis.}
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=\linewidth]{conservation_codons_genome}
-\caption{Synonymous diversity across the HIV genome, as quantified by the
-normalized codon entropy among sequences coding for the
-consensus amino-acid.
-The synonymous diversity peaks at the variable regions in {\it env} and is reduced in regions under purifying selection (RRE
-hairpin, second {\it tat}/{\it rev} exons). Since the variable regions are under
-positive selection at the protein level, synonymous hitchhiking is stronger
-there, and even deleterious synonymous mutations can be brought to high
-frequency. This gives to our signal in the fixation probability, Figs. 2A and
-2B of the main text.
-The normalized codon entropy is calculated as follows (see the script
-for the full algorithm): (i) from a subtype B multiple sequence alignment
-(MSA) from the LANL website (filtered sequences only, version 2011)~\cite{LANL2012},
-we calculate the consensus amino acid at each position in the HIV genome; (ii) we count
-how often each codon coding for the consensus amino acid appears in the MSA;
-(iii) at each amino acid position, we divide by the number of sequences in the
-MSA that had the consensus amino acid at that position, obtaining {\it codon
-frequencies} $\nu_c$; (iv) we calculate the codon entropy from each position as:
-$S := - \sum_{c} \nu_c \log \nu_c$, where $c$ runs over codons that code for
-the consensus amino acid at this site; (v) we divide by the maximal codon
-entropy of that amino acid (e.g. $\log 2$ for twofold degenerate codons).
-All parts of {\it env} that are part of a different gene (signaling peptide,
-second {\it rev} exon) have been excluded from our main analysis, to avoid
-contamination about synonymity.}
+\caption{
+Synonymous diversity across the HIV genome, as quantified by the normalized
+codon entropy among sequences coding for the consensus amino-acid. The
+synonymous diversity peaks at the variable regions in {\it env} and is reduced
+in regions under purifying selection (RRE hairpin, second {\it tat}/{\it rev}
+exons). Since the variable regions are under positive selection at the protein
+level, synonymous hitchhiking is stronger there, and even deleterious synonymous
+mutations can be brought to high frequency. This gives to our signal in the
+fixation probability, Figs. 2A and 2B of the main text. The normalized codon
+entropy is calculated as follows (see the script for the full algorithm): (i)
+from a subtype B multiple sequence alignment (MSA) from the LANL website
+(filtered sequences only, version 2011)~\cite{LANL2012}, we calculate the
+consensus amino acid at each position in the HIV genome; (ii) we count how often
+each codon coding for the consensus amino acid appears in the MSA; (iii) at each
+amino acid position, we divide by the number of sequences in the MSA that had
+the consensus amino acid at that position, obtaining {\it codon frequencies}
+$\nu_c$; (iv) we calculate the codon entropy from each position as: $S := -
+\sum_{c} \nu_c \log \nu_c$, where $c$ runs over codons that code for the
+consensus amino acid at this site; (v) we divide by the maximal codon entropy of
+that amino acid (e.g. $\log 2$ for twofold degenerate codons). All parts of
+{\it env} that are part of a different gene (signaling peptide, second {\it rev}
+exon) have been excluded from our main analysis, to avoid contamination about
+synonymity. Note that all gap-rich columns of the MSA are stripped from this
+figure, hence genes such as {\it env} might appear shorter than they actually
+are.
+}
 \label{fig:syndiv_genome}
 \end{center}
 \end{figure}
@@ -109,75 +112,68 @@ contamination about synonymity.}
 % \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Time dependent selection}
+\section{Time-dependent selection}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.8\linewidth]{simulations_graduallyepitopesandtimeselec}
-\caption{Time-dependent selection (the escape mutant is recognized after some
-months from its appearance) and competition between escape mutations in the same
-epitope both reduce fixation of nonsynonymous mutations. A ``na\"ive'' computer
-simulation shows a depression in synonymous fixation probability, as observed in
-patients, but the nonsynonymous fixation probability is much higher than the
-(neutral) diagonal: a nonsynonymous mutation that reaches a frequency around
-0.2 is already very likely to fix. In data from infected patients, however,
-nonsynonymous mutations show a neutral-like curve,
+\includegraphics[width=0.6\linewidth]{simulations_gradually_timeselec_deadagain}
+\caption{
+Time-dependent selection (the escape mutant is recognized after some months from
+its appearance) reduces fixation of nonsynonymous
+mutations. A ``na\"ive'' computer simulation shows a depression in synonymous
+fixation probability, as observed in patients, but the nonsynonymous fixation
+probability is much higher than the (neutral) diagonal: a nonsynonymous mutation
+that reaches a frequency around 0.2 is already very likely to fix. In data from
+infected patients, however, nonsynonymous mutations show a neutral-like curve,
 $P_\text{fix}(\nu) \approx \nu$. In the other curves, we show that the
-nonsynonymous fixation probability can be reduced by either time-dependent
-selection or competition between equivalent escapes, without affecting much the
-synonymous fixation probability itself.
-In the curves denoted with ``tds'' (time-dependent selection), the fitness advantage of
-an escape mutaition can vanish at each time point with a probability density
-\[ P_\text{recognized}(t) = c \cdot \nu(t), \]
-where $c$ is a constant coefficient shown in the legend that encodes the overall
-efficiency of the host immune system, and $\nu(t)$ is the frequency of the
-escape allele at time $t$.
-In the curves denoted with ``mut/epi'' we test the
-competition scenario instead, with 3 or 6 escape mutations within the same
-epitope of length 9 nucleotides. The fitness landscape of each such epitope
-include negative epistatic terms, so that the joint presence of more than one
-escape mutation is not any more beneficial for the virus than a single mutation.
-In this latter scenario, many escape mutations start to sweep on different
-backgrounds within the viral population, but eventually compete and only one of
-them if fixed.}
-\label{fig:tds_wec}
+nonsynonymous fixation probability can be reduced by time-dependent selection
+without affecting much the synonymous fixation probability itself. The fitness
+advantage of an escape mutaition can vanish at each time point with a
+probability density \[ P_\text{recognized}(t) = c \cdot \nu(t), \] where $c$ is
+a constant coefficient shown in the legend that encodes the overall efficiency
+of the host immune system, and $\nu(t)$ is the frequency of the escape allele at
+time $t$. After recognition, the former escape mutation has the same fitness
+cost as before the creation of the epitope, hence it is quickly lost. Note that,
+although the curves shown here show almost no reduction in fixation probability
+up to $\nu \approx 0.15$, this effect is not robust and depends on the exact form of
+$ P_\text{recognized}(t)$. The other parameters for the shown simulations are
+the following: deleterious effect $10^{-3}$, average escape rate $0.016$,
+fraction of deleterious synonymous mutations $0.986$, rate of new epitopes
+$0.0014$ per generation.
+}
+\label{fig:tds}
 \end{center}
 \end{figure}
 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Within epitope competition}
+\section{Within-epitope competition}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.8\linewidth]{simulations_graduallyepitopesandtimeselec}
-\caption{Time-dependent selection (the escape mutant is recognized after some
-months from its appearance) and competition between escape mutations in the same
-epitope both reduce fixation of nonsynonymous mutations. A ``na\"ive'' computer
-simulation shows a depression in synonymous fixation probability, as observed in
-patients, but the nonsynonymous fixation probability is much higher than the
-(neutral) diagonal: a nonsynonymous mutation that reaches a frequency around
-0.2 is already very likely to fix. In data from infected patients, however,
-nonsynonymous mutations show a neutral-like curve,
-$P_\text{fix}(\nu) \approx \nu$. In the other curves, we show that the
-nonsynonymous fixation probability can be reduced by either time-dependent
-selection or competition between equivalent escapes, without affecting much the
-synonymous fixation probability itself.
-In the curves denoted with ``tds'' (time-dependent selection), the fitness advantage of
-an escape mutaition can vanish at each time point with a probability density
-\[ P_\text{recognized}(t) = c \cdot \nu(t), \]
-where $c$ is a constant coefficient shown in the legend that encodes the overall
-efficiency of the host immune system, and $\nu(t)$ is the frequency of the
-escape allele at time $t$.
-In the curves denoted with ``mut/epi'' we test the
-competition scenario instead, with 3 or 6 escape mutations within the same
-epitope of length 9 nucleotides. The fitness landscape of each such epitope
-include negative epistatic terms, so that the joint presence of more than one
-escape mutation is not any more beneficial for the virus than a single mutation.
-In this latter scenario, many escape mutations start to sweep on different
-backgrounds within the viral population, but eventually compete and only one of
-them if fixed.}
-\label{fig:tds_wec}
+\includegraphics[width=0.6\linewidth]{simulations_gradually_epitopes}
+\caption{
+Competition between escape mutations in the same epitope also reduces fixation of
+nonsynonymous mutations. Compared to a ``na\"ive'' model,
+simulations with 3 or 6 escape mutations competing within the same epitope show
+reduced fixation probabilities of nonsynonymous changes, whereas the synonymous
+changes behave similarly in all cases. The epitope length is 9 nucleotides. The
+fitness landscape of each such epitope include negative epistatic terms, so that
+the joint presence of more than one escape mutation is not any more beneficial
+for the virus than a single mutation. In detail, each site has two alleles, $\pm
+1$, where $-1$ is the ancestral one and $+1$ the dervied one; the fitness
+coefficient of a $k$-uple of sites within the epitope is $f_k = \pm
+\eta_\epsilon / 2^{L-1}$, where $\eta_\epsilon$ is a random variable for the
+escape rate with average value $\epsilon$ (see methods), $L$ is the number of
+competing escapes in the epitope, and the positive (resp. negative) sign is for
+odd (resp. even) $k$. In this evolutionary scenario, many escape mutations start
+to sweep on different backgrounds within the viral population, but eventually
+compete and only one of them if fixed. The other parameters for the shown simulations are
+the following: deleterious effect $10^{-3}$, average escape rate $0.016$,
+fraction of deleterious synonymous mutations $0.986$, rate of new epitopes
+$0.0014$ per generation.
+}
+\label{fig:wec}
 \end{center}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

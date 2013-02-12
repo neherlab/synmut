@@ -35,9 +35,9 @@ def filterfolders(folders):
             ind[1] = i
         elif 'nescepi_6' in f:
             ind[2] = i
-        elif 'timeselec_0.005' in f:
+        elif 'timeselec_0.002_deadagain' in f:
             ind[3] = i
-        elif 'timeselec_0.01' in f:
+        elif 'timeselec_0.005_deadagain' in f:
             ind[4] = i
         elif ('nescepi' not in f) and ('timeselec' not in f):
             ind[0] = i
@@ -54,43 +54,52 @@ if __name__ == '__main__':
 
     # Sort them smartly
     folders = filterfolders(folders)
-    labels = ['naive', '3 mut/epi', '6 mut/epi', 'tds 0.005', 'tds 0.01']
+    labels = ['naive', '3 mut/epi', '6 mut/epi',
+              'c = 0.002 / gen', 'c = 0.005 / gen']
     colors = ['b', 'g', 'r', 'cyan', 'magenta']
 
-    # Prepare figure
-    fig = plt.figure()
+    # Make two figures, one for tds, one for competing escapes
+    for k, ind in enumerate([[0, 1, 2], [0, 3, 4]]):
 
-    # Get the data
-    for i, folder in enumerate(folders):
+        # Prepare figure
+        fig = plt.figure()
+    
+        # Get the data
+        for i in ind:
+    
+            folder = folders[i]
+            fn = results_dir+folder
+            nu0, nu1, Psyn, Pnonsyn, csyn, cnonsyn = np.genfromtxt(fn+'/Pfix.dat',
+                                                                   unpack=True,
+                                                                   usemask=True,
+                                                                   missing_values='--')
+            # Plot fixation probabilities
+            x = [0] + list(0.5 * (nu0 + nu1)) + [1]
+            ysyn = [0] + list(Psyn) + [1]
+            ynonsyn = [0] + list(Pnonsyn) + [1]
+            plt.plot(x, ysyn,
+                     color=colors[i],
+                     ls='--',
+                     lw=2)
+            plt.plot(x, ynonsyn,
+                     label=labels[i],
+                     color=colors[i],
+                     ls='-',
+                     lw=2)
+    
+        # Plot diagonal
+        plt.plot(np.linspace(0, 1, 100), np.linspace(0, 1, 100), color='k',
+                 ls='--', lw=1.5)
+        plt.xlabel(r'$\nu$', fontsize=18)
+        plt.ylabel(r'$P_{\text{fix}}$', fontsize=18)
+        plt.xlim(-0.05, 1.05)
+        plt.ylim(-0.05, 1.25)
+        plt.legend(loc=2)
 
-        fn = results_dir+folder
-        nu0, nu1, Psyn, Pnonsyn, csyn, cnonsyn = np.genfromtxt(fn+'/Pfix.dat',
-                                                               unpack=True,
-                                                               usemask=True,
-                                                               missing_values='--')
-        # Plot fixation probabilities
-        x = [0] + list(0.5 * (nu0 + nu1)) + [1]
-        ysyn = [0] + list(Psyn) + [1]
-        ynonsyn = [0] + list(Pnonsyn) + [1]
-        plt.plot(x, ysyn,
-                 color=colors[i],
-                 ls='--',
-                 lw=2)
-        plt.plot(x, ynonsyn,
-                 label=labels[i],
-                 color=colors[i],
-                 ls='-',
-                 lw=2)
-
-    # Plot diagonal
-    plt.plot(np.linspace(0, 1, 100), np.linspace(0, 1, 100), color='k',
-             ls='--', lw=1.5)
-    plt.xlabel(r'$\nu$', fontsize=18)
-    plt.ylabel(r'$P_{\text{fix}}$', fontsize=18)
-    plt.xlim(-0.05, 1.05)
-    plt.ylim(-0.05, 1.55)
-    plt.legend(loc=2)
-    plt.title('Fixation probabilities in complex scenarios', fontsize=16)
+        if k == 0:
+            plt.title('Fixation probabilities with complex epitopes', fontsize=16)
+        else:
+            plt.title('Fixation probabilities with time-dependent selection', fontsize=16)
 
     plt.ion()
     plt.show()
