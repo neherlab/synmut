@@ -144,7 +144,7 @@ the observed patterns of fixation and loss.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The central quantity we investigate is the probability of fixation of a
 mutation, conditional on its population frequency. A neutral mutation
-segregating at frequency $\nu$ has a probability $P_\text{fix}(\nu) = \nu$ to
+segregating at frequency $\nu$ has a probability $\pfix(\nu) = \nu$ to
 spread through the population and fix; in the rest of the cases, i.e. with
 probability $1-\nu$, it goes extinct. As illustrated in the inset of
 \FIG{aftsyn}, this is a simple consequence of the fact that (i) exactly one
@@ -180,8 +180,8 @@ initial frequency $\nu_0$ in panel~\ref{fig:fixp2} (red line). Restricted to the
 region \shankaregion, we find that $\pfix$ of synonymous mutations is far below
 the neutral expectation.  Outside of \shankaregion, using data from
 \citet{bunnik_autologous_2008} only, no such reduction in $\pfix$ is found.
-Restricted to the \shankaregion area, the data from
-\citet{bunnik_autologous_2008} is fully compatible with data from
+Restricted to the \shankaregion{} region, the sequence samples from
+\citet{bunnik_autologous_2008} are fully compatible with data from
 \citet{shankarappa_consistent_1999}. The nonsynonymous mutations seem to follow
 more or less the neutral expectation (blue line) -- a point to which we will
 come back below.
@@ -194,12 +194,12 @@ come back below.
 \label{fig:aftnonsyn}}
 \caption{Time series of frequencies
 of synonymous (A) and nonsynonymous (B) derived alleles in \env, \shankaregion, from patient
-1~\cite{shankarappa_consistent_1999}.
+10~\cite{shankarappa_consistent_1999}.
 While many nonsynonymous mutations  fix, few synonymous
 mutations do even though they are frequently observed at intermediate
-frequencies. Colors indicate the position of the site along the \shankaregion region
-(blue to red). Inset: the fixation probability $P_\text{fix}(\nu)$ of a neutral mutation
-is simply the likelihood that the future common ancestor is currently carrying
+frequencies. Colors indicate the position of the site along the \shankaregion{} region
+(blue to red). Inset: the fixation probability $\pfix$ of a neutral
+mutation is simply the likelihood that the future common ancestor is currently carrying
 it, i.e., its frequency $\nu$.}
 \label{fig:aft}
 \end{center}
@@ -215,7 +215,7 @@ reached a high frequency by chance (genetic drift or hitchhiking), and
 we expect that selection drives it out of the population again. Hence our
 observations suggest that many of the synonymous polymorphisms at intermediate
 frequencies in the part of \env{} that includes the hypervariable regions are
-deleterious, while outside this regions polymorphisms are mostly roughly
+deleterious, while outside this regions most polymorphisms are roughly
 neutral. Note that this does not imply that all synonymous mutations in this
 region are neutral -- only those mutations observed at high frequencies, which
 have been experiencing selection for some time already, tend to be neutral.
@@ -227,15 +227,17 @@ have been experiencing selection for some time already, tend to be neutral.
 \subfloat{\includegraphics[width=0.9\linewidth]{fixation_probabilities}
 \label{fig:fixp2}}
 \caption{Fixation and loss of synonymous mutations.
-Panel A) shows the time
-course of loss and fixation of synonymous mutations observed in a frequency interval $\nu_0$. 
+Panel A) shows the fraction of polymorphisms that have fixed (lower curves),
+are lost (distances between upper curves and 1), or remain polymorphic a time
+$\Delta t$ later for different initial allele frequencies (colors, indicated as
+shaded area).
 In each frequency interval, the fraction of synonymous
 mutations that ultimately fix is the fixation probability conditional on the
 initial frequency.
-Panel B) Fixation probability of derived synonymous
-alleles as a function of $\nu_0$ in \shankaregion is reduced relative to the neutral
-expectation indicated by the diagonal line. This suppression is not
-observed in other parts of \env~or for nonsynonymous mutations.
+Panel B) shows the fixation probability of derived synonymous
+alleles as a function of $\nu_0$. Polymorphisms within \shankaregion{} fix less
+often than expected for neutral mutations indicated by the diagonal line.
+This suppression is not observed in other parts of \env~or for nonsynonymous mutations.
 The horizontal error bars on the abscissa are bin sizes, the vertical ones the
 standard deviation after 100 patient bootstraps of the data. Data from
 refs.~\cite{shankarappa_consistent_1999,liu_selection_2006, bunnik_autologous_2008}.}
@@ -262,7 +264,7 @@ or extinction). Subsequently, we align our sequences to the reference NL4-3
 strain used in ref.~\citep{watts_architecture_2009} and assign them SHAPE
 reactivities. As shown in \FIG{SHAPEA}, the reactivities of fixed alleles (red
 histogram) are systematically larger than of alleles that are lost (blue)
-(Kolmogorov-Smirnov test on the cumulative distribution, $P\approx 0.002$). In
+(Kolmogorov-Smirnov test on the cumulative distribution, $p\approx 0.002$). In
 other words, alleles that are likely to break RNA helices are also more likely
 to revert and finally be lost from the population. The average over all
 mutations that are not observed (green) lies between the those that fix and
@@ -275,7 +277,7 @@ break stems in the conserved stretches between the variable loops, we consider
 mutations in variable loops and conserved parts separately. The biggest
 depression in fixation probability is observed in the conserved stems, while the
 variable loops show little deviation from the neutral signature, see
-\FIG{SHAPEB}. This is consistent with important stem structures in conservered
+\FIG{SHAPEB}. This is consistent with important stem structures in conserved
 regions between loops.
 
 In addition to RNA secondary structure, we have considered other possible
@@ -298,7 +300,7 @@ are susequently lost, and random mutations (all categories are restricted to the
 regions V1-V5$\pm 100$bp).
 Fixed mutations tend to have higher higher SHAPE reactivities, corresponding to
 less base pairing.
-Mutations that are never observered show an intermediate distribution of SHAPE values.
+Mutations that are never observed show an intermediate distribution of SHAPE values.
 Panel B) shows the fixation probability of synonymous mutations in
 \shankaregion{} separately for variable loops and the connecting conserved regions that
 harbor RNA stems. As expected, the fixation probability is lower
@@ -339,7 +341,7 @@ roughly $s_d \sim - 0.002$ per day.
 \subfloat{\includegraphics[width=\linewidth]{simulations_syn.pdf}
 \label{fig:simsfig}}
 \caption{Distribution of selection coefficients on synonymous sites. Panel A)
-The depression in $P_\text{fix}$ depends on the deleterious effect size 
+The depression in $\pfix$ depends on the deleterious effect size 
 of the synonymous alleles. This parameter also reduces synonymous
 diversity, measured by the probability of a derived allele to be found at
 intermediate frequencies $P_\text{interm}$ (first inset).
@@ -407,7 +409,7 @@ deleterious effects in \FIG{simheat} correspond to larger escapes rates. (iii)
 mutations with a deleterious effect smaller than approximately $0.001$ behave
 neutrally consistent with the typical coalescent times observed in HIV.
 
-The above simulation show that hitchhiking can explain the obervation of
+The above simulation show that hitchhiking can explain the observation of
 deleterious mutations that rarely fix. However, in a simple model where
 nonsynonymous escape mutations are unconditionally beneficial, they almost
 always fix once they reach high frequencies -- $A_{\mathrm{nonsyn}}$ is well
@@ -501,7 +503,7 @@ resistance evolution -- the linked region is of course much larger
 \citep{nijhuis_stochastic_1998}. 
 
 While classical population genetics assumes that the dominant stochastic force
-is genetic drift, i.e. nonheritable fluctuations in offspring number, our
+is genetic drift, i.e. non-heritable fluctuations in offspring number, our
 results show that stochasticity due to linked selection is much more important.
 Such fluctuations have been termed \emph{genetic draft} by
 \citet{gillespie_genetic_2000}. Genetic draft in facultatively sexual population
@@ -517,7 +519,7 @@ by its frequency. There are several possible explanations for this observation.
 Similar to synonymous mutations, the majority of nonsynonymous mutations could
 be weakly deleterious and the adaptive and deleterious parts conspire to yield a
 more neutral-like averaged fixation probability. We consider this possibility
-inplausible since the amino acid sequence outside the variable loops is much
+implausible since the amino acid sequence outside the variable loops is much
 more conserved that the synonymous positions, suggesting that the majority of
 the nonsynonymous mutations is much more deleterious. 
 
@@ -526,7 +528,7 @@ through an immune system that is catching up, or competition between mutations
 that mediate escape within the same epitope. We explore both of these
 possibilities and find that both produce the desired effect. Furthermore, there
 is experimental evidence in support of both of these hypotheses. Serum from HIV
-infected individuals tyically neutralizes the virus that dominated the
+infected individuals typically neutralizes the virus that dominated the
 population a few (3-6) month ago \citep{richman_rapid_2003}. This suggests that
 escape mutations cease to be beneficial after a few months and might revert if
 they come with a fitness cost. Deep sequencing of regions of \env{} after
@@ -570,7 +572,7 @@ using Muscle~\citep{edgar_muscle:_2004} to each other and the NL4-3 reference
 sequences separately for each patient. Within each patient, the consensus
 nucleotide sequence at the first time point was used to classify alleles as
 ``ancestral'' or ``derived'' at all sites. Sites that include large
-frequencies of gaps were excluded from the analysis to avoid artefactual
+frequencies of gaps were excluded from the analysis to avoid artifactual
 substitutions due to alignment errors. Allele frequencies at different time
 points were extracted from the multiple sequence alignment.
 
