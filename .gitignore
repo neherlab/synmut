@@ -2,7 +2,10 @@
 *.out
 *.pdf
 !figures/*.pdf
-
+*.pyc
+auto
+.~*
+_region_.tex
 ### /home/fabio/.gitignore-boilerplates/Global/vim.gitignore
 
 .*.sw[a-z]
