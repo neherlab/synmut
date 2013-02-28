@@ -173,12 +173,10 @@ were excluded from the analysis; see methods and \figurename~S\PCApat).  The
 former data set from is restricted to the \shankaregion{} region of \env, while
 the data from \citet{bunnik_autologous_2008} covers the majority of \env.
 Considering all mutations in a frequency interval $[\nu_0-\delta\nu, \nu_0+\delta\nu]$ at some time
-$t$, we calculate the fraction that is found at frequency 1, at frequency 0, or
-at intermediate frequency at later times $t+\Delta t$. Plotting these fixed,
-lost, and polymorphic fraction against the time interval $\Delta t$, we see that
+$t$, we calcate the fraction that are still observed at later times $t+\Delta t$. Plotting this fraction against the time interval $\Delta t$, we see that
 most synonymous mutations segregate for roughly one year and are lost much more
 frequently than expected (panel \ref{fig:fixp1}). The long-time probability of
-fixation versus extinction of synonymous mutations is shown as a function of the
+fixation, $\pfix$, is shown as a function of the
 initial frequency $\nu_0$ in panel~\ref{fig:fixp2} (red line). Restricted to the
 region \shankaregion, we find that $\pfix$ of synonymous mutations is far below
 the neutral expectation.  Outside of \shankaregion, using data from
@@ -230,13 +228,14 @@ have been experiencing selection for some time already, tend to be neutral.
 \subfloat{\includegraphics[width=0.9\linewidth]{fixation_probabilities.pdf}
 \label{fig:fixp2}}
 \caption{Fixation and loss of synonymous mutations.
-Panel A) shows the fraction of polymorphisms that have fixed (lower curves),
-are lost (distances between upper curves and 1), or remain polymorphic a time
-$\Delta t$ later for different initial allele frequencies (colors, indicated as
-shaded area).
+Panel A) shows how quickly synonymous mutations are purged from the populations. 
+Specifically, the figure shows the fraction of mutations that are still observed
+after $\Delta t$ days, conditional on being observed in one of the three frequency 
+intervals (different colors). 
 In each frequency interval, the fraction of synonymous
-mutations that ultimately fix is the fixation probability conditional on the
-initial frequency.
+mutations that ultimately survive is the fixation probability $\pfix$ conditional on the
+initial frequency. The neutral expectation for $\pfix=\nu_0$ is indicated by 
+dashed horizontal lines.
 Panel B) shows the fixation probability of derived synonymous
 alleles as a function of $\nu_0$. Polymorphisms within \shankaregion{} fix less
 often than expected for neutral mutations indicated by the diagonal line.
@@ -249,7 +248,7 @@ refs.~\cite{shankarappa_consistent_1999,liu_selection_2006, bunnik_autologous_20
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Synonymous mutations in \shankaregion tend to disrupt conserved RNA stems}
+\subsection{Synonymous mutations in \shankaregion{} tend to disrupt conserved RNA stems}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 One possible explanation for lack of fixation of synonymous mutations in
 \shankaregion are secondary structures in the viral RNA, the disruption of which
@@ -340,9 +339,9 @@ roughly $s_d \sim - 0.002$ per day.
 
 \begin{figure}
 \begin{center}
-\subfloat{\includegraphics[width=0.7\linewidth]{simulations_graduallydel.pdf}
+\subfloat{\includegraphics[width=0.9\linewidth]{simulations_graduallydel.pdf}
 \label{fig:simfixpvar}}\\
-\subfloat{\includegraphics[width=0.7\linewidth]{simulations_syn.pdf}
+\subfloat{\includegraphics[width=0.9\linewidth]{simulations_syn.pdf}
 \label{fig:simsfig}}
 \caption{Distribution of selection coefficients on synonymous sites. Panel A)
 The depression in $\pfix$ depends on the deleterious effect size 

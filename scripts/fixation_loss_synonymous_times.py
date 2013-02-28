@@ -13,7 +13,16 @@ import numpy as np
 import matplotlib.pyplot as ppl
 import matplotlib.cm as cm
 import matplotlib.patches as patches
-
+from matplotlib import rcParams
+params = {'backend': 'ps',
+        'axes.labelsize': 20, 
+        'text.fontsize': 20,
+    'legend.fontsize': 20,
+    'xtick.labelsize': 18,
+    'ytick.labelsize': 18,
+    'text.usetex': True}
+    
+rcParams.update(params)
 # Custom modules
 import sys
 sys.path.insert(0, '.')
@@ -225,7 +234,7 @@ if __name__ == '__main__':
                             (1 - np.linspace(0,P0,len(dt_loss)))[::-1]])
         ax.plot(x, y,
                 lw=2, c=colors[iji],
-                label=r'$\nu_0 = ['+str(nu0s[0])+','+str(nu0s[1])+']$')
+                label=r'$\nu_0 \in ['+str(nu0s[0])+','+str(nu0s[1])+']$')
     
         # Draw rectangle
         rec = patches.Rectangle((0,nu0s[0]), 2000, nu0s[1] - nu0s[0],
@@ -235,6 +244,40 @@ if __name__ == '__main__':
     ax.set_xlabel(r'time interval $\Delta t$ [days]', fontsize=16)
     ax.set_ylabel(r'$\nu$', fontsize=18)
     #ax.set_title(r'time interval $\Delta t [days]$')
+    ax.legend(loc=1)
+    ax.set_xlim(0, 2000)
+
+    ppl.ion()
+    ppl.show()
+
+    fig = ppl.figure()
+    ax = fig.add_subplot(1,1,1) 
+    for iji, nu0s in enumerate(nu0ss):
+ 
+        # Define the counts (lost, fixed, neither)
+        counts = counts_all[iji]
+        delta_ts = times_all[iji]
+        P0 = 1.0 * counts[0] / sum(counts)
+        P1 = 1.0 * counts[1] / sum(counts)
+    
+        # Plot the fixation/loss probability together as a function of time,
+        # by simply counting how many alleles (in percentage) had fixed/been lost after time dt
+        totcounts = sum(counts)
+        dt_fix = np.sort(delta_ts[1]) * mo_to_gen
+        dt_loss = np.sort(delta_ts[0]) * mo_to_gen
+        nu0m = sum(nu0s) / len(nu0s)
+    
+#        ax.plot(dt_fix, np.linspace(0,P1,len(dt_fix)),
+#                lw=2, c=colors[iji])
+
+        ax.plot(dt_loss, 1.0-np.linspace(0,P0,len(dt_loss)),
+                lw=2, c=colors[iji], ls = '-',
+                label=r'$\nu_0 \in ['+str(nu0s[0])+','+str(nu0s[1])+']$')    
+        ax.plot([0,2000], np.mean(nu0s)*np.ones(2), lw=2, ls='--', c=colors[iji])
+
+    ax.set_xlabel(r'time interval $\Delta t$ [days]', fontsize=20)
+    ax.set_ylabel(r'fraction of surviving mutations', fontsize=20)
+#ax.set_title(r'time interval $\Delta t [days]$')
     ax.legend(loc=1)
     ax.set_xlim(0, 2000)
 

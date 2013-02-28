@@ -259,7 +259,7 @@ if __name__ == '__main__':
                     c=colors[cla])
     ax.plot([0, 1], [0, 1], lw=2, ls='--', c='k')
     ax.set_xlabel(r'$\nu$', fontsize=18)
-    ax.set_ylabel(r'$P_\text{fix}(\nu)$', fontsize=18)
+    ax.set_ylabel(r'$P_\mathrm{fix}(\nu)$', fontsize=18)
     ax.set_xlim(-0.05, 1.05)
     ax.set_ylim(-0.05, 1.05)
     ax.legend(loc=2)
