@@ -20,9 +20,9 @@
 \includegraphics[width=0.35\linewidth]{Shankarappa_allele_freqs_trajectories_nonsyn_p7}
 \caption{Structure of viral populations and patient selection.
 Panel A) shows a PCA of all sequences from patient p1 (colors indicate time from
-seroconversion, from blue to red). Panel B) Allele frequency trajectories for nonsynonymous
+seroconversion, from blue to red). Panel B) shows allele frequency trajectories for nonsynonymous
 changes in the same patient. Here, the blue to red color map corresponds to the
-position of the allele in \env{} from 5' to 3'. Panels C and D) show analogous
+position of the allele in \env{} from 5' to 3'. Panels C) and D) show analogous
 plots for data from patient p7. Samples after day 1000 split into two clusters in the PCA and no mutations that arise after day 1000 fix, presumably because they are restricted
 to one subpopulation. All patients like p7 (p4, p7, p8, p9 from ref.~\citealp{shankarappa_consistent_1999} and
 ACH19542 and ACH19768 from ref.~\citealp{bunnik_autologous_2008}) were excluded
@@ -58,7 +58,7 @@ that amino acid (e.g. $\log 2$ for twofold degenerate codons). All parts of
 {\it env} that are part of a different gene (signaling peptide, second {\it rev}
 exon) have been excluded from our main analysis, to avoid contamination by
 protein selection in a different reading frame.
-Note that all gap-rich columns of the MSA are stripped from this figure, hence genes such as {\it env} might appear shorter than they actually
+Note that all gap-rich columns of the MSA are stripped from this figure, so genes such as {\it env} might appear shorter than they actually
 are.
 }
 \label{fig:syndiv_genome}
@@ -94,10 +94,10 @@ are.
 \caption{
 Time-dependent selection reduces fixation of nonsynonymous mutations. The figure
 compares the fixation probability in the time independent model (na\"ive) to
-a model with time dependent selection that mimics the an evolving immune system.
-It has been found that virus is typically neutralized by serum from a few month
+a model with time dependent selection that mimics  an evolving immune system.
+It has been found that virus is typically neutralized by serum from a few months
 earlier~\citep{richman_rapid_2003} but not by contemporary serum. We model this
-evolving immune system by assuming that escaped variants loose their beneficial
+evolving immune system by assuming that escaped variants lose their beneficial
 effect with a rate proportional to the frequency of the escaped variant. 
 Specifically, the selection effect of the escape mutations is
 reset to its fitness cost of $-0.02$ with probability
@@ -106,7 +106,7 @@ per generation, where $c$ is a constant coefficient shown in the legend that
 encodes the overall efficiency of the host immune system. With increasing
 probability of recognition, the fixation of frequent escape mutants is reduced,
 while hitch-hiking of synonymous mutations is not affected. The precise
-shape of $\pfix(\nu)$ depends on the details of the $P_\text{recognized}(t)$ and 
+shape of $\pfix(\nu)$ depends on the details of the $P_\text{recognized}(t)$, and 
 we do not think that the high $\pfix(\nu)$ for $\nu<0.2$ is meaningful.
 The other parameters for the shown simulations are
 the following: deleterious effect $s_d = 10^{-3}$, average escape rate $\epsilon = 0.016$,
@@ -128,7 +128,7 @@ $k_A=0.0014$ per generation.
 Competition between escape mutations in the same epitope reduces fixation of
 nonsynonymous mutations. The figure compares the fixation probability of models
 with one, three, or six mutually exclusive escape mutations within the
-same epitope. Within epitope competition results reduced fixation
+same epitope. Within epitope competition results in reduced fixation
 probabilities of nonsynonymous changes, whereas the synonymous changes behave 
 similarly in all cases. We assume that escape can happen at $n$ sites out of 3
 consecutive codons and vary $n$.
@@ -138,7 +138,7 @@ for the virus than a single mutation. Specifically, each site has two alleles,
 $\pm 1$, where $-1$ is the ancestral one and $+1$ the derived one; the fitness
 coefficient of a $k$-tuple of sites within the epitope is $f_k = (-1)^{k-1}
 2^{1-n}\eta_\epsilon $, where $\eta_\epsilon$ is the escape rate of the epitope
-drawn from an exponential distribution with mean $\epsilon$, 
+drawn from an exponential distribution with mean $\epsilon$ and 
 $n$ is the number of competing escapes in the epitope. 
 In this evolutionary scenario, many escape mutations start to sweep on different backgrounds within the viral population, but eventually
 compete and only one of them fixes. The other parameters for the shown simulations are

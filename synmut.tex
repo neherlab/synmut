@@ -12,7 +12,7 @@
 \usepackage[caption=false]{subfig}
 \usepackage{natbib}
 \usepackage{pslatex}
-\usepackage[colorlinks,linkcolor=red,citecolor=red]{hyperref}
+\usepackage[colorlinks,linkcolor=red,citecolor=blue]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \graphicspath{{./figures/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -53,7 +53,8 @@
 \begin{abstract}
 \noindent
 Intrapatient HIV-1 evolution is dominated by selection on the protein level in the
-arms race with the adaptive immune system. When cytotoxic CD8${}^+$ T-cells or neutralizing antibodies
+arms race with the adaptive immune system. When cytotoxic CD8${}^+$ T-cells or 
+neutralizing antibodies
 target a new epitope, the virus often escapes via nonsynonymous mutations that
 impair recognition. Synonymous mutations do not affect this interplay and are
 often assumed to be neutral.
@@ -65,7 +66,7 @@ the variable loops of gp120 are more likely to be lost than other synonymous
 changes, hinting at a direct fitness effect of these stem-loop structures in the
 HIV-1 RNA.
 Computational modeling indicates that these synonymous mutations have a
-(Malthusian) selection coefficient of the order of $-0.002$, and that they are
+(Malthusian) selection coefficient of the order of $-0.002$ and that they are
 brought up to high frequency by hitchhiking on neighboring beneficial
 nonsynonymous alleles.
 The patterns of fixation of nonsynonymous mutations estimated from the
@@ -89,12 +90,12 @@ nAb response against a particular HIV-1 epitope, mutations in the viral genome t
 reduce or prevent recognition of the epitope frequently emerge. Escape mutations
 in epitopes targeted by CTLs typically evolve during early infection and spread
 rapidly through the population~\citep{mcmichael_immune_2009}. During chronic
-infection, the most rapidly evolving part of the HIV-1 genome are the variable
+infection, the most rapidly evolving parts of the HIV-1 genome are the variable
 loops V1-V5 in the envelope protein gp120, which change to avoid recognition by
 nAbs. Escape mutations in \env, the gene encoding gp120, spread through the
 population within a few months.
 Consistent with this time scale, it is found that serum from a particular time
-typically neutralizes virus extracted more than 3-6 month earlier, but not contemporary
+typically neutralizes virus extracted more than 3-6 months earlier but not contemporary
 virus \citep{richman_rapid_2003}.
 
 Escape mutations are selected because they change the amino acid sequence
@@ -117,16 +118,16 @@ required for priming reverse transcription (RT) and is bound by a pseudoknotted
 RNA structure in the viral 5' untranslated region~\citep{barat_interaction_1991,
 paillart_vitro_2002}.
 
-Even in absence of important RNA structures, synonymous codons do not evolve
+Even in the absence of important RNA structures, synonymous codons do not evolve
 completely neutrally. Some codons are favored over others in many species
 \citep{plotkin_synonymous_2011}. Recent studies have shown that genetically
 engineered HIV-1 strains with altered codon usage can in some cases produce more
 viral protein, but in general replicate less efficiently
 \citep{ngumbela_quantitative_2008, li_codon-usage-based_2012,
-keating_rich_2009}. Codon deoptimization has been suggested as attenuation
+keating_rich_2009}. Codon deoptimization has been suggested as an attenuation
 strategy for polio and influenza~\citep{mueller_live_2010,coleman_virus_2008}.
 Purifying selection beyond the protein sequence is therefore expected
-\citep{forsdyke_reciprocal_1995,snoeck_mapping_2011} and it has been shown that
+\citep{forsdyke_reciprocal_1995,snoeck_mapping_2011}, and it has been shown that
 rates of evolution at synonymous sites vary along the HIV-1 genome
 \citep{mayrose_towards_2007}. Positive selection through the host adaptive
 immune system, however, is restricted to changes in the amino acid sequence.
@@ -156,13 +157,13 @@ future population at a particular site and (ii) this ancestor has a probability
 $\nu$ of carrying the mutation (assuming the neutral mutation is not
 preferentially associated with genomes of high or low fitness). Deleterious or
 beneficial mutations fix less or more often than neutral ones, respectively.
-\FIG{aft} shows the time course the frequencies of all synonymous and
-nonsynonymous mutations observed \env, \shankaregion, in patient
-p10~\citep{shankarappa_consistent_1999}, respectively. Despite many synonymous
+\FIG{aft} shows the time course of the frequencies of all synonymous and
+nonsynonymous mutations observed in \env, \shankaregion, in patient
+p10~\citep{shankarappa_consistent_1999}. Despite many synonymous
 mutations reaching high frequency, few fix (panel~\ref{fig:aftsyn}); in
 constrast, many nonsynonymous mutations fix (panel~\ref{fig:aftnonsyn}).
 Strictly speaking, no mutation in the HIV-1 population ever fixes because the 
-mutation rate and the population size are large. We define ``fixation'' or ``loss''
+mutation rate and the population size are large. Therefore, we define ``fixation'' or ``loss''
 by not observing the mutation in the sample.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -170,20 +171,20 @@ by not observing the mutation in the sample.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We study the dynamics and fate of synonymous mutations more quantitatively by
 analyzing data from seven patients from
-\citet{shankarappa_consistent_1999,liu_selection_2006} and three patients from
+\citet{shankarappa_consistent_1999} and \citep{liu_selection_2006} as well as three patients from
 \citet{bunnik_autologous_2008} (patients whose viral population was structured
 were excluded from the analysis; see methods and \figurename~S\PCApat).  The
-former data set from is restricted to the \shankaregion{} region of \env, while
-the data from \citet{bunnik_autologous_2008} covers the majority of \env.
+former data set is restricted to the \shankaregion{} region of \env, while
+the data from \citet{bunnik_autologous_2008} cover the majority of \env.
 Considering all mutations in a frequency interval $[\nu_0-\delta\nu, \nu_0+\delta\nu]$ at some time
 $t$, we calculate the fraction that are still observed at later times $t+\Delta t$. Plotting this fraction against the time interval $\Delta t$, we see that
 most synonymous mutations segregate for roughly one year and are lost much more
 frequently than expected (panel \ref{fig:fixp1}). The long-time probability of
 fixation, $\pfix$, is shown as a function of the
-initial frequency $\nu_0$ in panel~\ref{fig:fixp2} (red line). Restricted to the
-region \shankaregion, we find that $\pfix$ of synonymous mutations is far below
-the neutral expectation.  Outside of \shankaregion, using data from
-\citet{bunnik_autologous_2008} only, no such reduction in $\pfix$ is found.
+initial frequency $\nu_0$ in panel~\ref{fig:fixp2} (red line). 
+We find that $\pfix$ of synonymous mutations is far below
+the neutral expectation in  \shankaregion.  Outside of \shankaregion, using data from
+\citet{bunnik_autologous_2008} only, we find no such reduction in $\pfix$.
 Restricted to the \shankaregion{} region, the sequence samples from
 \citet{bunnik_autologous_2008} are fully compatible with data from
 \citet{shankarappa_consistent_1999}. The nonsynonymous mutations seem to follow
@@ -220,7 +221,7 @@ frequency. If, on the other hand, the polymorphism is deleterious it must have
 reached a high frequency by chance (genetic drift or hitchhiking), and
 we expect that selection drives it out of the population again. Hence our
 observations suggest that many of the synonymous polymorphisms at intermediate
-frequencies in the part of \env{} that includes the \shankaregion{} are
+frequencies in the part of \env{} that includes \shankaregion{} are
 deleterious, while outside this region most polymorphisms are roughly
 neutral. Note that this does not imply that all synonymous mutations outside 
 \shankaregion{} are neutral -- only those mutations observed at high frequencies, which
@@ -243,7 +244,7 @@ initial frequency. The neutral expectation for $\pfix=\nu_0$ is indicated by
 dashed horizontal lines.
 Panel B) shows the fixation probability of derived synonymous
 alleles as a function of $\nu_0$. Polymorphisms within \shankaregion{} fix less
-often than expected for neutral mutations indicated by the diagonal line.
+often than expected for neutral mutations (indicated by the diagonal line).
 This suppression is not observed in other parts of \env~or for nonsynonymous mutations.
 The horizontal error bars on the abscissa are bin sizes, the vertical ones the
 standard deviation after 100 patient bootstraps of the data. Data from
@@ -256,7 +257,7 @@ refs.~\cite{shankarappa_consistent_1999,liu_selection_2006, bunnik_autologous_20
 \subsection{Synonymous mutations in \shankaregion{} tend to disrupt conserved RNA stems}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 One possible explanation for lack of fixation of synonymous mutations in
-\shankaregion{} are secondary structures in the viral RNA, the disruption of which
+\shankaregion{} is secondary structures in the viral RNA, the disruption of which
 is deleterious to the virus \citep{forsdyke_reciprocal_1995,
 snoeck_mapping_2011, sanjuan_interplay_2011}.
 
@@ -269,10 +270,10 @@ variable regions form stems.  We aligned the within-patient sequence samples
 to the reference NL4-3 strain used by \citet{watts_architecture_2009} and 
 thereby assigned SHAPE reactivities to most positions in the alignment. 
 We then calculated the distributions of SHAPE reactivities for synonymous 
-polymorphisms that fixed or where subsequently lost (only polymorphisms with 
+polymorphisms that fixed or were subsequently lost (only polymorphisms with 
 frequencies above 15\%).
 As shown in \FIG{SHAPEA}, the reactivities of fixed alleles (red
-histogram) are systematically larger than of alleles that are lost (blue)
+histogram) are systematically larger than those of alleles that are lost (blue)
 (Kolmogorov-Smirnov test on the cumulative distribution, $p\approx 0.002$). In
 other words, alleles that are likely to break RNA helices are also more likely
 to revert and finally be lost from the population. The average over all
@@ -283,7 +284,7 @@ initial consensus sequence (it is thus statistically conservative).
 
 To test the hypothesis that mutations in \shankaregion{} are lost because they
 break stems in the conserved stretches between the variable loops, we consider
-mutations in variable loops and conserved parts separately. The biggest
+mutations in variable loops and conserved parts separately. The greatest
 depression in fixation probability is observed in the conserved stems, while the
 variable loops show little deviation from the neutral signature, see
 \FIG{SHAPEB}. This is consistent with important stem structures in conserved
@@ -303,7 +304,7 @@ its human host cells at the macroevolutionary level \citep{kuyl_biased_2012}.
 \subfloat{\includegraphics[height=0.46\linewidth]{fixation_probabilities_VnonV.pdf}\label{fig:SHAPEB}}
 \caption{Permissible synonymous mutations tend to be unpaired.
 Panel A) shows the distribution of SHAPE reactivities among sites at which synonymous 
-mutations fixed (red), at which mutations reached frequencies above 15\% but
+mutations fixed (red), sites at which mutations reached frequencies above 15\% but
 were susequently lost (blue), and sites at which no mutations were observed (green) 
 (all categories are restricted to the regions V1-V5$\pm 100$bp).
 Sites at which mutations fixed tend to have higher SHAPE reactivities, corresponding to
@@ -325,7 +326,7 @@ bunnik_autologous_2008, liu_selection_2006}.}
 While the observation that some fraction of synonymous mutations is deleterious
 is not unexpected, it seems odd that we observe them at high population
 frequency and that the fixation probability is reduced only in parts of the
-genome (in \shankaregion{} but not in the rest of \env{}, compare the red
+genome (in \shankaregion{} but not in the rest of \env{}; compare the red
 triangle line versus the green square line in \FIG{fixp2}).
 The region \shankaregion{} undergoes frequent adaptive changes to evade
 recognition by neutralizing antibodies \cite{williamson_adaptation_2003,
@@ -389,7 +390,7 @@ etc. Net escape rates in chronic infections have been estimated to be on the
 order of $\epsilon = 0.01$ per day \citep{neher_recombination_2010,
 Asquith:2006p28003}.
 
-\FIG{simfixpvar} shows simulations results for the fixation probability and the
+\FIG{simfixpvar} shows simulation results for the fixation probability and the
 synonymous diversity for different deleterious effects of synonymous mutations.
 We quantify synonymous diversity via $P_\text{interm}$, the fraction of sites
 with an allele at frequency $0.25 < \nu < 0.75$. The synonymous diversity
@@ -422,11 +423,11 @@ mutations, otherwise the majority of observed polymorphisms are neutral and no
 depression is observed; (ii) in order to hitchhike, the deleterious effect size
 has to be much smaller than the escape rate, otherwise the double mutant has
 little or no fitness advantage. Consistent with this argument, larger
-deleterious effects in \FIG{simsfig} correspond to larger escapes rates; and (iii)
+deleterious effects in \FIG{simsfig} correspond to larger escape rates; and (iii)
 mutations with a deleterious effect smaller than approximately $0.001$ behave
-neutrally, consistently with the typical coalescent times observed in HIV-1.
+neutrally, consistent with the typical coalescent times observed in HIV-1.
 
-The above simulation show that hitchhiking can explain the observation of
+The above simulations show that hitchhiking can explain the observation of
 deleterious mutations that rarely fix. However, in a simple model where
 nonsynonymous escape mutations are unconditionally beneficial, they almost
 always fix once they reach high frequencies -- $A_{\mathrm{nonsyn}}$ is well
@@ -461,16 +462,16 @@ rapidly, while the one with the smallest cost in terms of replication,
 packaging, etc. is most likely to eventually fix. The emergence of multiple
 sweeping nonsynonymous mutations in real HIV-1 infections has been shown
 \citep{moore_limited_2009, bar_early_2012}. This scenario has been explicitly 
-observed in evolution the evolution of resistance to 3TC, where the mutation 
+observed in  the evolution of resistance to 3TC, where the mutation 
 M184V is often preceeded by M184I \citep{hedskog_dynamics_2010}. Similarly, AZT 
 resistance often emerges via the competing TAM and TAM1 pathways.
 Within epitope competition can be
 implemented in the model through epistasis between escape mutations. While each
 mutation is individually beneficial, combining the mutations is deleterious (no
 extra benefit, but additional costs). Again, we find that the potential for
-hitchhiking is little affected by within epitope competition, but that the
+hitchhiking is little affected by within epitope competition but that the
 fixation probability of nonsynonymous polymorphisms is reduced. With roughly six
-mutations per epitope, the simulation data is compatible with observations; see
+mutations per epitope, the simulation data are compatible with observations; see
 \figurename~S\withinepi. The two scenarios are not exclusive and possibly both
 important in HIV-1 evolution.
 
@@ -504,7 +505,10 @@ selection on proteins substantially \citep{ngandu_extensive_2008}.
 A functional significance of the insulating RNA structure stems between the
 hypervariable loops has also been proposed previously
 \citep{watts_architecture_2009, sanjuan_interplay_2011} and conserved RNA
-structures exist in different parts of the HIV-1 genome. Our analysis is able to
+structures exist in different parts of the HIV-1 genome. Since there are
+of course many ways to build an RNA stem in a particular location, we do
+not necessarily expect a strong signal of conservation in cross-sectional data. 
+Our analysis, however, is able to
 quantify the fitness effect of RNA structure within single infections and
 demonstrates how selection at synonymous sites can alter genetic diversity and
 dynamics. The observed hitchhiking highlights the importance of linkage due to
@@ -512,7 +516,7 @@ infrequent recombination for the evolution of HIV-1
 \citep{neher_recombination_2010, batorsky_estimate_2011,
 josefsson_majority_2011}. The recombination rate has been estimated to be on the
 order of $\rho = 10^{-5}$ per base and day. It takes roughly $t_{sw} =
-\epsilon^{-1} \log \nu_0$ generations for escape mutation with escape rate
+\epsilon^{-1} \log \nu_0$ generations for an escape mutation with escape rate
 $\epsilon$ to rise from an initially low frequency $\nu_0\approx \mu$ to frequency
 one. This implies that a region of length $l = (\rho t_{sw})^{-1} = \epsilon /
 \rho \log \nu_0$ remains linked to the adaptive mutation. With $\epsilon=0.01$,
@@ -534,13 +538,13 @@ when draft dominates over drift.
 
 Contrary to na\"ive expectations, the adaptive escape mutations do not seem to
 be unconditionally beneficial. Otherwise we would observe almost sure fixation
-of nonsynonymous mutations once they reach intermediate frequencies. Instead, we
+of a nonsynonymous mutation once they reach intermediate frequencies. Instead, we
 find that the fixation probability of nonsynonymous mutations is roughly given
 by its frequency. There are several possible explanations for this observation.
 Similar to synonymous mutations, the majority of nonsynonymous mutations could
-be weakly deleterious and the adaptive and deleterious parts conspire to yield a
+be weakly deleterious, and the adaptive and deleterious parts could conspire to yield a
 more neutral-like averaged fixation probability. While weakly deleterious 
-nonsynonymous mutation certainly exist and will contribute to a depression of the
+nonsynonymous mutations certainly exist and will contribute to a depression of the
 fixation probability, we have seen that a substantial depression requires that
 weakly deleterious nonsynonymous polymorphisms at high frequency greatly 
 outnumber escape mutations. This seems unlikely, since nonsynonymous diversity
@@ -553,7 +557,7 @@ that mediate escape within the same epitope. We explore both of these
 possibilities and find that both produce the desired effect in computer models. Furthermore, there
 is experimental evidence in support of both of these hypotheses. Serum from HIV-1
 infected individuals typically neutralizes the virus that dominated the
-population a few (3-6) month earlier \citep{richman_rapid_2003}. This suggests that
+population a few (3-6) months earlier \citep{richman_rapid_2003}. This suggests that
 escape mutations cease to be beneficial after a few months and might revert if
 they come with a fitness cost. Deep sequencing of regions of \env{} after
 antibody escape have revealed multiple escape mutations in the same epitope
@@ -572,8 +576,8 @@ and the common assumption that selection is time independent or additive.
 If genetic variation is only transiently beneficial, existing estimates of the
 strength of selection \citep{neher_recombination_2010,batorsky_estimate_2011}
 could be substantial underestimates. Furthermore, weak conservation and
-time-dependent selection results in estimates of evolutionary 
-rates that depend on the time interval of observation with lower rates across
+time-dependent selection result in estimates of evolutionary 
+rates that depend on the time interval of observation, with lower rates across
 larger intervals. This implies that deep nodes in phylogenies might be older than 
 they appear.
 
@@ -644,8 +648,9 @@ neher_recombination_2010}, a mutation rate of $\mu=10^{-5}$
 evolution for 6000 days. For simplicity, third positions of every codon were
 deemed synonymous and assigned either a selection coefficient $0$ with
 probability $1-\alpha$ or a deleterious effect $s_d$ with probability $\alpha$.
-First and second positions have strongly deleterious fitness effects 0.02. At 
-rate $k_A$, a random place in the genome is designated an epitope that can
+Mutations at the first and second positions were assigned strongly deleterious 
+fitness effects 0.02. At 
+rate $k_A$, a random locus in the genome is designated an epitope that can
 escape by one or several mutations with an exponentially distributed escape rate
 with mean $\epsilon$. Both full-length HIV-1 genomes and \env{}-only simulations
 were performed and yielded comparable results.
@@ -653,10 +658,10 @@ were performed and yielded comparable results.
 The simulations were repeated 2400 times with random choices for the following
 parameters: the fraction of deleterious sites $\alpha$ was sampled uniformly
 between 0.75 and 1.0; the average deleterious effect $s_d$ was sampled such that
-its logarithm is uniformly distributed  between $10^{-4}$ and $10^{-2}$; the
-average escape rate $\epsilon$ of escape mutation such that its logarithm is
-uniform between $10^{-2.5}$ and $10^{-1.5}$; the rate $k_A$ of new antibody
-challenges such that its logarithm is uniform between $10^{-3}$ and $10^{-2}$
+its logarithm was uniformly distributed  between $10^{-4}$ and $10^{-2}$; the
+average escape rate $\epsilon$ of escape mutation was sampled such that its logarithm was
+uniform between $10^{-2.5}$ and $10^{-1.5}$ and the rate $k_A$ of new antibody
+challenges such that its logarithm was uniform between $10^{-3}$ and $10^{-2}$
 per generation. Populations were initialized with a homogenous founder
 population and were kept at an average size of $N=10^4$ throughout the
 simulation. After 30 generations of burn-in to create genetic diversity, new
@@ -667,9 +672,9 @@ landscape was designed such that each single mutant is sufficient for full
 escape. In particular, each mutation had a linear effect equal to the escape,
 but a negative epistatic effect of the same magnitude between each pair of sites
 was included. Higher order terms compensated each other to make sure that not
-only double, but all k-mutants with $k \geq 1$ had the same fitness (see
+only double mutants, but all k-mutants with $k \geq 1$ had the same fitness (see
 supplementary materials). To model recognition of escape variants by the immune
-system that is catching up, the beneficial effect of an escape mutation was set
+system  catching up, the beneficial effect of an escape mutation was set
 to its previous cost of -0.02 with a probability per generation proportional to
 the frequency of the escape variant.
 
@@ -693,7 +698,7 @@ used, are available for download at \url{http://git.tuebingen.mpg.de/synmut}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgements}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-We thank Jan Albert, Trevor Bedford and Pleuni Pennings for 
+We thank Jan Albert, Trevor Bedford and Pleuni Pennings and members of the lab for 
 stimulating discussions and critical reading of the manuscript.
 This work is supported by the ERC starting grant HIVEVO 260686 and 
 in part by the National Science Foundation under Grant No.~NSF PHY11-25915.
