@@ -37,12 +37,6 @@
 
 \pagestyle{myheadings}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[english]{babel}
-\usepackage[utf8x]{inputenc}
-\usepackage{eucal,eurosym,textcomp}
-\usepackage[caption=false]{subfig}
-\usepackage{pslatex}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \graphicspath{{./figures/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\comment}[1]{\textit{\textcolor{red}{#1}}}
@@ -65,7 +59,6 @@
 \newcommand{\timedependence}{3}
 \newcommand{\withinepi}{4}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\thesubfigure}{\Alph{subfigure}}
 \newcommand{\Author}{Fabio~Zanini and Richard~A.~Neher}
 \newcommand{\Title}{Deleterious synonymous mutations hitchhike to high frequency in HIV-1 \env~evolution}
 \newcommand{\Affiliation}{Max Planck Institute for Developmental Biology, 72076 T\"ubingen, Germany}
@@ -595,7 +588,7 @@ neher_recombination_2010}, a mutation rate of $\mu=10^{-5}$
 \cite{mansky_lower_1995, abram_nature_2010} and simulated intrapatient
 evolution for 6000 days. For simplicity, third positions of every codon were
 deemed synonymous and assigned either a selection coefficient $0$ with
-probability $1-\alpha$ or a deleterious effect $s_d$ with probability $\alpha$.
+ probability $1-\alpha$ or a deleterious effect $s_d$ with probability $\alpha$.
 Mutations at the first and second positions were assigned strongly deleterious 
 fitness effects 0.02. At 
 rate $k_A$, a random locus in the genome is designated an epitope that can
@@ -641,7 +634,7 @@ probability could not be calculated; those runs were excluded from
 \subsection*{Methods availability}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 All analysis and computer simulation scripts, as well as the sequence alignments
-used, are available for download at \url{http://git.tuebingen.mpg.de/synmut}.
+used, are available for download at http://git.tuebingen.mpg.de/synmut.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgements}
@@ -659,7 +652,7 @@ in part by the National Science Foundation under Grant No.~NSF PHY11-25915.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=\linewidth]{fig1.pdf}
+%\includegraphics[width=\linewidth]{fig1.pdf}
 \caption{Time series of frequencies
 of synonymous (A) and nonsynonymous (B) derived alleles in \env, 
 \shankaregion, from patient 10~\cite{shankarappa_consistent_1999}.
@@ -675,7 +668,7 @@ position is currently carrying it, i.e. the mutation frequency $\nu$.}
 
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=\linewidth]{fig2.pdf}
+%\includegraphics[width=\linewidth]{fig2.pdf}
 \caption{Fixation and loss of synonymous mutations.
 Panel A) shows how quickly synonymous mutations are purged from the populations. 
 Specifically, the figure shows the fraction of mutations that are still observed
@@ -698,7 +691,7 @@ refs.~\cite{shankarappa_consistent_1999,liu_selection_2006, bunnik_autologous_20
 
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=\linewidth]{fig3.pdf}
+%\includegraphics[width=\linewidth]{fig3.pdf}
 \caption{Permissible synonymous mutations tend to be unpaired.
 Panel A) shows the distribution of SHAPE reactivities among sites at which synonymous 
 mutations fixed (red), sites at which mutations reached frequencies above 15\% but
@@ -718,7 +711,7 @@ bunnik_autologous_2008, liu_selection_2006}.}
 
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=\linewidth]{fig4.pdf}
+%\includegraphics[width=\linewidth]{fig4.pdf}
 \caption{Distribution of selection coefficients on synonymous sites. Panel A)
 The depression in $\pfix$ depends on the deleterious effect size 
 of synonymous alleles. This parameter also reduces synonymous
@@ -740,13 +733,12 @@ from prior distributions uniform in logspace as indicated by the red rectangle
 \end{center}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Appendix
-\newpage
-\appendix
-\onecolumngrid
-\setcounter{figure}{0}
-\include{supplement_body}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Appendix
+%\newpage
+%\appendix
+%\setcounter{figure}{0}
+%\include{supplement_body}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
