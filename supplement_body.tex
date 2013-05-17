@@ -12,20 +12,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Selection of the patient data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!ht]
+\begin{figure}[ht]
 \begin{center}
-\includegraphics[width=0.35\linewidth]{Shankarappa_PCA_p1.pdf}
-\includegraphics[width=0.35\linewidth]{Shankarappa_allele_freqs_trajectories_nonsyn_p1.pdf}
-\includegraphics[width=0.35\linewidth]{Shankarappa_PCA_p7.pdf}
-\includegraphics[width=0.35\linewidth]{Shankarappa_allele_freqs_trajectories_nonsyn_p7.pdf}
+\includegraphics[width=0.35\linewidth]{Shankarappa_PCA_p1}
+\includegraphics[width=0.35\linewidth]{Shankarappa_allele_freqs_trajectories_nonsyn_p1}
+\includegraphics[width=0.35\linewidth]{Shankarappa_PCA_p7}
+\includegraphics[width=0.35\linewidth]{Shankarappa_allele_freqs_trajectories_nonsyn_p7}
 \caption{Structure of viral populations and patient selection.
 Panel A) shows a PCA of all sequences from patient p1 (colors indicate time from
 seroconversion, from blue to red). Panel B) shows allele frequency trajectories for nonsynonymous
 changes in the same patient. Here, the blue to red color map corresponds to the
 position of the allele in \env{} from 5' to 3'. Panels C) and D) show analogous
 plots for data from patient p7. Samples after day 1000 split into two clusters in the PCA and no mutations that arise after day 1000 fix, presumably because they are restricted
-to one subpopulation. All patients like p7 (p4, p7, p8, p9 from ref.~\cite{shankarappa_consistent_1999} and
-ACH19542 and ACH19768 from ref.~\cite{bunnik_autologous_2008}) were excluded
+to one subpopulation. All patients like p7 (p4, p7, p8, p9 from ref.~\citealp{shankarappa_consistent_1999} and
+ACH19542 and ACH19768 from ref.~\citealp{bunnik_autologous_2008}) were excluded
 from our analysis.}
 \label{fig:aftp}
 \end{center}
@@ -35,9 +35,9 @@ from our analysis.}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Synonymous diversity across the HIV genome}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!ht]
+\begin{figure}[h]
 \begin{center}
-\includegraphics[width=\linewidth]{conservation_codons_genome.pdf}
+\includegraphics[width=\linewidth]{conservation_codons_genome}
 \caption{
 Synonymous diversity across the HIV genome, as quantified by the normalized
 codon entropy among sequences coding for the consensus amino acid. In most
@@ -65,24 +65,43 @@ are.
 \end{center}
 \end{figure}
 \newpage
+% 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Nonsynonymous changes outside of variable regions are deleterious}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{figure}[h]
+% \begin{center}
+% \includegraphics[width=0.8\linewidth]{synmut_conservation_4fold_synnonsyn}
+% \caption{Cumulative distribution of synonymous and nonsynonymous diversity in
+% {\it gag} in the LANL reference panel (filtered
+% sequences only, version 2011)~\cite{LANL2012}. Sites such that the consensus codon
+% has three synonymous and six nonsynonymous single mutants were used, and the number of observed mutants
+% of a certain type over the number of possible mutants is plotted. Nonsynonymous
+% changes are observed less often, {\it ergo} are more conserved, than
+% synonymous changes. It can be therefore assumed, as mentioned in the main text,
+% that non-escape nonsynonymous changes involve a large fitness cost.}
+% \label{fig:synnonsyncons}
+% \end{center}
+% \end{figure}
+% \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Time-dependent selection}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!ht]
+\begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{simulations_gradually_timeselec_deadagain.pdf}
+\includegraphics[width=0.6\linewidth]{simulations_gradually_timeselec_deadagain}
 \caption{
 Time-dependent selection reduces fixation of nonsynonymous mutations. The figure
 compares the fixation probability in the time independent model (na\"ive) to
 a model with time dependent selection that mimics  an evolving immune system.
 It has been found that virus is typically neutralized by serum from a few months
-earlier~\cite{richman_rapid_2003} but not by contemporary serum. We model this
+earlier~\citep{richman_rapid_2003} but not by contemporary serum. We model this
 evolving immune system by assuming that escaped variants lose their beneficial
 effect with a rate proportional to the frequency of the escaped variant. 
 Specifically, the selection effect of the escape mutations is
 reset to its fitness cost of $-0.02$ with probability
-$ P_\text{recognized}(t) = c \cdot \nu(t), $
+\[ P_\text{recognized}(t) = c \cdot \nu(t), \] 
 per generation, where $c$ is a constant coefficient shown in the legend that
 encodes the overall efficiency of the host immune system. With increasing
 probability of recognition, the fixation of frequent escape mutants is reduced,
@@ -102,9 +121,9 @@ $k_A=0.0014$ per generation.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Within-epitope competition}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!ht]
+\begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{simulations_gradually_epitopes.pdf}
+\includegraphics[width=0.6\linewidth]{simulations_gradually_epitopes}
 \caption{
 Competition between escape mutations in the same epitope reduces fixation of
 nonsynonymous mutations. The figure compares the fixation probability of models
