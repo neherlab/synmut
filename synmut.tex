@@ -12,7 +12,6 @@
 \usepackage[caption=false]{subfig}
 \usepackage{natbib}
 \usepackage{pslatex}
-%\usepackage[colorlinks,linkcolor=red,citecolor=blue]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \graphicspath{{./figures/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,10 +37,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\thesubfigure}{\Alph{subfigure}}
 \newcommand{\Author}{Fabio~Zanini and Richard~A.~Neher}
-\newcommand{\Title}{Deleterious synonymous mutations hitchhike to high frequency in HIV-1 \env~evolution}
+\newcommand{\Title}{Quantifying selection against synonymous mutations in HIV-1 \env{} evolution}
 \newcommand{\Affiliation}{Max Planck Institute for Developmental Biology, 72076 T\"ubingen, Germany}
 \newcommand{\Keywords}{{HIV}, {synonymous}, {population genetics}}
-%\hypersetup{pdfauthor={\Author}, pdftitle={\Title}, pdfkeywords={\Keywords}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}
+\hypersetup{colorlinks,linkcolor=red,citecolor=blue, pdfauthor={\Author}, pdftitle={\Title}, pdfkeywords={\Keywords}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \title{\Title}
@@ -150,8 +151,10 @@ The central quantity we investigate is the probability of fixation of a
 mutation, conditional on its population frequency. A neutral mutation
 segregating at frequency $\nu$ has a probability $\pfix(\nu) = \nu$ to
 spread through the population and fix; in the rest of the cases, i.e. with
-probability $1-\nu$, it goes extinct. As illustrated in the inset of
-\FIG{aftsyn}, this is a  consequence of the fact that (i) exactly one
+probability $1-\nu$, it goes extinct. For instance, if a mutation is observed in
+half of the sequences, it will fix with a probability of 50\% (see inset in
+figure \ref{fig:aftsyn}).
+This is a  consequence of the fact that (i) exactly one
 individual in the current population will be the common ancestor of the entire
 future population at a particular site and (ii) this ancestor has a probability
 $\nu$ of carrying the mutation (assuming the neutral mutation is not
@@ -167,7 +170,7 @@ mutation rate and the population size are large. Therefore, we define ``fixation
 by not observing the mutation in the sample.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Synonymous polymorphisms in \env, \shankaregion, are mostly deleterious}
+\subsection{Many synonymous polymorphisms in \shankaregion{} are deleterious}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We study the dynamics and fate of synonymous mutations more quantitatively by
 analyzing data from seven patients from
@@ -206,8 +209,7 @@ While many nonsynonymous mutations  fix, few synonymous
 mutations do even though they are frequently observed at intermediate
 frequencies. Colors indicate the position of the site along the \shankaregion{} region
 (blue to red). Inset: the fixation probability $\pfix$ of a neutral
-mutation is simply the likelihood that the future common ancestor at this 
-position is currently carrying it, i.e. the mutation frequency $\nu$.}
+mutation that reached 50\% frequency is one half.}
 \label{fig:aft}
 \end{center}
 \end{figure}
@@ -254,7 +256,7 @@ refs.~\cite{shankarappa_consistent_1999,liu_selection_2006, bunnik_autologous_20
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Synonymous mutations in \shankaregion{} tend to disrupt conserved RNA stems}
+\subsection{Synonymous mutations in \shankaregion{} tend to disrupt RNA stems}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 One possible explanation for lack of fixation of synonymous mutations in
 \shankaregion{} is secondary structures in the viral RNA, the disruption of which
