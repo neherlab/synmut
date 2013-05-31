@@ -23,7 +23,8 @@ Panel A) shows a PCA of all sequences from patient p1 (colors indicate time from
 seroconversion, from blue to red). Panel B) shows allele frequency trajectories for nonsynonymous
 changes in the same patient. Here, the blue to red color map corresponds to the
 position of the allele in \env{} from 5' to 3'. Panels C) and D) show analogous
-plots for data from patient p7. Samples after day 1000 split into two clusters in the PCA and no mutations that arise after day 1000 fix, presumably because they are restricted
+plots for data from patient p7. Samples after day 1000 split into two clusters
+in the PCA and no single nucleotide variants (SNVs) that arise after day 1000 fix, presumably because they are restricted
 to one subpopulation. All patients like p7 (p4, p7, p8, p9 from ref.~\citealp{shankarappa_consistent_1999} and
 ACH19542 and ACH19768 from ref.~\citealp{bunnik_autologous_2008}) were excluded
 from our analysis.}
@@ -92,7 +93,7 @@ are.
 \begin{center}
 \includegraphics[width=0.6\linewidth]{simulations_gradually_timeselec_deadagain}
 \caption{
-Time-dependent selection reduces fixation of nonsynonymous mutations. The figure
+Time-dependent selection reduces fixation of nonsynonymous SNVs. The figure
 compares the fixation probability in the time independent model (na\"ive) to
 a model with time dependent selection that mimics  an evolving immune system.
 It has been found that virus is typically neutralized by serum from a few months
@@ -105,7 +106,7 @@ reset to its fitness cost of $-0.02$ with probability
 per generation, where $c$ is a constant coefficient shown in the legend that
 encodes the overall efficiency of the host immune system. With increasing
 probability of recognition, the fixation of frequent escape mutants is reduced,
-while hitch-hiking of synonymous mutations is not affected. The precise
+while hitch-hiking of synonymous SNVs is not affected. The precise
 shape of $\pfix(\nu)$ depends on the details of the $P_\text{recognized}(t)$, and 
 we do not think that the high $\pfix(\nu)$ for $\nu<0.2$ is meaningful.
 The other parameters for the shown simulations are
@@ -125,8 +126,8 @@ $k_A=0.0014$ per generation.
 \begin{center}
 \includegraphics[width=0.6\linewidth]{simulations_gradually_epitopes}
 \caption{
-Competition between escape mutations in the same epitope reduces fixation of
-nonsynonymous mutations. The figure compares the fixation probability of models
+Competition between escape SNVs in the same epitope reduces fixation of
+nonsynonymous SNVs. The figure compares the fixation probability of models
 with one, three, or six mutually exclusive escape mutations within the
 same epitope. Within epitope competition results in reduced fixation
 probabilities of nonsynonymous changes, whereas the synonymous changes behave 
@@ -140,7 +141,7 @@ coefficient of a $k$-tuple of sites within the epitope is $f_k = (-1)^{k-1}
 2^{1-n}\eta_\epsilon $, where $\eta_\epsilon$ is the escape rate of the epitope
 drawn from an exponential distribution with mean $\epsilon$ and 
 $n$ is the number of competing escapes in the epitope. 
-In this evolutionary scenario, many escape mutations start to sweep on different backgrounds within the viral population, but eventually
+In this evolutionary scenario, many escape SNVs start to sweep on different backgrounds within the viral population, but eventually
 compete and only one of them fixes. The other parameters for the shown simulations are
 the following: deleterious effect $s_d = 10^{-3}$, average escape rate $\epsilon = 0.016$,
 fraction of deleterious synonymous mutations $\alpha = 0.986$, rate of new epitopes
