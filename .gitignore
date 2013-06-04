@@ -7,6 +7,7 @@ auto
 .~*
 _region_.tex
 ### /home/fabio/.gitignore-boilerplates/Global/vim.gitignore
+*tar.gz
 
 .*.sw[a-z]
 *.un~
