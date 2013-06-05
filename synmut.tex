@@ -150,25 +150,28 @@ necessary to explain the observed patterns of fixation and loss.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In HIV-1, because of the high mutation rate, single nucleotide variants (SNVs)
-are continuously injected into the viral population. We say that an SNV has a
-frequency $\nu$ at a certain time if it is found in a fraction $\nu$, between
-zero and one, of the sequences from that time point. An SNV rises or falls in
-frequency because of (i) its own effect on fitness and escape and (ii)
-its association to genetic backgrounds and (iii) stochastic fluctuations
-(genetic drift). When an SNVs is present in all sequences
+Due to the large population size and the high mutation rate, every
+possible single nucleotide variant (SNV) is produced multiple time per
+day \citep{coffin_hiv_1995}. Some of these SNVs rise to high enough
+frequency that they are observed in a sample of sequences. SNVs rise or fall in 
+frequency because of (i) their own effect on fitness and escape and (ii)
+their association to genetic backgrounds and (iii) stochastic fluctuations
+(genetic drift). We study the dynamics of sample frequencies, $\nu$, of SNVs
+(SNV), i.e., the fraction $\nu$ of the sequences in a sample carrying
+the SNV. When an SNVs is present in all sequences 
 at a certain time point, we say it has ``fixed''; when it is completely absent,
 we say it was ``lost'' or is ``extinct''. 
 
-Eventually, all SNVs will either fix or be lost, at least in small
-samples. Given the SNV is at a certain frequency $\nu$, the probability
-of fixation is higher for beneficial SNVs than for neutral ones, which
-in turn fix more frequently than deleterious ones. Since a neutral
-mutation, by definition, has no effect on the fate of the viruses
-carrying it, the fixation probability of a neutral SNV at frequency
-$\nu$ is $\pfix(\nu) = \nu$; it goes extinct with probability
-$1-\nu$. For instance, if a neutral SNV is observed in half of the
-sequences, it will fix with a probability of 50\% (see inset in figure
+Most positions are only transiently variable and SNVs will either fix or
+are lost -- at least in small samples. Given a SNV is at a certain
+frequency $\nu$, the probability of fixation is higher for beneficial
+SNVs than for neutral ones, which in turn fix more frequently than
+deleterious ones. Since a neutral mutation, by definition, has no effect
+on the fate of the viruses carrying it, the fixation probability of a
+neutral SNV at frequency $\nu$ is the frequency itself, i.e.,
+$\pfix(\nu) = \nu$; it goes extinct with probability $1-\nu$. For
+instance, if a neutral SNV is observed in half of the sequences, it will
+fix with a probability of 50\% (see inset in figure
 \ref{fig:aftsyn}). The fixation probability of neutral SNVs is
 independent of most model assumptions and is only affected if neutral
 SNVs are associated preferentially with either high or low fitness
@@ -188,7 +191,7 @@ the assumption of neutrality.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We studied the dynamics and fate of synonymous SNVs more quantitatively by
 analyzing data from seven patients from \citet{shankarappa_consistent_1999} and
-\citep{liu_selection_2006} as well as three patients from
+\citet{liu_selection_2006} as well as three patients from
 \citet{bunnik_autologous_2008} (patients with strong viral population structure
 were excluded from the analysis; see methods and \figurename~S\PCApat). The
 former data set is restricted to the \shankaregion{} region of \env, while the
@@ -444,8 +447,9 @@ effects in \FIG{simsfig} correspond to larger escape rates; and (iii) SNVs
 with a deleterious effect smaller than approximately $0.001$ behave neutrally,
 consistent with the typical coalescent times observed in HIV-1.
 
-The above simulations show that hitchhiking can explain the observation of
-deleterious SNVs that rarely fix. However, in a simple model where
+The above simulations show that hitchhiking with favored nonsynonymous
+variants can explain the observation of
+deleterious synonymous SNVs that rarely fix. However, in a simple model where
 nonsynonymous escape mutations are unconditionally beneficial, they almost
 always fix once they reach high frequencies, i.e., $A_{\mathrm{nonsyn}}$ is well
 above zero. This is incompatible with the blue line in \FIG{fixp2}: in an HIV-1
@@ -459,7 +463,7 @@ If the immune system
 recognizes the escape mutant before its fixation, the mutant might cease to be
 beneficial and disappear soon, despite its quick initial rise in frequency. In
 support of this idea, in \citet{richman_rapid_2003, bunnik_autologous_2008},
-antibody responses to escape mutants have been reported. These responses are
+antibody responses against escape mutants have been reported. These responses are
 delayed by a few months, roughly matching the average time needed by an escape
 mutant to rise from low to high frequency. To model this type of behavior, we
 assumed that antibody responses against escape SNVs arise with a rate
@@ -505,7 +509,7 @@ in part, because they disrupt RNA secondary structures. Computer models
 of RNA folding predict stable hairpins in these regions that
 have been suggested to be functional and termed ``insulating
 stems'' \citep{watts_architecture_2009, sanjuan_interplay_2011}.
-The weak selection against synonynous variants is compatible with the
+The weak selection against synonymous variants is compatible with the
 negative results of \textit{In vitro} replication assays investigating
 the fitness effects of small RNA hairpins in HIV-1
 \citep{knoepfel_role_2013}: it would take hundreds of cell culture
@@ -519,7 +523,7 @@ to models via computer simulations. These statistics are informative
 even in absence of a neutral control and thus suited to analyze
 properties of synonymous sites. 
 We find selection against synonymous substitutions  despite the
-fact that the corresponding sites are not conservered in
+fact that the corresponding sites are not conserved in
 cross-sectional data. This is consistent with a recent comparative
 analysis of SIV and HIV-1 RNA secondary structure using SHAPE assays and
 computational methods \citep{pollom_comparison_2013}. While large scale
@@ -634,7 +638,7 @@ The SHAPE scores quantifying the degree of base pairing of individuals sites in
 the HIV-1 genome were downloaded from the journal website
 \citep{watts_architecture_2009}. Wherever possible, SHAPE reactivities were
 assigned to sites in the multiple sequence alignments for each patient through
-the alignment to the sequence of the NL4.3 virus used in
+the alignment to the sequence of the NL4-3 virus used in
 \citep{watts_architecture_2009}. Problematic assignments in indel-rich
 regions were excluded from the analysis. The variable loops and flanking
 regions were identified manually starting from the annotated reference HXB2
