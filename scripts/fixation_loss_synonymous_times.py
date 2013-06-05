@@ -165,8 +165,10 @@ if __name__ == '__main__':
 
                 alleles_all = {'syn': alleles_syn, 'nonsyn': alleles_nonsyn}
                 ###############################################################
+                # End of synonymous test
+                ###############################################################
             
-                # Check whether they fix/are lost in at least one time point
+                # Check whether they fix/are lost in at least one later time point
                 for (key, alleles) in alleles_all.iteritems():
                     # Define the counts (lost, fixed, neither)
                     counts = counts_all[key][iji]
@@ -178,6 +180,8 @@ if __name__ == '__main__':
     
                         # Look at later time points
                         for l in xrange(i+1, n):
+
+                            # Later allele frequency at t1
                             alf_sel1 = afs[l][al[0], al[1]]
             
                             # Look at LOST (j=0) and FIXED (j=1)
@@ -188,6 +192,8 @@ if __name__ == '__main__':
                                     # Finally: set the counts
                                     counts[j] += 1
                                     delta_ts[j].append(p.mo_to_SC[l]-p.mo_to_SC[i])
+
+                                    # The position is used now
                                     is_nonused[al[1]] = False
 
                                     # Add the alleles to the list of dicts
@@ -195,6 +201,16 @@ if __name__ == '__main__':
                                                'pos': al[1],
                                                'all': alpha[al[0]],
                                                'all_cons': consensus[al[1]],
+                                               'cod_cons': ''.join(consensus[al[1] - al[1] % 3:
+                                                                             al[1] - al[1] % 3 + 3]),
+                                               'codpos': al[1] % 3,
+                                               'time': p.mo_to_SC[l]-p.mo_to_SC[i],
+                                               'type': key,
+                                               'nu0': alf_sel0,
+                                               'nu1': alf_sel1,
+                                               't0': p.mo_to_SC[i],
+                                               't1': p.mo_to_SC[l],
+                                               'nu0_index': iji,
                                                 }
                                     fixlost[key][j].append(newitem)
     
@@ -237,10 +253,17 @@ if __name__ == '__main__':
         
             # Plot the fixation/loss probability together as a function of time,
             # by simply counting how many alleles (in percentage) had fixed/been lost after time dt
-            totcounts = sum(counts)
             dt_fix = np.sort(delta_ts[1]) * mo_to_gen
             dt_loss = np.sort(delta_ts[0]) * mo_to_gen
-            nu0m = sum(nu0s) / len(nu0s)
+
+            ## Equivalent but slower
+            #[dt_loss2, dt_fix2] = [np.sort(map(itemgetter('time'),
+            #                              filter(lambda x: x['nu0_index'] == iji,
+            #                                     fixlost[key][y]))) * mo_to_gen
+            #                       for y in xrange(2)]
+
+            #if (dt_fix != dt_fix2).all() or (dt_loss != dt_loss2).all():
+            #    raise ValueError('Not the same!')
 
             ax.plot(dt_loss, 1.0-np.linspace(0,P0,len(dt_loss)),
                     lw=2, c=colors[iji], ls = '-',
@@ -259,6 +282,7 @@ if __name__ == '__main__':
     # Replot fraction of surviving mutations over time normalized together
     fig, ax = ppl.subplots(1, 1, figsize=(9, 9))
     lss = {'syn': '--', 'nonsyn': '-'}
+    dt_losses = {'syn': [], 'nonsyn': []}
     for iji, nu0s in enumerate(nu0ss):
         for i, key in enumerate(['syn', 'nonsyn']):
  
@@ -270,12 +294,11 @@ if __name__ == '__main__':
         
             # Plot the fixation/loss probability together as a function of time,
             # by simply counting how many alleles (in percentage) had fixed/been lost after time dt
-            totcounts = sum(counts)
             dt_fix = np.sort(delta_ts[1]) * mo_to_gen
             dt_loss = np.sort(delta_ts[0]) * mo_to_gen
-            nu0m = sum(nu0s) / len(nu0s)
 
-
+            dt_losses[key].append(dt_loss)
+            
             ax.plot(dt_loss, 1.0-np.linspace(0, 1,len(dt_loss)),
                     lw=2, c=colors[iji], ls=lss[key],
                     label=key+r' $\nu_0 \in ['+str(nu0s[0])+','+str(nu0s[1])+']$')
