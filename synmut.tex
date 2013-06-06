@@ -55,23 +55,23 @@
 \begin{abstract}
 \noindent
 Intrapatient HIV-1 evolution is driven by the adaptive immune system
-resulting in rapid evolution of HIV-1 proteins. When cytotoxic CD8${}^+$ T-cells
+resulting in rapid adaptation of HIV-1 proteins. When cytotoxic CD8${}^+$ T-cells
 or neutralizing antibodies target a new epitope, the virus often escapes via
 nonsynonymous mutations that impair recognition. Synonymous mutations do not
 affect this interplay and are often assumed to be neutral. We test this
-assumption by tracking synonymous mutations in 
-longitudinal intrapatient data from the \shankaregion{} part of the envelope
-gene (\env{}).  We find that most synonymous mutations are lost even though
-they often reach high frequencies in the viral population suggesting a
+assumption by tracking the abundance of synonymous mutations in 
+longitudinal intrapatient data from the \shankaregion{} part of the \env{}
+gene. We find that most synonymous variants are lost even though
+they often reach high frequencies in the viral population, suggesting a
 cost to the virus. Using published data
 from SHAPE assays, we find that synonymous mutations that disrupt base pairs
 in RNA stems flanking the variable loops of gp120 are more likely to be lost than other
-synonymous changes, suggesting a function of these RNA hairpins in HIV-1.
-Computational modeling indicates that these synonymous mutations have a
-selection coefficient of the order of $-0.002$ and that they are rise to
-high frequency by genetic hitchhiking on neighboring beneficial
+synonymous changes; these RNA hairpins might be important for HIV-1.
+Computational modeling indicates that (i) most synonymous mutations in this
+genomic region have a selection coefficient of the order of $-0.002$, and
+(ii) synonymous variants rise to high frequency by genetic hitchhiking on neighboring beneficial
 variants. This weak selection against synonymous substitutions does not
-result in a strong pattern of conservation in cross-sectional data, but
+result in a strong pattern of conservation in cross sectional data, but
 slows down the rate of evolution considerably. Our findings are consistent with the
 notion that large scale patterns of RNA structure are functionally
 relevant, while the precise base pairing pattern is not.
@@ -84,23 +84,23 @@ relevant, while the precise base pairing pattern is not.
 HIV-1 evolves rapidly within a single host during the course of the infection.
 This evolution is driven by strong selection imposed by the host immune system
 via cytotoxic CD8${}^+$ T-cells (CTLs) and neutralizing antibodies
-(nAbs)~\citep{rambaut_causes_2004} and facilitated by the high mutation rate
-~\citep{mansky_lower_1995,abram_nature_2010}.  Escape mutations
+(nAbs)~\citep{rambaut_causes_2004} and facilitated by HIV-1's high mutation rate
+~\citep{mansky_lower_1995,abram_nature_2010}. Escape mutations
 in epitopes targeted by CTLs are typically observed during early infection and spread
 rapidly through the population~\citep{mcmichael_immune_2009}. During chronic
 infection, the most rapidly evolving parts of the HIV-1 genome are the variable
-loops V1-V5 in the envelope protein gp120, which change to avoid recognition by
-nAbs. Escape mutations in \env, the gene encoding gp120, spread through the
+loops V1-V5 in the envelope protein gp120 (V loops), which change to avoid recognition by
+nAbs. Escape mutations in \env{}, the gene encoding gp120, spread through the
 viral population within a few months.
 Consistent with this time scale, it is found that serum from a particular time
-typically neutralizes virus extracted more than 3-6 months earlier but not contemporary
+typically neutralizes autologous virus extracted more than 3-6 months earlier but not contemporary
 virus \citep{richman_rapid_2003}.
 
 Escape mutations are selected because they change the amino acid sequence of
 viral proteins in a way that reduces antibody binding or epitope presentation.
 Conversely, synonymous mutations do not modify the viral proteins and are
-commonly used as approximately neutral markers in studies of viral evolution.
-Neutral markers are very useful as a negative control for detecting selected
+commonly used as approximately neutral markers in studies of viral evolution,
+i.e. as a negative control for detecting selected
 sites \citep{Bhatt:2011p43255,Hurst:2002p32608,Chen:2004p22606}. In addition to
 maintaining protein function and avoiding the adaptive immune recognition,
 however, the HIV-1 genome has to ensure efficient processing and translation,
@@ -117,9 +117,8 @@ Besides these well characterized and conserved structures, large parts of the vi
 genome are folded into structures of unknown function
 \citep{watts_architecture_2009}. These poorly characterized RNA
 structures are conserved to varying degree between HIV-1 and
-SIV in the sense that corresponding regions tend to be part of
-of similar structural elements. Individual base pairings, however, are
-not conserved \citep{pollom_comparison_2013}. 
+SIV: corresponding regions tend to be part of
+of similar structural elements, but individual base pairings differ widely \citep{pollom_comparison_2013}. 
 
 Even in the absence of important RNA structures, synonymous codons do not evolve
 completely neutrally. Some codons are favored in many species
@@ -136,38 +135,40 @@ rates of evolution at synonymous sites vary along the HIV-1 genome
 
 In this paper, we characterize the dynamics of synonymous mutations in \env{}
 and show that, in the region of the V loops, a large fraction of these mutations
-is deleterious. Despite their fitness cost, deleterious synonymous mutations
+is deleterious. Despite their fitness cost, deleterious synonymous variants
 rise in frequency in the viral population via genetic hitchhiking due to limited
 recombination in HIV-1 populations~\citep{neher_recombination_2010,
 batorsky_estimate_2011}. We show a strong correlation between the fate of a
-synonymous mutation and the surrounding RNA structure. We then compare our
+synonymous variant and the surrounding RNA structure. We then compare our
 observations to computational models and obtain estimates for the effect of
-synonymous mutations on viral fitness. Extending the analysis of fixation
-probabilities to the nonsynonymous mutations, we show that time-dependent
-selection or strong competition of escape mutations inside the same epitope are
-necessary to explain the observed patterns of fixation and loss.
+synonymous mutations on viral fitness.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DO WE WANT TO KEEP THIS LAST SENTENCE?
+Extending the analysis of fixation
+probabilities to the nonsynonymous variants, we show that time-dependent
+selection or competition of escape mutations inside the same epitope are
+necessary to explain the observed patterns of spread and extinction.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Due to the large population size and the high mutation rate, every
-possible single nucleotide variant (SNV) is produced multiple time per
-day \citep{coffin_hiv_1995}. Some of these SNVs rise to high enough
+possible single nucleotide variant (SNV) is produced multiple times per
+day \citep{coffin_hiv_1995}. Some of these variants rise to high enough
 frequency that they are observed in a sample of sequences. SNVs rise or fall in 
-frequency because of (i) their own effect on fitness and escape and (ii)
-their association to genetic backgrounds and (iii) stochastic fluctuations
-(genetic drift). We study the dynamics of sample frequencies, $\nu$, of SNVs
-(SNV), i.e., the fraction $\nu$ of the sequences in a sample carrying
-the SNV. When an SNVs is present in all sequences 
+frequency because of three reasons: (i) their own effect on fitness and escape; (ii)
+their association to genetic backgrounds; (iii) stochastic fluctuations
+(genetic drift). We study the dynamics of sample frequencies, $\nu$, of SNVs,
+i.e., the fraction $\nu$ of the sequences in a sample carrying
+the variant. When an SNVs is present in all sequences 
 at a certain time point, we say it has ``fixed''; when it is completely absent,
 we say it was ``lost'' or is ``extinct''. 
 
-Most positions are only transiently variable and SNVs will either fix or
-will be lost -- at least in small samples. Given a SNV is at a certain
+Most positions are only transiently variable and variants will either fix or
+will be lost -- at least in small samples. Given an SNV is at a certain
 frequency $\nu$, the probability of fixation is higher for beneficial
-SNVs than for neutral ones, which in turn fix more frequently than
-deleterious ones. Since a neutral mutation, by definition, has no effect
-on the fate of the viruses carrying it, the fixation probability of a
+SNVs than for neutral ones; in turn, neutral variants fix more frequently than
+deleterious ones. The fixation probability of a
 neutral SNV at frequency $\nu$ is the frequency itself, i.e.,
 $\pfix(\nu) = \nu$; it goes extinct with probability $1-\nu$. For
 instance, if a neutral SNV is observed in half of the sequences, it will
@@ -189,11 +190,11 @@ the assumption of neutrality.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Many synonymous SNVs in \shankaregion{} are deleterious}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-We studied the dynamics and fate of synonymous SNVs more quantitatively by
+We studied the dynamics and fate of synonymous variants more quantitatively by
 analyzing data from seven patients from \citet{shankarappa_consistent_1999} and
 \citet{liu_selection_2006} as well as three patients from
 \citet{bunnik_autologous_2008} (patients with strong viral population structure
-were excluded from the analysis; see methods and \figurename~S\PCApat). The
+were not considered; see methods and \figurename~S\PCApat). The
 former data set is restricted to the \shankaregion{} region of \env, while the
 data from \citet{bunnik_autologous_2008} cover most of \env.  We considered all
 SNVs in a frequency interval $[\nu_0-\delta\nu, \nu_0+\delta\nu]$ at some time
@@ -202,14 +203,16 @@ t$. Plotting this fraction against the time interval $\Delta t$, we see that
 most synonymous SNVs segregate for roughly one year and are lost much more
 frequently than expected under neutrality (panel \ref{fig:fixp1}). The long-time
 probability of fixation, $\pfix$, is shown as a function of the initial
-frequency $\nu_0$ in panel \ref{fig:fixp2}. We found that $\pfix$ of synonymous
-variants is far below the neutral expectation in \shankaregion (red line).
+frequency $\nu_0$ in panel \ref{fig:fixp2}. As a control, the neutral result is
+shown as a black dashed line. We found that $\pfix$ of synonymous
+variants is far below the neutral expectation in \shankaregion{} (red triangle line).
 Outside of \shankaregion, using data from \citet{bunnik_autologous_2008} only,
-we found no such reduction in $\pfix$ (green line). Restricted to the
+we found no such reduction in $\pfix$ (green square line). Restricted to the
 \shankaregion{} region, the sequence samples from \citet{bunnik_autologous_2008}
-are fully compatible with data from \citet{shankarappa_consistent_1999}. The
+are fully compatible with data from \citet{shankarappa_consistent_1999}:
+fixation is rare. The
 nonsynonymous SNVs seem to follow more or less the neutral expectation (blue
-line) -- a point to which we will come back below.
+circle line) -- a point to which we come back below.
 
 \begin{figure}
 \begin{center}
@@ -233,7 +236,7 @@ SNV that reached 50\% frequency is one half.}
 
 When interpreting these results for the fixation probabilities, it is important
 to note that we focused on SNVs that have already reached high frequencies. In
-HIV-1 infection, most SNVs remain very rare throughout; they are not considered
+HIV-1 infection, most SNVs remain very rare throughout: they are not considered
 here. Synonymous SNVs can reach high frequencies either through genetic
 drift or genetic hitchhiking on escape variants (see below); very deleterious
 variants will never reach high frequencies in the first place. Hence, our
@@ -270,7 +273,7 @@ refs.~\cite{shankarappa_consistent_1999,liu_selection_2006, bunnik_autologous_20
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Synonymous mutations in \shankaregion{} tend to disrupt RNA stems}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-One possible explanation for lack of fixation of synonymous SNVs in
+One possible explanation for a reduced fixation of synonymous variants in
 \shankaregion{} is secondary structures in the viral RNA, the disruption of which
 is deleterious to the virus \citep{forsdyke_reciprocal_1995,
 snoeck_mapping_2011, sanjuan_interplay_2011}.
@@ -280,11 +283,11 @@ measured using the SHAPE assay, a biochemical reaction preferentially altering
 unpaired bases 
 \citep{watts_architecture_2009}. The SHAPE assay has shown that the variable
 regions V1-V5 tend to be unpaired, while the conserved regions between those
-variable regions form stems. We aligned the within-patient sequence samples to
+stretches form stems. We aligned the sequences from each patient to
 the reference NL4-3 strain used in \citet{watts_architecture_2009} and assigned
 SHAPE reactivities to most positions in the alignment. We then calculated the
 distributions of SHAPE reactivities for synonymous SNVs that fixed or were
-subsequently lost (only SNVs with frequencies above 15\%). As shown in
+lost (only variants reaching frequencies above 15\%). As shown in
 \FIG{SHAPEA}, the reactivities of fixed SNVs (red histogram) are systematically
 larger than those of lost SNVs (blue) (Kolmogorov-Smirnov test on the cumulative
 distribution, $p\approx 0.002$). In other words, SNVs that are likely to
@@ -294,12 +297,12 @@ at positions where the base pairing pattern of NL4-3 agrees with that of each
 patient's initial consensus sequence -- it is thus statistically conservative.
 As a control, we also calculate the distribution of SHAPE reactivities for SNVs
 that never reach high frequencies (green). This set is a mixture of neutral and
-deleterious SNVs and, as expected, their distribution lies between those of
-fixed and lost high-frequency SNVs.
+deleterious SNVs and, as expected, its distribution lies between those of
+fixed and lost high-frequency variants.
 
-To test the hypothesis that synonymous SNVs in \shankaregion{} are lost because they
+To test the hypothesis that synonymous variants in \shankaregion{} are lost because they
 break stems in the conserved stretches between the V loops, we considered
-separately SNVs in V loops and conserved flanks. The greatest
+separately SNVs in V loops and their flanks. The greatest
 depression in fixation probability is observed in the conserved stems, while the
 V loops show little deviation from the neutral signature, see
 \FIG{SHAPEB}. This is suggestive of important RNA helices in conserved
@@ -338,16 +341,15 @@ bunnik_autologous_2008, liu_selection_2006}.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Deleterious SNVs reach high frequency by hitchhiking}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-While the observation that some fraction of synonymous SNVs is deleterious
-is not unexpected, it seems odd that we observe them at high population
+While the observation of some deleterious synonymous variants is not fully
+unexpected, it seems odd that we observe them at high population
 frequency and that the fixation probability is reduced only in parts of the
 genome (in \shankaregion{} but not in the rest of \env{}; compare the red
 triangle line versus the green square line in \FIG{fixp2}).
 The region \shankaregion{} undergoes frequent adaptive changes to evade
 recognition by neutralizing antibodies \cite{williamson_adaptation_2003,
 richman_rapid_2003}. Due to the limited amount of recombination in HIV-1
-\cite{neher_recombination_2010, batorsky_estimate_2011}, deleterious SNVs
+\cite{neher_recombination_2010, batorsky_estimate_2011}, deleterious variants
 that are linked to adaptive variants can reach high frequency. This process is
 known as hitchhiking \citep{smith_hitch-hiking_1974} or genetic draft
 \citep{gillespie_genetic_2000,neher_genetic_2011}. Hitchhiking is apparent in
@@ -432,27 +434,27 @@ a moderately high synonymous diversity. Specifically, \FIG{simsfig} shows
 parameter combinations for which we found $A_\text{syn} < -0.15$ and $0.0025 <
 P_\text{interm} < 0.010$. This subset of parameters indicates that a high fraction
 ($\gtrsim 0.8$) of sites has to be deleterious with effect size $|s_d| \sim
-0.002$, consistent with the fixation/extinction times estimated above
+0.002$. This is consistent with the fixation/extinction times estimated above
 (see \FIG{fixp1}). 
 
-The bounds on the fraction of synonymous SNVs that are deleterious and
-their effect sizes are plausible:
-(i) A substantial depression in $\pfix$ requires pervasive deleterious SNVs, otherwise
+The bounds on the fraction of deleterious synonymous SNVs and
+on their effect sizes are plausible:
+(i) a substantial depression in $\pfix$ requires pervasive deleterious SNVs, otherwise
 the majority of SNVs reaching high frequency are neutral and no depression is
 observed; (ii) in order to hitchhike, the deleterious effect size has to be much
 smaller than the escape rate, otherwise the double mutant (with both the escape
 mutation and the deleterious synonymous one) has little or no fitness advantage
-over the wildtype virus. Consistent with this argument, larger deleterious
+over the wildtype virus. In agreement with this argument, larger deleterious
 effects in \FIG{simsfig} correspond to larger escape rates; and (iii) SNVs
 with a deleterious effect smaller than approximately $0.001$ behave neutrally,
-consistent with the typical coalescent times observed in HIV-1.
+as expected from the typical coalescent times observed in HIV-1.
 
-The above simulations show that hitchhiking with favored nonsynonymous
+The above simulations show that hitchhiking with favoured nonsynonymous
 variants can explain the observation of
 deleterious synonymous SNVs that rarely fix. However, in a simple model where
-nonsynonymous escape mutations are unconditionally beneficial, they almost
+nonsynonymous escape mutations are unconditionally beneficial, escape mutations almost
 always fix once they reach high frequencies, i.e., $A_{\mathrm{nonsyn}}$ is well
-above zero. This is incompatible with the blue line in \FIG{fixp2}: in an HIV-1
+above zero. This is incompatible with the blue circle line in \FIG{fixp2}: in an HIV-1
 infection, nonsynonymous SNVs at high frequency often disappear again, even
 though many are at least transiently beneficial. Inspecting the trajectories of
 nonsynonymous SNVs suggests the rapid rise and fall of many SNVs. Two
@@ -467,7 +469,7 @@ antibody responses against escape mutants have been reported. These responses ar
 delayed by a few months, roughly matching the average time needed by an escape
 mutant to rise from low to high frequency. To model this type of behavior, we
 assumed that antibody responses against escape SNVs arise with a rate
-proportional to the frequency of the escape SNV and abolish the benefit of the
+proportional to the frequency of the escape variant and abolish the benefit of the
 escape mutations. As expected, this type of time-dependent selection retained the
 potential for hitchhiking, but reduced fixation of nonsynonymous SNVs.
 \figurename~S\timedependence~shows that $\pfix$ of synonymous SNVs is not
@@ -480,14 +482,14 @@ are not additive, because each of them is essentially sufficient to escape and
 no additional benefit is gained from combining them. As a consequence, several
 escape SNVs rise to high frequency rapidly, while the one with the smallest cost
 in terms of replication, packaging, etc.~is most likely to eventually fix, while
-all others are lost. The emergence of multiple competing escape SNVs in HIV-1
+all others are lost. The emergence of multiple competing escape variants in HIV-1
 infections has been shown \citep{moore_limited_2009, bar_early_2012}. 
 Similarly, this scenario has been explicitly observed in the evolution of
 resistance to 3TC, where the mutation M184V is often preceded by M184I
 \citep{hedskog_dynamics_2010}. We implemented within epitope competition 
-in the model by allowing multiple escape mutations per epitope that do
+in the model by allowing for multiple escape mutations per epitope that do
 not provide additional benefit to the virus when combined. Again, we found that the potential for
-hitchhiking is retained by within epitope competition but that the
+hitchhiking is retained by within-epitope competition but that the
 fixation probability of nonsynonymous SNVs is reduced. With roughly six
 mutations per epitope, the simulation data are compatible with observations; see
 \figurename~S\withinepi. The two scenarios, time-dependent selection and
@@ -503,7 +505,7 @@ against synonymous substitutions in the relatively conserved regions
 C2-C4 of the \env{} gene. Computational modeling suggested that these
 SNVs have deleterious effects on the order of $0.002$ and that they are
 brought to high frequency through linkage to adaptive mutations.
-Comparison with biochemical studies of base pairing propensity in RNA
+Comparison with biochemical studies of base pairing propensity in an RNA
 genome of HIV-1 indicated that these mutations are deleterious, at least
 in part, because they disrupt RNA secondary structures. Computer models
 of RNA folding predict stable hairpins in these regions that
@@ -518,13 +520,13 @@ however, spans many years, hence our analysis is able to quantify the
 subtle fitness effect of RNA structure within single infections.
 
 The fixation probabilities and the sojourn times of SNVs represent a rich and simple
-summary statistics useful to characterize longitudinal sequence data and compare
-to models via computer simulations. These statistics are informative
-even in absence of a neutral control and thus suited to analyze
+summary statistics: they are useful to characterize longitudinal sequence data and
+can be compared to models via computer simulations. These statistics are informative
+even in absence of a neutral control and thus appropriate to analyze
 properties of synonymous sites. 
-We find selection against synonymous substitutions  despite the
+We find selection against synonymous substitutions despite the
 fact that the corresponding sites are not strongly conserved in
-cross-sectional data. This is consistent with a recent comparative
+cross sectional data. This is consistent with a recent comparative
 analysis of SIV and HIV-1 RNA secondary structure using SHAPE assays and
 computational methods \citep{pollom_comparison_2013}. While large scale
 patterns of RNA structures tend to agree in both viruses, the individual
@@ -536,9 +538,9 @@ sites. As expected from this argument, the evolutionary rate
 at synonymous sites varies greatly along the HIV-1 genome
 \citep{mayrose_towards_2007}. This variation can confound estimates of
 selection on proteins substantially \citep{ngandu_extensive_2008}. 
-The dynamic nature of HIV secondary structure makes finding the 
+The dynamic nature of HIV secondary structure makes it hard to find the 
 compensatory mutations that would restore base pairing in the
-longitudinal data difficult; in fact, the exact base pairing pattern is
+longitudinal data; in fact, the exact base pairing pattern is
 most likely different than in the reference sequence. 
 
 Selection against the majority of synonymous substitutions is probably
