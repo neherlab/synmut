@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ARTICLE ABOUT FATE OF SYNONYMOUS MUTATIONS IN HIV
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[rmp, twocolumn]{revtex4}
+\documentclass[pre, twocolumn]{revtex4}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[english]{babel}
@@ -60,7 +60,7 @@ resulting in rapid change of HIV-1 proteins. When cytotoxic CD8${}^+$ T-cells
 or neutralizing antibodies target a new epitope, the virus often escapes via
 nonsynonymous mutations that impair recognition. Synonymous mutations do not
 affect this interplay and are often assumed to be neutral. We test this
-assumption by tracking the abundance of synonymous mutations in 
+assumption by tracking  synonymous mutations in 
 longitudinal intrapatient data from the \shankaregion{} part of the \env{}
 gene. We find that most synonymous variants are lost even though
 they often reach high frequencies in the viral population, suggesting a
@@ -101,23 +101,26 @@ Escape mutations are selected because they change the amino acid sequence of
 viral proteins in a way that reduces antibody binding or epitope presentation.
 Conversely, synonymous mutations do not modify the viral proteins and are
 commonly used as approximately neutral markers in studies of viral evolution,
-i.e. as a negative control for detecting selected
+i.e., as a negative control for detecting selected
 sites \citep{Bhatt:2011p43255,Hurst:2002p32608,Chen:2004p22606}. In addition to
 maintaining protein function and avoiding the adaptive immune recognition,
 however, the HIV-1 genome has to ensure efficient processing and translation,
 nuclear export, and packaging into the viral capsid: all these processes operate
-at the RNA level and are sensitive to synonymous changes. For instance, the HIV-1
-\rev{} response element (RRE) in \env{} enhances nuclear export of full length
+at the RNA level and are sensitive to synonymous changes. Several
+important RNA secondary structures have been characterized in detail, including the HIV-1
+\rev{} response element (RRE) in \env{} which enhances nuclear export of full length
 or partially spliced viral transcripts via a complex hairpin RNA structure
 \citep{fernandes_hiv-1_2012}. In fact, the HIV-1 genome is full of RNA
-structures \citep{watts_architecture_2009}, and several of them have been suggested
-to be functional and relevant for viral evolution \citep{keating_rich_2009, snoeck_mapping_2011,
-forsdyke_reciprocal_1995}, although their biology is not fully understood and
-their effects are sometimes hard to distinguish from codon usage bias.
+structures \citep{watts_architecture_2009} with no or unknown
+function. However, large scale modification of secondary structures
+can results in substantial reduction of the replication capacity
+\citep{keating_rich_2009} and the propensity of forming RNA stems
+anticorrelates with the rate of evolution
+\citep{forsdyke_reciprocal_1995,snoeck_mapping_2011}. 
 These poorly characterized RNA structures are conserved to varying degree between HIV-1 and
-SIV: corresponding regions tend to be part of
-of similar structural elements, but individual base pairings are almost always
-discordant \citep{pollom_comparison_2013}. 
+SIV: corresponding regions tend to be part
+of similar structural elements, but individual base pairings are very
+rarely conserved \citep{pollom_comparison_2013}. 
 
 In this paper, we characterize the dynamics of synonymous mutations in \env{}
 and show that, in the region of the V loops, a large fraction of these mutations
@@ -185,14 +188,14 @@ frequently than expected under neutrality (panel \ref{fig:fixp1}). The long-time
 probability of fixation, $\pfix$, is shown as a function of the initial
 frequency $\nu_0$ in panel \ref{fig:fixp2}. As a control, the neutral result is
 shown as a black dashed line. We found that $\pfix$ of synonymous
-variants is far below the neutral expectation in \shankaregion{} (red triangle line).
+variants is far below the neutral expectation in \shankaregion{} (red line).
 Outside of \shankaregion, using data from \citet{bunnik_autologous_2008} only,
-we found no such reduction in $\pfix$ (green square line). Restricted to the
+we found no such reduction in $\pfix$ (green line). Restricted to the
 \shankaregion{} region, the sequence samples from \citet{bunnik_autologous_2008}
 are fully compatible with data from \citet{shankarappa_consistent_1999}:
 fixation is rare. The
 nonsynonymous SNVs seem to follow more or less the neutral expectation (blue
-circle line) -- a point to which we come back below.
+line) -- a point to which we come back below.
 
 \begin{figure}
 \begin{center}
@@ -434,8 +437,8 @@ variants can explain the observation of
 deleterious synonymous SNVs that rarely fix. However, in a simple model where
 nonsynonymous escape mutations are unconditionally beneficial, escape mutations almost
 always fix once they reach high frequencies, i.e., $A_{\mathrm{nonsyn}}$ is well
-above zero. This is incompatible with the blue circle line in \FIG{fixp2}: in an HIV-1
-infection, nonsynonymous SNVs at high frequency often disappear again, even
+above zero. This is incompatible with the observed fixation probability
+nonsynonymous SNVs at high frequency often disappear again (\FIG{fixp2}), even
 though many are at least transiently beneficial. Inspecting the trajectories of
 nonsynonymous SNVs suggests the rapid rise and fall of many SNVs. Two
 possible mechanisms that could explain the transient rise of
@@ -485,9 +488,8 @@ against synonymous substitutions in the relatively conserved regions
 C2-C4. We suggest through computational modeling that these
 SNVs have deleterious effects on the order of $0.002$ and that they are
 brought to high frequency through linkage to adaptive mutations.
-Comparison with biochemical studies of base pairing propensity in an RNA
-genome of HIV-1 indicated that these mutations are deleterious, at least
-in part, because they disrupt RNA secondary structures. Computer models
+Comparison with biochemical data (SHAPE) of base pairing propensity in the RNA
+genome of HIV-1 indicated that these mutations tend to disrupt RNA secondary structures\citep{watts_architecture_2009}. Computer models
 of RNA folding predict stable hairpins in these regions that
 have been suggested to be functional and termed ``insulating
 stems'' \citep{watts_architecture_2009, sanjuan_interplay_2011}.
@@ -524,7 +526,7 @@ longitudinal data; in fact, the exact base pairing pattern is
 most likely different than in the reference sequence.
 
 Selection against the majority of synonymous substitutions is probably
-true across the genome, but we only observe deleterious synonymous SNVs
+common across the genome, but we only observe deleterious synonymous SNVs
 at high frequency in \shankaregion{} of \env{}, where they hitchhike to
 high frequencies on nAb escape mutations. Surprisingly, nonsynonymous
 mutations display a fixation pattern as if they were neutral;
@@ -535,8 +537,8 @@ are escape mutations despite the fact that are often lost again. We suggest that
 paradoxical behavior could be due to (i) escape
 mutations that revert after they themselves are recognized by nAbs, or (ii)
 the competition between different escape mutations within one epitope. 
-Both mechanisms reduce the overall fixation probability and could
-explain the observed pattern of fixation.
+Both mechanisms reduce the overall fixation probability and can
+give rise to the observed pattern of fixation in computer simulations.
 
 The observed hitchhiking highlights the importance of linkage due to
 infrequent recombination for the evolution of HIV-1
@@ -697,7 +699,7 @@ This work is supported by the ERC starting grant HIVEVO 260686 and
 in part by the National Science Foundation under Grant No.~NSF PHY11-25915.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{natbib}
+%\bibliographystyle{unsrtnat}
 \bibliography{bib}
 \newpage
 \appendix
