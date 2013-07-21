@@ -65,7 +65,7 @@ if __name__ == '__main__':
     # only with enough synonymous diversity
     is_good &= (tb['poly_syn'] > poly_synmin) & (tb['poly_syn'] < poly_synmax)
 
-    # (nonsynonymous gating)
+    # (optional nonsynonymous gating)
     # only with small Anonsyn
     is_good &= (tb['Anonsyn'] < Anonsynmax) & (tb['Anonsyn'] > Anonsynmin)
     # only in the right window for nonsyn substitutions
