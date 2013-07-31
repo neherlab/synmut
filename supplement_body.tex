@@ -110,8 +110,8 @@ while hitch-hiking of synonymous SNVs is not affected. The precise
 shape of $\pfix(\nu)$ depends on the details of the $P_\text{recognized}(t)$, and 
 we do not think that the high $\pfix(\nu)$ for $\nu<0.2$ is meaningful.
 The other parameters for the shown simulations are
-the following: deleterious effect $s_d = 10^{-3}$, average escape rate $\epsilon = 0.016$,
-fraction of deleterious synonymous mutations $\alpha = 0.986$, rate of new epitopes
+the following: deleterious effect $s_d = 2 \cdot 10^{-3}$, average escape rate $\epsilon
+= 0.032$, fraction of deleterious synonymous mutations $\alpha = 0.986$, rate of new epitopes
 $k_A=0.0014$ per generation.
 }
 \label{fig:tds}
@@ -143,10 +143,28 @@ drawn from an exponential distribution with mean $\epsilon$ and
 $n$ is the number of competing escapes in the epitope. 
 In this evolutionary scenario, many escape SNVs start to sweep on different backgrounds within the viral population, but eventually
 compete and only one of them fixes. The other parameters for the shown simulations are
-the following: deleterious effect $s_d = 10^{-3}$, average escape rate $\epsilon = 0.016$,
-fraction of deleterious synonymous mutations $\alpha = 0.986$, rate of new epitopes
+the following: deleterious effect $s_d = 2 \cdot 10^{-3}$, average escape rate
+$\epsilon = 0.032$, fraction of deleterious synonymous mutations $\alpha = 0.986$, rate of new epitopes
 $k_A=0.0014$ per generation.
 }
 \label{fig:wec}
 \end{center}
 \end{figure}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Simulations with different parameters}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.6\linewidth]{simulations_syn_gentime_2days.pdf}
+\caption{
+Results of simulations with alternative parameters.
+Panel A) Like \figurename~4B in the main text, but simulations are performed using a
+generation time of two days. Two selection coefficient of synonymous sites
+doubles in units of 1/generations, hence keeps constants in units of 1/days.
+}
+\label{fig:sims_altparameters}
+\end{center}
+\end{figure}
+

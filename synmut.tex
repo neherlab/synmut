@@ -40,6 +40,7 @@
 \newcommand{\syndiv}{2}
 \newcommand{\timedependence}{3}
 \newcommand{\withinepi}{4}
+\newcommand{\gentimetwo}{5}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\thesubfigure}{\Alph{subfigure}}
 \newcommand{\Author}{Fabio~Zanini and Richard~A.~Neher}
@@ -77,7 +78,7 @@ from SHAPE assays, we find that synonymous mutations that disrupt base pairs
 in RNA stems flanking the variable loops of gp120 are more likely to be lost than other
 synonymous changes: these RNA hairpins might be important for HIV-1.
 Computational modeling indicates that (i) most synonymous mutations in this
-genomic region have a selection coefficient of the order of $-0.002$, and
+genomic region have a selection coefficient of the order of $-0.004$, and
 (ii) synonymous variants rise to high frequency by genetic hitchhiking on neighboring beneficial
 variants. This weak selection against synonymous substitutions does not
 result in a strong pattern of conservation in cross sectional data, but
@@ -199,10 +200,13 @@ Computer simulations were performed using FFPopSim
 \citep{zanini_ffpopsim:_2012}. Briefly, FFPopSim enables individual-based
 simulations where each site in the genome is represented by one bit that can be
 in one of two states. Outcrossing rates, crossover rates, mutations rates and
-arbitrary fitness functions can be specified. We used a generation time of 1
-day, an outcrossing rate of $r=0.01$ per day \citep{batorsky_estimate_2011,
-neher_recombination_2010}, a mutation rate of $\mu=10^{-5}$
-\citep{mansky_lower_1995, abram_nature_2010} and simulated intrapatient
+arbitrary fitness functions can be specified. We used an outcrossing rate of
+$r=0.01$ per day \citep{batorsky_estimate_2011, neher_recombination_2010},
+a mutation rate of $\mu=2 \times 10^{-5}$ \citep{mansky_lower_1995, abram_nature_2010}.
+We performed the simulations with
+generation times of both 1 and 2 days, because this parameter varies across patients
+\citep{perelson_hiv-1_1996, perelson_decay_1997}; our conclusions are shown in
+did not change (see \FIG{simheat} and \figurename~S\gentimetwo, respectively). We simulated intrapatient
 evolution for 6000 days. For simplicity, third positions of every codon were
 deemed synonymous and assigned either a selection coefficient $0$ with
 probability $1-\alpha$ or a deleterious effect $s_d$ with probability $\alpha$.
@@ -216,9 +220,9 @@ were performed and yielded comparable results.
 The simulations were repeated 2400 times with random choices for the following
 parameters: the fraction of deleterious sites $\alpha$ was sampled uniformly
 between 0.75 and 1.0; the average deleterious effect $s_d$ was sampled such that
-its logarithm was uniformly distributed  between $10^{-4}$ and $10^{-2}$; the
+its logarithm was uniformly distributed  between $2 \cdot 10^{-4}$ and $2 \cdot 10^{-2}$; the
 average escape rate $\epsilon$ of escape mutation was sampled such that its logarithm was
-uniform between $10^{-2.5}$ and $10^{-1.5}$ and the rate $k_A$ of new antibody
+uniform between $2 \cdot 10^{-2.5}$ and $2 \cdot 10^{-1.5}$ and the rate $k_A$ of new antibody
 challenges such that its logarithm was uniform between $10^{-3}$ and $10^{-2}$
 per generation. Populations were initialized with a homogeneous founder
 population and were kept at an average size of $N=10^4$ throughout the
@@ -248,6 +252,8 @@ In 10 runs out of 2400, the highest frequency bin was empty so the fixation
 probability could not be calculated; those runs were excluded from
 \FIG{simsfig}.
 
+% TODO change mu and rho and N
+ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Methods availability}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -401,7 +407,7 @@ The approximate magnitude of the deleterious effects can be estimated from
 SNVs at intermediate frequencies become fixed or lost. The typical time to
 loss is of the order of 500 days. If this loss is driven by the deleterious
 effect of the mutation, this corresponds to deleterious effects $s_d$ of the
-order of $- 0.002$ per day. (This is only an average estimate: every single
+order of $-0.002$ per day. (This is only an average estimate: every single
 mutation is expected to have a slightly different fitness effect.)
 
 
@@ -448,8 +454,8 @@ a moderately high synonymous diversity. Specifically, \FIG{simsfig} shows
 parameter combinations for which we found $A_\text{syn} < -0.15$ and $0.0025 <
 P_\text{interm} < 0.010$. This subset of parameters indicates that a high fraction
 ($\gtrsim 0.8$) of sites has to be deleterious with effect size $|s_d| \sim
-0.002$. This is consistent with the fixation/extinction times estimated above
-(see \FIG{fixp1}). 
+0.004$. The inverse of $|s_d|$ is of the same order of magnitude as the
+fixation/extinction times estimated above (see \FIG{fixp1}).
 
 The bounds on the fraction of deleterious synonymous SNVs and
 on their effect sizes are plausible:
@@ -517,7 +523,7 @@ By analyzing the fate of single nucleotide variants (SNVs) in
 longitudinal data of HIV-1 \env{} evolution, we demonstrated selection
 against synonymous substitutions in the relatively conserved regions
 C2-C4. We suggest through computational modeling that these
-SNVs have deleterious effects on the order of $0.002$ and that they are
+SNVs have deleterious effects on the order of $0.004$ and that they are
 brought to high frequency through linkage to adaptive mutations.
 Comparison with biochemical data (SHAPE) of base pairing propensity in the RNA
 genome of HIV-1 indicated that these mutations tend to disrupt RNA secondary structures\citep{watts_architecture_2009}. Computer models
@@ -706,7 +712,7 @@ size, fraction of deleterious synonymous sites, average escape rate $\epsilon$
 introduction of new epitopes (marker size, from $10^{-3}$ to $10^{-2}$ per
 day). Only simulations that reproduce the synonymous diversity and fixation
 patterns observed in data are shown. These simulations demonstrate that
-deleterious effects are around $-0.002$ and a large fraction of the 
+deleterious effects are around $-0.004$ and a large fraction of the 
 synonymous mutations needs to be deleterious. As expected, larger
 $s_d$ require larger $\epsilon$. Parameters are chosen
 from prior distributions uniform in logspace as indicated by the red rectangle

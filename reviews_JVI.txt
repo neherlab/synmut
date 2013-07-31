@@ -50,8 +50,8 @@ following respects:
 virion to integrate and start transcription.  One usually takes 2 days as the
 mean generation time, but there is individual variation. See next point.
 >>>>>>>>>>>>>>>>>
-Fabio: This is only a scaling factor that limits our accuracy indeed. We should
-       stress this point more.
+Fabio: We repeated simulations with t_g = 2 and nothing changes (in units of
+       1/days). Hence we are safe.
 
 ##############################################################################
 2) Related to the above: the simulation does not address how sensitive the
@@ -62,7 +62,7 @@ analysis shaping our expectations, I strongly feel that this sensitivity
 analysis needs to be part of the results, and folded into the error bars.
 >>>>>>>>>>>>>>>>>
 Fabio:
-- generation time is only a scaling factor
+- generation time: DONE
 - mutation rate play no big role, as we look for times and fates of
   high-frequencies alleles anyway
 - outcrossing rate sets the time scale for the decay of linkage, so it is a
@@ -79,7 +79,8 @@ Fabio:
 with citation to existing literature.
 >>>>>>>>>>>>>>>>>
 Fabio: This is there already, maybe we should be more explicit in the methods
-       (e.g. generation time)
+       (e.g. generation time). Maybe it also refers to the last plot indeed, so
+       we should explain why we choose that range of adaptive density etc.
 
 ##############################################################################
 4) I am a bit surprised that the authors chose to do random sampling in their
