@@ -40,7 +40,8 @@
 \newcommand{\syndiv}{2}
 \newcommand{\timedependence}{3}
 \newcommand{\withinepi}{4}
-\newcommand{\marginals}{5}
+\newcommand{\gentimetwo}{5}
+\newcommand{\marginals}{6}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\thesubfigure}{\Alph{subfigure}}
 \newcommand{\Author}{Fabio~Zanini and Richard~A.~Neher}
@@ -55,11 +56,13 @@
 \begin{document}
 \title{\Title}
 \author{\Author\\ \Affiliation}
+%\affiliation{\Affiliation}
 \date{\today}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \maketitle
 
 \newpage
+%\begin{abstract}
 \section*{Abstract}
 \noindent
 Intrapatient HIV-1 evolution is driven by the adaptive immune system
@@ -83,6 +86,8 @@ result in a strong pattern of conservation in cross sectional data, but
 slows down the rate of evolution considerably. Our findings are consistent with the
 notion that large scale patterns of RNA structure are functionally
 relevant, while the precise base pairing pattern is not.
+%\end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -698,7 +703,6 @@ bunnik_autologous_2008, liu_selection_2006}.}
 \label{fig:SHAPE}
 \end{center}
 \end{figure}
-
 \begin{figure}
 \begin{center}
 \subfloat{\includegraphics[width=0.6\linewidth]{simulations_graduallydel.pdf}
@@ -719,7 +723,7 @@ the synonymous diversity and fixation patterns observed in data are shown.
 These simulations demonstrate that deleterious effects are around $-0.003$
 and a large fraction of the synonymous mutations needs to be deleterious. This
 picture is also confirmed by the analysis of the marginal distributions of the
-single parameters (see \figurename~S\marginals).}
+single parameters (see \figurename~S\marginals).
 \label{fig:simheat}
 \end{center}
 \end{figure}

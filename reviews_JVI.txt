@@ -22,10 +22,7 @@ should not be considered in isolation. They support the view that 'landscaping'
 approaches such as that described recently by Chakraborty in Immunity (Immunity
 38:606-617, 2013), need to be applied. 
 >>>>>>>>>>>>>>>>>
-Fabio: The Chakraborty paper is a maximum-likelihood fit of database frequencies
-       and 2-point correlations of untreated patients. What exactly this has to do
-       with our manuscript, I am not sure. I suppose we could add a citation if
-       that's the suggestion.
+Fabio: DONE (citation added).
 
 ##############################################################################
 # Reviewer #2 (Comments for Author):
@@ -78,19 +75,14 @@ Fabio:
 3) The reasonableness of the ranges for the various parameters should be argued
 with citation to existing literature.
 >>>>>>>>>>>>>>>>>
-Fabio: This is there already, maybe we should be more explicit in the methods
-       (e.g. generation time). Maybe it also refers to the last plot indeed, so
-       we should explain why we choose that range of adaptive density etc.
+Fabio: DONE (more discussion in Methods).
 
 ##############################################################################
 4) I am a bit surprised that the authors chose to do random sampling in their
 multidimensional parameter space.  One would have expected a Latin hypercube
 sampling to provide a better coverage.
 >>>>>>>>>>>>>>>>>
-Fabio: We could do more fancy stuff as Latin hypercube, but I do not think it is
-       needed: our coverage is excellent. It is only a matter of showing the prior
-       I think. I added the figure 'simulations_syn_flat.pdf' in the 'figures'
-       folder to show that the space is well covered.
+Fabio: DONE.
 
 ##############################################################################
 5) The actual dynamics of HIV in the body is presumably more complex: it is

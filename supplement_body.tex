@@ -152,17 +152,82 @@ $k_A=0.0014$ per generation.
 \end{figure}
 
 \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Simulations with different parameters}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}[h]
+%\begin{center}
+%\includegraphics[width=0.4\linewidth]{simulations_syn_gentime_2days.pdf}\\
+%\includegraphics[width=0.24\linewidth]{simulations_syn_mu_1e-5.pdf}
+%\includegraphics[width=0.24\linewidth]{simulations_syn_latin_suppl.pdf}
+%\includegraphics[width=0.24\linewidth]{simulations_syn_mu_3e-5.pdf}
+%\includegraphics[width=0.24\linewidth]{simulations_syn_mu_4e-5.pdf}\\
+%\includegraphics[width=0.32\linewidth]{simulations_syn_coi_5e-3.pdf}
+%\includegraphics[width=0.32\linewidth]{simulations_syn_latin_suppl2.pdf}
+%\includegraphics[width=0.32\linewidth]{simulations_syn_coi_2e-2.pdf}
+%\caption{
+%Results of simulations with alternative parameters.
+%\textbf{Panel A)} Like \figurename~4B in the main text, but simulations are performed using a
+%generation time of two days. Two selection coefficient of synonymous sites
+%doubles in units of 1/generations, hence keeps constants in units of 1/days.
+%\textbf{Panels B, C, D, and E)} Effect of mutation rate on the simulation
+%results. The mutation rates are respectively $1 \times 10^{-5}$ (B), $2 \times
+%10^{-5}$ (C), $3 \times 10^{-5}$ (D), and $4 \times
+%10^{-5}$ (E) per generation per site. Increasing the mutation rate tightens the
+%requirement that almost all synonymous mutations must be deleterious. This can
+%be rationalized as follows: a higher $\mu$ increases the neutral synonymous
+%diversity (we have measured this directly in our simulations), hence more and
+%more synonymous SNVs that reach high frequency are neutral and the
+%effect of deleterious SNVs, although present, becomes too weak to be observed as
+%a depression in $P_\text{fix}$. As a consequence, only simulations with almost
+%no neutral sites still show a reduced $P_\text{fix}$ and are shown in the
+%figures.
+%\textbf{Panels F, G, H)} Effect of recombination rate on the simulation results.
+%The recombination rates are respectively $0.5 \times 10^{-5}$ (F), $10^{-5}$
+%(G), and $2 \times 10^{-5}$ (H) per generation per site. Recombination does not
+%change the results qualitatively in terms of fixation probability. Simulations
+%with high recombination rates, however, have an excessively high synonymous
+%diversity compared to the data (dots at the bottom and right side of panel H).
+%More stringent gating around the data solves this issue.
+%}
+%\label{fig:sims_altparameters}
+%\end{center}
+%\end{figure}
+
+
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Simulations with different parameters}
+\section{Marginal distributions in simulations}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{simulations_syn_gentime_2days.pdf}
+\includegraphics[width=0.99\linewidth]{simulations_syn_marginals.pdf}
 \caption{
-Results of simulations with alternative parameters.
-Panel A) Like \figurename~4B in the main text, but simulations are performed using a
-generation time of two days. Two selection coefficient of synonymous sites
-doubles in units of 1/generations, hence keeps constants in units of 1/days.
+Marginal distributions of parameters in simulations that reproduce the
+synonymous fixation probability and diversity seen in the data. The prior on all
+parameters are flat lines (see methods). Whereas some parameters do not seem to
+affect the fixation of synonymous deleterious SNVs (e.g. the recombination
+rate), the effect of deleterious synonymous changes and their abundance are
+crucial, as discussed in the main text.
+}
+\label{fig:sims_altparameters}
+\end{center}
+\end{figure}
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Divergence and diversity over time in simulations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.6\linewidth]{simulations_diversity_divergence_example.pdf}
+\caption{
+Diversity and divergence over time in an example simulation with realistic
+parameters. Divergence from the founder genotype accumulates linearly. On the
+contrary, because of the frequent selective sweeps of escape mutations, diversity saturates
+relatively quickly. The population dynamics after that point is in a steady
+state.
 }
 \label{fig:sims_altparameters}
 \end{center}
