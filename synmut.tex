@@ -196,38 +196,68 @@ Computer simulations were performed using FFPopSim
 \citep{zanini_ffpopsim:_2012}. Briefly, FFPopSim enables individual-based
 simulations where each site in the genome is represented by one bit that can be
 in one of two states. Outcrossing rates, crossover rates, mutations rates and
-arbitrary fitness functions can be specified. We used an outcrossing rate of
-$r=0.01$ per day \citep{batorsky_estimate_2011, neher_recombination_2010},
-a mutation rate of $\mu=2 \times 10^{-5}$ \citep{mansky_lower_1995, abram_nature_2010}.
-We performed the simulations with
-generation times of both 1 and 2 days, because this parameter varies across patients
-\citep{perelson_hiv-1_1996, perelson_decay_1997}; our conclusions are shown in
-did not change. We simulated intrapatient
-evolution for 6000 days. For simplicity, third positions of every codon were
+arbitrary fitness functions can be specified. While the best estimates
+for the HIV generation time is roughly two days
+\citep{perelson_hiv-1_1996, markowitz_novel_2003}, the generation time
+has very little influence on the result and basically sets the unit of
+time in which other parameters are measured. For simplicity, we use one
+generation per day and have checked that the results obtained are
+indistinguishable from simulations with a generation time of two days.
+
+\subsubsection*{Parameters}
+In order to simulate HIV, we have to specify several parameters that are
+known to various degrees. The mutation rate has been measured using
+exogenous LacZ constructs and the average nucleotide substitution rate is 
+estimated to be $\mu\approx 2 \times 10^{-5}$ per generation \citep{mansky_lower_1995,
+abram_nature_2010}. In our simulations, we vary the mutations rate
+from $?? -?? \times 10^{-5}$ per day. Different virions within an
+infected person can recombine their genome by coinfection of the same
+cell, followed by template switching during reverse transcription. 
+Template switching happens between around ten times per reverse
+transcription \citep{levy_dynamics_2004}. The combined recombination rate of template
+switching and coinfection has been estimated based on modeling to be around $\rho\approx
+10^{-5}$ per nucleotide and day
+\citep{neher_recombination_2010,batorsky_estimate_2011}, implying a
+coinfection rate of a few percent or less, as has been recently
+confirmed experimentally \citep{josefsson_single_2013}. We assume a
+template switching rate of $10^{3}$ per nucleotide and vary the
+recombination rate between $??-??\times 10^{-5}$ by adjusting the
+coinfection rate. The population size relevant to evolution in chronic
+infection has been hotly debated. The number of cells infected by HIV-1
+per day is on the order of $10^{7}$ \citep{perelson_hiv-1_1996}, but the
+number of viruses contributing to the next generation might be
+considerably smaller due to the burstiness of replication. 
+Recent evidence points to a relevant population
+size in excess of the inverse mutation rate
+\citep{boltz_ultrasensitive_2012}. In fact, the evolutionary dynamics
+depends only weakly on the actual value of the population size once the
+product $N\mu$ is of order one or larger \citep{neher_genetic_2011}. We
+simulate populations between $N=10^4$ and $10^5$. Larger populations
+become prohibitively costly to simulate.
+
+Another crucial ingredient for our simulations is the fitness landscape,
+i.e., the effects of mutations on fitness and possible interactions
+between mutations. For simplicity, third positions of every codon were
 deemed synonymous and assigned either a selection coefficient $0$ with
 probability $1-\alpha$ or a deleterious effect $s_d$ with probability $\alpha$.
 Mutations at the first and second positions were assigned strongly deleterious 
-fitness effects 0.02. At 
+fitness effects ??? COULD MAKE THIS STRONGER, NEED CITATION. At 
 rate $k_A$, a random locus in the genome is designated an epitope that can
 escape by one or several mutations with exponentially distributed escape rates
-with mean $\epsilon$. Both full-length HIV-1 genomes and \env{}-only simulations
-were performed and yielded comparable results.
+with mean $\epsilon$. The rate of escape in chronic infection is
+reported to be on the order of a few percent
+\citep{Asquith:2006p28003,moore_limited_2009}, consistent with the
+finding that virus is neutralized by serum from 3-6 month later
+\citep{richman_rapid_2003}. We simulated escape rates between $2 \cdot
+10^{-2.5}$ and $2 \cdot 10^{-1.5}$ per day. 
+The rate at which new anti-body challenges arise is more difficult to
+quantify, but the majority of non-synonymous substitutions in gp120 are
+probably driven by escape. Since the sequence of the C2-V5 region of
+gp120  changes at a rate of about 1\% per year
+\citep{shankarappa_consistent_1999}, this rate should be on the order of
+$k_A=0.003$ per day. 
 
-The simulations were repeated 1000 times with a four dimensional Latin hypercube sampling scheme.
-For two parameters, ranges were chosen around estimates from the recent literature:
-the average escape rate $\epsilon$ of escape mutation was sampled such that its logarithm was
-uniform between $2 \cdot 10^{-2.5}$ and $2 \cdot 10^{-1.5}$
-\citep{neher_recombination_2010} and the rate $k_A$ of new antibody
-challenges such that its logarithm was uniform between $10^{-3}$ and $10^{-2}$
-per generation \citep{richman_rapid_2003, moore_limited_2009}.
-For the other two parameters, ranges were determined to include all simulations
-that reproduced the experimental data: the fraction of deleterious sites $\alpha$ was sampled uniformly
-between 0.75 and 1.0; the average deleterious effect $s_d$ was sampled such that
-its logarithm was uniformly distributed  between $2 \cdot 10^{-4}$ and $2 \cdot
-10^{-2}$. Populations were initialized with a homogeneous founder
-population and were kept at an average size of $N=10^4$ throughout the
-simulation. After 30 generations of burn-in to create genetic diversity, new
-epitopes were introduced at a constant rate $k_A$. 
+
 
 For the models with competition within epitopes, a complex epistatic fitness
 landscape was designed such that each single mutant is sufficient for full
@@ -241,9 +271,24 @@ evolving immune system, the beneficial effect of an escape mutation was set
 to its previous cost of -0.02 with a probability per generation proportional to
 the frequency of the escape variant.
 
-For each set of parameters, fixation probabilities and probabilities of
-synonymous polymorphisms $P_\text{interm}$ were calculated as averages over
-100 repetitions (with different random seeds).
+
+\subsubsection*{Sampling and analysis}
+To obtain reasonable sampling of a particular parameter combination we
+ran simulation for 6000 days and we repeated each run 100 times with
+different seeds for the random number generator. Both full-length HIV-1
+genomes and \env{}-only simulations were performed and yielded
+comparable results.  Populations were initialized with a homogeneous
+founder population and were kept at an average size of $N=10^4$
+throughout the simulation. After 30 generations of burn-in to create
+genetic diversity, new epitopes were introduced at a constant rate
+$k_A$.  The simulations were repeated 1000 times with a four dimensional
+Latin hypercube sampling scheme \citep{mckay_comparison_1979}.  For each
+parameter, 1000 random values were chosen from a distribution uniform in
+log-space and bounded by the ranges given for each of these parameters
+above. These 1000 values for each parameter were combined using a Latin
+hypercube sampling scheme.
+
+
 
 The areas below or above the neutral fixation probability (diagonal line) were
 estimated from the binned fixation probabilities using linear interpolation
@@ -481,40 +526,49 @@ nonsynonymous SNVs suggests the rapid rise and fall of many SNVs. Two
 possible mechanisms that could explain the transient rise of
 nonsynonymous SNVs are time-dependent selection and within-epitope competition.
 
-If the immune system
-recognizes the escape mutant before its fixation, the mutant might cease to be
-beneficial and disappear soon, despite its quick initial rise in frequency. In
-support of this idea, in \citet{richman_rapid_2003, bunnik_autologous_2008},
-antibody responses against escape mutants have been reported. These responses are
-delayed by a few months, roughly matching the average time needed by an escape
-mutant to rise from low to high frequency. To model this type of behavior, we
-assumed that antibody responses against escape SNVs arise with a rate
-proportional to the frequency of the escape variant and abolish the benefit of the
-escape mutations. As expected, this type of time-dependent selection retained the
-potential for hitchhiking, but reduced fixation of nonsynonymous SNVs.
-\figurename~S\timedependence~shows that $\pfix$ of synonymous SNVs is not
-affected by this change, while $\pfix$ of nonsynonymous SNVs approaches the
-diagonal as the rate of recognition of escape mutants is increased. 
+If the immune system recognizes the escape mutant before its fixation,
+the mutant might cease to be beneficial and disappear soon, despite its
+quick initial rise in frequency. In support of this idea, in
+\citet{richman_rapid_2003,wei_antibody_2003,bunnik_autologous_2008},
+antibody responses against escape mutants have been reported. These
+responses are delayed by a few months, roughly matching the average time
+needed by an escape mutant to rise from low to high
+frequency. Furthermore, neutralization responses against early virus
+sometimes decline later in infection, which could lead to a reversion of
+some sites. To model
+this type of behavior, we assumed that antibody responses against escape
+SNVs arise with a rate proportional to the frequency of the escape
+variant and abolish the benefit of the escape mutations. As expected,
+this type of time-dependent selection retained the potential for
+hitchhiking, but reduced fixation of nonsynonymous SNVs.
+\figurename~S\timedependence~shows that $\pfix$ of synonymous SNVs is
+not affected by this change, while $\pfix$ of nonsynonymous SNVs
+approaches the diagonal as the rate of recognition of escape mutants is
+increased.
 
-Several different escape mutations that arise within the 
-same epitope have similar effects. Their benefits
-are not additive, because each of them is essentially sufficient to escape and
-no additional benefit is gained from combining them. As a consequence, several
-escape SNVs rise to high frequency rapidly, while the one with the smallest cost
-in terms of replication, packaging, etc.~is most likely to eventually fix, while
-all others are lost. The emergence of multiple competing escape variants in HIV-1
-infections has been shown \citep{moore_limited_2009, bar_early_2012}. 
-Similarly, this scenario has been explicitly observed in the evolution of
-resistance to 3TC, where the mutation M184V is often preceded by M184I
-\citep{hedskog_dynamics_2010}. We implemented within epitope competition 
-in the model by allowing for multiple escape mutations per epitope that do
-not provide additional benefit to the virus when combined. Again, we found that the potential for
-hitchhiking is retained by within-epitope competition but that the
-fixation probability of nonsynonymous SNVs is reduced. With roughly six
-mutations per epitope, the simulation data are compatible with observations; see
+Several different escape mutations that arise within the same epitope
+have similar effects. Their benefits are not additive, because each of
+them is essentially sufficient to escape and no additional benefit is
+gained from combining them. As a consequence, several escape SNVs rise
+to high frequency rapidly, while the one with the smallest cost in terms
+of replication, packaging, etc.~is most likely to eventually fix, while
+all others are lost. The emergence of multiple competing escape variants
+in HIV-1 infections has been shown \citep{moore_limited_2009,
+  bar_early_2012,wei_antibody_2003}.  This scenario has been explicitly
+observed in the evolution of resistance to 3TC, where the mutation M184V
+is often preceded by M184I \citep{hedskog_dynamics_2010} or in the
+context of CTL escape mutations where multiple variants rise to high
+frequencies rapidly but most of the are lost again
+\citep{fischer_transmission_2010}. We implemented within epitope
+competition in the model by allowing for multiple escape mutations per
+epitope that do not provide additional benefit to the virus when
+combined. Again, we found that the potential for hitchhiking is retained
+by within-epitope competition but that the fixation probability of
+nonsynonymous SNVs is reduced. With roughly six mutations per epitope,
+the simulation data are compatible with observations; see
 \figurename~S\withinepi. The two scenarios, time-dependent selection and
-competition between equivalent escape pathways, are not exclusive and possibly
-both important in HIV-1 evolution.
+competition between equivalent escape pathways, are not exclusive and
+possibly both important in HIV-1 evolution.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Discussion}
@@ -525,6 +579,9 @@ against synonymous substitutions in the relatively conserved regions
 C2-C4. We suggest through computational modeling that these
 SNVs have deleterious effects on the order of $0.003$ and that they are
 brought to high frequency through linkage to adaptive mutations.
+While both the rise and fall of synonymous SNV is subject to hichhiking,
+the consistent loss of these variants conditional on being at high
+frequency implies selection against these SNVs.
 Comparison with biochemical data (SHAPE) of base pairing propensity in the RNA
 genome of HIV-1 indicated that these mutations tend to disrupt RNA secondary structures\citep{watts_architecture_2009}. Computer models
 of RNA folding predict stable hairpins in these regions that
@@ -536,13 +593,13 @@ the fitness effects of small RNA hairpins in HIV-1
 \citep{knoepfel_role_2013}: it would take hundreds of cell culture
 passages to detect fitness effects of the order of one per mille. The longitudinal data,
 however, spans many years, hence our analysis is able to quantify the
-subtle fitness effect of RNA structure within single infections.
+subtle fitness effect of RNA structure within single infections. 
+The fixation probabilities and the sojourn times of SNVs represent a
+rich and simple summary statistics of longitudinal sequence data. Most
+importantly, these statistics are informative even in absence of a
+neutral control and thus appropriate to analyze properties of synonymous
+sites. 
 
-The fixation probabilities and the sojourn times of SNVs represent a rich and simple
-summary statistics: they are useful to characterize longitudinal sequence data and
-can be compared to models via computer simulations. These statistics are informative
-even in absence of a neutral control and thus appropriate to analyze
-properties of synonymous sites. 
 We find selection against synonymous substitutions despite the
 fact that the corresponding sites are not strongly conserved in
 cross sectional data. This is consistent with a recent comparative
