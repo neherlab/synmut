@@ -51,12 +51,14 @@ We agree that one generation in HIV takes closer to 2 days than 1
 day. Most escape rates and selection coefficients, however, are more
 readily measured in days and we have chosen to model HIV evolution with
 generation of one day for simplicity. Factor of 2 changes in the
-generation have next to now influence on the dynamics and only
+generation have little influence on the dynamics and only
 renormalize genetic drift. Genetic drift is not a dominant force in HIV
 evolution and the population size, the main determinant of drift, is not
 known to this accuracy anyway. We have repeated a subset of the
 simulations with a generation time of one day, finding no
-difference. IS THIS SHOWN SOMEWHERE?
+difference.
+
+IS THIS SHOWN SOMEWHERE? (Fabio is redoing the simulations)
 
 ##############################################################################
 >2) Related to the above: the simulation does not address how sensitive the
@@ -76,7 +78,7 @@ compatible with observations as a heat map. The marginal distribution of
 the individual parameters consistent with the data are shown in the supplement.
 
 The distribution of allowed deleterious is sharply peaked around
-???. DISCUSS THE DIVERSITY ISSUES. 
+0.02. DISCUSS THE DIVERSITY ISSUES. 
 
 
 
@@ -92,7 +94,7 @@ section.
 >multidimensional parameter space.  One would have expected a Latin hypercube
 >sampling to provide a better coverage.
 
-Indeed. Our previous simulations where not limited by coverage of the
+Indeed. Our previous simulations were not limited by coverage of the
 parameter space. Now that we cover a much larger (higher dimensional)
 space, we did implement a Latin hypercube sampling scheme. We thank the
 reviewer for this very useful suggestion. WE MIGHT WANT TO SHOW THE RANK
@@ -133,6 +135,10 @@ of synonymous mutations will be due to draft. The consistent loss of
 variants, conditional on them being at high frequency earlier, implies
 selection against these variants. We have added a sentence to the
 discussion to make this point clear.
+
+Fabio: I DO NOT THINK THAT ADRESSES THE QUESTION ("IN GENERAL" --> "BUT").
+MAYBE WE COULD STATE SOMETHING LIKE: "IN ABSENCE OF DELETERIOUS EFFECTS, THE
+FIXATION PROBABILITY OF HITCHHIKERS IS NOT AFFECTED BY DRAFT".
 
 
 ##############################################################################
