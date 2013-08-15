@@ -9,7 +9,7 @@ def fix_prob(s, af):
 
 def area(sd, alpha, af_vec=np.linspace(0.05,0.95,19)):
     sfs_neutral = (1-alpha)/af_vec
-    sfs_dele  = alpha*np.exp(sd)/af_vec
+    sfs_dele  = alpha*np.exp(sd*af_vec)/af_vec
 
     frac_fixed = (af_vec*sfs_neutral+sfs_dele*fix_prob(sd,af_vec))\
         /(sfs_neutral+sfs_dele)

@@ -7,7 +7,7 @@ content:    Trajectories of allele frequencies.
 # Standard modules
 from operator import *
 import numpy as np
-import matplotlib.pyplot as ppl
+import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 from Bio.Seq import translate
 
@@ -18,6 +18,7 @@ sys.path.insert(0, '.')
 import modules.parser_Shankarappa as pS
 from modules.helper import is_nonsyn_table
 from modules.alphabet import alpha
+from conservation_syn_nonsyn_subtypeB import codon_single_mutants_synnonsyn
 
 
 
@@ -46,28 +47,46 @@ if __name__ == '__main__':
 
         # Divide into syn/nonsyn to spot hitchhiking
         consensus = alpha[afs[:,:,0].argmax(axis=1)]
-        is_nonsyn = is_nonsyn_table(consensus)
+        conscods = map(''.join, consensus.reshape((len(consensus) / 3, 3)))
+        is_nongap_cod = np.array(map(lambda x: '-' not in x, conscods))
+
+        # Times (in months?)
+        ts = np.array([p.visit_to_time(v) for v in p.visit]) * 30.5
 
         # Scan the genome codon-wise
-        counts = np.zeros(afs.shape[0], int)
-        chances = np.zeros(afs.shape[0], int)
-        for i in xrange(len(afs)):
-            non_double_hit = ((afs[i - i % 3: i - i % 3 + 3] > 0).sum(axis=0).sum(axis=0) <= 4).all()
-            if (not is_nongap[i]):# or (not non_double_hit):
-                continue
-            af = afs[i]
-            for j, a in enumerate(alpha):
-                # Gate for nonsynonymous changes
-                if ((not is_nonsyn[i, j]) and       # Not nonsyn
-                    (consensus[i] != a)):       # An actual mutation
+        counts = np.zeros((len(ts), afs.shape[0] // 3), int)
+        chances = np.zeros(afs.shape[0] // 3, int)
+        # Proceed codon by codon
+        for i in xrange(len(ts)):
+            v = p.visit[i]
+            seqs = np.array(p.seqs_from_visit(v))
 
-                    chances[i] += 1
-                    counts[i] += ((af[j] >= 0.25) & (af[j] <= 0.75)).sum()
+            for j in xrange(afs.shape[0] // 3):
+                # Exclude gaps
+                if not is_nongap_cod[j]:
+                    continue
+    
+                conscod = conscods[j]
+                cods = map(''.join, seqs[:, 3 * j: 3* (j+1)])
+                cods_sm = codon_single_mutants_synnonsyn(conscod)
+    
+                counts[i, j] += len([c for c in cods_sm['syn']
+                                     if 0.25 <= 1.0 * cods.count(c) / len(cods) <= 0.75])
+                if i == 0:
+                    chances[j] += 1#len(cods_sm['syn'])
 
-        is_good = is_nongap & (chances > 0)
-        p.diversity_25_75 = 1.0 * (counts[is_good]).sum() / (chances).sum() / (afs.shape[2])
+            
+        is_good = is_nongap_cod & (chances > 0)
+        p.diversity_25_75 = (1.0 * counts[:, is_good] / chances[is_good]).mean(axis=1)
 
-        print p, p.diversity_25_75
+        # Plot
+        plt.figure()
+        plt.plot(ts, p.diversity_25_75 * 3.0 / 3, c='r', lw=2, label='diversity 25-75')
+        plt.xlabel('Time [days after SC]')
+        plt.title(str(p), fontsize=20)
 
     # Poll results
-    print np.mean(map(attrgetter('diversity_25_75'), patients))
+    diversity_25_75 = np.mean([p.diversity_25_75.mean() * 3.0 / 3 for p in patients])
+    print diversity_25_75
+    
+

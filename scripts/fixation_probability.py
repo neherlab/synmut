@@ -259,6 +259,16 @@ if __name__ == '__main__':
         for i in xrange(counts[cla].shape[0]):
             Pfstd[cla][i] = np.std(Pfboot[cla][i], axis=1)
 
+    # Calculate areas
+    # Note: skip the last point (via i_final < len(x) - 1) because many simulations
+    # have nothing there (not enough time or very noisy)
+    x = [0] + list(nu0mid) + [1]
+    ysyn = [0] + list(Pf['syn_Shanka'][:, 0]) + [1]
+    i_final_offset = 2              # Skip last bin
+    i_final = len(x) - 1 - i_final_offset
+    Atot = 0.5 * x[i_final]**2
+    Asyn = - Atot + sum([0.5 * (ysyn[i+1] + ysyn[i]) * (x[i+1] - x[i]) for i in xrange(i_final)])
+
     # Prepare figure and plot results
     nu0mid = [0.5 * sum(nu0s) for nu0s in nu0ss]
     nu0err = [0.5 * (nu0s[1] - nu0s[0]) for nu0s in nu0ss]
