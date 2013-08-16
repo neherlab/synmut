@@ -48,7 +48,7 @@ IS_ZERO = 0.000001
 max_counts = 10000
 nirands = 10
 sfs_bins = np.logspace(-3, -0.1, 30)
-savefig = True
+savefig = False
 sep = '\t'
 
 
@@ -553,15 +553,22 @@ if __name__ == '__main__':
                          'ytick.labelsize': 17,
                          'text.usetex': True})
         import matplotlib.pyplot as plt
+        #plt.figure()
+        #plt.plot(gs, divergence, c='b', lw=2, label='Divergence')
+        #plt.plot(gs, diversity, c='r', lw=2, label='Diversity')
+        #plt.xlabel('Time [generations]')
+        #plt.legend(loc=2)
+        #plt.tight_layout()
+        #if savefig:
+        #    for ext in ['svg', 'pdf']:
+        #        plt.savefig('/home/fabio/publications/synmut/figures/simulations_diversity_divergence_example.'+ext)
+
+        # Plot the fixation probability
         plt.figure()
-        plt.plot(gs, divergence, c='b', lw=2, label='Divergence')
-        plt.plot(gs, diversity, c='r', lw=2, label='Diversity')
-        plt.xlabel('Time [generations]')
-        plt.legend(loc=2)
-        plt.tight_layout()
-        if savefig:
-            for ext in ['svg', 'pdf']:
-                plt.savefig('/home/fabio/publications/synmut/figures/simulations_diversity_divergence_example.'+ext)
+        plt.plot([0, 1], [0, 1], lw=1.5, ls='--', c='k')
+        plt.plot([0] + list(nu0ss.mean(axis=1)) + [1], [0] + list(Psyn) + [1], lw=2)
+        plt.xlabel('initial frequency')
+        plt.ylabel(r'$P_{fix}$')
 
         plt.ion()
         plt.show()
