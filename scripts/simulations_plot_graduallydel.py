@@ -105,5 +105,3 @@ if __name__ == '__main__':
             plt.savefig('../figures/simulations_graduallydel.'+ext)
 
     plt.ion()
-    plt.show()
-
