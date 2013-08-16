@@ -36,7 +36,7 @@ symbols = ['o', 's', '^']
 # Script
 if __name__ == '__main__':
 
-    fig = plt.figure()
+    fig, ax0 = plt.subplots(1, 1)
 
     # Plot fixation probability
     for i, subdir in enumerate(subdirs):
@@ -66,13 +66,12 @@ if __name__ == '__main__':
               width=0.007, head_width=0.05, head_length=0.12,
               overhang=0.3)
     plt.xlim(-0.05, 1.05)
-    plt.ylim(-0.05, 1.05)
+    plt.ylim(-0.05, 1.15)
 
     # Inset: plot synonymous diversity
-    from matplotlib.patches import Rectangle
-    plt.gca().add_patch(Rectangle((-0.03, 0.50), 0.52, 0.53,
-                                  edgecolor='k', facecolor='none', lw=1.2))
-    ax = fig.add_axes([0.25, 0.67, 0.25, 0.25])
+    ax0.add_patch(Rectangle((-0.03, 0.66), 0.52, 0.48,
+                            edgecolor='k', facecolor='none', lw=1.2))
+    ax = fig.add_axes([0.25, 0.73, 0.25, 0.22])
     div = []
     for i, subdir in enumerate(subdirs):
         div.append(np.loadtxt(results_dir+subdir+'/poly_25to75.dat',
@@ -81,7 +80,7 @@ if __name__ == '__main__':
     del_eff_x = [del_effs[l] for l in subdirs]
     ax.plot(del_eff_x, div, lw=2, c='k')
     ax.plot([3e-4, 2.5e-4], [9e-3, 1.5e-3], lw=1.2, c='purple')
-    ax.text(1.5e-4, 2e-4, 'observed\ndiversity', fontsize=16)
+    ax.text(1.5e-4, 1.8e-4, 'observed\ndiversity', fontsize=16)
 
     ax.set_xlabel(r'$s_d$', fontsize=18)
     ax.set_ylabel(r'$P_{interm}$', fontsize=18)
@@ -93,10 +92,30 @@ if __name__ == '__main__':
     ax.set_xscale('log')
     ax.set_yscale('log')
     ax.set_xlim(1e-4, 1e-2)
+    ax.set_ylim(1e-4, 8e-2)
+
+    # Second inset: data plot
+    ax0.add_patch(Rectangle((-0.03, 0.3), 0.32, 0.35,
+                            edgecolor='k', facecolor='none', lw=1.2))
+    ax2 = fig.add_axes([0.18, 0.44, 0.195, 0.18])
+    x = np.linspace(0, 1, 1000)
+    y = (1.4 * x)**3
+    ind = x >= y
+    x = x[ind]
+    y = y[ind]
+    ax2.plot([0, 1], [0, 1], lw=1.5, ls='--', c='k')
+    ax2.fill_between(x, y, x, color='purple')
+    ax2.set_xlim(-0.01, 1.01)
+    ax2.set_ylim(-0.01, 1.01)
+    ax2.set_xticks([])
+    ax2.set_yticks([])
+    ax2.set_xlabel(r'$\nu$', fontsize=18)
+    ax2.set_ylabel(r'$P_{fix}$', fontsize=16)
+    ax2.plot([0.25, 0.22], [0.21, 0.48], color='purple', lw=1.5)
+    ax2.text(0.03, 0.6, 'observed\narea', fontsize=16)
 
 
     panel = plt.figtext(0.02, 0.92, 'A', fontsize=24)
-
     plt.tight_layout(rect=(0, 0, 1, 1))
 
 
