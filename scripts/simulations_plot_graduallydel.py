@@ -71,7 +71,7 @@ if __name__ == '__main__':
     # Inset: plot synonymous diversity
     ax0.add_patch(Rectangle((-0.03, 0.66), 0.52, 0.48,
                             edgecolor='k', facecolor='none', lw=1.2))
-    ax = fig.add_axes([0.25, 0.73, 0.25, 0.22])
+    ax = fig.add_axes([0.25, 0.74, 0.25, 0.21])
     div = []
     for i, subdir in enumerate(subdirs):
         div.append(np.loadtxt(results_dir+subdir+'/poly_25to75.dat',
@@ -79,7 +79,7 @@ if __name__ == '__main__':
     div = np.array(div)
     del_eff_x = [del_effs[l] for l in subdirs]
     ax.plot(del_eff_x, div, lw=2, c='k')
-    ax.plot([3e-4, 2.5e-4], [9e-3, 1.5e-3], lw=1.2, c='purple')
+    ax.plot([3e-4, 2.5e-4], [9e-3, 2e-3], lw=1.2, c='purple')
     ax.text(1.5e-4, 1.8e-4, 'observed\ndiversity', fontsize=16)
 
     ax.set_xlabel(r'$s_d$', fontsize=18)
@@ -95,9 +95,9 @@ if __name__ == '__main__':
     ax.set_ylim(1e-4, 8e-2)
 
     # Second inset: data plot
-    ax0.add_patch(Rectangle((-0.03, 0.3), 0.32, 0.35,
+    ax0.add_patch(Rectangle((-0.03, 0.31), 0.32, 0.35,
                             edgecolor='k', facecolor='none', lw=1.2))
-    ax2 = fig.add_axes([0.18, 0.44, 0.195, 0.18])
+    ax2 = fig.add_axes([0.18, 0.445, 0.195, 0.18])
     x = np.linspace(0, 1, 1000)
     y = (1.4 * x)**3
     ind = x >= y
