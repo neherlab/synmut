@@ -1,0 +1,5 @@
+# nu0_start	nu0_end	Psyn	Pnonsyn	counts_syn	counts_nonsyn
+0.1	0.2	0.000649561545956	1.0	3.24780772978e-06	0.01
+0.2	0.4	0.0	--	2.0964360587e-05	inf
+0.4	0.6	0.0	--	0.000526315789474	inf
+0.6	0.9	--	--	inf	inf

@@ -211,7 +211,7 @@ known to various degrees. The mutation rate has been measured using
 exogenous LacZ constructs and the average nucleotide substitution rate is 
 estimated to be $\mu\approx 2 \times 10^{-5}$ per generation \citep{mansky_lower_1995,
 abram_nature_2010}. In our simulations, we vary the mutations rate
-from $10^{-5} - 3\times 10^{-5}$ per day. Different virions within an
+from $10^{-5} - 4\times 10^{-5}$ per day. Different virions within an
 infected person can recombine their genome by coinfection of the same
 cell, followed by template switching during reverse transcription. 
 Template switching happens between around ten times per reverse
@@ -233,7 +233,7 @@ size in excess of the inverse mutation rate
 \citep{boltz_ultrasensitive_2012}. In fact, the evolutionary dynamics
 depends only weakly on the actual value of the population size once the
 product $N\mu$ is of order one or larger \citep{neher_genetic_2011}. We
-simulate populations between $N=10^4$ and $10^5$. Larger populations
+simulate populations between $N=10^4$ and $5 \times 10^4$. Larger populations
 become prohibitively costly to simulate.
 
 Another crucial ingredient for our simulations is the fitness landscape,
@@ -241,7 +241,8 @@ i.e., the effects of mutations on fitness and possible interactions
 between mutations. For simplicity, third positions of every codon were
 deemed synonymous and assigned either a selection coefficient $0$ with
 probability $\alpha$ or a deleterious effect $s_d$ with probability
-$1-\alpha$. In our simulations, $\alpha$ varies from 0 to 1.
+$1-\alpha$. In our simulations, $\alpha$ varies from 0 to 0.75,
+and $s_d$ between $2 \times 10^{-4}$ to $2\times 10^{-2}$ per day.
 Mutations at the first and second positions were assigned deleterious 
 fitness effects of $-0.01$ (simulations with a larger cost of $-0.1$ were also
 performed and produced similar results). At 
@@ -258,7 +259,7 @@ quantify, but a substantial fraction of nonsynonymous substitutions in gp120 are
 probably driven by escape. Since the sequence of the C2-V5 region of
 gp120  changes at a rate of about 1\% per year
 \citep{shankarappa_consistent_1999}, this rate should be on the order of
-$k_A=0.005$ per day. We simulate a range from $10^{-4}$ to $2\times 10^{-2}$ per day.
+$k_A=0.005$ per day. We simulate a range from $10^{-3.8}$ to $2\times 10^{-2}$ per day.
 
 For the models with competition within epitopes, a complex epistatic fitness
 landscape was designed such that each single mutant is sufficient for full
@@ -478,8 +479,8 @@ probability and the diagonal, which is the neutral expectation
 (\FIG{simfixpvar}, lower inset). We restrict this area up to frequency
 $\nu=0.5$ since the high frequency part is rather noisy.
 If no fixation happens, this restricted area will be
-$0.125$; if every SNV fixes, the area will be $0.125$. In HIV-1 infected
-patients, we find $P_\text{interm} \approx 0.01$, $A_\text{syn} \approx -0.08$
+$-0.125$; if every SNV fixes, the area will be $0.125$. In HIV-1 infected
+patients, we find $P_\text{interm} \approx 0.01$, $A_\text{syn} \approx -0.09$
 for synonymous changes and $A_\text{nonsyn} \approx 0$ for nonsynonymous
 changes. In the three simulations shown in \FIG{simfixpvar}, the fixation
 probability of synonymous SNVs decreases from the neutral expectation
@@ -497,7 +498,7 @@ that show $A_\text{syn}$ and $P_\text{interm}$ as observed in the data, i.e., a
 large depression in fixation probability of synonymous SNVs but, simultaneously,
 a moderately high synonymous diversity. Figure \ref{fig:simsfig} shows
 the distribution of deleterious effects $s_d$ and neutral fraction
-$\alpha$ for which we found $A_\text{syn} < -0.15$ and $0.005 <
+$\alpha$ for which we found $-0.11 < A_\text{syn} < -0.06$ and $0.008 <
 P_\text{interm} < 0.015$. This subset of parameters indicates that in
 order to be consistent with the data only
 a minority of synonymous sites ($\alpha \lesssim 0.2$) can be neutral  and that
