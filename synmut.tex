@@ -75,10 +75,9 @@ cost to the virus. Using published data from SHAPE assays, we find that
 synonymous mutations that disrupt base pairs in RNA stems flanking the
 variable loops of gp120 are more likely to be lost than other synonymous
 changes: these RNA hairpins might be important for HIV-1.  Computational
-modeling indicates that most synonymous mutations in this genomic region
-have a selection coefficient of the order of $-0.003$, and that the
-majority of synonymous mutations need to be slightly deleterious to be
-consistent with the data. This weak selection against synonymous
+modeling indicates that, to be consistent with the data, a large fraction
+of synonymous mutations in this genomic region needs to be deleterious,
+with a selection coefficient of the order of $-0.002$. This weak selection against synonymous
 substitutions does not result in a strong pattern of conservation in
 cross sectional data, but slows down the rate of evolution
 considerably. Our findings are consistent with the notion that large
@@ -172,7 +171,8 @@ criteria for synonymous/nonsynonymous discrimination yielded similar results.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Fixation probability and secondary structure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-For the estimates of time to fixation/extinction, SNVs were binned by
+For the estimates of time to fixation/extinction, single nucleotide variants
+(SNVs) were binned by
 frequency and the time to first reaching either fixation or extinction was
 stored. The fixation probability was determined as the long-time limit of the
 resulting curves. Mutations that reached high frequency but neither fixed nor
@@ -243,7 +243,8 @@ deemed synonymous and assigned either a selection coefficient $0$ with
 probability $\alpha$ or a deleterious effect $s_d$ with probability
 $1-\alpha$. In our simulations, $\alpha$ varies from 0 to 1.
 Mutations at the first and second positions were assigned strongly deleterious 
-fitness effects of $-???$. At 
+fitness effects of $-0.01$ (simulations with a larger cost of $-0.1$ were also
+performed and produced similar results). At 
 rate $k_A$, a random locus in the genome is designated an epitope that can
 escape by one or several mutations with exponentially distributed escape rates
 with mean $\epsilon$. The rate of escape in chronic infection is
@@ -252,8 +253,8 @@ reported to be on the order of a few percent
 finding that virus is neutralized by serum from 3-6 month later
 \citep{richman_rapid_2003}. We simulated escape rates between $2 \cdot
 10^{-2.5}$ and $2 \cdot 10^{-1.5}$ per day. 
-The rate at which new anti-body challenges arise is more difficult to
-quantify, but a substantial fraction of non-synonymous substitutions in gp120 are
+The rate at which new antibody challenges arise is more difficult to
+quantify, but a substantial fraction of nonsynonymous substitutions in gp120 are
 probably driven by escape. Since the sequence of the C2-V5 region of
 gp120  changes at a rate of about 1\% per year
 \citep{shankarappa_consistent_1999}, this rate should be on the order of
@@ -269,25 +270,22 @@ Higher order terms were included to make sure that not
 only double mutants, but all k-mutants with $k \geq 1$ had the same fitness (see
 supplementary materials). To model recognition of escape variants by the
 evolving immune system, the beneficial effect of an escape mutation was set
-to its previous cost of -???? with a probability per generation proportional to
+to its previous cost of $-0.01$ with a probability per generation proportional to
 the frequency of the escape variant.
-TODO
 
 \subsubsection*{Sampling and analysis}
 To obtain reasonable sampling of a particular parameter combination we
 ran simulation for 6000 days and we repeated each run 100 times with
 different seeds for the random number generator. Both full-length HIV-1
 genomes and \env{}-only simulations were performed and yielded
-comparable results.  Populations were initialized with a homogeneous
+comparable results. Populations were initialized with a homogeneous
 founder population and were kept at an average size of $N=10^4$
 throughout the simulation. After 30 generations of burn-in to create
-genetic diversity, new epitopes were introduced at a constant rate
-$k_A$.  The simulations were repeated 1000 times with a seven dimensional
-Latin hypercube sampling scheme \citep{mckay_comparison_1979}.  For each
-parameter, 1000 random values were chosen from a distribution uniform in
-log-space and bounded by the ranges given for each of these parameters
-above. These 1000 values for each parameter were combined using a Latin
-hypercube sampling scheme.
+genetic diversity, new epitopes were introduced at later times according 
+to an exponential distribution with rate
+$k_A$. The simulations were repeated 3000 times with a seven dimensional
+Latin hypercube sampling scheme \citep{mckay_comparison_1979}, bounded by the ranges
+given for each of these parameters above.
 
 The areas below or above the neutral fixation probability (diagonal line) were
 estimated from the binned fixation probabilities using linear interpolation
@@ -296,7 +294,6 @@ between the bin centers. The bins used were $[0.1, 0.2], [0.2, 0.4],
 we did not consider the frequency interval between 0.6 and 1, since very
 few variants are observed in this window and its inclusion generates
 more noise than signal.
-
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Methods availability}
@@ -435,7 +432,7 @@ While the observation of some deleterious synonymous variants is not fully
 unexpected, it seems odd that we observe them at high population
 frequency and that the fixation probability is reduced only in parts of the
 genome (in \shankaregion{} but not in the rest of \env{}; compare the red
-triangle line versus the green square line in \FIG{fixp2}).
+and green lines in \FIG{fixp2}).
 The region \shankaregion{} undergoes frequent adaptive changes to evade
 recognition by neutralizing antibodies \cite{williamson_adaptation_2003,wei_antibody_2003,
 richman_rapid_2003}. Due to the limited amount of recombination in HIV-1
@@ -494,7 +491,7 @@ repeatedly simulated the evolution for many different combinations of
 effects of synonymous mutations, $s_d$, and the fraction of synonymous
 sites that are neutral, $\alpha$, escape rates and number of targeted epitopes. In
 addition, we vary the mutation rate, recombination rate and population
-size, see methods.  Among all simulations, we selected the ones
+size (see methods).  Among all simulations, we selected the ones
 that show $A_\text{syn}$ and $P_\text{interm}$ as observed in the data, i.e., a
 large depression in fixation probability of synonymous SNVs but, simultaneously,
 a moderately high synonymous diversity. Figure \ref{fig:simsfig} shows
@@ -504,7 +501,7 @@ P_\text{interm} < 0.010$. This subset of parameters indicates that in
 order to be consistent with the data only
 a minority of synonyous sites ($\lesssim 0.2$) can be neutral  and that
 the deleterious effects of the remainder is on the order of $|s_d| \sim
-0.003$. 
+0.002$. 
 
 The observed distribution of $\alpha$ and $s_d$ is plausible:
 (i) A substantial depression in $\pfix$ requires pervasive deleterious SNVs, otherwise
@@ -519,8 +516,8 @@ selection coefficients behave neutrally and often go to fixation
 as expected from the typical coalescent times observed in HIV-1.
 
 
-The above simulations show that hitchhiking with favoured nonsynonymous
-variants can explain the observated pattern of deleterious synonymous SNVs that
+The above simulations show that hitchhiking on favoured nonsynonymous
+variants can recapitulate the observated pattern of deleterious synonymous SNVs that
 rarely fix. While our model is already quite complicated with many
 poorly known parameters that make interpretation of simulation results
 challenging, we know that the actual evolutionary dynamics within an
@@ -571,15 +568,15 @@ is often preceded by M184I \citep{hedskog_dynamics_2010} or in the
 context of CTL escape mutations where multiple variants rise to high
 frequencies rapidly but most of the are lost again
 \citep{fischer_transmission_2010}. Consequently, there could be many
-non-synonymous mutations are only beneficial until the viral population
+nonsynonymous mutations are only beneficial until the viral population
 has found a ``better solution'' and subsequently disappear. 
 
 We implemented within epitope
 competition in the model by allowing for multiple escape mutations per
 epitope that do not provide additional benefit to the virus when
-combined. Again, we found that the rapid rise of several non-synonymous
+combined. Again, we found that the rapid rise of several nonsynonymous
 mutations to intermediate frequencies allows deleterious synonymous
-mutations to hitch-hike, while the fixation probability of non-synonymous
+mutations to hitchhike, while the fixation probability of nonsynonymous
 mutations is reduced. With roughly six mutations per epitope,
 the simulation data are compatible with observations; see
 \figurename~S\withinepi. The two scenarios, time-dependent selection and
@@ -596,13 +593,13 @@ By analyzing the fate of single nucleotide variants (SNVs) in
 longitudinal data of HIV-1 \env{} evolution, we demonstrated selection
 against synonymous substitutions in the relatively conserved regions
 C2-C4. We suggest through computational modeling that these SNVs have
-deleterious effects on the order of $s_d = 0.003$ and that the majority
-of all synonymous mutations is deleterious. In absense of hitch-hiking
+deleterious effects on the order of $s_d = 0.002$ and that the majority
+of all synonymous mutations is deleterious. In absense of hitchhiking
 in a large population, deleterious mutations with effect $s_d$ should be
 at a frequency $\mu/s_d\approx 0.01$. The fact that we see many
 synonymous mutation at high frequency that nevertheless disappears over
 a time scale of a year suggests that they are brought to high frequency
-by hitch-hiking on favorable genetic backgrounds. 
+by hitchhiking on favorable genetic backgrounds. 
 While both the rise and fall of synonymous SNV is subject to hichhiking,
 the consistent loss of these variants conditional on being at high
 frequency implies selection against these SNVs.
@@ -612,7 +609,7 @@ of RNA folding predict stable hairpins in these regions that
 have been suggested to be functional and termed ``insulating
 stems'' \citep{watts_architecture_2009, sanjuan_interplay_2011}.
 The weak selection against synonymous variants is compatible with the
-negative results of \textit{In vitro} replication assays investigating
+negative results of \textit{in vitro} replication assays investigating
 the fitness effects of small RNA hairpins in HIV-1
 \citep{knoepfel_role_2013}: it would take hundreds of cell culture
 passages to detect fitness effects of the order of one per mille. The longitudinal data,
@@ -793,14 +790,15 @@ bunnik_autologous_2008, liu_selection_2006}.}
 The depression in $\pfix$ depends on the deleterious effect size 
 of synonymous SNVs. This parameter also reduces synonymous
 diversity, measured by the probability of a SNV to be found at
-intermediate frequencies $P_\text{interm}$ (first inset).
+intermediate frequencies $P_\text{interm}$ (first inset). The area observed in
+the data is also shown (second inset).
 Panel B) To assess the parameter space that affects synonymous fixation and
-diversity, we run 3000 simulations with random parameters for deleterious effect
+diversity, we run 3000 simulations with random combinations of parameters for deleterious effect
 size, fraction of deleterious synonymous sites, average escape rate $\epsilon$,
 rate of introduction of new epitopes, population size, mutation rate, and
 recombination rate (see methods). The density of simulations that reproduce
 the synonymous diversity and fixation patterns observed in data are shown.
-These simulations demonstrate that deleterious effects are around $-0.003$
+These simulations demonstrate that deleterious effects are around $-0.002$
 and a large fraction of the synonymous mutations needs to be deleterious. This
 picture is also confirmed by the analysis of the marginal distributions of the
 single parameters (see \figurename~S\marginals).}
