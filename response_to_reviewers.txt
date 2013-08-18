@@ -1,6 +1,4 @@
 ##############################################################################
-# Reviewer comments:
-##############################################################################
 # Reviewer #1 (Comments for Author):
 ##############################################################################
 
@@ -50,16 +48,16 @@ response below.
 We agree that one generation in HIV takes closer to 2 days than 1
 day. Most escape rates and selection coefficients, however, are more
 readily measured in days and we have chosen to model HIV evolution with
-generation of one day for simplicity. Factor of 2 changes in the
-generation have little influence on the dynamics and only renormalize
-genetic drift. Genetic drift is not a dominant force in evolution of the
-HIV envelope gene. The (effective) population size, the main determinant of drift,
-is not known to this accuracy anyway. We have repeated a subset of the
-simulations with a generation time of one day, finding no
-difference. Our more exhaustive survey of the parameter space includes a
-10-fold variation of the population size. Our results are very
-insensitive and hence also insensitive to the generation time.
-
+generation of one day for simplicity. We have repeated some of the
+simulations with a generation time of 2 days and find the same results.
+In fact, minor changes in the generation have little influence on the
+dynamics and only renormalize genetic drift. Since the main determinant
+of genetic drift -- the (effective) population size -- is not known
+accurately, we don't think the difference of choosing one or two days as
+generation time is important. Our more exhaustive survey of the
+parameter space includes a 5-fold variation of the population size. Our
+results are very insensitive to the population size and hence also
+insensitive to the generation time.
 
 ##############################################################################
 >2) Related to the above: the simulation does not address how sensitive the
@@ -71,14 +69,15 @@ insensitive and hence also insensitive to the generation time.
 
 We have greatly extended the parameter space that we survey and now test
 different values for the mutation rate, the recombination rate, the
-generation time, the fitness effects, and the population size. To
-accomodate this high dimensional data, we have changed figure 4. The
-figure now shows the joint distribution of the deleterious effect and
-the fraction of synonymous mutations that are deleterious that are
-compatible with observations as a heat map. The marginal distribution of
-the individual parameters consistent with the data are shown in the supplement.
+fitness effects of synonymous and non-synonymous mutations, and the
+population size. To accomodate this high dimensional data, we have
+changed figure 4. The figure now shows the joint distribution of the
+deleterious effect and the fraction of synonymous mutations that are
+deleterious that are compatible with observations as a contour plot. The
+marginal distributions of the individual parameters consistent with the
+data are shown in the supplement.
 
-The distribution of allowed deleterious effects is again peaked around
+The distribution of compatible deleterious effects is again peaked around
 0.002 and the fraction of "synonymous" mutations that can be neutral is
 low, as reported in the earlier version of our manuscript.
 
@@ -135,8 +134,8 @@ of synonymous mutations will be due to draft. However, the consistent
 loss of variants, conditional on them being at high frequency earlier,
 implies selection against these variants. Without a deleterious effect,
 the mutations would fix with a probability equal to their frequency,
-regardless of whether they are subject to drift of draft. We have added
-a sentence to the discussion to make this point clear.
+regardless of whether they are subject to drift of hitchhiking. We have
+added a sentence to the discussion to make this point clear.
 
 
 ##############################################################################

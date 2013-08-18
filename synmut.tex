@@ -10,9 +10,7 @@
 \usepackage{amsmath,amsfonts,amssymb,eucal,eurosym,textcomp}
 \usepackage{color}
 \usepackage{graphicx}
-\usepackage[caption=false]{subfig}
 \usepackage[numbers]{natbib}
-\usepackage{pslatex}
 \usepackage{lineno}
 \linenumbers
 
@@ -42,7 +40,6 @@
 \newcommand{\withinepi}{4}
 \newcommand{\marginals}{5}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\thesubfigure}{\Alph{subfigure}}
 \newcommand{\Author}{Fabio~Zanini and Richard~A.~Neher}
 \newcommand{\Title}{Quantifying selection against synonymous mutations in HIV-1 \env{} evolution}
 \newcommand{\Affiliation}{Max Planck Institute for Developmental Biology, 72076 T\"ubingen, Germany}
@@ -51,7 +48,7 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks,linkcolor=red,citecolor=blue, pdfauthor={\Author}, pdftitle={\Title}, pdfkeywords={\Keywords}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\linespread{1.5}
+\linespread{1.5}
 \begin{document}
 \title{\Title}
 \author{\Author\\ \Affiliation}
@@ -146,7 +143,7 @@ studies \citep{shankarappa_consistent_1999, liu_selection_2006,
 bunnik_autologous_2008} and downloaded from the Los Alamos National Laboratory
 (LANL) HIV sequence database~\citep{LANL2012}. Some patients
 show substantial population structure and were excluded (see
-\figurename~S\PCApat); a total of 11 patients with 4-23 time points each and
+Fig.~S\PCApat); a total of 11 patients with 4-23 time points each and
 approximately 10 sequences per time point were analyzed. The time intervals
 between two consecutive sequences ranged from 1 to 34 months, most of them
 between 6 and 10 months.
@@ -344,7 +341,7 @@ We studied the dynamics and fate of synonymous variants more quantitatively by
 analyzing data from seven patients from \citet{shankarappa_consistent_1999} and
 \citet{liu_selection_2006} as well as three patients from
 \citet{bunnik_autologous_2008} (patients with strong viral population structure
-were not considered; see methods and \figurename~S\PCApat). The
+were not considered; see methods and Fig.~S\PCApat). The
 former data set is restricted to the \shankaregion{} region of \env, while the
 data from \citet{bunnik_autologous_2008} cover most of \env.  We considered all
 SNVs in a frequency interval $[\nu_0-\delta\nu, \nu_0+\delta\nu]$ at some time
@@ -425,7 +422,7 @@ adapting its codon usage to its human host cells at the macro-evolutionary level
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Deleterious SNVs can reach high frequency by hitchhiking}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-While the observation of some deleterious synonymous variants is not fully
+While the observation that some synonymous variants are deleterious is not
 unexpected, it seems odd that we observe them at high population
 frequency and that the fixation probability is reduced only in parts of the
 genome (in \shankaregion{} but not in the rest of \env{}; compare the red
@@ -451,7 +448,7 @@ mutation is expected to have a slightly different fitness effect.)
 
 To get a better idea of the range of parameters that are compatible with the
 observations and our interpretation, we performed computer simulations of
-evolving viral populations assuming a mix of positive and purifying selection
+a model of evolving viral populations assuming a mix of positive and purifying selection
 and rare recombination.  For this purpose, we use the simulation package
 FFPopSim, which includes a module dedicated to intrapatient HIV evolution
 \citep{zanini_ffpopsim:_2012}. For each simulation run, we specify the
@@ -468,7 +465,7 @@ with a lag in neutralization of a few month \citep{richman_rapid_2003}.
 
 \FIG{simheat}A shows simulation results for the fixation probability and the
 synonymous diversity for different deleterious effects sizes of synonymous mutations.
-We quantify synonymous diversity via $P_\text{interm}$, the fraction of sites
+We quantify synonymous diversity via $P_\mathrm{interm}$, the fraction of sites
 with an synonymous SNV at frequency $0.25 < \nu < 0.75$. The synonymous diversity
 observed in patient data is indicated in the figure. To quantify the depression
 of the fixation probability, we calculate the area between the measured fixation
@@ -476,12 +473,12 @@ probability and the diagonal, which is the neutral expectation
 (\FIG{simheat}A, lower inset). We restrict this area up to frequency
 $\nu=0.5$ since the high frequency part is rather noisy.
 If no fixation happens, this restricted area will be
-$-0.125$; if every SNV fixes, the area will be $0.125$. In HIV-1 infected
-patients, we find $P_\text{interm} \approx 0.01$, $A_\text{syn} \approx -0.09$
-for synonymous changes and $A_\text{nonsyn} \approx 0$ for nonsynonymous
+$-0.125$; if every SNV fixes, the area will be $0.125$. In data from HIV-1 infected
+patients, we find $P_\mathrm{interm} \approx 0.01$, $A_\mathrm{syn} \approx -0.09$
+for synonymous changes and $A_\mathrm{nonsyn} \approx 0$ for nonsynonymous
 changes. In the three simulations shown in \FIG{simheat}A, the fixation
 probability of synonymous SNVs decreases from the neutral expectation
-($A_\text{syn} \approx 0$) to zero ($A_\text{syn} \approx -0.125$) as the
+($A_\mathrm{syn} \approx 0$) to zero ($A_\mathrm{syn} \approx -0.125$) as the
 fitness cost of the SNVs increases; the synonymous diversity plummets as well, as
 deleterious SNVs are selected against.
 
@@ -491,12 +488,12 @@ effects of synonymous mutations, $s_d$, and the fraction of synonymous
 sites that are neutral, $\alpha$, escape rates and number of targeted epitopes. In
 addition, we vary the mutation rate, recombination rate and population
 size (see methods).  Among all simulations, we selected the ones
-that show $A_\text{syn}$ and $P_\text{interm}$ as observed in the data, i.e., a
+that show $A_\mathrm{syn}$ and $P_\mathrm{interm}$ as observed in the data, i.e., a
 large depression in fixation probability of synonymous SNVs but, simultaneously,
 a moderately high synonymous diversity. Figure \ref{fig:simheat}B shows
 the distribution of deleterious effects $s_d$ and neutral fraction
-$\alpha$ for which we found $-0.11 < A_\text{syn} < -0.06$ and $0.008 <
-P_\text{interm} < 0.015$. This subset of parameters indicates that in
+$\alpha$ for which we found $-0.11 < A_\mathrm{syn} < -0.06$ and $0.008 <
+P_\mathrm{interm} < 0.015$. This subset of parameters indicates that in
 order to be consistent with the data only
 a minority of synonymous sites ($\alpha \lesssim 0.2$) can be neutral  and that
 the deleterious effects of the remainder is on the order of $s_d \sim
@@ -524,7 +521,7 @@ infected person is much more complicated still. In our model,
  escape mutations are unconditionally beneficial and almost
 always fix once they reach high frequencies, i.e., $A_{\mathrm{nonsyn}}$ is well
 above zero. This is incompatible with the observed fixation probability of
-nonsynonymous SNVs at high frequency often disappear again
+nonsynonymous SNVs that often disappear again
 (\FIG{fixp}B). One possible reason for this discrepancy is the fact that
 the fitness landscape in our model is static: Once a site is designated
 as targeted by the immune system, mutations at this site are beneficial
@@ -535,9 +532,9 @@ nonsynonymous SNVs are time-dependent selection and within-epitope competition.
 
 If the immune system recognizes the escape mutant before its fixation,
 the mutant might cease to be beneficial and disappear soon, despite its
-quick initial rise in frequency. In support of this idea, in
-\citet{richman_rapid_2003,wei_antibody_2003,bunnik_autologous_2008},
-antibody responses against escape mutants have been reported. These
+quick initial rise in frequency. In support of this idea,
+\citet{richman_rapid_2003,wei_antibody_2003,bunnik_autologous_2008}
+report antibody responses against escape mutants. These
 responses are delayed by a few months, roughly matching the average time
 needed by an escape mutant to rise from low to high
 frequency. Furthermore, neutralization responses against early virus
@@ -548,7 +545,7 @@ SNVs arise with a rate proportional to the frequency of the escape
 variant and abolish the benefit of the escape mutations. As expected,
 this type of time-dependent selection retained the potential for
 hitchhiking, but reduced fixation of nonsynonymous SNVs.
-\figurename~S\timedependence~shows that $\pfix$ of synonymous SNVs is
+Fig.~S\timedependence~shows that $\pfix$ of synonymous SNVs is
 not affected by this change, while $\pfix$ of nonsynonymous SNVs
 approaches the diagonal as the rate of recognition of escape mutants is
 increased.
@@ -560,15 +557,13 @@ gained from combining them. As a consequence, several escape SNVs can rise
 to high frequency rapidly, while the one with the smallest cost in terms
 of replication, packaging, etc.~is most likely to eventually fix, while
 all others are lost. The emergence of multiple competing escape variants
-in HIV-1 infections has been shown \citep{moore_limited_2009,
-bar_early_2012,wei_antibody_2003}.  This scenario has been explicitly
+within a single epitope infections has been shown for CTL and anti-body escape 
+\citep{fischer_transmission_2010,moore_limited_2009, bar_early_2012,wei_antibody_2003}.  
+This scenario has also been explicitly
 observed in the evolution of resistance to 3TC, where the mutation M184V
-is often preceded by M184I \citep{hedskog_dynamics_2010} or in the
-context of CTL escape mutations where multiple variants rise to high
-frequencies rapidly but most of them are lost again
-\citep{fischer_transmission_2010}. Consequently, there could be many
-nonsynonymous mutations are only beneficial until the viral population
-has found a ``better solution'' and subsequently disappear. 
+is often preceded by M184I \citep{hedskog_dynamics_2010}. Consequently, there could be many
+nonsynonymous mutations that are only beneficial until the viral population
+has found a ``better solution'' and that subsequently disappear. 
 
 We implemented within epitope
 competition in the model by allowing for multiple escape mutations per
@@ -578,7 +573,7 @@ mutations to intermediate frequencies allows deleterious synonymous
 mutations to hitchhike, while the fixation probability of nonsynonymous
 mutations is reduced. With roughly six mutations per epitope,
 the simulation data are compatible with observations; see
-\figurename~S\withinepi. The two scenarios, time-dependent selection and
+Fig.~S\withinepi. The two scenarios, time-dependent selection and
 competition between equivalent escape pathways, are not exclusive and
 possibly both important in HIV-1 evolution. We note that our modeling merely suggest
 possible scenarios. More data is required to determine to what extend
@@ -591,11 +586,11 @@ By analyzing the fate of single nucleotide variants (SNVs) in
 longitudinal data of HIV-1 \env{} evolution, we demonstrated selection
 against synonymous substitutions in the relatively conserved regions
 C2-C4. We suggest through computational modeling that these SNVs have
-deleterious effects on the order of $s_d = 0.002$ and that the majority
-of all synonymous mutations is deleterious. In absence of hitchhiking
+deleterious effects on the order of $s_d = 0.002$ per day and that the majority
+of all synonymous mutations in this region is deleterious. In absence of hitchhiking
 in a large population, deleterious mutations with effect $s_d$ should be
 at a frequency $\mu/s_d\approx 0.01$. The fact that we see many
-synonymous mutations at high frequency that nevertheless disappears over
+synonymous mutations at high frequency and that these SNVs nevertheless disappears over
 a time scale of a year suggests that they are brought to high frequency
 by hitchhiking on favorable genetic backgrounds. 
 While both the rise and fall of synonymous SNV is subject to hitchhiking,
@@ -632,7 +627,7 @@ changes over time, selection seems to maintain them, which reduces the
 fixation probability and hence the rate of evolution at synonymous
 sites. As expected from this argument, the evolutionary rate
 at synonymous sites varies greatly along the HIV-1 genome
-\citep{mayrose_towards_2007} (see also \figurename~S\syndiv). This variation can confound estimates of
+\citep{mayrose_towards_2007} (see also Fig.~S\syndiv). This variation can confound estimates of
 selection on proteins substantially \citep{ngandu_extensive_2008}. 
 The dynamic nature of HIV secondary structure makes it hard to find the 
 compensatory mutations that would restore base pairing in the
@@ -663,12 +658,13 @@ give rise to the observed pattern of fixation in computer
 simulations. More data is required to investigate this behavior further.
 
 The observed hitchhiking highlights the importance of linkage due to
-infrequent recombination for the evolution of HIV-1
+infrequent recombination for the evolution of HIV-1. 
+The recombination rate has been estimated to be on the
+order of $\rho = 10^{-5}$ per base and day
 \citep{neher_recombination_2010, batorsky_estimate_2011,
-josefsson_majority_2011}. The recombination rate has been estimated to be on the
-order of $\rho = 10^{-5}$ per base and day. It takes roughly $t_{sw} =
-\epsilon^{-1} |\log \nu_0|$ generations for an escape SNV with escape rate
-$\epsilon$ to rise from an initially low frequency $\nu_0$ to frequency
+josefsson_majority_2011}. It takes roughly $t_{sw} =
+\epsilon^{-1} |\log \nu_0|$ generations for an escape variant with escape rate
+$\epsilon$ to rise from an initially low frequency $\nu_0$ to a frequency close to
 one. This implies that a region of length $l = (\rho t_{sw})^{-1} = \epsilon /
 |\rho \log \nu_0|$ remains linked to the adaptive mutation. With
 $\epsilon=0.01$, and $\nu_0\approx 10^{-3}$, 
@@ -708,20 +704,532 @@ This work is supported by the ERC starting grant HIVEVO 260686 and
 in part by the National Science Foundation under Grant No.~NSF PHY11-25915.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{unsrtnat}
-\bibliography{bib}
-%\onecolumngrid
+%\bibliographystyle{unsrtnat}
+%\bibliography{bib}
+
+\begin{thebibliography}{48}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Rambaut et~al.(2004)Rambaut, Posada, Crandall, and
+  Holmes]{rambaut_causes_2004}
+Andrew Rambaut, David Posada, Keith~A. Crandall, and Edward~C. Holmes.
+\newblock The causes and consequences of {HIV} evolution.
+\newblock \emph{Nature Reviews Genetics}, 5\penalty0 (1):\penalty0 52--61,
+  January 2004.
+\newblock ISSN 1471-0056.
+\newblock \doi{10.1038/nrg1246}.
+\newblock URL \url{http://www.nature.com/nrg/journal/v5/n1/full/nrg1246.html}.
+
+\bibitem[Mansky and Temin(1995)]{mansky_lower_1995}
+L~M Mansky and H~M Temin.
+\newblock Lower in vivo mutation rate of human immunodeficiency virus type 1
+  than that predicted from the fidelity of purified reverse transcriptase.
+\newblock \emph{Journal of virology}, 69\penalty0 (8):\penalty0 5087--5094,
+  1995.
+\newblock URL \url{file:///home/fabio/university/evolution/references/J.
+  Virol.-1995-Mansky-5087-94.pdf}.
+
+\bibitem[Abram et~al.(2010)Abram, Ferris, Shao, Alvord, and
+  Hughes]{abram_nature_2010}
+Michael~E. Abram, Andrea~L. Ferris, Wei Shao, W.~Gregory Alvord, and Stephen~H.
+  Hughes.
+\newblock Nature, position, and frequency of mutations made in a single cycle
+  of {HIV-1} replication.
+\newblock \emph{Journal of Virology}, 84\penalty0 (19):\penalty0 9864--9878,
+  October 2010.
+\newblock ISSN 0022-{538X}, 1098-5514.
+\newblock \doi{10.1128/JVI.00915-10}.
+\newblock URL \url{http://jvi.asm.org/content/84/19/9864}.
+
+\bibitem[{McMichael} et~al.(2009){McMichael}, Borrow, Tomaras, Goonetilleke,
+  and Haynes]{mcmichael_immune_2009}
+Andrew~J. {McMichael}, Persephone Borrow, Georgia~D. Tomaras, Nilu
+  Goonetilleke, and Barton~F. Haynes.
+\newblock The immune response during acute {HIV-1} infection: clues for vaccine
+  development.
+\newblock \emph{Nature Reviews Immunology}, 10\penalty0 (1):\penalty0 11--23,
+  December 2009.
+\newblock \doi{10.1038/nri2674}.
+\newblock URL \url{http://www.nature.com/doifinder/10.1038/nri2674}.
+
+\bibitem[Richman et~al.(2003)Richman, Wrin, Little, and
+  Petropoulos]{richman_rapid_2003}
+Douglas~D. Richman, Terri Wrin, Susan~J. Little, and Christos~J. Petropoulos.
+\newblock Rapid evolution of the neutralizing antibody response to {HIV} type 1
+  infection.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 100\penalty0
+  (7):\penalty0 4144--4149, April 2003.
+\newblock ISSN 0027-8424, 1091-6490.
+\newblock \doi{10.1073/pnas.0630530100}.
+\newblock URL \url{http://www.pnas.org/content/100/7/4144}.
+
+\bibitem[Bhatt et~al.(2011)Bhatt, Holmes, and Pybus]{Bhatt:2011p43255}
+S~Bhatt, E.~C Holmes, and O.~G Pybus.
+\newblock The genomic rate of molecular adaptation of the human influenza a
+  virus.
+\newblock \emph{Molecular Biology and Evolution}, 28\penalty0 (9):\penalty0
+  2443--2451, Sep 2011.
+\newblock \doi{10.1093/molbev/msr044}.
+\newblock URL
+  \url{http://mbe.oxfordjournals.org/cgi/content/abstract/28/9/2443?etoc}.
+
+\bibitem[Hurst(2002)]{Hurst:2002p32608}
+Laurence~D Hurst.
+\newblock The {Ka/Ks} ratio: diagnosing the form of sequence evolution.
+\newblock \emph{Trends Genet}, 18\penalty0 (9):\penalty0 486, Sep 2002.
+\newblock URL
+  \url{http://www.sciencedirect.com/science?_ob=GatewayURL&_origin=inwardhub&_urlversion=4&_method=citationSearch&_piikey=S0168952502027221&_version=1&md5=994712d847438f6994ce2a092b0f78a2}.
+
+\bibitem[Chen et~al.(2004)Chen, Perlina, and Lee]{Chen:2004p22606}
+Lamei Chen, Alla Perlina, and Christopher~J Lee.
+\newblock Positive selection detection in 40,000 human immunodeficiency virus
+  ({HIV}) type 1 sequences automatically identifies drug resistance and
+  positive fitness mutations in hiv protease and reverse transcriptase.
+\newblock \emph{J Virol}, 78\penalty0 (7):\penalty0 3722--32, Apr 2004.
+\newblock URL
+  \url{http://jvi.asm.org/cgi/content/full/78/7/3722?view=long&pmid=15016892}.
+
+\bibitem[Fernandes et~al.(2012)Fernandes, Jayaraman, and
+  Frankel]{fernandes_hiv-1_2012}
+Jason Fernandes, Bhargavi Jayaraman, and Alan Frankel.
+\newblock The {HIV-1} rev response element: An {RNA} scaffold that directs the
+  cooperative assembly of a homo-oligomeric ribonucleoprotein complex.
+\newblock \emph{{RNA} Biology}, 9\penalty0 (1):\penalty0 4--9, January 2012.
+\newblock ISSN 1547-6286.
+\newblock \doi{10.4161/rna.9.1.18178}.
+\newblock URL
+  \url{http://www.landesbioscience.com/journals/rnabiology/article/18178/?nocache=886329209}.
+
+\bibitem[Watts et~al.(2009)Watts, Dang, Gorelick, Leonard, Jr, Swanstrom,
+  Burch, and Weeks]{watts_architecture_2009}
+Joseph~M. Watts, Kristen~K. Dang, Robert~J. Gorelick, Christopher~W. Leonard,
+  Julian W.~Bess Jr, Ronald Swanstrom, Christina~L. Burch, and Kevin~M. Weeks.
+\newblock Architecture and secondary structure of an entire {HIV-1} {RNA}
+  genome.
+\newblock \emph{Nature}, 460\penalty0 (7256):\penalty0 711--716, August 2009.
+\newblock ISSN 0028-0836.
+\newblock \doi{10.1038/nature08237}.
+\newblock URL
+  \url{http://www.nature.com/nature/journal/v460/n7256/full/nature08237.html}.
+
+\bibitem[Keating et~al.(2009)Keating, Hill, Hawkes, Smyth, Isel, Le,
+  Palmenberg, Marshall, Marquet, Nabel, and Mak]{keating_rich_2009}
+Cameron~P. Keating, Melissa~K. Hill, David~J. Hawkes, Redmond~P. Smyth,
+  Catherine Isel, Shu-Yun Le, Ann~C. Palmenberg, John~A. Marshall, Roland
+  Marquet, Gary~J. Nabel, and Johnson Mak.
+\newblock The {A-rich} {RNA} sequences of {HIV-1} pol are important for the
+  synthesis of viral {cDNA}.
+\newblock \emph{Nucleic Acids Research}, 37\penalty0 (3):\penalty0 945--956,
+  February 2009.
+\newblock ISSN 0305-1048, 1362-4962.
+\newblock \doi{10.1093/nar/gkn1015}.
+\newblock URL \url{http://nar.oxfordjournals.org/content/37/3/945}.
+
+\bibitem[Forsdyke(1995)]{forsdyke_reciprocal_1995}
+{D.R.} Forsdyke.
+\newblock Reciprocal relationship between stem-loop potential and substitution
+  density in retroviral quasispecies under positive {Darwinian} selection.
+\newblock \emph{Journal of Molecular Evolution}, 41\penalty0 (6), December
+  1995.
+\newblock ISSN 0022-2844, 1432-1432.
+\newblock \doi{10.1007/BF00173184}.
+\newblock URL \url{http://www.springerlink.com/content/n7621n18505m418m/}.
+
+\bibitem[Snoeck et~al.(2011)Snoeck, Fellay, Bartha, Douek, and
+  Telenti]{snoeck_mapping_2011}
+Joke Snoeck, Jacques Fellay, István Bartha, Daniel~C Douek, and Amalio
+  Telenti.
+\newblock Mapping of positive selection sites in the {HIV-1} genome in the
+  context of {RNA} and protein structural constraints.
+\newblock \emph{Retrovirology}, 8\penalty0 (1):\penalty0 87, 2011.
+\newblock ISSN 1742-4690.
+\newblock \doi{10.1186/1742-4690-8-87}.
+\newblock URL \url{http://www.retrovirology.com/content/8/1/87/additional}.
+
+\bibitem[Pollom et~al.(2013)Pollom, Dang, Potter, Gorelick, Burch, Weeks, and
+  Swanstrom]{pollom_comparison_2013}
+Elizabeth Pollom, Kristen~K. Dang, E.~Lake Potter, Robert~J. Gorelick,
+  Christina~L. Burch, Kevin~M. Weeks, and Ronald Swanstrom.
+\newblock Comparison of {SIV} and {HIV-1} genomic {RNA} structures reveals
+  impact of sequence evolution on conserved and non-conserved structural
+  motifs.
+\newblock \emph{{PLoS} Pathog}, 9\penalty0 (4):\penalty0 e1003294, April 2013.
+\newblock \doi{10.1371/journal.ppat.1003294}.
+\newblock URL \url{http://dx.doi.org/10.1371/journal.ppat.1003294}.
+
+\bibitem[Neher and Leitner(2010)]{neher_recombination_2010}
+{R.A.} Neher and Thomas Leitner.
+\newblock Recombination rate and selection strength in {HIV} intra-patient
+  evolution.
+\newblock \emph{{PLoS} Comput Biol}, 6\penalty0 (1):\penalty0 e1000660, January
+  2010.
+\newblock \doi{10.1371/journal.pcbi.1000660}.
+\newblock URL \url{http://dx.plos.org/10.1371/journal.pcbi.1000660}.
+
+\bibitem[Batorsky et~al.(2011)Batorsky, Kearney, Palmer, Maldarelli, Rouzine,
+  and Coffin]{batorsky_estimate_2011}
+Rebecca Batorsky, Mary~F Kearney, Sarah~E Palmer, Frank Maldarelli, Igor~M
+  Rouzine, and John~M Coffin.
+\newblock Estimate of effective recombination rate and average selection
+  coefficient for {HIV} in chronic infection.
+\newblock \emph{Proceedings of the National Academy of Sciences of the United
+  States of America}, 108\penalty0 (14):\penalty0 5661--6, April 2011.
+\newblock \doi{10.1073/pnas.1102036108}.
+\newblock URL
+  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3078368&tool=pmcentrez&rendertype=abstract}.
+
+\bibitem[Shankarappa et~al.(1999)Shankarappa, Margolick, Gange, Rodrigo,
+  Upchurch, Farzadegan, Gupta, Rinaldo, Learn, He,
+  et~al.]{shankarappa_consistent_1999}
+R.~Shankarappa, {J.B.} Margolick, {S.J.} Gange, {A.G.} Rodrigo, David Upchurch,
+  Homayoon Farzadegan, Phalguni Gupta, {C.R.} Rinaldo, {G.H.} Learn, X.~He,
+  et~al.
+\newblock Consistent viral evolutionary changes associated with the progression
+  of human immunodeficiency virus type 1 infection.
+\newblock \emph{Journal of Virology}, 73\penalty0 (12):\penalty0 10489, 1999.
+\newblock URL \url{http://jvi.asm.org/cgi/content/abstract/73/12/10489}.
+
+\bibitem[Liu et~al.(2006)Liu, {McNevin}, Cao, Zhao, Genowati, Wong,
+  {McLaughlin}, {McSweyn}, Diem, Stevens, et~al.]{liu_selection_2006}
+Yi~Liu, J.~{McNevin}, Jianhong Cao, Hong Zhao, Indira Genowati, Kim Wong,
+  S.~{McLaughlin}, {M.D.} {McSweyn}, Kurt Diem, {C.E.} Stevens, et~al.
+\newblock Selection on the human immunodeficiency virus type 1 proteome
+  following primary infection.
+\newblock \emph{Journal of virology}, 80\penalty0 (19):\penalty0 9519, 2006.
+\newblock \doi{10.1128/JVI.00575-06}.
+\newblock URL \url{http://jvi.asm.org/cgi/content/abstract/80/19/9519}.
+
+\bibitem[Bunnik et~al.(2008)Bunnik, Pisas, Van~Nuenen, and
+  Schuitemaker]{bunnik_autologous_2008}
+{E.M.} Bunnik, Linaida Pisas, {A.C.} Van~Nuenen, and Hanneke Schuitemaker.
+\newblock Autologous neutralizing humoral immunity and evolution of the viral
+  envelope in the course of subtype b human immunodeficiency virus type 1
+  infection.
+\newblock \emph{Journal of virology}, 82\penalty0 (16):\penalty0 7932, 2008.
+\newblock ISSN 3120566829.
+\newblock \doi{10.1128/JVI.00757-08}.
+\newblock URL \url{http://jvi.asm.org/cgi/content/abstract/82/16/7932}.
+
+\bibitem[Kuiken et~al.(2012)Kuiken, Leitner, Hahn, Mullins, Wolinsky, Foley,
+  Apetrei, Mizrachi, Rambaut, and Korber]{LANL2012}
+Carla Kuiken, Thomas Leitner, Beatrice Hahn, James Mullins, Steven Wolinsky,
+  Brian Foley, Cristian Apetrei, Ilene Mizrachi, Andrew Rambaut, and Bette
+  Korber.
+\newblock \emph{HIV Sequence Compendium 2012}.
+\newblock Theoretical Biology and Biophysics Group T-6, Mail Stop K710 Los
+  Alamos National Laboratory Los Alamos, New Mexico 87545 U.S.A., 2012.
+
+\bibitem[Edgar(2004)]{edgar_muscle:_2004}
+Robert~C. Edgar.
+\newblock {MUSCLE:} multiple sequence alignment with high accuracy and high
+  throughput.
+\newblock \emph{Nucleic Acids Research}, 32\penalty0 (5):\penalty0 1792--1797,
+  March 2004.
+\newblock ISSN 0305-1048, 1362-4962.
+\newblock \doi{10.1093/nar/gkh340}.
+\newblock URL \url{http://nar.oxfordjournals.org/content/32/5/1792}.
+
+\bibitem[Zanini and Neher(2012)]{zanini_ffpopsim:_2012}
+Fabio Zanini and Richard~A. Neher.
+\newblock {FFPopSim:} an efficient forward simulation package for the evolution
+  of large populations.
+\newblock \emph{Bioinformatics}, October 2012.
+\newblock ISSN 1367-4803, 1460-2059.
+\newblock \doi{10.1093/bioinformatics/bts633}.
+\newblock URL
+  \url{http://bioinformatics.oxfordjournals.org/content/early/2012/10/24/bioinformatics.bts633}.
+
+\bibitem[Perelson et~al.(1996)Perelson, Neumann, Markowitz, Leonard, and
+  Ho]{perelson_hiv-1_1996}
+a~S Perelson, a~U Neumann, M~Markowitz, J~M Leonard, and D~D Ho.
+\newblock Hiv-1 dynamics in vivo: virion clearance rate, infected cell
+  life-span, and viral generation time.
+\newblock \emph{Science {(New York, N.Y.)}}, 271\penalty0 (5255):\penalty0
+  1582--6, March 1996.
+\newblock URL \url{http://www.ncbi.nlm.nih.gov/pubmed/8599114}.
+
+\bibitem[Markowitz et~al.(2003)Markowitz, Louie, Hurley, Sun, Di~Mascio,
+  Perelson, and Ho]{markowitz_novel_2003}
+Martin Markowitz, Michael Louie, Arlene Hurley, Eugene Sun, Michele Di~Mascio,
+  Alan~S Perelson, and David~D Ho.
+\newblock A novel antiviral intervention results in more accurate assessment of
+  human immunodeficiency virus type 1 replication dynamics and {T-cell} decay
+  in vivo.
+\newblock \emph{J Virol}, 77\penalty0 (8):\penalty0 5037--5038, April 2003.
+
+\bibitem[Levy et~al.(2004)Levy, Aldrovandi, Kutsch, and
+  Shaw]{levy_dynamics_2004}
+David~N Levy, Grace~M Aldrovandi, Olaf Kutsch, and George~M Shaw.
+\newblock Dynamics of {HIV}-1 recombination in its natural target cells.
+\newblock \emph{Proc Natl Acad Sci USA}, 101\penalty0 (12):\penalty0 4204--9,
+  Mar 2004.
+\newblock \doi{10.1073/pnas.0306764101}.
+\newblock URL \url{http://www.pnas.org/content/101/12/4204.long}.
+
+\bibitem[Josefsson et~al.(2013)Josefsson, Palmer, Faria, Lemey, Casazza,
+  Ambrozak, Kearney, Shao, Kottilil, Sneller, Mellors, Coffin, and
+  Maldarelli]{josefsson_single_2013}
+Lina Josefsson, Sarah Palmer, Nuno~R. Faria, Philippe Lemey, Joseph Casazza,
+  David Ambrozak, Mary Kearney, Wei Shao, Shyamasundaran Kottilil, Michael
+  Sneller, John Mellors, John~M. Coffin, and Frank Maldarelli.
+\newblock Single cell analysis of lymph node tissue from {HIV-1} infected
+  patients reveals that the majority of {CD4+} t-cells contain one {HIV-1}
+  {DNA} molecule.
+\newblock \emph{{PLoS} Pathog}, 9\penalty0 (6):\penalty0 e1003432, June 2013.
+\newblock \doi{10.1371/journal.ppat.1003432}.
+\newblock URL \url{http://dx.doi.org/10.1371/journal.ppat.1003432}.
+
+\bibitem[Boltz et~al.(2012)Boltz, Ambrose, Kearney, Shao, {KewalRamani},
+  Maldarelli, Mellors, and Coffin]{boltz_ultrasensitive_2012}
+Valerie~F. Boltz, Zandrea Ambrose, Mary~F. Kearney, Wei Shao, Vineet~N.
+  {KewalRamani}, Frank Maldarelli, John~W. Mellors, and John~M. Coffin.
+\newblock Ultrasensitive allele-specific {PCR} reveals rare preexisting
+  drug-resistant variants and a large replicating virus population in macaques
+  infected with a simian immunodeficiency virus containing human
+  immunodeficiency virus reverse transcriptase.
+\newblock \emph{Journal of Virology}, 86\penalty0 (23):\penalty0 12525--12530,
+  December 2012.
+\newblock ISSN 0022-{538X}, 1098-5514.
+\newblock \doi{10.1128/JVI.01963-12}.
+\newblock URL \url{http://jvi.asm.org/content/86/23/12525}.
+
+\bibitem[Neher and Shraiman(2011)]{neher_genetic_2011}
+Richard~A Neher and Boris Shraiman.
+\newblock Genetic draft and quasi-neutrality in large facultatively sexual
+  populations.
+\newblock \emph{Genetics}, 188\penalty0 (4):\penalty0 975--996, 2011.
+\newblock URL \url{http://www.genetics.org/content/188/4/975.short}.
+
+\bibitem[Asquith et~al.(2006)Asquith, Edwards, Lipsitch, and
+  McLean]{Asquith:2006p28003}
+Becca Asquith, Charles T~T Edwards, Marc Lipsitch, and Angela~R McLean.
+\newblock Inefficient cytotoxic t lymphocyte-mediated killing of
+  {HIV}-1-infected cells in vivo.
+\newblock \emph{PLoS Biol}, 4\penalty0 (4):\penalty0 e90, Apr 2006.
+\newblock \doi{10.1371/journal.pbio.0040090}.
+\newblock URL
+  \url{http://www.plosbiology.org/article/info%253Adoi%252F10.1371%252Fjournal.pbio.0040090}.
+
+\bibitem[Moore et~al.(2009)Moore, Ranchobe, Lambson, Gray, Cave, Abrahams,
+  Bandawe, Mlisana, Abdool~Karim, Williamson, Morris, the {CAPRISA} 002~study,
+  and the {NIAID} Center~for {HIV/AIDS} Vaccine
+  Immunology~{(CHAVI)}]{moore_limited_2009}
+Penny~L. Moore, Nthabeleng Ranchobe, Bronwen~E. Lambson, Elin~S. Gray, Eleanor
+  Cave, Melissa-Rose Abrahams, Gama Bandawe, Koleka Mlisana, Salim~S.
+  Abdool~Karim, Carolyn Williamson, Lynn Morris, the {CAPRISA} 002~study, and
+  the {NIAID} Center~for {HIV/AIDS} Vaccine Immunology~{(CHAVI)}.
+\newblock Limited neutralizing antibody specificities drive neutralization
+  escape in early {HIV-1} subtype {C} infection.
+\newblock \emph{PLoS Pathog}, 5\penalty0 (9):\penalty0 e1000598, September
+  2009.
+\newblock \doi{10.1371/journal.ppat.1000598}.
+\newblock URL \url{http://dx.doi.org/10.1371/journal.ppat.1000598}.
+
+\bibitem[{McKay} et~al.(1979){McKay}, Beckman, and
+  Conover]{mckay_comparison_1979}
+M.~D. {McKay}, R.~J. Beckman, and W.~J. Conover.
+\newblock A comparison of three methods for selecting values of input variables
+  in the analysis of output from a computer code.
+\newblock \emph{Technometrics}, 21\penalty0 (2):\penalty0 239--245, May 1979.
+\newblock ISSN 0040-1706.
+\newblock \doi{10.2307/1268522}.
+\newblock URL \url{http://www.jstor.org/stable/1268522}.
+\newblock {ArticleType:} research-article / Full publication date: May, 1979 /
+  Copyright © 1979 American Statistical Association and American Society for
+  Quality.
+
+\bibitem[Coffin(1995)]{coffin_hiv_1995}
+John~M Coffin.
+\newblock {HIV} population dynamics in vivo: implications for genetic
+  variation, pathogenesis, and therapy.
+\newblock \emph{Science}, 267\penalty0 (5197):\penalty0 483--489, January 1995.
+\newblock ISSN 0036-8075.
+
+\bibitem[Sanjuan and Borderia(2011)]{sanjuan_interplay_2011}
+Rafael Sanjuan and Antonio~V. Borderia.
+\newblock Interplay between {RNA} structure and protein evolution in {HIV-1}.
+\newblock \emph{Molecular Biology and Evolution}, 28\penalty0 (4):\penalty0
+  1333--1338, April 2011.
+\newblock ISSN 0737-4038, 1537-1719.
+\newblock \doi{10.1093/molbev/msq329}.
+\newblock URL \url{http://mbe.oxfordjournals.org/content/28/4/1333}.
+
+\bibitem[Jenkins and Holmes(2003)]{jenkins_extent_2003}
+Gareth~M Jenkins and Edward~C Holmes.
+\newblock The extent of codon usage bias in human {RNA} viruses and its
+  evolutionary origin.
+\newblock \emph{Virus Research}, 92\penalty0 (1):\penalty0 1--7, March 2003.
+\newblock ISSN 0168-1702.
+\newblock \doi{10.1016/S0168-1702(02)00309-X}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S016817020200309X}.
+
+\bibitem[Kuyl and Berkhout(2012)]{kuyl_biased_2012}
+Antoinette C. van~der Kuyl and Ben Berkhout.
+\newblock The biased nucleotide composition of the {HIV} genome: a constant
+  factor in a highly variable virus.
+\newblock \emph{Retrovirology}, 9\penalty0 (1):\penalty0 92, November 2012.
+\newblock ISSN 1742-4690.
+\newblock \doi{10.1186/1742-4690-9-92}.
+\newblock URL \url{http://www.retrovirology.com/content/9/1/92/abstract}.
+
+\bibitem[Williamson(2003)]{williamson_adaptation_2003}
+Scott Williamson.
+\newblock Adaptation in the env gene of {HIV-1} and evolutionary theories of
+  disease progression.
+\newblock \emph{Molecular biology and evolution}, 20\penalty0 (8):\penalty0
+  1318--25, 2003.
+\newblock \doi{10.1093/molbev/msg144}.
+\newblock URL \url{http://www.ncbi.nlm.nih.gov/pubmed/12777505}.
+
+\bibitem[Wei et~al.(2003)Wei, Decker, Wang, Hui, Kappes, Wu, Salazar-Gonzalez,
+  Salazar, Kilby, Saag, Komarova, Nowak, Hahn, Kwong, and
+  Shaw]{wei_antibody_2003}
+Xiping Wei, Julie~M. Decker, Shuyi Wang, Huxiong Hui, John~C. Kappes, Xiaoyun
+  Wu, Jesus~F. Salazar-Gonzalez, Maria~G. Salazar, J.~Michael Kilby, Michael~S.
+  Saag, Natalia~L. Komarova, Martin~A. Nowak, Beatrice~H. Hahn, Peter~D. Kwong,
+  and George~M. Shaw.
+\newblock Antibody neutralization and escape by {HIV-1}.
+\newblock \emph{Nature}, 422\penalty0 (6929):\penalty0 307--312, March 2003.
+\newblock ISSN 0028-0836.
+\newblock \doi{10.1038/nature01470}.
+\newblock URL
+  \url{http://www.nature.com/nature/journal/v422/n6929/full/nature01470.html}.
+
+\bibitem[Smith and Haigh(1974)]{smith_hitch-hiking_1974}
+J~M Smith and J~Haigh.
+\newblock The hitch-hiking effect of a favourable gene.
+\newblock \emph{Genetical research}, 23\penalty0 (1):\penalty0 23--35, February
+  1974.
+\newblock {PMID:} 4407212.
+
+\bibitem[Gillespie(2000)]{gillespie_genetic_2000}
+J~H Gillespie.
+\newblock Genetic drift in an infinite population. the pseudohitchhiking model.
+\newblock \emph{Genetics}, 155\penalty0 (2):\penalty0 909--19, July 2000.
+\newblock URL
+  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1461093&tool=pmcentrez&rendertype=abstract}.
+
+\bibitem[Bar et~al.(2012)Bar, Tsao, Iyer, Decker, Yang, Bonsignori, Chen,
+  Hwang, Montefiori, Liao, Hraber, Fischer, Li, Wang, Sterrett, Keele, Ganusov,
+  Perelson, Korber, Georgiev, {McLellan}, Pavlicek, Gao, Haynes, Hahn, Kwong,
+  and Shaw]{bar_early_2012}
+Katharine~J. Bar, Chun-yen Tsao, Shilpa~S. Iyer, Julie~M. Decker, Yongping
+  Yang, Mattia Bonsignori, Xi~Chen, Kwan-Ki Hwang, David~C. Montefiori, Hua-Xin
+  Liao, Peter Hraber, William Fischer, Hui Li, Shuyi Wang, Sarah Sterrett,
+  Brandon~F. Keele, Vitaly~V. Ganusov, Alan~S. Perelson, Bette~T. Korber,
+  Ivelin Georgiev, Jason~S. {McLellan}, Jeffrey~W. Pavlicek, Feng Gao,
+  Barton~F. Haynes, Beatrice~H. Hahn, Peter~D. Kwong, and George~M. Shaw.
+\newblock Early low-titer neutralizing antibodies impede {HIV-1} replication
+  and select for virus escape.
+\newblock \emph{{PLoS} Pathog}, 8\penalty0 (5):\penalty0 e1002721, May 2012.
+\newblock \doi{10.1371/journal.ppat.1002721}.
+\newblock URL \url{http://dx.doi.org/10.1371/journal.ppat.1002721}.
+
+\bibitem[Hedskog et~al.(2010)Hedskog, Mild, Jernberg, Sherwood, Bratt, Leitner,
+  Lundeberg, Andersson, and Albert]{hedskog_dynamics_2010}
+Charlotte Hedskog, Mattias Mild, Johanna Jernberg, Ellen Sherwood, Göran
+  Bratt, Thomas Leitner, Joakim Lundeberg, Björn Andersson, and Jan Albert.
+\newblock Dynamics of {HIV-1} quasispecies during antiviral treatment dissected
+  using ultra-deep pyrosequencing.
+\newblock \emph{{PLoS} {ONE}}, 5\penalty0 (7):\penalty0 e11345, July 2010.
+\newblock \doi{10.1371/journal.pone.0011345}.
+\newblock URL \url{http://dx.doi.org/10.1371/journal.pone.0011345}.
+
+\bibitem[Fischer et~al.(2010)Fischer, Ganusov, Giorgi, Hraber, Keele, Leitner,
+  Han, Gleasner, Green, Lo, Nag, Wallstrom, Wang, {McMichael}, Haynes, Hahn,
+  Perelson, Borrow, Shaw, Bhattacharya, and Korber]{fischer_transmission_2010}
+Will Fischer, Vitaly~V. Ganusov, Elena~E. Giorgi, Peter~T. Hraber, Brandon~F.
+  Keele, Thomas Leitner, Cliff~S. Han, Cheryl~D. Gleasner, Lance Green,
+  Chien-Chi Lo, Ambarish Nag, Timothy~C. Wallstrom, Shuyi Wang, Andrew~J.
+  {McMichael}, Barton~F. Haynes, Beatrice~H. Hahn, Alan~S. Perelson, Persephone
+  Borrow, George~M. Shaw, Tanmoy Bhattacharya, and Bette~T. Korber.
+\newblock Transmission of single {HIV-1} genomes and dynamics of early immune
+  escape revealed by ultra-deep sequencing.
+\newblock \emph{{PLoS} {ONE}}, 5\penalty0 (8):\penalty0 e12303, August 2010.
+\newblock \doi{10.1371/journal.pone.0012303}.
+\newblock URL \url{http://dx.doi.org/10.1371/journal.pone.0012303}.
+
+\bibitem[Knoepfel and Berkhout(2013)]{knoepfel_role_2013}
+S.~A. Knoepfel and B.~Berkhout.
+\newblock On the role of four small hairpins in the {HIV-1} {RNA} genome.
+\newblock \emph{{RNA} Biology}, 10\penalty0 (4):\penalty0 512--524, March 2013.
+\newblock URL
+  \url{http://www.landesbioscience.com/journals/rnabiology/article/24133/}.
+
+\bibitem[Mayrose et~al.(2007)Mayrose, Doron-Faigenboim, Bacharach, and
+  Pupko]{mayrose_towards_2007}
+Itay Mayrose, Adi Doron-Faigenboim, Eran Bacharach, and Tal Pupko.
+\newblock Towards realistic codon models: among site variability and dependency
+  of synonymous and non-synonymous rates.
+\newblock \emph{Bioinformatics}, 23\penalty0 (13):\penalty0 i319--i327, July
+  2007.
+\newblock ISSN 1367-4803, 1460-2059.
+\newblock \doi{10.1093/bioinformatics/btm176}.
+\newblock URL
+  \url{http://bioinformatics.oxfordjournals.org/content/23/13/i319}.
+
+\bibitem[Ngandu et~al.(2008)Ngandu, Scheffler, Moore, Woodman, Martin, and
+  Seoighe]{ngandu_extensive_2008}
+Nobubelo~K. Ngandu, Konrad Scheffler, Penny Moore, Zenda Woodman, Darren
+  Martin, and Cathal Seoighe.
+\newblock Extensive purifying selection acting on synonymous sites in {HIV-1}
+  group m sequences.
+\newblock \emph{Virology Journal}, 5\penalty0 (1):\penalty0 160, December 2008.
+\newblock ISSN 1743-{422X}.
+\newblock \doi{10.1186/1743-422X-5-160}.
+\newblock URL \url{http://www.virologyj.com/content/5/1/160/abstract}.
+\newblock {PMID:} 19105834.
+
+\bibitem[Ferguson et~al.(2013)Ferguson, Mann, Omarjee, Ndung'u, Walker, and
+  Chakraborty]{ferguson_translating_2013}
+Andrew L. Ferguson, Jaclyn K. Mann, Saleha Omarjee, Thumbi Ndung'u, Bruce D.
+  Walker, and Arup K. Chakraborty.
+\newblock Translating {HIV} sequences into quantitative fitness landscapes
+  predicts viral vulnerabilities for rational immunogen design.
+\newblock \emph{Immunity}, 38\penalty0 (3):\penalty0 606--617, March 2013.
+\newblock ISSN 1074-7613.
+\newblock \doi{10.1016/j.immuni.2012.11.022}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S1074761313001076}.
+
+\bibitem[Josefsson et~al.(2011)Josefsson, King, Makitalo, Br\"annstr\"om, Shao,
+  Maldarelli, Kearney, Hu, Chen, Gaines, Mellors, Albert, Coffin, and
+  Palmer]{josefsson_majority_2011}
+Lina Josefsson, Martin~S. King, Barbro Makitalo, Johan Br\"annstr\"om, Wei
+  Shao, Frank Maldarelli, Mary~F. Kearney, Wei-Shau Hu, Jianbo Chen, Hans
+  Gaines, John~W. Mellors, Jan Albert, John~M. Coffin, and Sarah~E. Palmer.
+\newblock Majority of {CD4+} t cells from peripheral blood of {HIV-1} infected
+  individuals contain only one {HIV} {DNA} molecule.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 108\penalty0
+  (27):\penalty0 11199--11204, July 2011.
+\newblock ISSN 0027-8424, 1091-6490.
+\newblock \doi{10.1073/pnas.1107729108}.
+\newblock URL \url{http://www.pnas.org/content/108/27/11199}.
+
+\bibitem[Nijhuis et~al.(1998)Nijhuis, Boucher, Schipper, Leitner, Schuurman,
+  and Albert]{nijhuis_stochastic_1998}
+Monique Nijhuis, Charles A.~B. Boucher, Pauline Schipper, Thomas Leitner, Rob
+  Schuurman, and Jan Albert.
+\newblock Stochastic processes strongly influence {HIV-1} evolution during
+  suboptimal protease-inhibitor therapy.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 95\penalty0
+  (24):\penalty0 14441--14446, November 1998.
+\newblock ISSN 0027-8424, 1091-6490.
+\newblock \doi{10.1073/pnas.95.24.14441}.
+\newblock URL \url{http://www.pnas.org/content/95/24/14441}.
+
+\end{thebibliography}
+
 
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.6\linewidth]{fig1}
-%\subfloat{\includegraphics[width=0.6\linewidth]
-%{Shankarappa_allele_freqs_trajectories_syn_p10.pdf}
-%\label{fig:aftsyn}}\\
-% \subfloat{\includegraphics[width=0.6\linewidth]
-%{Shankarappa_allele_freqs_trajectories_nonsyn_p10.pdf}
-%\label{fig:aftnonsyn}}
 \caption{Time series of frequencies
 of synonymous (A) and nonsynonymous (B) single nucleotide variants (SNVs) in \env, 
 \shankaregion, from patient p10~\cite{shankarappa_consistent_1999}.
@@ -738,10 +1246,6 @@ SNV that reached 50\% frequency is one half.}
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.6\linewidth]{fig2}
-%\subfloat{\includegraphics[width=0.6\linewidth]{fixation_times.pdf}
-%\label{fig:fixp1}}\\
-%\subfloat{\includegraphics[width=0.6\linewidth]{fixation_probabilities.pdf}
-%\label{fig:fixp2}}
 \caption{Fixation and loss of SNVs.
 Panel A) shows how quickly synonymous SNVs are purged from the populations. 
 Specifically, the figure shows the fraction of SNVs that are still observed
@@ -765,8 +1269,6 @@ refs.~\cite{shankarappa_consistent_1999,liu_selection_2006, bunnik_autologous_20
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.9\linewidth]{fig3}
-%\subfloat{\includegraphics[height=0.3\linewidth]{reactivities_histograms_syn.pdf}\label{fig:SHAPEA}}
-%\subfloat{\includegraphics[height=0.3\linewidth]{fixation_probabilities_VnonV.pdf}\label{fig:SHAPEB}}
 \caption{Permissible synonymous mutations tend to be unpaired.
 Panel A) shows the distribution of SHAPE reactivities among sites at which synonymous 
 SNVs fixed (red), sites at which SNVs reached frequencies above 15\% but
@@ -787,15 +1289,11 @@ bunnik_autologous_2008, liu_selection_2006}.}
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.6\linewidth]{fig4}
-%\subfloat{\includegraphics[width=0.6\linewidth]{simulations_graduallydel.pdf}
-%\label{fig:simfixpvar}}\\
-%\subfloat{\includegraphics[width=0.6\linewidth]{simulations_syn_latin_contour.pdf}
-%\label{fig:simsfig}}
 \caption{Distribution of selection coefficients on synonymous sites. Panel A)
 The depression in $\pfix$ depends on the deleterious effect size 
 of synonymous SNVs. This parameter also reduces synonymous
 diversity, measured by the probability of a SNV to be found at
-intermediate frequencies $P_\text{interm}$ (first inset). The area observed in
+intermediate frequencies $P_\mathrm{interm}$ (first inset). The area observed in
 the data is also shown (second inset).
 Panel B) To assess the parameter space that affects synonymous fixation and
 diversity, we run 3000 simulations with random combinations of parameters for deleterious effect
@@ -806,13 +1304,11 @@ the synonymous diversity and fixation patterns observed in data are shown.
 These simulations demonstrate that deleterious effects are around $0.002$
 and a large fraction of the synonymous mutations needs to be
 deleterious. The marginal distributions of each parameter are given in
-\figurename~S\marginals.} 
+Fig.~S\marginals.} 
 \label{fig:simheat}
 \end{center}
 \end{figure}
 
-%\setcounter{figure}{0}
-%\include{supplement_body}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
