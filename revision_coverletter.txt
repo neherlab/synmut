@@ -1,0 +1,20 @@
+Dear Dr. Hahn,
+
+please find enclosed the revision of our manuscript "Quantifying
+selection against synonymous mutations in HIV-1 env evolution". To
+address the concerns of referee 2, we have performed additional
+extensive simulations of our model that confirm our previous estimates
+of the average deleterious effect of synonymous mutations. We have also
+implemented the Latin hyper-cube sampling scheme the referee suggested
+and now sample a much larger parameter space. In addition, we have added
+discussions of the burstiness of HIV-1 evolution and a discussion of the
+plausible parameter ranges. We include a point-by-point response to each
+of the reviewer's comments. 
+
+We would like to thank you and the reviewers for this very constructive
+review that has helped to improve the manuscript. 
+
+Sincerely,
+
+Richard Neher
+ 

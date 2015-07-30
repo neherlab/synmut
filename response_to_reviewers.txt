@@ -1,0 +1,173 @@
+##############################################################################
+# Reviewer #1 (Comments for Author):
+##############################################################################
+
+>The text is clearly written and the written arguments are well spelled out.
+>They observe that synonymous mutations in the C2-V5 region that disrupt
+>modelled base pairs in SHAPE assays are more likely to be lost than other
+>mutations, implying clear fitness costs to the virus, although they point out
+>that those with major costs will never reach high frequencies. They argue that
+>less deleterious mutations, but still with a fitness cost, can rise to high
+>frequency by 'hitch hiking' with immune selected non-synonymous mutations, in
+>other words simple linkage. The selection against synonymous slows down
+>evolution of the virus so selective forces may have been underestimated in the
+>past. These are important concepts and show that immune escape mutations
+>should not be considered in isolation. They support the view that 'landscaping'
+>approaches such as that described recently by Chakraborty in Immunity (Immunity
+>38:606-617, 2013), need to be applied.
+
+We thank the reviewer for this thoughtful assessment. We have included a
+brief discussion of the landscape aspect of HIV fitness and now cite
+Ferguson et al, Immunity, 2013. 
+
+
+##############################################################################
+# Reviewer #2 (Comments for Author):
+##############################################################################
+
+>These are interesting results and the manuscript is clearly written. The second
+>observation is not novel, but underappreciated, whereas this is the first
+>concrete calculation of the average selective disadvantage of silent mutations
+>in HIV taking draft into account. As such, it is necessary for this work to
+>establish proper error estimates so that the community can make valid use of
+>the results.  With this in mind, the manuscript can be strengthened in the
+>following respects:
+
+We thank the reviewer for the constructive comments, which have helped
+us to improve the manuscript. We have resorted to a more sophisticated
+sampling scheme for parameters in the computer simulations and now scan
+a larger parameter space. All our conclusions remain valid, but are based
+on more exhaustive sampling. We detail these improvements in our point to point
+response below. 
+
+##############################################################################
+>1) The modeling generation time of 1 day is odd.  It takes about a day for the
+>virion to integrate and start transcription.  One usually takes 2 days as the
+>mean generation time, but there is individual variation. See next point.
+
+We agree that one generation in HIV takes closer to 2 days than 1
+day. Most escape rates and selection coefficients, however, are more
+readily measured in days and we have chosen to model HIV evolution with
+generation of one day for simplicity. We have repeated some of the
+simulations with a generation time of 2 days and find the same results.
+In fact, minor changes in the generation have little influence on the
+dynamics and only renormalize genetic drift. Since the main determinant
+of genetic drift -- the (effective) population size -- is not known
+accurately, we don't think the difference of choosing one or two days as
+generation time is important. Our more exhaustive survey of the
+parameter space includes a 5-fold variation of the population size. Our
+results are very insensitive to the population size and hence also
+insensitive to the generation time.
+
+##############################################################################
+>2) Related to the above: the simulation does not address how sensitive the
+>results are to varying the parameters (in particular, the generation time, the
+>outcrossing rate, the mutation rate, and the assigned deleterious fitness of
+>the "non-synonymous" changes).  In the absence of described theoretical
+>analysis shaping our expectations, I strongly feel that this sensitivity
+>analysis needs to be part of the results, and folded into the error bars.
+
+We have greatly extended the parameter space that we survey and now test
+different values for the mutation rate, the recombination rate, the
+fitness effects of synonymous and non-synonymous mutations, and the
+population size. To accomodate this high dimensional data, we have
+changed figure 4. The figure now shows the joint distribution of the
+deleterious effect and the fraction of synonymous mutations that are
+deleterious that are compatible with observations as a contour plot. The
+marginal distributions of the individual parameters consistent with the
+data are shown in the supplement.
+
+The distribution of compatible deleterious effects is again peaked around
+0.002 and the fraction of "synonymous" mutations that can be neutral is
+low, as reported in the earlier version of our manuscript.
+
+
+##############################################################################
+>3) The reasonableness of the ranges for the various parameters should be argued
+>with citation to existing literature.
+
+We have added a discussion of the parameter ranges to the methods
+section. 
+
+##############################################################################
+>4) I am a bit surprised that the authors chose to do random sampling in their
+>multidimensional parameter space.  One would have expected a Latin hypercube
+>sampling to provide a better coverage.
+
+Indeed. Our previous simulations were not limited by coverage of the
+parameter space. Now that we cover a much larger (higher dimensional)
+space, we did implement a Latin hypercube sampling scheme. We thank the
+reviewer for this very useful suggestion. 
+
+
+##############################################################################
+>5) The actual dynamics of HIV in the body is presumably more complex: it is
+>likely that the virions are produced in large bursts of virtually genetically
+>identical virions most of which are then cleared by the body fast on the
+>time-scale of HIV generations. There is no discussion whether this leads to
+>increased stochasticity in the dynamics, nor whether this can influence the
+>quantitative evaluations presented here. It is possible that the authors mean
+>to absorb these into some kind of reduced effective population size, but a
+>short discussion would be beneficial.
+
+We agree with reviewer that HIV evolution is bursty, but we would like
+to mention that actual number of cells that get infected every day is
+around 10^7 and hence much larger than we are able to simulate. The
+population size in our simulation can therefore be viewed as an
+effective population size. We have investigated the sensitivity of our
+results to changes in the population size and find that our conclusions
+are insensitive to the population size as long as the product of
+population size and mutation rate is not very much smaller than 1.  
+
+We have added a discussion of our choice of population size to the
+methods section next the part where the other parameter choices are
+discussed. 
+
+##############################################################################
+>6) In the discussions, the rise of synonymous mutations is attributed to draft,
+>but the fall to selective effects. In general, some of the fall might also be
+>due to overlapping selective sweeps: the manuscript does not discuss this
+>possibility.
+
+Yes, much of the stochastic component in the dynamics of the frequencies
+of synonymous mutations will be due to draft. However, the consistent
+loss of variants, conditional on them being at high frequency earlier,
+implies selection against these variants. Without a deleterious effect,
+the mutations would fix with a probability equal to their frequency,
+regardless of whether they are subject to drift of hitchhiking. We have
+added a sentence to the discussion to make this point clear.
+
+
+##############################################################################
+>7) The observed neutral fixation pattern of the nonsynonymous mutations is
+>mentioned, and two explanations have been proposed to duet of increased
+>diversity over synonymous mutations with no increase of fixation over neutral
+>expectations.  Neither of the explanations, however, are plausible (at least,
+>without argument) absent experimental evidence not mentioned in the text. It
+>would perhaps be better to either strengthen this discussion with citation to
+>literature, or to weaken it by mentioning these as mere possibilities amongst
+>others.
+
+We agree with the reviewer that the both hypothesis we put forward to
+explain the fixation pattern of non-synonymous mutations are somewhat
+tentative. Qualitatively, however, the processes we discuss have been
+observed. We now cite additional experimental evidence (Wei et al,
+2003). It is common for escape to happen in multiple equivalent ways and
+this has been well documented fro early CTL escape and early nAb escape
+(Wei et al, Nature, 2003. Bar et al, PPath, 2012). Data for chronic
+infection is less conclusive and selection pressures are generally
+smaller, but turnover at targeted epitopes and the replacement of
+variants that where previously at high frequencies was observed 3y into
+the infection in Wei et al, Nature, 2003.  Whether this fall in
+frequency of some non-synonymous variants happens because they are
+replaced by a less costly escape variant or because the escape variant
+itself is targeted is hard to disentangle. We think it is reasonable
+that both of these effects contribute. Whether they are sufficient to
+produce the observed fixation patterns of non-synonymous mutations is
+largely an empirical question. We simply explored using numerical
+experiments whether these effects push the curve in the "right"
+direction. We have added a disclaimer that more data is needed to fully
+explain the pattern of fixation observed for non-synonymous mutations.
+
+
+

@@ -1,0 +1,128 @@
+##############################################################################
+# Reviewer comments:
+##############################################################################
+# Reviewer #1 (Comments for Author):
+##############################################################################
+This manuscript examines synonymous mutations in the HIV-1 Envelope gene. The
+data are taken from other publications and this is a modelling manuscript. I am
+not able to judge the mathematical modelling critically but can comment on the
+potential importance of the conclusions.
+
+The text is clearly written and the written arguments are well spelled out.
+They observe that synonymous mutations in the C2-V5 region that disrupt
+modelled base pairs in SHAPE assays are more likely to be lost than other
+mutations, implying clear fitness costs to the virus, although they point out
+that those with major costs will never reach high frequencies. They argue that
+less deleterious mutations, but still with a fitness cost, can rise to high
+frequency by 'hitch hiking' with immune selected non-synonymous mutations, in
+other words simple linkage. The selection against synonymous slows down
+evolution of the virus so selective forces may have been underestimated in the
+past. These are important concepts and show that immune escape mutations
+should not be considered in isolation. They support the view that 'landscaping'
+approaches such as that described recently by Chakraborty in Immunity (Immunity
+38:606-617, 2013), need to be applied. 
+>>>>>>>>>>>>>>>>>
+Fabio: DONE (citation added).
+
+##############################################################################
+# Reviewer #2 (Comments for Author):
+##############################################################################
+The manuscript "Quantifying selection against synonymous mutations in HIV-1 env
+evolution" by Zanini and Neher analyzes intra-patient HIV data and finds that
+most synonymous mutation in the RNA stems flanking the variable loops of gp120
+are at a selective disadvantage in vivo, with a small selection coefficient of
+the order of -0.002. They also point to the importance of draft instead of
+drift in the intrapatient evolution of HIV.
+
+These are interesting results and the manuscript is clearly written. The second
+observation is not novel, but underappreciated, whereas this is the first
+concrete calculation of the average selective disadvantage of silent mutations
+in HIV taking draft into account. As such, it is necessary for this work to
+establish proper error estimates so that the community can make valid use of
+the results.  With this in mind, the manuscript can be strengthened in the
+following respects:
+
+##############################################################################
+1) The modeling generation time of 1 day is odd.  It takes about a day for the
+virion to integrate and start transcription.  One usually takes 2 days as the
+mean generation time, but there is individual variation. See next point.
+>>>>>>>>>>>>>>>>>
+Fabio: We repeated simulations with t_g = 2 and nothing changes (in units of
+       1/days). Hence we are safe.
+
+##############################################################################
+2) Related to the above: the simulation does not address how sensitive the
+results are to varying the parameters (in particular, the generation time, the
+outcrossing rate, the mutation rate, and the assigned deleterious fitness of
+the "non-synonymous" changes).  In the absence of described theoretical
+analysis shaping our expectations, I strongly feel that this sensitivity
+analysis needs to be part of the results, and folded into the error bars.
+>>>>>>>>>>>>>>>>>
+Fabio:
+- generation time: DONE
+- mutation rate play no big role, as we look for times and fates of
+  high-frequencies alleles anyway
+- outcrossing rate sets the time scale for the decay of linkage, so it is a
+  crucial parameter. We should run simulations again at different coinfection
+  rates for the supplementary.
+- the scatter plot is not gated by nonsynonymous observables, so it gives an
+  impression of the range of selection coefficients on synonymous mutations given
+  by different nonsynonymous parameters (a factor of ~3 or so). Since we have
+  little idea about the dynamics of nonsynonymous changes anyway, reducing this
+  errorbar is harder.
+
+##############################################################################
+3) The reasonableness of the ranges for the various parameters should be argued
+with citation to existing literature.
+>>>>>>>>>>>>>>>>>
+Fabio: DONE (more discussion in Methods).
+
+##############################################################################
+4) I am a bit surprised that the authors chose to do random sampling in their
+multidimensional parameter space.  One would have expected a Latin hypercube
+sampling to provide a better coverage.
+>>>>>>>>>>>>>>>>>
+Fabio: DONE.
+
+##############################################################################
+5) The actual dynamics of HIV in the body is presumably more complex: it is
+likely that the virions are produced in large bursts of virtually genetically
+identical virions most of which are then cleared by the body fast on the
+time-scale of HIV generations. There is no discussion whether this leads to
+increased stochasticity in the dynamics, nor whether this can influence the
+quantitative evaluations presented here. It is possible that the authors mean
+to absorb these into some kind of reduced effective population size, but a
+short discussion would be beneficial.
+>>>>>>>>>>>>>>>>>
+Fabio : fair enough, we do not discuss population sizes in here. Since we do not
+        look at rare variants, the exact propagation mechanism is irrelevant: if
+        mutants are generated continuously and N >> mu/|s_d| = 100 so that high
+        frequency is only reached by draft, N should not make a huge difference.
+        We should discuss this point more thoroughly.
+
+##############################################################################
+6) In the discussions, the rise of synonymous mutations is attributed to draft,
+but the fall to selective effects. In general, some of the fall might also be
+due to overlapping selective sweeps: the manuscript does not discuss this
+possibility.
+>>>>>>>>>>>>>>>>>
+Fabio: Maybe we just need some more discussion here. If HIV were asexual, that
+       would be the case (clonal interf). Recombination breaks linkage so this should
+       happen only rarely in HIV. In addition, clonal interference would not generate
+       a correlation with RNA structure.  Finally, simulations with realistic
+       recombination rates show that only deleterious synonymous mutations can lower
+       P_fix(syn), even in the case of 6 escape mutations per epitope (perfect
+       incompatibility).
+
+##############################################################################
+7) The observed neutral fixation pattern of the nonsynonymous mutations is
+mentioned, and two explanations have been proposed to duet of increased
+diversity over synonymous mutations with no increase of fixation over neutral
+expectations.  Neither of the explanations, however, are plausible (at least,
+without argument) absent experimental evidence not mentioned in the text. It
+would perhaps be better to either strengthen this discussion with citation to
+literature, or to weaken it by mentioning these as mere possibilities amongst
+others.
+>>>>>>>>>>>>>>>>>
+Fabio: we could cite more literature. I do not see what the other possibilities
+       could be.
